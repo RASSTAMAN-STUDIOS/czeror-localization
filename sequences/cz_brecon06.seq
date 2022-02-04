@@ -1,0 +1,248 @@
+
+
+!sentences
+{
+	// ==============================================================
+	// Right before the church sequence
+	// ==============================================================
+	Injured_2_SAS0 brecon/sasinj2_dug
+
+	// If you steal a guys med kit
+	mad_guy1_heyman0 brecon/sas1_using
+
+	// ==============================================================
+	// The Terrorist leader will taunt the player when running away.
+	// ==============================================================
+	T_leader_1_taunt0 brecon/tl_nevercatch
+	T_leader_2_taunt0 brecon/tl_stop
+	T_leader_3_taunt0 brecon/tl_haha
+	T_leader_4_taunt0 brecon/tl_toolate
+	T_leader_5_taunt0 brecon/tl_stand
+
+
+	// ==============================================================
+	// Inside Chruch
+	// ==============================================================================================
+	SAS_Op_1_Nuke0 brecon/sas6_defure
+	SAS_Op_2_Nuke0 brecon/sas6_time
+	SAS_Op_3_Nuke0 brecon/cnc_movinq
+	SAS_Op_4_Nuke0 brecon/cnc_churchfire
+
+	SAS_Op_5_Nuke0 brecon/cnc_nukedeflad
+
+
+	// T leader will preach as your fighting in the church
+	T_leader_6_taunt0 brecon/tl_resist
+	T_leader_7_taunt0 brecon/tl_stopfool
+	T_leader_8_taunt0 brecon/tl_youlose
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%SAS_Com_radio
+{
+	@RadioStyle
+}
+
+%T_leader
+{
+	@T3Style
+}
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+
+%Taunt_01
+{
+		
+	// ======
+	
+	@T_leader	#sound=T_leader_7_taunt, 
+	speaker=run4 
+	// text="You cannot stop us, durak!"
+	
+	// ======= 
+}
+
+//%HEYMANGUY
+//{
+//		
+//	// ======
+//	
+//	#sound=mad_guy1_heyman, 
+//	speaker=HEYMAN 
+//	// text="Testing testing!"
+//	
+//	// ======= 
+//}
+
+//%Dugin_01
+//{
+//		
+//	// ======
+//	
+//	#sound=Injured_2_SAS, 
+//	speaker=HEYMAN 
+//	// text="Testing testing!"
+//	
+//	// =======
+//}
+
+%CT_team_backup
+{
+		
+	// ======
+	
+	#pause = 15
+
+	@SAS_Com_radio	#sound=SAS_Op_2_Nuke 
+	//text="Time is running out!  Defuse that nuke!"
+
+	// =======
+}
+
+%Last_fight_voices
+{
+		
+	// ======
+
+	@SAS_Com_radio	#sound=SAS_Op_3_Nuke,
+	pause = 4 
+	//text="We are moving in as quickly as possible."
+
+	@SAS_Com_radio	#sound=SAS_Op_4_Nuke,
+	pause = 5 
+	//text="Support teams can't get in the church, too much enemy fire!"
+
+	@ObjectiveStyle #text = "#OBJ4_BRECON_NEW"
+
+	@SAS_Com_radio	#sound=SAS_Op_2_Nuke,
+	pause = 5 
+	//text="Time is running out!  Defuse that nuke!"
+
+	@T_leader	#sound=T_leader_6_taunt, 
+	speaker=t21,
+	pause = 10  
+	//text="Why do you resist infidel!  This will bring about a new age!"
+
+	@T_leader	#sound=T_leader_7_taunt, 
+	speaker=t21,
+	pause = 8  
+	//text="You cannot stop us, durak!"
+
+	@T_leader	#sound=T_leader_8_taunt, 
+	speaker=t21,
+	pause = 8  
+	//text="You lose infidel svin'yal!  The device is armed and you cannot stop it!  DIE!"
+
+	@T_leader	#sound=T_leader_6_taunt, 
+	speaker=t21,
+	pause = 8  
+	//text="Why do you resist infidel!  This will bring about a new age!"
+
+	@T_leader	#sound=T_leader_7_taunt, 
+	speaker=t21,
+	pause = 12  
+	//text="You cannot stop us, durak!"
+
+	@T_leader	#sound=T_leader_8_taunt, 
+	speaker=t21,
+	pause = 10  
+	//text="You lose infidel svin'yal!  The device is armed and you cannot stop it!  DIE!"
+
+	@T_leader	#sound=T_leader_6_taunt, 
+	speaker=t21,
+	pause = 9  
+	//text="Why do you resist infidel!  This will bring about a new age!"
+
+	@T_leader	#sound=T_leader_7_taunt, 
+	speaker=t21,
+	pause = 15  
+	//text="You cannot stop us, durak!"
+
+	@T_leader	#sound=T_leader_8_taunt, 
+	speaker=t21,
+	pause = 8  
+	//text="You lose infidel svin'yal!  The device is armed and you cannot stop it!  DIE!"
+
+	@T_leader	#sound=T_leader_6_taunt, 
+	speaker=t21,
+	pause = 10  
+	//text="Why do you resist infidel!  This will bring about a new age!"
+
+	@T_leader	#sound=T_leader_7_taunt, 
+	speaker=t21,
+	pause = 8  
+	//text="You cannot stop us, durak!"
+
+	@T_leader	#sound=T_leader_8_taunt, 
+	speaker=t21,
+	pause = 8  
+	//text="You lose infidel svin'yal!  The device is armed and you cannot stop it!  DIE!"
+
+	@T_leader	#sound=T_leader_6_taunt, 
+	speaker=t21,
+	pause = 8  
+	//text="Why do you resist infidel!  This will bring about a new age!"
+
+	@T_leader	#sound=T_leader_7_taunt, 
+	speaker=t21,
+	pause = 12  
+	//text="You cannot stop us, durak!"
+
+	@T_leader	#sound=T_leader_8_taunt, 
+	speaker=t21,
+	pause = 10  
+	//text="You lose infidel svin'yal!  The device is armed and you cannot stop it!  DIE!"
+
+	@T_leader	#sound=T_leader_6_taunt, 
+	speaker=t21,
+	pause = 9  
+	//text="Why do you resist infidel!  This will bring about a new age!"
+
+	@T_leader	#sound=T_leader_7_taunt, 
+	speaker=t21,
+	pause = 15  
+	//text="You cannot stop us, durak!"
+
+	@T_leader	#sound=T_leader_8_taunt, 
+	speaker=t21,
+	pause = 8  
+	//text="You lose infidel svin'yal!  The device is armed and you cannot stop it!  DIE!"
+
+
+	
+	// =======
+}
+
+%Defused_nuke
+{
+		
+	// ======
+
+	@SAS_Com_radio	#sound=SAS_Op_5_Nuke 
+	// text="Nuke defused.  Good work, lads."
+
+	// =======
+}
+
+// =====================================================================
+// Mission Fails
+// =====================================================================
+
+%Mission_failed01
+{
+	@FailureStyle
+	#text = "#BRecon06_failed01"	 // LOCALIZE_ME
+
+}
+
+%Mission_success
+{
+	@titlestyle
+	#text =	"#GENERIC_SUCCESS"
+}

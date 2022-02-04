@@ -1,0 +1,291 @@
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//|| CZ_Training03 Dialog Sequences (cz_train03) ||
+//|| Tom "ParadoX" Mustaine			 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+
+
+// Sentences for +use on actors and so on.
+!sentences
+{
+	// The CT Ammo dude
+	Training_CT2_talk0 cz_training/trammo_huh
+	Training_CT2_talk1 cz_training/trammo_keep
+	Training_CT2_talk2 cz_training/trammo_wherefire
+
+// Dialog called in the level
+	Training_tr_whenlights0 	cz_training/tr_whenlights
+	Training_tr_navnightv0 		cz_training/tr_navnightv
+	Training_tr_sincenight0 	cz_training/tr_sincenight
+	Training_tr_pickupshot0 	cz_training/tr_pickupshot
+	Training_tr_navflash0 		cz_training/tr_navflash
+	Training_tr_nextradio0 		cz_training/tr_nextradio
+	Training_tr_radiocontact0 	cz_training/tr_radiocontact
+	Training_tr_pickuprad0 		cz_training/tr_pickuprad
+	Training_ct_rogeronway0 	cz_training/ct_rogeronway
+	Training_ct_affirmative0 	cz_training/ct_affirmative
+	Training_tr_finallyde0 		cz_training/tr_finallyde
+	Training_tr_thisbomb0 		cz_training/tr_thisbomb
+	Training_tr_tode0 		cz_training/tr_tode
+	Training_ct_movinginto0 	cz_training/ct_movinginto
+	Training_ct_provcover0 		cz_training/ct_provcover
+	Training_tr_excellentdev0 	cz_training/tr_excellentdev
+	Training_tr_nodetime0 		cz_training/tr_nodetime
+	Training_tr_cgrtscomp0 		cz_training/tr_cgrtscomp
+	Training_tr_pleaseret0 		cz_training/tr_pleaseret
+	Training_tr_shootct0 		cz_training/tr_shootct
+	Training_MoveNextArea0		cz_training/tr_moveonnext
+	Training_Good0			cz_training/tr_good1
+}
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	BEGIN: Speaker, Style & Definitions	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+%Training_Text
+{
+	$position = -1 0.1
+	$fadein = 0.005, holdtime = 3.5, fadeout = 1.0
+	$color = 0 128 255, color2 = 0 64 192, effect = 2
+	$channel = 3
+}
+
+%Trainer1
+{
+	@NPC1Style
+	$speaker	= trainer1
+	$listener	= player
+}
+
+%Trainer2
+{
+	@NPC1Style
+	$speaker	= trainer2
+	$listener	= player
+}
+
+%Trainer3
+{
+	@NPC1Style
+	$speaker	= trainer4
+	$listener	= player
+}
+
+%CT1
+{
+	@CT1Style
+	$speaker	= ct1
+}
+
+%CT2
+{
+	@CT2Style
+	$speaker	= ct2
+}
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	END: Speaker Definitions		 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	BEGIN: Use Characters Sequences 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+
+%NightVision_Start
+{	
+	#firetargets = "door_stuff1"
+	
+	@RadioStyle
+	//#text = "When the lights go out, you will need to press your night vision key."	
+	#sound = Training_tr_whenlights
+	#pause = 3.55	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	
+	#firetargets = "night_music"
+	#firetargets = "glow_removal_relay"
+	#firetargets = "red_lights"
+	#firetargets = "door_stuff2"
+	#firetargets = "player_gets_nightvision"
+
+	@Training_Text
+	#text = "#TRAINING_NIGHTVISION" //#text = "PRESS NIGHTVISION KEY TO TURN NIGHTVISION ON"
+
+	#pause = 1
+
+	@RadioStyle
+	//#text = "Navigate the nightvision area to continue."	
+	#sound = Training_tr_navnightv
+}
+
+%Flashlight_Start
+{
+	@Trainer1
+	//#text = "Since nightvision will not always be available, some weapons are equipped with attached flashlights"	
+	#sound = Training_tr_sincenight
+	#pause = 5.35	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	
+	#firetargets = "player_loses_nightvision"
+
+	@Trainer1
+	//#text = "Pick up the shotgun and press your secondary fire key to activate the flashlight."	
+	#sound = Training_tr_pickupshot
+	#pause = 4.9	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+
+	@Training_Text
+	#text = "#TRAINING_FLASHLIGHT" //#text = "PRESS ATTACK2 KEY TO TURN FLASHLIGHT ON"
+
+	@Trainer1
+	//#text = "Navigate the flashlight area to continue."	
+	#sound = Training_tr_navflash
+	#pause = 2.7	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	
+	#firetargets = "nv_door"
+}
+
+%Congrat
+{
+	@Trainer1
+	//#text = "Good"
+	#sound = Training_Good
+	#pause = 1
+	
+	@Trainer1
+	//#text = "Move on to the next area"
+	#sound = Training_MoveNextArea
+}
+
+%Radio_Start
+{
+	#firetargets = "door_stuff5"
+
+	@Trainer2
+	//#text = "The next piece of equipment is the radio"	
+	#sound = Training_tr_nextradio
+	#pause = 2.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	
+	@Trainer2
+	//#text = "The radio is used to contact your Counter Terrorist teammates from the field."	
+	#sound = Training_tr_radiocontact
+	#pause = 4.1	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	
+	@Trainer2
+	//#text = "Pick up the radio, and use it in the Radio zone."	
+	#sound = Training_tr_pickuprad
+	#pause = 3.25	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+
+	@Training_Text 
+	#text = "#TRAINING_PICKUP_RADIO" //#text = "MOVE UP TO EQUIPMENT TO PICK IT UP"	
+
+	#firetargets = "radio_stop"
+}
+
+%Radio_Picked_Up
+{
+	#firetargets = "equip_bombs"
+	#firetargets = "hide_bomb_model"
+	
+	@Training_Text 
+	#text = "#TRAINING_USE_RADIO" //#text = "MOVE INTO RADIO ZONE
+//AND PRESS ATTACK1 TO ACTIVATE RADIO"
+}
+
+
+%Radio_Used
+{
+	@RadioStyle
+	//#text = "Roger, on our way!"	
+	#sound = Training_ct_rogeronway	
+	#pause = 6	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+
+	@Trainer2
+	//#text = "Finally, you will need to know how to defuse explosive devices."	
+	#sound = Training_tr_finallyde	
+	#pause = 4.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	
+	#firetargets = "final_doors"
+}
+
+%Bomb_Active
+{
+
+	
+	@Trainer3
+	//#text = "This bomb has gone live!"	
+	#sound = Training_tr_thisbomb	
+	#pause = 2.45	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+
+	@CT1
+	//#text = "Moving in to position!"	
+	#sound = Training_ct_movinginto
+		
+	@CT2
+	//#text = "Providing cover!"	
+	#sound = Training_ct_provcover
+	
+	#pause = 1 // SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+
+	@Trainer3
+	//#text = "To defuse the bomb, walk up to it, face the device - then press and hold your use key."	
+	#sound = Training_tr_tode
+	
+	@Training_Text 
+	#text = "#TRAINING_DEFUSE_BOMB" //#text = "WALK UP TO THE BOMB, AND FACE THE DEVICE
+//PRESS AND HOLD USE KEY UNTIL BOMB IS DE-ACTIVATED"	
+
+#pause = 5.8 // SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+}
+
+%BombFailure
+{
+	#killtargets = "defuse_zone"
+	#firetargets="hud_off"
+	#firetargets = "failure_music"
+	#firetargets="bomb_fadeout"
+	#pause = 1
+
+	@Trainer3
+	//#text = "You didn't defuse the bomb in time, try again."	
+	#sound = Training_tr_nodetime
+	
+	@FailureStyle
+	#text = "#TRAINING_BOMBDEFUSE_FAILURE"	//#text = "STATUS: MISSION FAILED
+//REASON: OPERATIVE FAILED TO DEFUSE THE BOMB"
+
+	#pause = 6	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#firetargets = "autoload"
+}
+
+%BombSuccess
+{	
+	#firetargets = "success_music"
+	#firetargets = "bomb_disarmed_sound"
+	#pause = 3
+	
+	#firetargets = "ct1_stand"
+	#pause = 0.5
+	#firetargets = "ct2_stand"
+	
+	@Trainer3
+	//#text = "Excellent! The device has been defused!"	
+	#sound = Training_tr_excellentdev
+	#pause = 3.3	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+
+	@Trainer3
+	//#text = "Congratulations.  You have completed the counter terrorist special training course."	
+	#sound = Training_tr_cgrtscomp	
+	#pause = 4.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+
+	@Trainer3
+	//#text = "Please return topside for processing."	
+	#sound = Training_tr_pleaseret	
+	#pause = 3.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+		
+	#firetargets="bomb_fadeout_won"
+	#firetargets="hud_off"
+	@TitleStyle
+	#text = "#GENERIC_SUCCESS"
+	
+	#pause = 7	
+	#firetargets = "end_training"	
+}
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	END: Level relevant Sequences 	 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]

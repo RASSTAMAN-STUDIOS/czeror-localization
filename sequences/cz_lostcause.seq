@@ -1,0 +1,520 @@
+$position = .8 .8
+$fadein = 1.5, holdtime = 2, fadeout = 0.5
+$color = 240 100 0, color2 = 0 100 240
+
+
+!sentences
+{
+dialogIntro lostcause/gsg9l_sinceagent
+dialogFindHostages lostcause/gsg9l_getinthere
+dialogFoundHostages lostcause/gsg9l_affirmass
+dialogAtHostages lostcause/gsg9l_staycovpack
+dialogTraps lostcause/gsg9l_boobytrap
+dialogCareful lostcause/gsg9l_becareful
+dialogGet lostcause/gsg9l_placedown
+dialogDelay lostcause/gsg9l_whatdelay
+dialogWhosOverThere t/t_whos_sp
+dialogSworeIHeard t/t_heardsomw_sp
+dialogIsAnyoneThere t/t_heywhat_sp
+
+dialogFDown lostcause/gsg9s_frdown
+	
+soundAttack ambience/lostcause_attack
+
+female_hostage1_talk0 h/h_f_plsnokill_am
+male_hostage1_talk0 h/h_m_dontdie_ja
+male_hostage2_talk0 h/h_m_goinpuke_am
+gsg9guard1_talk0 ct/ct_allclear2_ge
+gsg9guard2_talk0 ct/ct_clear3_ge
+
+//**hostage chatter
+
+
+H_HELP_AM0 h/h_m_getmeout_am
+H_HELP_AM1 h/h_m_okletsgo_am
+H_HELP_AM2 h/h_m_gethellout_am
+H_HELP_AM3 h/h_m_ohlets_am
+
+H_THANK_AM0 h/h_m_thanksave_am
+H_THANK_AM1 h/h_m_owelife_am
+H_THANK_AM2 h/h_m_gladover_am
+H_THANK_AM3 h/h_m_thanks_am
+	
+H_PAIN_AM0 h/h_m_pain1_am
+H_PAIN_AM1 h/h_m_pain2_am
+H_PAIN_AM2 h/h_m_pain3_am
+H_PAIN_AM3 h/h_m_pain4_am
+
+H_DEATH_AM0 h/h_m_death1_am
+H_DEATH_AM1 h/h_m_death2_am
+H_DEATH_AM2 h/h_m_death3_am
+H_DEATH_AM3 h/h_m_death4_am
+
+H_PLFEAR_AM0 h/h_m_mygodw_am
+H_PLFEAR_AM1 h/h_m_ithought_am
+H_PLFEAR_AM2 h/h_m_pleasenok_am
+
+H_FEAR_AM0 h/h_m_dontdie_am
+H_FEAR_AM1 h/h_m_yousavr_am
+H_FEAR_AM2 h/h_m_wherewego_am
+
+H_SCREAM_AM0 h/h_m_ahh1_am
+H_SCREAM_AM1 h/h_m_lookout_am
+H_SCREAM_AM2 h/h_m_they'rehere_am
+
+H_SICK_AM0 h/h_m_cantgo_am
+H_SICK_AM1 h/h_m_toosick_am
+H_SICK_AM2 h/h_m_goinpuke_am
+
+H_BETTER_AM0 h/h_m_feelmuch_am
+H_BETTER_AM1 h/h_m_didtr_am
+H_BETTER_AM2 h/h_m_thankshot_am
+
+//**hostage female chatter
+
+H_HELP_AMF0 h/h_f_mygoodp_am
+H_HELP_AMF1 h/h_f_neverbeen_am
+H_HELP_AMF2 h/h_f_scaredp_am
+
+H_THANK_AMF0 h/h_f_thankf_am
+H_THANK_AMF1 h/h_f_veryb_am
+H_THANK_AMF2 h/h_f_courage_am
+
+H_PAIN_AMF0 h/h_f_pain1_am
+H_PAIN_AMF1 h/h_f_pain2_am
+H_PAIN_AMF2 h/h_f_pain3_am
+H_PAIN_AMF3 h/h_f_pain4_am
+
+H_DEATH_AMF0 h/h_f_death1_am
+H_DEATH_AMF1 h/h_f_death2_am
+H_DEATH_AMF2 h/h_f_death3_am
+H_DEATH_AMF3 h/h_f_death4_am
+
+H_PLFEAR_AMF0 h/h_f_mygod_am
+H_PLFEAR_AMF1 h/h_f_myside_am
+H_PLFEAR_AMF2 h/h_f_plsnokill_am
+
+HEAR_AMF0 h/h_f_ohhelp_am
+HEAR_AMF1 h/h_f_ohmy_am
+HEAR_AMF2 h/h_f_help_am
+
+H_SCREAM_AMF0 h/h_f_ahh1_am
+H_SCREAM_AMF1 h/h_f_lookout_am
+H_SCREAM_AMF2 h/h_f_theyhere_am
+
+H_SICK_AMF0 h/h_f_dontfeel_am
+H_SICK_AMF1 h/h_f_toosick_am
+H_SICK_AMF2 h/h_f_puke_am
+
+H_BETTER_AMF0 h/h_f_feelbett_am
+H_BETTER_AMF1 h/h_f_trick_am
+H_BETTER_AMF2 h/h_f_shotgo_am
+
+
+//**NPC chatter
+
+NPC_OK_AM0 h/npc_m_yesdo_am
+NPC_OK_AM1 h/npc_m_right_am
+NPC_OK_AM2 h/npc_m_ok_am
+
+
+NPC_WAIT_AM0 h/npc_m_waithere_am
+NPC_WAIT_AM1 h/npc_m_stayhere_am
+NPC_WAIT_AM2 h/npc_m_movemusc_am
+
+NPC_STOP_AM0 h/npc_m_notfurth_am
+
+NPC_STARE_AM0 h/npc_m_lookme_am
+NPC_STARE_AM1 h/npc_m_yousure_am
+
+NPC_HELLO_AM0 h/npc_m_hello_am
+NPC_HELLO_AM1 h/npc_m_officer_am
+
+NPC_ANSWER_AM0 h/npc_m_iworried_am
+NPC_ANSWER_AM1 h/npc_m_canttell_am
+NPC_ANSWER_AM2 h/npc_m_whatdoth_am
+NPC_ANSWER_AM3 h/npc_m_dontid_am
+
+NPC_QUESTION_AM0 h/npc_m_whatgon_am
+NPC_QUESTION_AM1 h/npc_m_didhear_am
+NPC_QUESTION_AM2 h/npc_m_whoare_am
+NPC_QUESTION_AM3 h/npc_m_thosepol_am
+
+NPC_IDLE_AM0 h/npc_m_howhapp_am
+NPC_IDLE_AM1 h/npc_m_whyme_am
+NPC_IDLE_AM2 h/npc_m_sudden_am
+NPC_IDLE_AM3 h/npc_m_whatgo_am
+
+NPC_NOGO_AM0 h/npc_m_dontgoth_am
+
+NPCONST_AM0 h/npc_m_iseeone_am
+NPCONST_AM1 h/npc_m_theyhere_am
+NPCONST_AM2 h/npc_m_theygotguns_am
+
+NPC_HEAR_AM0 h/npc_m_hearthat_am
+NPC_HEAR_AM1 h/npc_m_someover_am
+
+
+NPC_WOUND_AM h/npc_m_beenshot_am
+NPC_WOUND_AM h/npc_m_ow_am
+NPC_WOUND_AM h/npc_m_arg_am
+
+NPCORTAL_AM0 h/npc_m_notgoingm_am
+NPCORTAL_AM1 h/npc_m_noo_am
+NPCORTAL_AM2 h/npc_m_ahhh1_am
+
+NPC_CUREA_AM0 h/npc_m_youdontlo_am
+NPC_CUREA_AM1 h/npc_m_sureOK_am
+
+NPC_HEAL_AM0 h/npc_m_heretake_am
+NPC_HEAL_AM1 h/npc_m_letme_am
+
+NPC_PLFEAR_AM0 h/npc_m_thoughtc_am
+NPC_PLFEAR_AM1 h/npc_m_getawaym_am
+NPC_PLFEAR_AM2 h/npc_m_helost_am
+
+
+NPC_FEAR_AM0 h/npc_m_ahh2_am
+NPC_FEAR_AM1 h/npc_m_help2_am
+NPC_FEAR_AM2 h/npc_m_whatgo2_am
+
+NPC_SCREAM_AM0 h/npc_m_omg_am
+NPC_SCREAM_AM1 h/npc_m_helpme_am
+NPC_SCREAM_AM2 h/npc_m_ahh3_am
+NPC_SCREAM_AM3 h/npc_m_thisnot_am
+
+NPC_SCREAM_AM0 h/npc_m_whatstop_am
+NPC_SCREAM_AM1 h/npc_m_dontdo_am
+
+
+//**NPC female chatter
+
+
+NPC_OK_AMF0 h/npc_f_yesdo_am
+NPC_OK_AMF1 h/npc_f_right_am
+NPC_OK_AMF2 h/npc_f_ok_am
+
+NPC_WAIT_AMF0 h/npc_f_waithere_am
+NPC_WAIT_AMF1 h/npc_f_stayhere_am
+NPC_WAIT_AMF2 h/npc_f_movemusc_am
+
+NPC_STOP_AMF0 h/npc_f_notfurth_am
+
+NPC_STARE_AMF0 h/npc_f_lookme_am
+NPC_STARE_AMF1 h/npc_f_yousure_am
+
+NPC_HELLO_AMF0 h/npc_f_hello_am
+NPC_HELLO_AMF1 h/npc_f_officer_am
+
+NPC_ANSWER_AMF0 h/npc_f_iworried_am
+NPC_ANSWER_AMF1 h/npc_f_canttell_am
+NPC_ANSWER_AMF2 h/npc_f_whatdoth_am
+NPC_ANSWER_AMF3 h/npc_f_dontid_am
+
+NPC_QUESTION_AMF0 h/npc_f_whatgon_am
+NPC_QUESTION_AMF1 h/npc_f_didhear_am
+NPC_QUESTION_AMF2 h/npc_f_whoare_am
+NPC_QUESTION_AMF3 h/npc_f_thosepol_am
+
+NPC_IDLE_AMF0 h/npc_f_howhapp_am
+NPC_IDLE_AMF1 h/npc_f_whyme_am
+NPC_IDLE_AMF2 h/npc_f_sudden_am
+NPC_IDLE_AMF3 h/npc_f_whatgo_am
+
+NPC_NOGO_AMF0 h/npc_f_dontgoth_am
+
+NPCONST_AMF0 h/npc_f_iseeone_am
+NPCONST_AMF1 h/npc_f_theyhere_am
+NPCONST_AMF2 h/npc_f_theygotguns_am
+
+NPC_HEAR_AMF0 h/npc_f_hearthat_am
+NPC_HEAR_AMF1 h/npc_f_someover_am
+
+
+NPC_WOUND_AMF0 h/npc_f_beenshot_am
+NPC_WOUND_AMF1 h/npc_f_ow_am
+NPC_WOUND_AMF2 h/npc_f_arg_am
+
+NPCORTAL_AMF0 h/npc_f_notgoingm_am
+NPCORTAL_AMF1 h/npc_f_noo_am
+NPCORTAL_AMF2 h/npc_f_ahhh1_am
+
+NPC_CUREA_AMF0 h/npc_f_youdontlo_am
+NPC_CUREA_AMF1 h/npc_f_sureOK_am
+
+NPC_HEAL_AMF0 h/npc_f_heretake_am
+NPC_HEAL_AMF1 h/npc_f_letme_am
+
+NPC_PLFEAR_AMF0 h/npc_f_thoughtc_am
+NPC_PLFEAR_AMF1 h/npc_f_getawaym_am
+NPC_PLFEAR_AMF2 h/npc_f_helost_am
+
+
+NPCEAR_AMF0 h/npc_f_ahh2_am
+NPCEAR_AMF1 h/npc_f_help2_am
+NPCEAR_AMF2 h/npc_f_whatgo2_am
+
+NPC_SCREAM_AMF0 h/npc_f_omg_am
+NPC_SCREAM_AMF1 h/npc_f_helpme_am
+NPC_SCREAM_AMF2 h/npc_f_ahh3_am
+NPC_SCREAM_AMF3 h/npc_f_thisnot_am
+
+NPC_SCREAM_AMF0 h/npc_f_whatstop_am
+NPC_SCREAM_AMF1 h/npc_f_dontdo_am
+
+}
+
+%kill_f
+{
+	#firetargets = "fail"
+	#pause = 5
+	@FailureStyle
+	#text = "#LOSTC_FAIL1"
+}
+
+%caught
+{
+	#firetargets = "fail0"
+	#pause = 5
+	@FailureStyle
+	#text = "#LOSTC_FAIL2"
+}
+
+%ct_killed
+{
+	@FailureStyle
+	#text = "#LOSTC_FAIL3"
+}
+
+%level_start
+{
+	#firetargets = "hudOff"
+	#firetargets = "freeze"
+	
+	#pause = .1
+	#firetargets = "saveStart"
+	
+	#pause = .1
+	
+	#firetargets = "fadeStart"
+	#firetargets = "intro_music"
+	
+	#pause = 1
+	
+	
+	@TitleStyle		#text = "#LOSTCAUSE_TITLE"
+	
+	#pause = 5
+	
+	@SubtitleStyle	#text = "#LOSTCAUSE_SUBTITLE"
+	
+	#pause = 6.5
+	
+	#sound = dialogIntro
+	
+	#pause = 4
+	
+	#firetargets = "freeze"
+	
+	#pause = .25
+	
+	#firetargets = "hudOn"
+	#firetargets = "equipPlayer"	
+	
+	#pause = .1
+	
+	#firetargets = "equipCam"
+		
+}
+
+%FoundHostages
+{
+	#firetargets = "changetStart"	
+	
+	#sound = dialogFoundHostages
+	#firetargets = "freeze"
+	#firetargets = "new_objective02_complete" // KILTRON
+	
+	#pause = 4
+	
+	#firetargets = "new_objective03_sequence" // KILTRON
+	#firetargets = "soundAttack"
+	#firetargets = "ct_attack_manager" // NEW
+	#firetargets = "soundChat"
+	#pause = 2
+	
+	#sound = dialogFDown
+	
+	#pause = 2
+	
+	#firetargets = "changeStealth"
+	#firetargets = "freeze"
+	
+	#firetargets = "manStartSeq" 
+	
+	#pause = .5
+	
+	#killtargets = "t59"
+	
+	#pause = 4
+	
+	#sound = dialogGet
+	
+}
+
+%StartBoom
+{
+	#firetargets = "relayHole1"
+	
+	#pause = 1.5
+	
+	#sound = dialogCareful
+}
+
+
+%AtHostages
+{
+	
+	#firetargets = "musicHostages"
+	#firetargets = "latch_door1" // KILTRON
+	#firetargets = "new_objective03_complete" // KILTRON
+	#pause = 1
+	
+	#sound = dialogAtHostages,
+		speaker = ctLeader
+		
+	#firetargets = "manHostages"
+	#firetargets = "new_objective04_sequence" // KILTRON
+	#pause = 3
+	#firetargets = "gsg9guard1_cantalknow" // KILTRON
+
+}
+
+%DialogTrap
+{
+
+	#firetargets = "soundExp"
+	#firetargets = "shake"
+	#firetargets = "soundFire1"
+	
+	#pause = 1
+	
+	#sound = dialogTraps
+
+}
+
+%dialogHurry
+{
+	#sound = dialogDelay,
+	speaker = ctLeader
+}
+
+%whos_over_there
+{
+
+	#text="",
+	sound=dialogWhosOverThere,
+	speaker = tStart,
+	pause = 4
+
+}
+
+%whos_over_there2
+{
+
+	#text="",
+	sound=dialogSworeIHeard,
+	speaker = tStart,
+	pause = 4
+
+}
+
+%is_anyone_there
+{
+
+	#text="",
+	sound=dialogIsAnyoneThere,
+	speaker = tStart1,
+	pause = 4
+
+}
+
+%female_hostage1_use
+{
+
+	#text="",
+	sound=female_hostage1_talk,
+	speaker = female_hostage1,
+	pause = 4
+
+}
+
+%male_hostage1_use
+{
+
+	#text="",
+	sound=male_hostage1_talk,
+	speaker = male_hostage1,
+	pause = 4
+
+}
+
+%male_hostage2_use
+{
+
+	#text="",
+	sound=male_hostage2_talk,
+	speaker = male_hostage2,
+	pause = 4
+
+}
+
+%gsg9guard1_use
+{
+
+	#text="",
+	sound=gsg9guard1_talk,
+	speaker = ctLeader,
+	pause = 4
+
+}
+
+%gsg9guard2_use
+{
+
+	#text="",
+	sound=gsg9guard2_talk,
+	speaker = gsg9guard2_child,
+	pause = 4
+
+}
+
+//=============================================
+// Mission Objectives
+//=============================================
+
+%new_objective01
+{
+	@ObjectiveStyle	#text = "#OBJ1_LCAUSE_NEW", //#text = "NEW OBJECTIVE: Use Fiber Optic Camera to locate hostages"
+				firetargets="new_objective01_complete"
+}
+
+%new_objective02
+{
+	@ObjectiveStyle	#text = "#OBJ2_LCAUSE_NEW", //#text = "NEW OBJECTIVE: Report hostage positions to CNC"
+				firetargets="new_objective02_complete"
+}
+
+%new_objective03
+{
+	@ObjectiveStyle	#text = "#OBJ3_LCAUSE_NEW", //#text = "Enter compound and provide support to assault team"
+				firetargets="new_objective03_complete"
+}
+
+%new_objective04
+{
+	@ObjectiveStyle	#text = "#OBJ4_LCAUSE_NEW", //#text = "NEW OBJECTIVE: Clear path for assault team to the docks"
+				firetargets="new_objective04_complete"
+}
+
+

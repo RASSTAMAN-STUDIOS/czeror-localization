@@ -1,0 +1,379 @@
+!sentences
+{
+	cnc_beady0 hankagai/cnc_beady
+	seal1_rogherthat0 hankagai/seal1_rogherthat
+	seal1_getkill0 hankagai/seal1_getkill
+	seal1_grandst0 hankagai/seal1_grandst
+	seal1_heyget0 hankagai/seal1_heyget
+	cnc_courtsec0 hankagai/cnc_courtsec
+	cnc_yoshent0 hankagai/cnc_yoshent
+	cnc_shotfir0 hankagai/cnc_shotfir
+	cnc_ytosafe0 hankagai/cnc_ytosafe
+	cnc_catchup0 hankagai/cnc_catchup
+	cnc_keepaftert0 hankagai/cnc_keepaftert
+	clerk_mayih0 hankagai/clerk_mayih
+	clerk_finebook0 hankagai/clerk_finebook
+	clerk_browse0 hankagai/clerk_browse
+	clerkf_manyfine0 hankagai/clerkf_manyfine
+	clerkf_likecl0 hankagai/clerkf_likecl
+	clerkf_combgear0 hankagai/clerkf_combgear
+	clerkf_mangun0 hankagai/clerkf_mangun
+	clerkf_scream0 hankagai/femhos_ahh
+	schoolg_somany0 hankagai/schoolg_somany
+	schoolg_pika0 hankagai/schoolg_pika
+	schoolg_nerv0 hankagai/schoolg_nerv
+	cnc_chasedmn0 hankagai/cnc_chasedmn
+	cnc_invite0 hankagai/cnc_invite
+	snip_youcant0 hankagai/snip_youcant
+	snip_outwayo0 hankagai/snip_outwayo
+	snip_stophim0 hankagai/snip_stophim
+	snip_dontlet0 hankagai/snip_dontlet
+	scom_anyhos0 hankagai/scom_anyhos
+	scom_wipeout0 hankagai/scom_wipeout
+
+	NPC_OK_JA0 npc/npc_m_yesdo_ja
+	NPC_OK_JA1 npc/npc_m_right_ja
+	NPC_OK_JA2 npc/npc_m_ok_ja
+
+	NPC_WAIT_JA0 npc/npc_m_waithere_ja
+	NPC_WAIT_JA1 npc/npc_m_stayhere_ja
+	NPC_WAIT_JA2 npc/npc_m_movemusc_ja
+
+	NPC_STOP_JA0 npc/npc_m_notfurth_ja
+
+	NPC_STARE_JA0 npc/npc_m_lookme_ja
+	NPC_STARE_JA1 npc/npc_m_yousure_ja
+
+	NPC_HELLO_JA0 npc/npc_m_hello_ja
+	NPC_HELLO_JA1 npc/npc_m_officer_ja
+
+	NPC_ANSWER_JA0 npc/npc_m_iworried_ja
+	NPC_ANSWER_JA1 npc/npc_m_canttell_ja
+	NPC_ANSWER_JA2 npc/npc_m_whatdoth_ja
+	NPC_ANSWER_JA3 npc/npc_m_dontid_ja
+
+	NPC_QUESTION_JA0 npc/npc_m_whatgon_ja
+	NPC_QUESTION_JA1 npc/npc_m_didhear_ja
+	NPC_QUESTION_JA2 npc/npc_m_whoare_ja
+	NPC_QUESTION_JA3 npc/npc_m_thosepol_ja
+
+	NPC_IDLE_JA0 npc/npc_m_howhapp_ja
+	NPC_IDLE_JA1 npc/npc_m_whyme_ja
+	NPC_IDLE_JA2 npc/npc_m_sudden_ja
+	NPC_IDLE_JA3 npc/npc_m_whatgo_ja
+
+	NPC_NOGO_JA0 npc/npc_m_dontgoth_ja
+
+	NPC_MONST_JA0 npc/npc_m_iseeone_ja
+	NPC_MONST_JA1 npc/npc_m_theyhere_ja
+	NPC_MONST_JA2 npc/npc_m_theygotguns_ja
+
+	NPC_HEAR_JA0 npc/npc_m_hearthat_ja
+	NPC_HEAR_JA1 npc/npc_m_someover_ja
+
+
+	NPC_WOUND_JA npc/npc_m_beenshot_ja
+	NPC_WOUND_JA npc/npc_m_ow_ja
+	NPC_WOUND_JA npc/npc_m_arg_ja
+
+	NPC_MORTAL_JA0 npc/npc_m_notgoingm_ja
+	NPC_MORTAL_JA1 npc/npc_m_noo_ja
+	NPC_MORTAL_JA2 npc/npc_m_ahhh1_ja
+
+	NPC_CUREA_JA0 npc/npc_m_youdontlo_ja
+	NPC_CUREA_JA1 npc/npc_m_sureOK_ja
+
+	NPC_HEAL_JA0 npc/npc_m_heretake_ja
+	NPC_HEAL_JA1 npc/npc_m_letme_ja
+
+	NPC_PLFEAR_JA0 npc/npc_m_thoughtc_ja
+	NPC_PLFEAR_JA1 npc/npc_m_getawaym_ja
+	NPC_PLFEAR_JA2 npc/npc_m_helost_ja
+
+	NPC_PAIN_JA0 h/h_m_pain1_ja
+	NPC_PAIN_JA1 h/h_m_pain2_ja
+	NPC_PAIN_JA2 h/h_m_pain3_ja
+
+	NPC_FEAR_JA0 npc/npc_m_help2_ja
+	NPC_FEAR_JA1 npc/npc_m_whatgo2_ja
+
+	NPC_SCREAM_JA0 npc/npc_m_omg_ja
+	NPC_SCREAM_JA1 npc/npc_m_helpme_ja
+	NPC_SCREAM_JA2 npc/npc_m_ahh3_ja
+	NPC_SCREAM_JA3 npc/npc_m_thisnot_ja
+	NPC_SCREAM_JA4 npc/npc_m_whatstop_ja
+	NPC_SCREAM_JA5 npc/npc_m_dontdo_ja
+
+
+	//**NPC female chatter
+
+
+	NPC_OK_JAF0 npc/npc_f_yesdo_ja
+	NPC_OK_JAF1 npc/npc_f_right_ja
+	NPC_OK_JAF2 npc/npc_f_ok_ja
+
+	NPC_WAIT_JAF0 npc/npc_f_waithere_ja
+	NPC_WAIT_JAF1 npc/npc_f_stayhere_ja
+	NPC_WAIT_JAF2 npc/npc_f_movemusc_ja
+
+	NPC_STOP_JAF0 npc/npc_f_notfurth_ja
+
+	NPC_STARE_JAF0 npc/npc_f_lookme_ja
+	NPC_STARE_JAF1 npc/npc_f_yousure_ja
+
+	NPC_HELLO_JAF0 npc/npc_f_hello_ja
+	NPC_HELLO_JAF1 npc/npc_f_officer_ja
+
+	NPC_ANSWER_JAF0 npc/npc_f_iworried_ja
+	NPC_ANSWER_JAF1 npc/npc_f_canttell_ja
+	NPC_ANSWER_JAF2 npc/npc_f_whatdoth_ja
+	NPC_ANSWER_JAF3 npc/npc_f_dontid_ja
+
+	NPC_QUESTION_JAF0 npc/npc_f_whatgon_ja
+	NPC_QUESTION_JAF1 npc/npc_f_didhear_ja
+	NPC_QUESTION_JAF2 npc/npc_f_whoare_ja
+	NPC_QUESTION_JAF3 npc/npc_f_thosepol_ja
+
+	NPC_IDLE_JAF0 npc/npc_f_howhapp_ja
+	NPC_IDLE_JAF1 npc/npc_f_whyme_ja
+	NPC_IDLE_JAF2 npc/npc_f_sudden_ja
+	NPC_IDLE_JAF3 npc/npc_f_whatgo_ja
+
+	NPC_NOGO_JAF0 npc/npc_f_dontgoth_ja
+
+	NPC_MONST_JAF0 npc/npc_f_iseeone_ja
+	NPC_MONST_JAF1 npc/npc_f_theyhere_ja
+	NPC_MONST_JAF2 npc/npc_f_theygotguns_ja
+
+	NPC_HEAR_JAF0 npc/npc_f_hearthat_ja
+	NPC_HEAR_JAF1 npc/npc_f_someover_ja
+
+
+	NPC_WOUND_JAF0 npc/npc_f_beenshot_ja
+	NPC_WOUND_JAF1 npc/npc_f_ow_ja
+	NPC_WOUND_JAF2 npc/npc_f_arg_ja
+
+	NPC_MORTAL_JAF0 npc/npc_f_notgoingm_ja
+	NPC_MORTAL_JAF1 npc/npc_f_noo_ja
+	NPC_MORTAL_JAF2 npc/npc_f_ahhh1_ja
+
+	NPC_CUREA_JAF0 npc/npc_f_youdontlo_ja
+	NPC_CUREA_JAF1 npc/npc_f_sureOK_ja
+
+	NPC_HEAL_JAF0 npc/npc_f_heretake_ja
+	NPC_HEAL_JAF1 npc/npc_f_letme_ja
+
+	NPC_PLFEAR_JAF0 npc/npc_f_thoughtc_ja
+	NPC_PLFEAR_JAF1 npc/npc_f_getawaym_ja
+	NPC_PLFEAR_JAF2 npc/npc_f_helost_ja
+
+	NPC_PAIN_JAF0 h/h_f_pain1_ja
+	NPC_PAIN_JAF1 h/h_f_pain2_ja
+	NPC_PAIN_JAF2 h/h_f_pain3_ja
+
+	NPC_FEAR_JAF0 npc/npc_f_ahh2_ja
+	NPC_FEAR_JAF1 npc/npc_f_whatgo2_ja
+
+	NPC_SCREAM_JAF0 npc/npc_f_omg_ja
+	NPC_SCREAM_JAF1 npc/npc_f_helpme_ja
+	NPC_SCREAM_JAF2 npc/npc_f_ahh3_ja
+	NPC_SCREAM_JAF3 npc/npc_f_thisnot_ja
+	NPC_SCREAM_JAF4 npc/npc_f_whatstop_ja
+	NPC_SCREAM_JAF5 npc/npc_f_dontdo_ja
+
+	
+}
+
+%clothingstore_clerk
+{	
+	@NPC1Style
+	$speaker = clothingstore_clerk 
+	$listener = player
+}
+
+%furn_store_clerk
+{	
+	@NPC2Style
+	$speaker = furn_store_clerk
+	$listener = player 
+}
+
+%backalley
+{
+	#firetargets="backalley_thugs"
+}
+
+%backalley_run_out
+{
+	#firetargets="tosh_yell_music"
+	@T1Style
+	#text="#HANKAGAI_STOPHIM"
+	#sound=snip_stophim,
+	pause = 2
+	#firetargets="ladder_escape1"
+	#pause = .7
+	#firetargets="ladder_escape2"
+	#pause = .6
+	#firetargets="ladder_escape3"
+	#pause = .5
+	#firetargets="ladder_escape4"
+	#pause = .6
+	#firetargets="ladder_escape5"
+	#pause = .4
+}
+
+%vent_leave_seq
+{
+	#firetargets="vent_leave"
+	#pause = 1
+	#firetargets="vent_land"
+}
+
+%clothingstore_clerk_wave
+{
+	#firetargets="clothingstore_clerk_frantic"
+	#pause = 3.5
+	#firetargets="clerk_wave_again"
+}
+
+%kill_windowjump
+{
+	#killtargets="windowjump_trig"
+	#killtargets="clothingstore_clerk_wave"
+	#killtargets="clerk_wave_again"
+	#firetargets="clothingstore_clerk_ck3"
+	#killtargets="r_sniper2a"
+}
+
+%snipe2_run6
+{	
+	#pause = .1
+	#killtargets="window_b_trig"
+	#killtargets="window_a_trig"
+	#firetargets="behind_you_sp"
+	#firetargets="clothingstore_clerk_seq4"
+	#pause = .1
+	#firetargets="kill_sniper2a"
+	#killtargets="kill_windowjump_trig"
+	#firetargets="window_jump_bu_sp"
+	#firetargets="hall_door2"
+	#pause = .3
+	#firetargets="window_jump_brk"
+	#firetargets="backhall_guard_ck"
+	#pause = .3
+	#firetargets="hall_door2"
+	#pause = .2
+	#firetargets="hall_shout"
+	#firetargets="tosh_yell_music"
+	@T1Style
+	#text="#HANKAGAI_DONTLET"
+	#pause = .75
+	#firetargets="hall_door1"
+}
+
+%roofbreak_seq
+{
+	#firetargets="roofbreak_exp"
+	#firetargets="roofbreak_expsprite"
+	#firetargets="roofbreak_glass1"
+	#firetargets="roofbreak"
+	#pause = .2
+	#killtargets="law"
+	#pause = .05
+	#firetargets="law_swap"
+	#pause = .1	
+	#firetargets="roofbreak_glass2"
+	#firetargets="roofbreak_side"
+	#pause = .1 
+	#firetargets="roofbreak_glass3"
+	#firetargets="roofbreak_beam"
+	#pause = .2
+	#firetargets="roofbreak_roof"
+	#firetargets="ceiling_brk_lt1"
+	#firetargets="ceiling_brk_lt2"
+}
+
+%clothingstore_clerk_seq1
+{
+	#firetargets="clothingstore_clerk_ck1"
+	@clothingstore_clerk
+	//#text="You like clothes? We got clothes!."
+	#sound=clerkf_likecl,
+	pause = 2.5
+
+}
+
+%clothingstore_clerk_seq2
+{
+	#firetargets="clothingstore_clerk_ck2"
+	@clothingstore_clerk
+	//#text="The whole combat gear look is so last year."
+	#sound=clerkf_combgear,
+	pause = 3
+}
+
+%clothingstore_clerk_seq3
+{
+	#killtargets="clerk_wave_again"
+	#killtargets="clothingstore_clerk_wave"
+	@clothingstore_clerk
+	//#text="There's a man with a gun...over there..."
+	#sound=clerkf_mangun
+	#firetargets="clothingstore_clerk_point"
+} 
+
+%clothingstore_clerk_seq4
+{
+	@clothingstore_clerk
+	#sound=NPC_QUESTION_JAF,
+	pause = 3
+	#firetargets="cl_clerk_uncower"
+}
+
+%furn_clerk_seq1
+{
+	@furn_store_clerk
+
+	//#text="We have many fine products."
+	#sound=clerkf_manyfine,
+
+	pause = 3
+}
+
+%furn_clerk_seq2
+{
+	@furn_store_clerk
+	#sound=NPC_SCREAM_JAF,
+	pause = 3
+	#firetargets="furn_clerk_uncower"
+}
+
+%move_player_snd
+{
+	#pause = 1
+	@RadioStyle
+	//#text="Chase down that sniper, chikusho!"
+	#sound=cnc_chasedmn,
+	pause = 67
+	@RadioStyle
+	//#text="Keep after Toshifune, don't let him get away!"
+	#sound=cnc_keepaftert
+	#pause = 67
+	@RadioStyle
+	//#text="Are you waiting for an invitation?!"
+	#sound=cnc_invite,
+	pause = 67
+	@RadioStyle
+	//#text="You're going to lose him!"
+	#sound=cnc_yougolose
+	#pause = 67
+	#repeat = -1
+}
+
+%npc_failure
+{
+	#firetargets="mission_fail"
+	#pause = 3
+	@FailureStyle
+	#text="#HANKAGAI_NPC_FAIL_MSG"
+}

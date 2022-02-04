@@ -1,0 +1,209 @@
+!sentences
+{
+	// ==============================================================
+	// Building Recon Mission
+	// When player first enters area he is directed to the breifing room
+	// ==============================================================
+	// Ahh yes you're finally here. The briefing is in the room in the back. Good luck sir 
+	Welcome_1_talkguy0 brecon/ow1_welcome1 
+	
+	// Welcome_1use1_talkguy0 brecon/ow1_getin
+	Welcome_1use1_talkguy1 brecon/ow1_waiting
+
+	// SAS dude tells you to step inside
+	// Step inside the office, Sir.
+	Welcome_2_talkguy0 brecon/sas1_stepins
+	
+	// Welcome_2use1_talkguy0 brecon/sas1_clrthroat
+	Welcome_2use1_talkguy1 brecon/sas1_stepins
+
+	// guy bitches at copy machine
+	// Damn this copy machine!
+	Welcome_3_talkguy0 brecon/ow2_damncopy
+
+	// Welcome_3use1_talkguy0 brecon/ow2_hello
+	Welcome_3use1_talkguy1 brecon/ow2_behind
+
+	// ==============================================================
+	// Mission Breifing starts here
+	// ==============================================================
+	SAS_01_Commander0 brecon/sasg_oklads
+	// wav_time_8.522   
+	SAS_02_Commander0 brecon/sasg_rafint
+	// wav_time_9.473
+	SAS_03_Commander0 brecon/sasg_gosilent
+	// wav_time_9.799
+	SAS_04_Commander0 brecon/sasg_ifbomb
+	// wav_time_4.470
+	SAS_07_Commander0 brecon/sasg_good
+	// wav_time_2.270
+}
+ 
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%SAS_Commander
+{
+	@CT1Style
+	$speaker	= guy1 
+	$listener	= Player
+}
+
+%SAS_Soldier
+{
+	@CT1Style
+	// $speaker	= 
+	$listener	= Player
+}
+
+%NPC_guy1
+{
+	@NPC1Style
+	// $speaker	= 
+	$listener	= Player
+}
+
+%NPC_guy2
+{
+	@NPC1Style
+	// $speaker	= 
+	$listener	= Player
+}
+
+%NPC_guy3
+{
+	@NPC1Style
+	// $speaker	= 
+	$listener	= Player
+}
+
+//---------------------------------------------------------------------------
+// The mission title
+//---------------------------------------------------------------------------
+%titletext
+{
+	#pause = .4	
+
+	@TitleStyle
+	#text = "#BRECON_TITLE"
+
+	#pause = 2.0
+
+	@SubtitleStyle
+	#text = "#BRecon_SUBTITLE"
+
+}
+
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%Use_talk01
+{
+
+		@NPC_guy1	#sound=Welcome_1use1_talkguy, 
+			speaker=heyman0
+			// text="They have been waiting a while, Sir."
+
+}
+
+%Use_talk02
+{
+
+	@NPC_guy2	#sound=Welcome_2use1_talkguy, 
+		speaker=guard1
+			// text="Step inside the office, Sir."
+
+}
+
+%Use_talk03
+{
+
+	@NPC_guy3	#sound=Welcome_1use1_talkguy, 
+		speaker=heyman
+			// text="Aren't you running a little behind?"
+
+}
+
+
+
+%welcome1
+{
+	#firetargets="Play_welcome_anim"
+	@NPC_guy2	#sound=Welcome_1_talkguy, 
+		speaker=welcome1,
+		pause = 5 
+		// text="Ahh yes you're finally here. The briefing is in the 
+		// 	room in the back. Good luck, Sir.",
+		//	firetargets="Play_welcome_anim"
+
+	#pause = 5 
+	#firetargets="t128"
+}
+
+%welcome2
+{
+	@NPC_guy2	#sound=Welcome_3_talkguy, 
+		speaker=heyman,
+		pause = 1.3 
+		// text="Bloody copy machine!"
+	
+	@SAS_Soldier	#sound=Welcome_2_talkguy, 
+		speaker=guard1,
+		pause = 5 
+		// text="Step inside the office, Sir."
+}
+
+%missionB01
+{
+	@SAS_Commander	#sound=SAS_01_Commander 
+		// speaker=guy1 
+		// text="Ok lads, we're going into a Broken Arrow situation 
+		//	--  a missing nuke - possibly in the hands of a 
+		//	suspected terrorist group." 
+	#pause = 8.522 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+	
+	#firetargets="Commander_anim12"
+	#firetargets="pic1",
+		pause = 4
+
+	@SAS_Commander	#sound=SAS_02_Commander 
+		// speaker=guy1,
+		// text="RAF Intel has identified a warehouse where the 
+		//	weapon could possibly be located, but it's dodgy. 
+		//	We'll have to go in to verify the presence 
+		//	of the device." 
+	#pause = 9.473 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+	
+	@SAS_Commander	#firetargets="Commander_anim12"
+	@SAS_Commander	#firetargets="pic2",
+	 	pause = 4
+
+	@SAS_Commander	#sound=SAS_03_Commander 
+		// speaker=guy1, 
+		// text="We're going in silent at first, since we have no 
+		//	solid information on this terrorist group, or 
+		//	if the bomb is actually in their hands- so belt up!" 
+		#firetargets="Commander_anim11",
+			pause = 9.799 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@SAS_Commander	#sound=SAS_04_Commander
+		// speaker=guy1, 
+		// text="If a bomb is located, we will engage enemy forces 
+		// 	and capture the weapon." 
+		#pause = 4.470 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@SAS_Commander	#sound=SAS_07_Commander 
+		// speaker=guy1, 
+		// text="Right lads…lets get this show on the road…" 
+	#pause = 2.270 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+	
+	#firetargets="t3",
+		pause = 2
+	
+	#firetargets="t4",
+		pause = 4
+
+}

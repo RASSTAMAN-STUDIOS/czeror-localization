@@ -1,0 +1,758 @@
+!sentences
+{
+	okano_bringme0 truth/okano_bringme
+	okano_getgo0 truth/okano_getgo
+	cnc_morevx0 truth/cnc_morevx
+	okano_takecare0 truth/okano_takecare
+	okano_takecaref0 truth/okano_takecare2
+	okano_hosres0 truth/okano_hosres
+	cnc_makes0 truth/cnc_makes
+	cnc_nicework0 truth/cnc_nicework
+	cnc_makesure0 truth/cnc_makesure
+	cnc_okanmove0 truth/cnc_okanmove
+	cnc_sniptake0 truth/cnc_sniptake
+	cnc_tnkhelp0 truth/cnc_tnkhelp
+	hos2_notdo0 truth/hos2_notdo
+	clan5_turnc0 truth/clan5_turnc
+	hos2_toll0 truth/hos2_toll
+	clan5_catasit0 truth/clan5_catasit
+	clan5_intgas0 truth/clan5_intgas
+	clan7_dielikerest0 truth/clan7_dielikerest
+	cnc_vxlook0 truth/cnc_vxlook
+	cnc_noted0 truth/cnc_noted
+	cnc_shouldcont0 truth/cnc_shouldcont
+	cnc_makehostages0 truth/cnc_makehostages
+	cnc_losthos0 truth/cnc_losthos
+	cnc_notone0 truth/cnc_notone
+	unitdown0 truth/unitdown
+
+	//hostage chatter
+
+
+	H_HELP_JA0 h/h_m_getmeout_ja
+	H_HELP_JA1 h/h_m_okletsgo_ja
+	H_HELP_JA2 h/h_m_gethellout_ja
+	H_HELP_JA3 h/h_m_ohlets_ja
+
+	H_THANK_JA0 h/h_m_thanksave_ja
+	H_THANK_JA1 h/h_m_owelife_ja
+	H_THANK_JA2 h/h_m_gladover_ja
+	H_THANK_JA3 h/h_m_thanks_ja
+
+	H_PAIN_JA0 h/h_m_pain1_ja
+	H_PAIN_JA1 h/h_m_pain2_ja
+	H_PAIN_JA2 h/h_m_pain3_ja
+
+	H_DEATH_JA0 h/h_m_death1_ja
+	H_DEATH_JA1 h/h_m_death2_ja
+	H_DEATH_JA2 h/h_m_death3_ja
+	H_DEATH_JA3 h/h_m_death4_ja
+
+	H_PLFEAR_JA0 h/h_m_mygodw_ja
+	H_PLFEAR_JA1 h/h_m_ithought_ja
+	H_PLFEAR_JA2 h/h_m_pleasenok_ja
+
+	H_FEAR_JA0 h/h_m_dontdie_ja
+	H_FEAR_JA1 h/h_m_yousavr_ja
+	H_FEAR_JA2 h/h_m_wherewego_ja
+
+	H_SCREAM_JA0 h/h_m_ahh1_ja
+	H_SCREAM_JA1 h/h_m_lookout_ja
+	H_SCREAM_JA2 h/h_m_they'rehere_ja
+
+	H_SICK_JA0 h/h_m_cantgo_ja
+	H_SICK_JA1 h/h_m_toosick_ja
+	H_SICK_JA2 h/h_m_goinpuke_ja
+
+	H_BETTER_JA0 h/h_m_feelmuch_ja
+	H_BETTER_JA1 h/h_m_didtr_ja
+	H_BETTER_JA2 h/h_m_thankshot_ja
+
+	//**hostage female chatter
+
+	H_HELP_JAF0 h/h_f_mygoodp_ja
+	H_HELP_JAF1 h/h_f_neverbeen_ja
+	H_HELP_JAF2 h/h_f_scaredp_ja
+
+	H_THANK_JAF0 h/h_f_thankf_ja
+	H_THANK_JAF1 h/h_f_veryb_ja
+	H_THANK_JAF2 h/h_f_courage_ja
+
+	H_PAIN_JAF0 h/h_f_pain1_ja
+	H_PAIN_JAF1 h/h_f_pain2_ja
+	H_PAIN_JAF2 h/h_f_pain3_ja
+
+	H_DEATH_JAF0 h/h_f_death1_ja
+	H_DEATH_JAF1 h/h_f_death2_ja
+	H_DEATH_JAF2 h/h_f_death3_ja
+	H_DEATH_JAF3 h/h_f_death4_ja
+
+	H_PLFEAR_JAF0 h/h_f_mygod_ja
+	H_PLFEAR_JAF1 h/h_f_myside_ja
+	H_PLFEAR_JAF2 h/h_f_plsnokill_ja
+
+	H_HEAR_JAF0 h/h_f_ohhelp_ja
+	H_HEAR_JAF1 h/h_f_ohmy_ja
+	H_HEAR_JAF2 h/h_f_help_ja
+
+	H_SCREAM_JAF0 h/h_f_ahh1_ja
+	H_SCREAM_JAF1 h/h_f_lookout_ja
+	H_SCREAM_JAF2 h/h_f_theyhere_ja
+
+	H_SICK_JAF0 h/h_f_dontfeel_ja
+	H_SICK_JAF1 h/h_f_toosick_ja
+	H_SICK_JAF2 h/h_f_puke_ja
+
+	H_BETTER_JAF0 h/h_f_feelbett_ja
+	H_BETTER_JAF1 h/h_f_trick_ja
+	H_BETTER_JAF2 h/h_f_shotgo_ja
+
+	NPC_WAIT_JA0 npc/npc_m_waithere_ja
+	NPC_WAIT_JA1 npc/npc_m_stayhere_ja
+	NPC_WAIT_JA2 npc/npc_m_movemusc_ja
+
+	NPC_WAIT_JAF0 npc/npc_f_waithere_ja
+	NPC_WAIT_JAF1 npc/npc_f_stayhere_ja
+	NPC_WAIT_JAF2 npc/npc_f_movemusc_ja
+}
+
+%okano
+{
+	@CT1Style
+	$speaker	= okano
+	$listener	= player
+}
+
+%backroom_terror
+{
+	@T1Style
+	$speaker	= backroom_terror
+	$listener	= hostage2
+}
+
+%hostage2
+{
+	@NPC1Style
+	$speaker = hostage2
+	$listener = backroom_terror
+}
+
+%okano_coming
+{
+	@RadioStyle
+	//#text="Okano is moving in behind you.
+	//Bring hostages directly to him for extraction."
+	#sound=cnc_okanmove,
+	pause = 4.4
+	#firetargets="objective3"
+	@ObjectiveStyle
+	#text="#OBJ3_TRUTH_NEW"
+	#pause = 3
+	#firetargets="pa_steps"
+}
+
+%okano_use1
+{
+	#firetargets="safeguy_ck2"
+	@okano
+	//#text="Bring me the hostages."
+	#sound=okano_bringme,
+	pause = 1.5
+}
+
+%okano_use2
+{
+	#firetargets="safeguy_ck"
+	@okano
+	//#text="Get Going!
+	//There are still hostages that need assistance!"
+	#sound=okano_getgo,
+	pause = 3.7
+
+}
+
+%okano_use3
+{
+	@RadioStyle
+	//#text="We've got all the hostages, but there's still more VX to be located."
+	#sound=cnc_morevx
+	#pause = 3.5
+}
+
+%sniper_help
+{
+	#firetargets="sniper_shoot"
+	#pause = 1
+}
+
+%sniper_attk1
+{
+	#firetargets="sniper_shoot"
+	#pause = .5
+
+
+	#firetargets="cyard_ct_burst"
+	#pause = .5
+	@RadioStyle
+	//#text="We're pinned down by sniper fire from 
+	//the courtyard balcony. Take him out!"
+	#sound=cnc_sniptake
+	#pause = 3.9
+	#firetargets="objective4"
+	@ObjectiveStyle
+	#text="#OBJ4_TRUTH_NEW"
+	#firetargets="pa_2"
+	#pause = 30	
+	#firetargets="pa_3"
+	#pause = 30	
+	#firetargets="pa_4"
+}
+
+%sniper_attk
+{
+	#firetargets="cyard_ct_burst"
+	#pause = 1
+	#firetargets="cyard_ct_burst"
+	#pause = .5
+	#firetargets="sniper_shoot"
+}
+
+%postdojo_hall_act
+
+
+{
+	#firetargets="beamallstart"
+	#firetargets="safeguy_sp"
+	#firetargets="dojo_bars"
+	#firetargets="stair_rush_sp"
+	#pause = .5
+	#firetargets="rescue_point_ck"
+	#firetargets="fodder_killer"
+	#pause = 2
+	#firetargets="balcony_sniper"
+}
+
+%killsquad1
+{
+	#killtargets="ctsquad_ldr"
+	#killtargets="ctsquad_1"
+	#killtargets="ctsquad_2"
+}
+
+%beam_all_start
+{
+	#firetargets="beam0start"
+	#firetargets="beam1start"
+	#firetargets="beam2start"
+	#pause = .7
+	#firetargets="beam3start"
+	#firetargets="beam4start"
+	#firetargets="beam5start"
+}
+
+%beam_0_on
+{
+	#firetargets="beam0"
+	#firetargets="beam0_global"
+	#pause = 2.2
+	#firetargets="beam0"
+	#firetargets="beam0_global"
+	#pause = 5
+	#repeat = -1
+}
+
+%beam_1_on
+{
+	#firetargets="beam1"
+	#firetargets="beam1_global"
+	#pause = 2.2
+	#firetargets="beam1"
+	#firetargets="beam1_global"
+	#pause = 4
+	#repeat = -1
+}
+
+%beam_2_on
+{
+	#firetargets="beam2"
+	#firetargets="beam2_global"
+	#pause = 2.2
+	#firetargets="beam2"
+	#firetargets="beam2_global"
+	#pause = 3
+	#repeat = -1
+}
+
+%beam_3_on
+{
+	#firetargets="beam3"
+	#firetargets="beam3_global"
+	#pause = 2.2
+	#firetargets="beam3"
+	#firetargets="beam3_global"
+	#pause = 5
+	#repeat = -1
+}
+
+%beam_4_on
+{
+	#firetargets="beam4"
+	#firetargets="beam4_global"
+	#pause = 2.2
+	#firetargets="beam4"
+	#firetargets="beam4_global"
+	#pause = 4
+	#repeat = -1
+}
+
+%beam_5_on
+{
+	#firetargets="beam5"
+	#firetargets="beam5_global"
+	#pause = 2.2
+	#firetargets="beam5"
+	#firetargets="beam5_global"
+	#pause = 3
+	#repeat = -1
+}
+
+%alarm2_shutdown
+{
+	#killtargets="beam0"
+	#killtargets="beam0_global"
+	#killtargets="beam0start"
+	#killtargets="beam1"
+	#killtargets="beam1_global"
+	#killtargets="beam1start"
+	#killtargets="beam2"
+	#killtargets="beam2_global"
+	#killtargets="beam2start"
+	#killtargets="alarmtrigger2"
+	#firetargets="laser_snd2"
+	#firetargets="truth3_save"
+}
+
+%alarm1_shutdown
+{
+	#killtargets="beam3"
+	#killtargets="beam3_global"
+	#killtargets="beam3start"
+	#killtargets="beam4"
+	#killtargets="beam4_global"
+	#killtargets="beam4start"
+	#killtargets="beam5"
+	#killtargets="beam5_global"
+	#killtargets="beam5start"
+	#killtargets="alarmtrigger1"
+	#firetargets="laser_snd1"
+	#firetargets="truth3_save"
+}
+
+%sec_sys_shutdown
+{
+	#firetargets="sys_scrn_off"
+	#firetargets="sys_scrn_on"
+	#pause = .5
+	#firetargets="alarm1_btn"
+	#firetargets="alarm2_btn"
+}
+
+%courtyard_battle
+{
+	#pause = 1.5
+	@RadioStyle
+	//#text="Thanks for the help with the sniper.
+	//Proceed through the house with caution."
+	#sound=cnc_tnkhelp,
+	pause = 3.4
+	#firetargets="objective4"
+	#firetargets="CT_pinned_ck"
+	#pause = .5
+	#firetargets="ctsquad2l_seq1"
+	#pause = .5
+	#firetargets="ct_pinned_seq1"
+	#pause = 1
+	#firetargets="ctsquad22_seq1"
+	#firetargets="courtyard_porch_spawn"
+}
+
+%door2underseq
+{
+	#firetargets="d2u_spawn"
+	#pause = 1.
+	#firetargets="door2under"
+}
+
+%vbars_lockdown
+{
+	#firetargets="alarm2"
+	#killtargets="alarmtrigger2"
+	$position = .3 .7
+	$channel = 2
+	$fadein = .5, holdtime = 2, fadeout = 0.5
+	$color = 255 50 0, color2 = 0 50 255
+	#text="#TRUTH_INTRUDER"
+	#sound=clan5_intgas,
+	pause = 2.1
+	#firetargets="hostage_area1_vx"
+}
+
+%hbars_lockdown
+{
+	#firetargets="alarm1"
+	#killtargets="alarmtrigger1"
+	$position = .3 .7
+	$channel = 2
+	$fadein = .5, holdtime = 2, fadeout = 0.5
+	$color = 255 50 0, color2 = 0 50 255
+	#text="#TRUTH_INTRUDER"
+	#sound=clan5_intgas,
+	pause = 2.1
+	#firetargets="vx_area1_vx"
+
+}
+
+%backroom_seq
+{
+	#firetargets="sidedoor_global"
+	#firetargets="sidedoor_block"
+	#pause = .1
+	#firetargets="sidedoor"
+	@hostage2
+	//#text="You shouldn't do this! It doesn't help our cause."
+	#sound=hos2_notdo,
+	pause = 3.4		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@backroom_terror
+	#text="#TRUTH_TURNCOAT"
+	#sound=clan5_turnc,
+
+	pause = 5		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@hostage2
+	#text="#TRUTH_UNDERSTAND"
+	#sound=hos2_toll,	
+
+	pause = 6.54		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@backroom_terror
+	#text="#TRUTH_EXACTLY"
+	#sound=clan5_catasit,
+	pause = 5.		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#firetargets="hit_me_im_a_hostage"
+}
+
+
+
+%hit_me_im_a_hostage
+{
+	#firetargets="t_punch_seq"
+	#firetargets="h_punch_seq1"
+}
+
+%kill_punch_seq
+{
+	#killtargets="hit_me_im_a_hostage"
+	#killtargets="backroom_seq"
+	#firetargets="no_punch_cower"
+}
+
+%vxrelease1
+{
+	#firetargets="backroom_stealth_off"
+	#firetargets="vxrelease_snd"
+	@T2Style
+	#text="#TRUTH_INTRUDER"
+	#sound=clan5_intgas,
+	pause = 2.1
+	#firetargets="vxrelease1_seq"
+}
+
+%vx_released
+{
+	#firetargets="failure"
+	#firetargets="vxreleased_fx"
+	#firetargets="vxreleased_snd"
+	@T2Style
+	#text="#TRUTH_PREVAIL"
+	#sound=clan7_dielikerest
+}
+
+%vx_approach
+{
+	#firetargets="truth3_save"
+	#firetargets="vx_music"
+	@RadioStyle
+	//#text="You should be approaching an area with VX containers."
+	#sound=cnc_shouldcont,
+	pause = 16
+	#firetargets="vx_music"
+}
+
+%vx_loc_1
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_2
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_3
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_4
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_5
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_6
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_7
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_msg_more
+{
+	@RadioStyle
+	//#text="HAZMAT: Location noted. Keep looking, there should be more."
+	#sound=cnc_vxlook,
+	pause = 3
+}
+
+%vx_msg_all
+{
+	#killtargets="hostage_all_vx_more"
+	#killtargets="find_vx"
+	#pause = 1.5
+	@RadioStyle
+	//#text="HAZMAT: Location noted. That should be all for this area.
+
+	//The rest should be in a garage at the back of the compound."
+	#sound=cnc_noted,
+	pause = 8
+	#firetargets="main_done"
+	#firetargets="find_hostages"
+}
+
+%find_vx
+{
+	@RadioStyle
+	//#text="Make sure all the VX has been identified in this area.
+	//Use your radio to alert the Hazmat teams."
+	#sound=cnc_makes,
+	pause = 5
+}
+
+%find_hostages
+{
+	@RadioStyle
+	//#text="Make sure you've gotten all the hostages out."
+	#sound=cnc_makehostages
+}
+
+%hostage6_rescued
+{
+	#pause = 2
+	#firetargets="hostage6_global"
+	@okano
+	//#text="I'll get her out of here."
+	#sound=okano_takecaref,
+	pause = 1.31
+}
+
+%hostage2_rescued
+{
+	#pause = 2
+	#firetargets="hostage2_global"
+	@okano
+	//#text="I'll take care of him."
+	#sound=okano_takecare,
+	pause = 1.3
+}
+
+%hostage3_rescued
+{
+	#pause = 2
+	#firetargets="hostage3_global"
+	@okano
+	//#text="I'll take care of him."
+	#sound=okano_takecare,
+	pause = 1.3
+}
+
+%hostage4_rescued
+{
+	#pause = 2
+	#firetargets="hostage4_global"
+	@okano
+	//#text="I'll take care of him."
+	#sound=okano_takecare,
+	pause = 1.3
+}
+
+%hostage5_rescued
+{
+	#pause = 2
+	#firetargets="hostage5_global"
+	@okano
+	//#text="I'll get her out of here."
+	#sound=okano_takecaref,
+	pause = 1.31
+
+}
+
+%hostage_out6
+{
+	@okano
+	//#text="Hostage has been rescued."
+	#sound=okano_hosres,
+	pause = 1.8		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#firetargets="hostage_rescued_seq"
+}
+
+%hostage_out2
+{
+	@okano
+	//#text="Hostage has been rescued."
+	#sound=okano_hosres,
+	pause = 1.8		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#firetargets="hostage_rescued_seq"
+}
+
+%hostage_out3
+{
+	@okano
+	//#text="Hostage has been rescued."
+	#sound=okano_hosres,
+	pause = 1.8		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#firetargets="hostage_rescued_seq"
+}
+
+%hostage_out4
+{
+	@okano
+	//#text="Hostage has been rescued."
+	#sound=okano_hosres,
+	pause = 1.8		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#firetargets="hostage_rescued_seq"
+}
+
+%hostage_out5
+{
+	@okano
+	//#text="Hostage has been rescued."
+	#sound=okano_hosres,
+	pause = 1.8		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#firetargets="hostage_rescued_seq"
+}
+
+
+%hostage_all_rescued
+{
+	#killtargets="find_hostages"
+	#firetargets="safeguy_ck3"
+	#firetargets="objective2"
+	#firetargets="objective3"
+	#pause = 2
+	#firetargets="main_done"
+	#pause = 2
+	#firetargets="hostage_all_vx_more"
+}
+
+%hostage_all_vx_more
+{
+	@RadioStyle
+	//#text="We've got all the hostages,
+	//but there's still more VX to be located."
+	#sound=cnc_morevx,
+	pause = 3.55
+}
+
+%hostage_dead
+{
+	#killtargets="find_vx"
+	#killtargets="failure"
+	#killtargets="hostage_rescued_all"
+	#killtargets="find_hostages"
+	#firetargets="missionfail"
+	@RadioStyle
+	//#text="What do you mean you lost a hostage?! Baka!"
+	#sound=cnc_losthos
+	#pause = 2.2
+	@FailureStyle
+	#text="#TRUTH_HOST_FAIL"
+
+}
+
+
+%main_done_seq
+{
+	#killtargets="unfinished_warning_seq"
+	#killtargets="unfinished_warning"
+	#firetargets="unfinished_global"
+	#firetargets="cl3-4_global"
+	#pause = .2
+	#firetargets="proceed_door"
+	@RadioStyle
+	//#text="Nice work so far.
+	//All known hostages have been extracted and
+	//you've tagged all VX in your area.
+	//Proceed into the rest of the compound."
+	#sound=cnc_nicework,
+	pause = 8
+}
+
+%unfinished_warning_seq
+{
+	@RadioStyle
+	//#text="Make sure you've located all VX containers
+	//and removed all hostages before proceeding further.
+	//We don't want to miss anything"
+	#sound=cnc_makesure,
+	pause = 8
+}
+
+%okano_dead
+{
+	#killtargets="rescue_point"
+	#killtargets="okano_use1"
+	#killtargets="okano_use2"
+	#killtargets="okano_use3"
+	#killtargets="find_vx"
+	#killtargets="hostage_rescued_all"
+	#killtargets="hostage_dead_all"
+	#firetargets="missionfail"
+	#pause = 3
+	@FailureStyle
+	#text="#TRUTH_OKANO_FAIL"
+}
+
+%failure
+{
+	#killtargets="find_vx"
+	#killtargets="hostage_rescued_all"
+	#killtargets="hostage_dead_all"
+	#firetargets="missionfail"
+	#pause = 3
+	@FailureStyle
+	#text="#TRUTH_GAS_FAIL"
+}
+
+%unit_down
+{
+	@RadioStyle
+	//#text="All units, report in!
+	//Unit is down, repeat unit is down!"
+	#sound=cnc_unitdown,
+	pause = 4.3
+}

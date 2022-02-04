@@ -1,0 +1,971 @@
+$position = .8 .8
+$fadein = 1.5, holdtime = 2, fadeout = 0.5
+$color = 240 100 0, color2 = 0 100 240
+
+
+!sentences
+{
+	carcrash fastline/fastline_crash
+	lockeddoor doors/door_metal_locked1
+
+	dSG1-A fastline/girl1_whatneed
+	dSG1-B fastline/girl1_muchsafetrain
+	dSG1-C fastline/girl1_somewrong
+	dSG1-P fastline/girl1_pervert
+	dSG2-A fastline/girl2_safersub
+	dSG2-B fastline/girl2_gladsafe
+	dSG2-C fastline/girl2_doyouneed
+	dSG3-A fastline/npc2_hii
+	dSG3-B fastline/npc2_howlongpat
+	dSG3-C fastline/npc2_ilikuni
+	dSG3-D fastline/npc2_needsome
+	dSG1-L fastline/fastline_girllaugh1
+	
+	
+	dCT1-A fastline/ct3_highal
+	dCT1-B fastline/ct3_outlive
+	dCT1-C fastline/ct3_lastshif
+	dCT1-D fastline/ct3_talklate
+	dCT2-A fastline/ct2_notmuch
+	dCT2-B fastline/ct2_tacinfav
+	dCT2-C fastline/ct2_highal
+	dCT2-D fastline/ct2_keepalrt
+	
+	dMan2-A fastline/bman2_standhere
+	dMan2-B fastline/bman2_movetraindis
+	dMan2-C fastline/bman2_findown
+	dMan3-A fastline/bman4_hello
+	dMan3-B fastline/bman4_howgo
+	dMan3-C fastline/bman4_offic
+	dMan4-A fastline/bman1_ypdist
+	dMan4-B fastline/bman1_mayih
+	dMan5-A fastline/bman1_thinking
+	dMan5-B fastline/bman1_plslval
+	dMan6-A fastline/bman2_donunder
+	dMan6-B fastline/bman2_somewrong
+	dMan7-A fastline/bman3_trycon
+	dMan7-B fastline/bman3_stopbug
+	
+	dCMan-A fastline/bman3_seebus
+	
+	dGirl-A fastline/npc2_huh
+	dGirl-B fastline/npc2_what
+	
+	
+// first cinematic sequence 
+	dFlash fastline/ct2_flashb
+	dAtten fastline/g2_attmovedie
+	dFDidnt fastline/g3_palslist
+	dDontF fastline/g3_tryfr
+	dSitFat fastline/g2_sitfat
+	dAskFor fastline/g2_youask
+	dNoDont fastline/bman4_nodont
+	dMoveBlw fastline/g3_moveblow
+	dNobody fastline/g2_nobodelse
+	dTakeC fastline/g2_takecare
+	dNoProb fastline/g3_nopboss
+	dLiteO fastline/g3_liteout
+	dYesSir fastline/g0_yessir
+
+// 2nd cinematic sequence
+	dComeW fastline/g3_comeme
+	dLMG fastline/girl1_letmego
+	dSAFMS fastline/girl2_stayaway
+	dStopS fastline/g3_stopstrug
+// 3rd cinematic sequence
+	dGetUp fastline/girl2_blowups
+	dCantH fastline/g2_hecant
+	dLetGo fastline/girl2_ahlets
+
+
+
+
+}
+
+%Credits
+{
+	@Credits1Style
+	#text = "Bill Schofield"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Charles Tinney"
+	
+	#pause = 1.5
+
+	@Credits3Style
+	#text = "Chris 'kanaeda' Voss"
+	
+	#pause = 1.5
+	
+	@Credits4Style
+	#text = "David Demaret"
+	
+	#pause = 1.5
+
+	@Credits1Style
+	#text = "Doug Service"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Eric 'ArchV' Fowler"
+	
+	#pause = 1.5
+
+	@Credits3Style
+	#text = "Jason Sallenbach"
+	
+	#pause = 1.5
+	
+	@Credits4Style
+	#text = "Jay Halderman"
+	
+	#pause = 1.5
+	
+	@Credits1Style
+	#text = "Jay Hawkins"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Jay 'Fross' Hosfelt"
+	
+	#pause = 1.5
+
+	@Credits3Style
+	#text = "Joe Waters"
+	
+	#pause = 1.5
+	
+	@Credits4Style
+	#text = "Ken Harward"
+	
+	#pause = 1.5
+	
+	@Credits1Style
+	#text = "Kevin Steele"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Kevin Wright"
+	
+	#pause = 1.5
+
+	@Credits3Style
+	#text = "Levelord"
+	
+	#pause = 1.5
+	
+	@Credits4Style
+	#text = "Luke 'weasl' Whiteside"
+	
+	#pause = 1.5
+	
+	@Credits1Style
+	#text = "Michael Porter"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Michael Tarwater"
+	
+	#pause = 1.5
+
+	@Credits3Style
+	#text = "Nick Pappas"
+	
+	#pause = 1.5
+	
+	@Credits4Style
+	#text = "Rich Fleider"
+	
+	#pause = 1.5
+	
+	@Credits1Style
+	#text = "Robert Atkins"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Rungy Singhal"
+	
+	#pause = 1.5
+
+	@Credits3Style
+	#text = "Russell 'Castle' Meakim"
+	
+	#pause = 1.5
+	
+	@Credits4Style
+	#text = "Spike T. Dog"
+	
+	#pause = 1.5
+	
+	@Credits1Style
+	#text = "Stephen Hornback"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Steve Maines"
+	
+	#pause = 1.5
+
+	@Credits3Style
+	#text = "Steve Nix"
+	
+	#pause = 1.5
+	
+	@Credits4Style
+	#text = "Steven Peeler"
+	
+	#pause = 1.5
+	
+	@Credits1Style
+	#text = "Thearrel 'Kiltron' McKinney"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Todd Rose"
+	
+	#pause = 1.5
+
+	@Credits3Style
+	#text = "Tom Mustaine"
+	
+	#pause = 1.5
+	
+	@Credits4Style
+	#text = "Travell McEnTyre"
+	
+	#pause = 1.5
+	
+	@Credits1Style
+	#text = "Wyeth Johnson"
+	
+	#pause = 1.5
+	
+	@Credits2Style
+	#text = "Zak Belica"
+	
+	#pause = 1.5
+
+}
+
+//-------------------------------------------------------
+// Level Start
+//-------------------------------------------------------
+%level_start
+{
+
+	
+	#firetargets = "fadeLevelStart"
+	#firetargets = "hudOff"
+	
+	#pause = .2
+	
+	#firetargets = "freeze"
+	
+	#firetargets = "intro_music"
+	
+	#pause = 3
+		
+//	#firetargets = "seqCredits" // Cut intro stuff
+	#firetargets = "sgLaugh"
+	#sound = dSG1-L, speaker = sg1
+	
+	
+	#pause = 2 
+	
+	#firetargets = "seqCT2-1"
+	
+	#pause = 3.8
+	
+	#firetargets = "seqCT2-2"
+	
+	#pause = 3.3
+	
+	#firetargets = "seqCT2-3"
+	
+	#pause = 3
+	
+	#firetargets = "freeze"
+	
+	#pause = 10
+	
+//	#firetargets = "sgLaugh" // Cut intro stuff
+	
+//	#pause = 35 // Cut intro stuff
+	
+
+		
+	#firetargets = "door1"
+	#pause = .1
+	#firetargets = "throwFlash"
+	#pause = .4
+	
+	#sound = dFlash, speaker = ct2
+	
+	#firetargets = "soundCrowd"
+	#firetargets = "soundGasp"
+	
+	#firetargets = "startleSG1"
+	#firetargets = "startleSG2"
+	#firetargets = "startleMan1"
+	#firetargets = "startleMan2"
+	#firetargets = "startleMan3"
+	#firetargets = "startleMan4"
+	#firetargets = "startleMan5"
+	
+	#pause = .7
+	
+	// faded out
+	
+	#firetargets = "freeze"
+	#firetargets = "soundFlash"
+	#firetargets = "fadeFlash"
+
+	#firetargets = "gibs"
+	
+	#firetargets = "soundFlash1"
+	#firetargets = "soundFlash2"
+	#firetargets = "soundFlash3"
+	
+	#pause = 7
+
+	
+	#firetargets = "teleRoom2"
+	#firetargets = "cam1"
+	#firetargets = "seq2ndStage"
+	#firetargets = "cTrain"
+	
+}
+
+%SecondStage
+{
+	#firetargets = "soundTrack1"
+	
+	#firetargets = "door3"
+	#firetargets = "seqSG1"
+	#firetargets = "seqSG2"
+	#firetargets = "seqGTH"
+	#firetargets = "seqT1"
+	#firetargets = "seqT2"
+	#firetargets = "killFatMan"
+	#firetargets = "soundSGW"
+	
+	#pause = 1
+	
+	#firetargets = "soundShove"
+	
+	#sound = dDontF, speaker = tGTH
+	
+	#pause = 1
+	
+	#firetargets = "soundShove"
+	
+	#pause = 3
+		
+	#sound = dNoDont, speaker = pushFatMan
+	
+	#pause = 1.9
+	#firetargets = "glassShotGuy"
+	#firetargets = "gibsShotGuy"
+	
+	#pause = 3
+	
+	#sound = dComeW, speaker = pushT1
+		
+	#pause = 2
+		
+	#sound = dLMG, speaker = cowerSG1
+	#firetargets = "soundSGW"
+	
+	#pause = 1.5
+	
+	#sound = dSAFMS, speaker = cowerSG2
+	
+	#pause = 1
+	
+	#sound = dTakeC, speaker = pushT2
+		
+	#pause = 1.5
+	
+	#sound = dYesSir, speaker = tGTH
+	
+	#pause = 1.1
+	
+	#firetargets = "soundSlap"
+	
+	#pause = 1.1
+	
+	#firetargets = "soundKO"
+	#firetargets = "knockout"
+	#firetargets = "soundTrack2"
+	#pause = 2
+	
+	
+	// --- End this shtuff
+//	#firetargets = "fadeOut"
+	#firetargets = "teleEndRoom"
+	#pause = .1
+	
+	#pause = 1
+	
+	#firetargets = "soundTrack2"
+	
+	#pause = 3
+	
+	#firetargets = "soundTrack3"
+	#firetargets = "soundBeepS"
+	#firetargets = "fadeIn"
+	#firetargets = "freeze"
+	#firetargets = "giveStuff"
+	
+	#pause = 1
+	
+	#firetargets = "hudOn"
+	
+	#pause = 2
+	
+	#firetargets = "soundNextS"
+	
+	
+}
+
+
+%BoomTrain
+{
+
+	#pause = 2.25
+	
+	#firetargets = "soundBeepS"
+	#firetargets = "soundBeepE"
+	
+	#pause = 4
+	
+	#firetargets = "boom1LevelEnd"
+	#firetargets = "boom2LevelEnd"
+	#firetargets = "gibBoom1"
+	#firetargets = "gibBoom2"
+	#firetargets = "gibBoom3"
+	#firetargets = "gibBoom4"
+	#firetargets = "shakeLevelEnd"
+	#firetargets = "pushEnd"
+	
+	#sound = carcrash
+	#firetargets = "soundCrash1"
+	#firetargets = "soundCrash2"
+	
+	#firetargets = "soundTrack3"
+	#firetargets = "hudOff"
+	#firetargets = "killLuggage"
+	
+	#pause = .5
+
+	#firetargets = "killBars"
+	
+	 
+	#firetargets = "fadeEnd"
+	
+	#firetargets = "freeze"
+	
+	#pause = 4.7
+	
+	#firetargets = "camLogo"
+	#pause = 2
+	#firetargets = "logo1"
+	#firetargets = "soundLogo1"
+	
+	#pause = 2
+	
+	#firetargets = "soundLogo2"
+	#firetargets = "logo2"
+	
+	#pause = 1
+	
+	#firetargets = "nextlevel"
+	
+}
+
+//--------------------------- LOADS OF DIALOG
+
+%SG1-1
+{
+	#firetargets = "cSG1-N"
+//	#text = "SG 1 Talk 1"
+	#sound = dSG1-A, speaker = sg1 
+	$listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cSG1-2"
+}
+
+%SG1-2
+{
+	#firetargets = "cSG1-N"
+//	#text = "SG 1 Talk 2"
+	#sound = dSG1-B,
+	speaker = sg1
+	$listener = player
+	
+	#pause = 2.7
+	
+	#firetargets = "cSG1-3"
+}
+
+%SG1-3
+{
+	#firetargets = "cSG1-N"
+//	#text = "SG 1 Talk 3"
+	#sound = dSG1-C,
+	speaker = sg1,
+	listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cSG1-3"
+	#firetargets = "countSG"
+	
+}
+
+%SG1-P
+{
+	#firetargets = "cSG1-N"
+//	#text = "SG 1 PERVERT"
+	#sound = dSG1-P,
+	speaker = sg1,
+	listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cSG1-P"
+}
+
+%SG2-1
+{
+	#firetargets = "cSG2-N"
+//	#text = "SG 2 Talk 1"
+	#sound = dSG2-A,
+	speaker = sg2, listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cSG2-2"
+}
+
+%SG2-2
+{
+	#firetargets = "cSG2-N"
+//	#text = "SG 2 Talk 2"
+	#sound = dSG2-B,
+	speaker = sg2, listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cSG2-3"
+}
+
+%SG2-3
+{
+	#firetargets = "cSG2-N"
+//	#text = "SG 2 Talk 3"
+	#sound = dSG2-C,
+	speaker = sg2, listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cSG2-3"
+}
+
+%SG3-1
+{
+	#firetargets = "cSG3-N"
+//	#text = "SG 3 Talk 1"
+	#sound = dSG3-A,
+	speaker = sg3, listener = player
+	
+	#pause = 1
+	
+	#firetargets = "cSG3-2"
+}
+
+%SG3-2
+{
+	#firetargets = "cSG3-N"
+//	#text = "SG 3 Talk 2"
+	#sound = dSG3-B,
+	speaker = sg3, listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cSG3-3"
+}
+%SG3-3
+{
+	#firetargets = "cSG3-N"
+//	#text = "SG 3 Talk 3"
+	#sound = dSG3-C,
+	speaker = sg3, listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cSG3-4"
+}
+
+%SG3-4
+{
+	#firetargets = "cSG3-N"
+//	#text = "SG 3 Talk 4"
+	#sound = dSG3-D,
+	speaker = sg3, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cSG3-4"
+}
+
+
+%Man1-1
+{
+	#firetargets = "cMan1-N"
+//	#text = "Man 1 Talk 1"
+	#sound = dMan1-A,
+	speaker = man1, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan1-2"
+}
+
+%Man1-2
+{
+	#firetargets = "cMan1-N"
+//	#text = "Man 1 Talk 2"
+	#sound = dMan1-B,
+	speaker = man1, listener = player
+	
+	#pause = 2	
+	
+	#firetargets = "cMan1-2"
+}
+
+
+%Man2-1
+{
+	#firetargets = "cMan2-N"
+//	#text = "Man 2 Talk 1"
+	#sound = dMan2-A,
+	speaker = man2, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan2-2"
+}
+
+%Man2-2
+{
+	#firetargets = "cMan2-N"
+//	#text = "Man 2 Talk 2"
+	#sound = dMan2-B,
+	speaker = man2, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan2-3"
+}
+
+%Man2-3
+{
+	#firetargets = "cMan2-N"
+//	#text = "Man 2 Talk 3"
+	#sound = dMan2-C,
+	speaker = man2, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan2-3"
+}
+
+%Man3-1
+{
+	#firetargets = "cMan3-N"
+//	#text = "Man 3 Talk 1"
+	#sound = dMan3-A,
+	speaker = man3, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan3-2"
+}
+
+%Man3-2
+{
+	#firetargets = "cMan3-N"
+//	#text = "Man 3 Talk 2"
+	#sound = dMan3-B,
+	speaker = man3, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan3-3"
+}
+%Man3-3
+{
+	#firetargets = "cMan3-N"
+//	#text = "Man 3 Talk 3"
+	#sound = dMan3-C,
+	speaker = man3, listener = player
+	
+	#pause = 1.5
+	
+	#firetargets = "cMan3-3"
+}
+
+%Man4-1
+{
+	#firetargets = "cMan4-N"
+//	#text = "Man 4 Talk 1"
+	#sound = dMan4-A,
+	speaker = man4, listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cMan4-2"
+}
+
+%Man4-2
+{
+	#firetargets = "cMan4-N"
+//	#text = "Man 4 Talk 2"
+	#sound = dMan4-B,
+	speaker = man4, listener = player
+	
+	#pause = 1.5
+	
+	#firetargets = "cMan4-2"
+}
+
+
+%Man5-1
+{
+	#firetargets = "cMan5-N"
+//	#text = "Man 5 Talk 1"
+	#sound = dMan5-A,
+	speaker = man5, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan5-2"
+}
+
+%Man5-2
+{
+	#firetargets = "cMan5-N"
+//	#text = "Man 5 Talk 2"
+	#sound = dMan5-B,
+	speaker = man5, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan5-2"
+}
+
+%Man6-1
+{
+	#firetargets = "cMan6-N"
+//	#text = "Man 6 Talk 1"
+	#sound = dMan6-A,
+	speaker = man6, listener = player
+	
+	#pause = 4.5
+	
+	#firetargets = "cMan6-2"
+}
+
+%Man6-2
+{
+	#firetargets = "cMan6-N"
+//	#text = "Man 6 Talk 2"
+	#sound = dMan6-B,
+	speaker = man6, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan6-2"
+}
+
+%Man7-1
+{
+	#firetargets = "cMan7-N"
+//	#text = "Man 7 Talk 1"
+	#sound = dMan7-A,
+	speaker = man7, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan7-2"
+}
+
+%Man7-2
+{
+	#firetargets = "cMan7-N"
+//	#text = "Man 7 Talk 2"
+	#sound = dMan7-B,
+	speaker = man7, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cMan7-2"
+}
+
+
+
+
+%CT1-1
+{
+	#firetargets = "cCT1-N"
+//	#text = "CT 1 Talk 1"
+	#sound = dCT1-A,
+	speaker = ct1, listener = player
+	
+	#pause = 3.5
+	
+	#firetargets = "cCT1-2"
+}
+
+%CT1-2
+{
+	#firetargets = "cCT1-N"
+//	#text = "CT 1 Talk 2"
+	#sound = dCT1-B,
+	speaker = ct1, listener = player
+	
+	#pause = 2.5
+	
+	#firetargets = "cCT1-3"
+}
+
+%CT1-3
+{
+	#firetargets = "cCT1-N"
+//	#text = "CT 1 Talk 3"
+	#sound = dCT1-C,
+	speaker = ct1, listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cCT1-4"
+}
+%CT1-4
+{
+	#firetargets = "cCT1-N"
+//	#text = "CT 1 Talk 4"
+	#sound = dCT1-D,
+	speaker = ct1, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cCT1-4"
+}
+
+
+
+%CT2-1
+{
+	#firetargets = "cCT2-N"
+//	#text = "CT 2 Talk 1"
+	#sound = dCT2-A,
+	speaker = ct2, listener = player
+	
+	#pause = 3.5
+	
+	#firetargets = "cCT2-2"
+}
+
+%CT2-2
+{
+	#firetargets = "cCT2-N"
+//	#text = "CT 2 Talk 2"
+	#sound = dCT2-B,
+	speaker = ct2, listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cCT2-3"
+}
+
+%CT2-3
+{
+	#firetargets = "cCT2-N"
+//	#text = "CT 2 Talk 3"
+	#sound = dCT2-C,
+	speaker = ct2, listener = player
+	
+	#pause = 3.5
+	
+	#firetargets = "cCT2-4"
+}
+
+%CT2-4
+{
+	#firetargets = "cCT2-N"
+//	#text = "CT 2 Talk 4"
+	#sound = dCT2-D,
+	speaker = ct2, listener = player
+	
+	#pause = 2
+	
+	#firetargets = "cCT2-4"
+}
+
+%CMan-1
+{
+	#firetargets = "cCMan-N"
+	#firetargets = "cCGirl-N"
+//	#text = "Couple Man Talk 1"
+	#sound = dCMan-A,
+	speaker = coupleMan,
+	listener = player
+	
+	#pause = 3
+	
+	#firetargets = "cCMan-1"
+	#firetargets = "cCGirl-1"
+}
+
+%Girl-1
+{
+	#firetargets = "cGirl-N"
+//	#text = "Girl Talk 1"
+	#sound = dGirl-A,
+	speaker = girl1, listener = player
+	
+	#pause = 1.5
+	
+	#firetargets = "cGirl-2"
+}
+
+%Girl-2
+{
+	#firetargets = "cGirl-N"
+//	#text = "Girl Talk 2"
+	#sound = dGirl-B,
+	speaker = girl1, listener = player
+	
+	#pause = 1.5
+	
+	#firetargets = "cGirl-2"
+}
+
+
+%LockedSound
+{
+	#sound = lockeddoor
+}
+

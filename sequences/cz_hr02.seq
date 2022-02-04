@@ -1,0 +1,186 @@
+!sentences
+{
+	// ==============================================================
+	// High Rise
+	// ==============================================================
+ 
+	Keep_down0 		HighRise/sass1_keepdown
+	
+	reload0 		HighRise/sass2_blimey
+	
+	zip-line0		HighRise/sass3_gettozip
+
+	civilian_contact0 HighRise/cnc_wehaveciv
+
+	hes_dead0		HighRise/cnc_whatdead
+
+	// Bullet whine effects for rooftop shooting
+	Bw_whine0		ambience/bw_01
+	Bw_whine1		ambience/bw_02
+	Bw_whine2		ambience/bw_03
+	Bw_whine3		ambience/bw_04
+	Bw_whine4		ambience/bw_05
+	Bw_whine5		ambience/bw_06
+	Bw_whine6		ambience/bw_close1
+	Bw_whine7		ambience/bw_close2
+	Bw_whine8		ambience/bw_close3
+	Bw_whine9		ambience/bw_close4
+	Bw_whine10		ambience/bw_close5
+	Bw_whine11		ambience/bw_far1
+	Bw_whine12		ambience/bw_far2
+	Bw_whine13		ambience/bw_far3
+	Bw_whine14		ambience/bw_far4
+	Bw_whine15		ambience/bw_far5
+	Bw_whine16		ambience/bw_medium1
+	Bw_whine17		ambience/bw_medium2
+	Bw_whine18		ambience/bw_medium3
+	Bw_whine19		ambience/bw_medium4
+
+	//Lightning and thunder ambience
+
+	HR_thunder0			ambience/HR_thunder1
+	HR_thunder1			ambience/HR_thunder3
+	HR_thunder2			ambience/HR_thunder4
+	HR_thunder3			ambience/HR_Thunstrike
+	HR_thunder4			ambience/HR_rollthun
+
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers. 
+//---------------------------------------------------------------------------
+
+%CNC_voice
+{
+	@RadioStyle
+}
+
+%SAS_soldier_1
+{
+	@CT1Style
+	$speaker	= SAS_soldier_1
+	$listener	= Player
+}
+
+%SAS_soldier_2
+{
+	@CT2Style
+	$speaker	= SAS_soldier_2
+	$listener	= Player	
+}
+
+%SAS_soldier_3
+{
+	@CT3Style
+	$speaker	= SAS_soldier_3
+	$listener	= Player
+}
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%weap_eq
+{
+	#pause = 7
+	#firetargets = "weapon_equip1"
+	#pause = .2
+	#firetargets = "weapon_equip2"
+}
+
+%Bullet_whine
+{
+	#sound = Bw_whine, pause = .48
+}
+
+%SAS_soldier_talk1
+{
+
+	@ObjectiveStyle #text = "#OBJ1_HRISE_NEW"
+	
+	@SAS_soldier_1	#sound = Keep_down,	channel = 1
+		//text = "Keep down, they saw us come in."
+
+}
+
+%SAS_soldier_talk2
+{
+	@SAS_soldier_2	#sound = reload,	channel = 2
+		//text = "They've gotta reload sometime!"
+}
+
+%SAS_soldier_talk3
+{
+	@SAS_soldier_3	#sound = zip-line,	channel = 3
+		//text = "*cough* Get to the zip-line!"
+
+}
+
+%CNC_talk01
+{
+	@CNC_voice	#sound = civilian_contact,	channel = 4
+		//text = "We have a civilian contact on that floor that has equipment 
+		//		you will need, meet up with him and radio in for 
+		//		further instructions."
+
+}
+
+%CNC_talk02
+{
+	@CNC_voice	#sound = hes_dead,	channel = 5
+		//text = "What?! he's dead? ......... Understood.  Grab the radio 
+		//		bombs and proceed to the elevators."
+
+}
+
+%lightning_thun_amb1
+{
+	#pause = 10
+
+	#firetargets = "setoff_bolt_10"	
+	#firetargets = "bolt_flash"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#pause = 16
+
+	#firetargets = "setoff_bolt_11"	
+	#pause = 1.4
+	#sound = HR_thunder
+
+	
+	#firetargets = "lightning_thun_amb2"
+	
+}
+
+%lightning_thun_amb2
+{
+	#pause = 24
+
+	#firetargets = "setoff_bolt_12"
+	#firetargets = "bolt_flash"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#firetargets = "lightning_thun_amb1"
+
+	#pause = 12
+
+	#firetargets = "setoff_bolt_14"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#firetargets = "lightning_thun_amb1"	
+}
+
+// =====================================================================
+// Mission Fails
+// =====================================================================
+
+%Mission_failed01
+{
+	#pause = 1.2
+	@FailureStyle
+	#text = "#RiseHard_Felltodeath"
+
+}

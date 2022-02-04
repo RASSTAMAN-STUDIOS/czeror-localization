@@ -1,0 +1,93 @@
+//============================================
+// Drug Lab Dialog Sequences (cz_druglab3)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//==================================================================
+// Sentences
+//==================================================================
+
+!sentences
+{
+
+terrorist1_1_converse0 junglecamp/t1_whereis
+terrorist1_2_converse0 junglecamp/t2_dunno
+terrorist1_3_converse0 junglecamp/t1_keeplook
+terrorist1_4_converse0 junglecamp/t2_surprise
+teammate3_2a_talk0 junglecamp/slc2_plantrad
+bomb_target3_dialog junglecamp/slc2_plantrad
+
+}
+
+//==================================================================
+// Speaker Style and Definitions
+//==================================================================
+
+%conversing_terrorist1		
+{
+	@T1Style
+	$speaker=conversing_terrorist1
+}
+
+//==================================================================
+// Sequence ID's
+//==================================================================
+
+%underfloor_converse1
+{
+
+	@conversing_terrorist1		//#text="Where is the Gringo?", // LOCALIZE ME
+						#text="#DRUGLAB_UNDERHOUSE1",
+						sound=terrorist1_1_converse,
+						pause = 2.5
+
+	@conversing_terrorist1		//#text="I don't know, I don't know.", // LOCALIZE ME
+						#text="#DRUGLAB_UNDERHOUSE2",
+						sound=terrorist1_2_converse,
+						pause = 3
+
+	@conversing_terrorist1		//#text="Keep looking.", // LOCALIZE ME
+						#text="#DRUGLAB_UNDERHOUSE3",
+						sound=terrorist1_3_converse,
+						pause = 2
+
+	@conversing_terrorist1		//#text="I have a surprise for him, but he won't like it!", // LOCALIZE ME
+						#text="#DRUGLAB_UNDERHOUSE4",
+						sound=terrorist1_4_converse,
+						pause = 5
+
+}
+
+%squad_encounter1c
+{
+	
+	@RadioStyle				//#text="Plant a radio bomb here soldier!",
+						#text="",
+						sound=teammate3_2a_talk,
+						pause = 4
+
+}
+
+%bomb_target3_radio
+{
+	
+	@RadioStyle				//#text="Plant a radio bomb here soldier!",
+						#text="",
+						sound=bomb_target3_dialog,
+						pause = 4
+
+}
+
+//==================================================================
+// Mision Failure
+//==================================================================
+
+%mission_failure_message1
+{
+	@FailureStyle	#text="#DRUGLAB_FAILURE3",
+				holdtime = 4
+
+}
+
+
+

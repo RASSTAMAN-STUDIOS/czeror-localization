@@ -1,0 +1,125 @@
+//============================================
+// Downed Pilot Dialog Sequences (cz_downed2)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//============================================
+//	Sentences
+//============================================
+
+!sentences
+{
+
+examine_1_dialog0 downed/gsg9gl_bloodtr
+examine_2_dialog0 downed/cnc_woodkeept
+examine_3_dialog0 junglecamp/slc2_eyeout
+examine_4_dialog0 downed/gsg9gl_letmvout
+
+minediffuse_1_dialog0 downed/gsg9gl_dwnstrip
+minediffuse_2_dialog0 downed/cnc_rogsalv
+minediffuse_3_dialog0 downed/gsg9gl_setsite
+
+}
+
+//============================================
+//	Speaker Style & Definitions
+//============================================
+
+%teammate2		
+{
+
+	@CT1Style
+	$speaker=teammate2
+}
+
+//============================================
+//	Sequence ID's
+//============================================
+
+%downed_chopper_examined
+{
+	@teammate2		//#text="Alpha1, this is bravo leader. We've examined the
+				//crash site … There's blood trails leading to the river…
+				//Looks like our boys were taken prisoner.",
+				#text="",
+				sound=examine_1_dialog,
+				pause = 10.8
+
+	@RadioStyle		//#text="Affirmative bravo team, follow any trails and
+				//locate those pilots.  We can see a number of heavily
+				//wooded areas ahead, keep eyes up.",
+				#text="",
+				sound=examine_2_dialog,
+				pause = 10.2
+
+	//@teammate2	//#text="Keep an eye out for mines!",
+				//#text="",
+				//sound=examine_3_dialog,
+				//pause = 3.1
+
+	@teammate2		//#text="Lets move out.",
+				#text="",
+				sound=examine_4_dialog,
+				pause = 3.1
+
+}
+
+%mine_diffusal
+{
+
+	@teammate2		//#text="Alpha1, we've stumbled upon aircraft wreck.
+				//It's been here a while and has been thoroughly stripped.",
+				#text="",
+				sound=minediffuse_1_dialog,
+				firetargets="new_objective01_complete", // NEW
+				pause = 6.1
+
+	@RadioStyle		//#text="Roger, see if there's anything salvageable.",
+				#text="",
+				sound=minediffuse_2_dialog,
+				pause = 2.9
+
+	@teammate2		//#text="You heard the man, we'll secure this crash site,
+				//you move ahead and locate the trail of our pilots.",
+				#text="",
+				sound=minediffuse_3_dialog,
+				firetargets="new_objective02_sequence", // NEW
+				pause = 5.2
+
+}
+
+//============================================
+//	Mission Failure
+//============================================
+
+%mission_failure_message1
+{
+	@FailureStyle	#text="#DOWNED2_FAILURE1",
+				holdtime = 4
+
+}
+
+%mission_failure_message2
+{
+	@FailureStyle	#text="#DOWNED_FAILURE2",
+				holdtime = 4
+
+}
+
+
+//=============================================
+// Mission Objectives
+//=============================================
+
+%new_objective01
+{
+	@ObjectiveStyle	#text = "#OBJ1_DPILOT_NEW", //#text = "NEW OBJECTIVE: Search for survivors of helicopter crash"
+				firetargets="new_objective01_complete"
+}
+
+%new_objective02
+{
+	@ObjectiveStyle	#text = "#OBJ2_DPILOT_NEW", //#text = "NEW OBJECTIVE: Proceed ahead into mining facility"
+				firetargets="new_objective02_complete"
+}
+

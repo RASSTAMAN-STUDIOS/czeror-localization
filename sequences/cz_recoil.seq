@@ -1,0 +1,137 @@
+// $position = .8 .8
+// $fadein = 1.5, holdtime = 2, fadeout = 0.5
+// $color = 240 100 0, color2 = 0 100 240
+
+
+!sentences
+{
+	deltaDialogFirst0 recoil/dsnip_sosurv
+	deltaDialogSecond0 recoil/dsnip_multhosconv
+	deltaDialogThird0 recoil/dsnip_grabgear
+	deltaDialogFourth0 recoil/dsnip_gethellout
+
+	CT_GREN_AM0 ct/ct_grenade_am
+	
+	//ct chatter, which I think works fine even commented below
+	//CT_OK
+	//CT_WAIT
+}
+
+%CT_yell_out
+{
+	#pause = 3.0
+	//#text = "GRENADE!!"
+	#sound = CT_GREN_AM, 
+		speaker = Good_guy_ct10
+}
+
+%level_start
+{
+	
+	#firetargets = "hudOff"
+	#pause = .1
+		
+	#pause = .1
+	
+	#firetargets = "freezeplayer"
+	#firetargets = "musicIntro"
+	#firetargets = "fadeStartEnd"
+		
+	#pause = 1
+
+	@TitleStyle		#text = "#RECOIL_TITLE" 
+	
+	#pause = 4
+	
+	@SubtitleStyle	#text = "#RECOIL_SUBTITLE"
+	
+	#pause = 9
+	
+	#firetargets = "dialogComeIn"
+	#pause = 1
+	#firetargets = "hudOn"
+	#firetargets = "freezeplayer"	
+	
+	#firetargets = "equipStart"
+	#pause = .25
+	#firetargets = "equipStart2"	
+	#pause = 2
+	#firetargets = "script_new_obj01" //new objective
+	//@ObjectiveStyle #text = "#recoil_Objective01"
+	#pause = 1
+	#firetargets = "saveStart" //moved here from above to check if save game bug is code related or LD/scripting logic error
+	#pause = 17
+	#firetargets = "dialogRepeat"
+	#pause = 20
+	#firetargets = "dialogMoveIt"	
+}
+
+//OBJECTIVES
+%new_obj01
+{
+	@ObjectiveStyle
+	#text = "#OBJ1_RECOIL_NEW" //#text = "NEW OBJECTIVE: Move away from the crash site and locate Bravo team"
+	#firetargets = "recoil_obj01" //adds objective to objectives list
+}
+
+%dead_delta
+{
+	#firetargets = "fail2"
+	#pause = 5
+	@FailureStyle
+	#text = "#RECOIL_FAIL"
+}
+
+%dialogSniper
+{
+	#firetargets = "keychng_sniper_move"
+	#firetargets = "keychng_sniper_stand"
+	#pause = 1.0
+	#firetargets = "recoil_obj01" //objective 1 completed
+	#firetargets = "musicMeet"
+		
+	#firetargets = "gesture01"
+	#sound = deltaDialogFirst,
+		speaker = delta,
+		pause = 4.0
+	//	text = "So someone really did survive that mess.."
+	
+	#firetargets = "gesture02"
+	#firetargets = "mutter1"
+	#pause = 2.0
+	#firetargets = "mutter2"
+	#pause = 1.0	
+	#sound = deltaDialogSecond,
+		speaker = delta,
+		pause = 2.5
+	//	text = "Shit.
+	//	CNC is reporting that multiple hostiles are about to converge on
+	//	this position, we can't afford to stay here any longer."	
+	#firetargets = "gesture04"	
+	#pause = 3.6
+	
+	#sound = deltaDialogThird,
+		speaker = delta
+	//	text = "Alright grab any gear that you need.
+	//	We're the last ones in this area, let's move out and rendezvous with the
+	//	rest of the team two blocks over at the extraction point."
+	
+	#pause = 2.0
+	#firetargets = "gesture03"
+	#firetargets = "seqDeltaDoor" //make deltasniper walk to the door
+		
+	//#pause = 7.0
+	//#firetargets = "deltaDoor" //moved here to fix timing of door open and animation of delta sniper pushing it open
+}
+
+%doorSniper
+{
+	#sound = deltaDialogFourth,
+		speaker = delta
+	//	text = "We need to get the hell out of here before the whole city rolls us over."
+		
+	#pause = 1.0
+	
+	#firetargets = "seqDeltaMove"
+}
+

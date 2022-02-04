@@ -1,0 +1,106 @@
+!sentences
+{
+	helip_appr0 recoil/helip_appr.wav
+	helip_beenhit0 recoil/helip_beenhit.wav
+	helic_rpg0 recoil/helic_rpg.wav
+}
+
+
+%level_start
+{
+	#firetargets = "hudOff"
+	
+	#pause = 0.5	
+	
+	#firetargets = "freeze"
+	#firetargets = "render_ground_out"
+	
+	#pause = 1
+	
+	#firetargets = "bounce1"
+	#firetargets = "move"
+	#firetargets = "fadeStart1"
+	
+	#pause = 2
+	
+//	@CT1Style		#text = "CnC, this is Redtail 5. We're approaching the drop point..
+//	Area looks quiet."
+
+	@RadioStyle
+	#sound=helip_appr
+	
+	#pause = 2
+	
+	#pause = 4.3
+	
+//	@CT2Style		#text = "RPG from 3 o'clock, evade!"
+
+	@RadioStyle
+	#sound=helic_rpg
+	
+	#pause = 2.4
+	#firetargets = "rpg_shooter"
+}
+
+%rpg_hit
+{
+	#firetargets = "fadeFlash"
+	#firetargets = "bounceEnd"
+	#firetargets = "boom"
+	#firetargets = "gib1"
+	#firetargets = "gib2"
+	#firetargets = "gib3"
+	#firetargets = "soundBoom"
+	#firetargets = "debris"
+
+	#firetargets = "killCT1"
+	#firetargets = "killCT2"
+	#firetargets = "killCT3"
+	#firetargets = "soundWind"
+	
+	#firetargets = "bumpy" //rough ride down
+
+	#pause = .05
+	#firetargets="render_ground_in"
+	#firetargets="render_move_out"
+	#pause = .15
+	
+
+
+	#firetargets = "smoke1"
+	#firetargets = "smoke2"
+	#firetargets = "smoke3"
+	#firetargets = "smoke4"
+	#firetargets = "smoke5"
+	#firetargets = "smoke6"
+	#firetargets = "smoke7"
+
+//	@CT1Style		#text = "CnC This is Readtail 5, we've been hit and are going down.
+//	Repeat this is Redtail 5 going down."
+
+	@RadioStyle
+	#sound=helip_beenhit
+
+	#pause = 1
+	
+	#firetargets = "tilt_ground"
+
+	#firetargets = "hudOff"
+	
+	#pause = 2
+	#firetargets = "fadeEnd"
+	#firetargets = "freeze"
+	
+	#pause = 11
+	
+	#firetargets = "camLogo"
+	#pause = 2
+	#firetargets = "soundLogo1"
+	#pause = .3
+	#firetargets = "logo1"
+	#pause = 1
+	#firetargets = "logo2"
+	#pause = 1
+	
+	#firetargets = "changelevel" //load cz_recoil
+}

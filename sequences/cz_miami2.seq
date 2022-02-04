@@ -1,0 +1,822 @@
+//============================================
+// Miami Heat Dialog Sequences (cz_miami2)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//============================================
+//	Sentences
+//============================================
+
+!sentences
+{
+
+ct_helper1_talk0 miami/seals_getmov
+spawn_ct_child1_talk0 miami/poff1_stalling
+recover_dialog1_talk0 miami/seals_recovpackage
+recover_dialog2_talk0 miami/seals_dontspot
+hostage_saved_dialog1_talk0 miami/miamih5_therearem
+hostage_saved_dialog2_talk0 miami/miamih3_helpoth
+hostage_saved_dialog3_talk0 miami/miamih4_savoth
+hostage_saved_dialog4_talk0 miami/miamih1_thankyou
+hostage_saved_dialog5_talk0 miami/miamih2_thanks
+4th_saved_dialog1_talk0 miami/seals_packsec
+all_saved_dialog1_talk0 miami/seals_cncadvise
+all_saved_dialog2_talk0 miami/cnc_mainlobb
+vault_card_dialog1_talk0 miami/miamih6_womanacc
+vault_dialog1_talk0 miami/robb4_unlockdep
+vault_dialog2_talk0 miami/miamih7_dwontdoit
+vault_dialog3_talk0 miami/robb4_doitnowunlockdep
+vault_dialog4_talk0 miami/miamih7_dontshoot
+vault_dialog5_talk0 miami/cnc_soundproof
+help_us_dialog1_talk0 miami/miamih8_3robbers
+injured_hostage_talk0 miami/miamih9_injured
+intruder_dialog1_talk0 miami/robb1_intruder
+intruder_dialog2_talk0 miami/robb2_execute
+taking_over_dialog1_talk0 miami/robb2_beonlook
+taking_over_dialog2_talk0 miami/robb3_breeze
+taking_over_dialog3_talk0 miami/robb2_allrich
+climax_dialog1_talk0 miami/cnc_rogcopy3
+climax_dialog2_talk0 miami/cnc_gostatus
+climax_dialog3_talk0 miami/seals_movingin
+climax_dialog4_talk0 miami/seals_inpos
+climax_dialog5_talk0 miami/seals_ready
+climax_dialog6_talk0 miami/seals_gogogo
+climax_dialog7_talk0 miami/robb3_cops
+climax_dialog8_talk0 miami/robb4_killthemall
+climax_dialog9_talk0 miami/seals_targacq
+climax_dialog10_talk0 miami/seals_takfire
+officer_down_talk0 miami/cnc_offdownrpt
+hostage_down_talk0 miami/cnc_packisdown
+final_boss1_taunt0 miami/robbl_kill
+final_boss2_taunt0 miami/robbl_eatthis
+final_boss3_taunt0 miami/robbl_youhavent
+end_dialog1_talk0 miami/cnc_packsaresec
+end_dialog2_talk0 miami/cnc_situndercont
+
+//============================================
+//	Hostage Chatter - American
+//============================================
+
+H_HELP_AM0 h/h_m_getmeout_am
+H_HELP_AM1 h/h_m_okletsgo_am
+H_HELP_AM2 h/h_m_gethellout_am
+H_HELP_AM3 h/h_m_ohlets_am
+
+H_THANK_AM0 h/h_m_thanksave_am
+H_THANK_AM1 h/h_m_owelife_am
+H_THANK_AM2 h/h_m_gladover_am
+H_THANK_AM3 h/h_m_thanks_am
+
+H_PAIN_AM0 h/h_m_pain1_am
+H_PAIN_AM1 h/h_m_pain2_am
+H_PAIN_AM2 h/h_m_pain3_am
+H_PAIN_AM3 h/h_m_pain4_am
+
+H_DEATH_AM0 h/h_m_death1_am
+H_DEATH_AM1 h/h_m_death2_am
+H_DEATH_AM2 h/h_m_death3_am
+H_DEATH_AM3 h/h_m_death4_am
+
+H_PLFEAR_AM0 h/h_m_mygodw_am
+H_PLFEAR_AM1 h/h_m_ithought_am
+H_PLFEAR_AM2 h/h_m_pleasenok_am
+
+H_FEAR_AM0 h/h_m_dontdie_am
+H_FEAR_AM1 h/h_m_yousavr_am
+H_FEAR_AM2 h/h_m_wherewego_am
+
+H_SCREAM_AM0 h/h_m_ahh1_am
+H_SCREAM_AM1 h/h_m_lookout_am
+H_SCREAM_AM2 h/h_m_they'rehere_am
+
+H_SICK_AM0 h/h_m_cantgo_am
+H_SICK_AM1 h/h_m_toosick_am
+H_SICK_AM2 h/h_m_goinpuke_am
+
+H_BETTER_AM0 h/h_m_feelmuch_am
+H_BETTER_AM1 h/h_m_didtr_am
+H_BETTER_AM2 h/h_m_thankshot_am
+
+
+H_HELP_AMF0 h/h_f_mygoodp_am
+H_HELP_AMF1 h/h_f_neverbeen_am
+H_HELP_AMF2 h/h_f_scaredp_am
+
+H_THANK_AMF0 h/h_f_thankf_am
+H_THANK_AMF1 h/h_f_veryb_am
+H_THANK_AMF2 h/h_f_courage_am
+
+H_PAIN_AMF0 h/h_f_pain1_am
+H_PAIN_AMF1 h/h_f_pain2_am
+H_PAIN_AMF2 h/h_f_pain3_am
+H_PAIN_AMF3 h/h_f_pain4_am
+
+H_DEATH_AMF0 h/h_f_death1_am
+H_DEATH_AMF1 h/h_f_death2_am
+H_DEATH_AMF2 h/h_f_death3_am
+H_DEATH_AMF3 h/h_f_death4_am
+
+H_PLFEAR_AMF0 h/h_f_mygod_am
+H_PLFEAR_AMF1 h/h_f_myside_am
+H_PLFEAR_AMF2 h/h_f_plsnokill_am
+
+HEAR_AMF0 h/h_f_ohhelp_am
+HEAR_AMF1 h/h_f_ohmy_am
+HEAR_AMF2 h/h_f_help_am
+
+H_SCREAM_AMF0 h/h_f_ahh1_am
+H_SCREAM_AMF1 h/h_f_lookout_am
+H_SCREAM_AMF2 h/h_f_theyhere_am
+
+H_SICK_AMF0 h/h_f_dontfeel_am
+H_SICK_AMF1 h/h_f_toosick_am
+H_SICK_AMF2 h/h_f_puke_am
+
+H_BETTER_AMF0 h/h_f_feelbett_am
+H_BETTER_AMF1 h/h_f_trick_am
+H_BETTER_AMF2 h/h_f_shotgo_am
+
+//============================================
+//	NPC Chatter - American
+//============================================
+
+NPC_OK_AM0 npc/npc_m_yesdo_am
+NPC_OK_AM1 npc/npc_m_right_am
+NPC_OK_AM2 npc/npc_m_ok_am
+
+NPC_WAIT_AM0 npc/npc_m_waithere_am
+NPC_WAIT_AM1 npc/npc_m_stayhere_am
+NPC_WAIT_AM2 npc/npc_m_movemusc_am
+
+NPC_STOP_AM0 npc/npc_m_notfurth_am
+
+NPC_STARE_AM0 npc/npc_m_lookme_am
+NPC_STARE_AM1 npc/npc_m_yousure_am
+
+NPC_HELLO_AM0 npc/npc_m_hello_am
+NPC_HELLO_AM1 npc/npc_m_officer_am
+
+NPC_ANSWER_AM0 npc/npc_m_iworried_am
+NPC_ANSWER_AM1 npc/npc_m_canttell_am
+NPC_ANSWER_AM2 npc/npc_m_whatdoth_am
+NPC_ANSWER_AM3 npc/npc_m_dontid_am
+
+NPC_QUESTION_AM0 npc/npc_m_whatgon_am
+NPC_QUESTION_AM1 npc/npc_m_didhear_am
+NPC_QUESTION_AM2 npc/npc_m_whoare_am
+NPC_QUESTION_AM3 npc/npc_m_thosepol_am
+
+NPC_IDLE_AM0 npc/npc_m_howhapp_am
+NPC_IDLE_AM1 npc/npc_m_whyme_am
+NPC_IDLE_AM2 npc/npc_m_sudden_am
+NPC_IDLE_AM3 npc/npc_m_whatgo_am
+
+NPC_NOGO_AM0 npc/npc_m_dontgoth_am
+
+NPCONST_AM0 npc/npc_m_iseeone_am
+NPCONST_AM1 npc/npc_m_theyhere_am
+NPCONST_AM2 npc/npc_m_theygotguns_am
+
+NPC_HEAR_AM0 npc/npc_m_hearthat_am
+NPC_HEAR_AM1 npc/npc_m_someover_am
+
+NPC_WOUND_AM npc/npc_m_beenshot_am
+NPC_WOUND_AM npc/npc_m_ow_am
+NPC_WOUND_AM npc/npc_m_arg_am
+
+NPCORTAL_AM0 npc/npc_m_notgoingm_am
+NPCORTAL_AM1 npc/npc_m_noo_am
+NPCORTAL_AM2 npc/npc_m_ahhh1_am
+
+NPC_CUREA_AM0 npc/npc_m_youdontlo_am
+NPC_CUREA_AM1 npc/npc_m_sureOK_am
+
+NPC_HEAL_AM0 npc/npc_m_heretake_am
+NPC_HEAL_AM1 npc/npc_m_letme_am
+
+NPC_PLFEAR_AM0 npc/npc_m_thoughtc_am
+NPC_PLFEAR_AM1 npc/npc_m_getawaym_am
+NPC_PLFEAR_AM2 npc/npc_m_helost_am
+
+
+NPC_FEAR_AM0 npc/npc_m_ahh2_am
+NPC_FEAR_AM1 npc/npc_m_help2_am
+NPC_FEAR_AM2 npc/npc_m_whatgo2_am
+
+NPC_SCREAM_AM0 npc/npc_m_omg_am
+NPC_SCREAM_AM1 npc/npc_m_helpme_am
+NPC_SCREAM_AM2 npc/npc_m_ahh3_am
+NPC_SCREAM_AM3 npc/npc_m_thisnot_am
+
+NPC_SCREAM_AM0 npc/npc_m_whatstop_am
+NPC_SCREAM_AM1 npc/npc_m_dontdo_am
+
+
+NPC_OK_AMF0 npc/npc_f_yesdo_am
+NPC_OK_AMF1 npc/npc_f_right_am
+NPC_OK_AMF2 npc/npc_f_ok_am
+
+NPC_WAIT_AMF0 npc/npc_f_waithere_am
+NPC_WAIT_AMF1 npc/npc_f_stayhere_am
+NPC_WAIT_AMF2 npc/npc_f_movemusc_am
+
+NPC_STOP_AMF0 npc/npc_f_notfurth_am
+
+NPC_STARE_AMF0 npc/npc_f_lookme_am
+NPC_STARE_AMF1 npc/npc_f_yousure_am
+
+NPC_HELLO_AMF0 npc/npc_f_hello_am
+NPC_HELLO_AMF1 npc/npc_f_officer_am
+
+NPC_ANSWER_AMF0 npc/npc_f_iworried_am
+NPC_ANSWER_AMF1 npc/npc_f_canttell_am
+NPC_ANSWER_AMF2 npc/npc_f_whatdoth_am
+NPC_ANSWER_AMF3 npc/npc_f_dontid_am
+
+NPC_QUESTION_AMF0 npc/npc_f_whatgon_am
+NPC_QUESTION_AMF1 npc/npc_f_didhear_am
+NPC_QUESTION_AMF2 npc/npc_f_whoare_am
+NPC_QUESTION_AMF3 npc/npc_f_thosepol_am
+
+NPC_IDLE_AMF0 npc/npc_f_howhapp_am
+NPC_IDLE_AMF1 npc/npc_f_whyme_am
+NPC_IDLE_AMF2 npc/npc_f_sudden_am
+NPC_IDLE_AMF3 npc/npc_f_whatgo_am
+
+NPC_NOGO_AMF0 npc/npc_f_dontgoth_am
+
+NPCONST_AMF0 npc/npc_f_iseeone_am
+NPCONST_AMF1 npc/npc_f_theyhere_am
+NPCONST_AMF2 npc/npc_f_theygotguns_am
+
+NPC_HEAR_AMF0 npc/npc_f_hearthat_am
+NPC_HEAR_AMF1 npc/npc_f_someover_am
+
+
+NPC_WOUND_AMF0 npc/npc_f_beenshot_am
+NPC_WOUND_AMF1 npc/npc_f_ow_am
+NPC_WOUND_AMF2 npc/npc_f_arg_am
+
+NPCORTAL_AMF0 npc/npc_f_notgoingm_am
+NPCORTAL_AMF1 npc/npc_f_noo_am
+NPCORTAL_AMF2 npc/npc_f_ahhh1_am
+
+NPC_CUREA_AMF0 npc/npc_f_youdontlo_am
+NPC_CUREA_AMF1 npc/npc_f_sureOK_am
+
+NPC_HEAL_AMF0 npc/npc_f_heretake_am
+NPC_HEAL_AMF1 npc/npc_f_letme_am
+
+NPC_PLFEAR_AMF0 npc/npc_f_thoughtc_am
+NPC_PLFEAR_AMF1 npc/npc_f_getawaym_am
+NPC_PLFEAR_AMF2 npc/npc_f_helost_am
+
+NPCEAR_AMF0 npc/npc_f_ahh2_am
+NPCEAR_AMF1 npc/npc_f_help2_am
+NPCEAR_AMF2 npc/npc_f_whatgo2_am
+
+NPC_SCREAM_AMF0 npc/npc_f_omg_am
+NPC_SCREAM_AMF1 npc/npc_f_helpme_am
+NPC_SCREAM_AMF2 npc/npc_f_ahh3_am
+NPC_SCREAM_AMF3 npc/npc_f_thisnot_am
+
+NPC_SCREAM_AMF0 npc/npc_f_whatstop_am
+NPC_SCREAM_AMF1 npc/npc_f_dontdo_am
+
+}
+
+//============================================
+//	Speaker Style & Definitions
+//============================================
+
+
+%ct_helper1		
+{
+	@CT1Style
+	$speaker=ct_helper1
+}
+
+%spawn_ct_child1		
+{
+	@CT1Style
+	$speaker=spawn_ct_child1
+}
+
+%hostage1	
+{
+	@NPC1Style
+	$speaker=hostage1
+}
+
+%hostage2	
+{
+	@NPC1Style
+	$speaker=hostage2
+}
+
+%hostage3
+{
+	@NPC1Style
+	$speaker=hostage3
+}
+
+%hostage4
+{
+	@NPC1Style
+	$speaker=hostage4
+}
+
+%hostage5	
+{
+	@NPC1Style
+	$speaker=hostage5
+}
+
+%vault_terrorist
+{
+	@T1Style
+	$speaker=vault_terrorist
+}
+
+%help_us_hostage
+{
+	@NPC1Style
+	$speaker=help_us_hostage
+}
+
+%patrolling_terrorist1
+{
+	@T1Style
+	$speaker=patrolling_terrorist1
+}
+
+%patrolling_terrorist3
+{
+	@T2Style
+	$speaker=patrolling_terrorist3
+}
+
+%temp_terrorist3
+{
+	@T1Style
+	$speaker=temp_terrorist3
+}
+
+%ct_through_window1
+{
+	@CT1Style
+	$speaker=ct_through_window1
+}
+
+%final_boss_child
+{
+	@T1Style
+	$speaker=final_boss_child
+}
+
+//============================================
+//	Sequence ID's
+//============================================
+
+%ct_helper1_use
+{
+
+	@ct_helper1		//#text="You heard the man, get moving!",
+				#text="",
+				sound=ct_helper1_talk,
+				pause = 3
+}
+
+%spawn_ct_child1_use
+{
+
+	@spawn_ct_child1	//#text="Stalling will get more hostages killed, get moving!",
+				#text="",
+				sound=spawn_ct_child1_talk,
+				pause = 3
+}
+
+%hostage1_saved
+{
+
+	@hostage1		//#text="There are more hostages to save.",
+				#text="",
+				killtargets="patrolling_terrorist3",
+				sound=hostage_saved_dialog1_talk,
+				firetargets="4th_hostage_door_counter",
+				pause = 5
+
+}
+
+%hostage2_saved
+{
+
+	@hostage2		//#text="Please help the others.",
+				#text="",
+				killtargets="patrolling_terrorist4",
+				sound=hostage_saved_dialog2_talk,
+				firetargets="4th_hostage_door_counter",
+				pause = 5
+
+}
+
+%hostage3_saved
+{
+
+	@hostage3		//#text="You have to save the others.",
+				#text="",
+				sound=hostage_saved_dialog3_talk,
+				pause = 3.5
+
+}
+
+%hostage4_saved
+{
+
+	@hostage4		//#text="Thank you.",
+				#text="",
+				firetargets="ct_helper1_ckv2", // NEW
+				sound=hostage_saved_dialog4_talk,
+				firetargets="4th_hostage_door_counter",
+				pause = 2
+
+}
+
+%hostage5_saved
+{
+
+	@hostage5		//#text="Thanks for saving me.",
+				#text="",
+				firetargets="ct_helper1_ckv4", // NEW
+				sound=hostage_saved_dialog5_talk,
+				pause = 5
+
+}
+
+%all_hostages_saved_dialog
+{
+
+	@ct_helper1		//#text="Packages in the employee area are secure,
+				//CNC please advise.",
+				#text="",
+				sound=all_saved_dialog1_talk,
+				pause = 3.9
+
+	@RadioStyle		//#text="Move into the main lobby without being detected
+				//and radio for support after assessing the situation.",
+				#text="",
+				sound=all_saved_dialog2_talk,
+				firetargets="ct_helper1_ckv5", // NEW
+				firetargets="new_objective07_sequence", // OBJECTIVE07
+				pause = 4.8
+
+}
+
+%4_hostages_saved_dialog
+{
+
+	@ct_helper1		//#text="Packages in the office area secure.
+				//Go after the one in the vault.",
+				#text="",
+				sound=4th_saved_dialog1_talk,
+				firetargets="ct_helper1_ckv3", // NEW
+				firetargets="double_doors", // NEW
+				pause = 3.7
+
+}
+
+%vault_sequence
+{
+
+	@vault_terrorist		//#text="Start unlocking the deposit boxes lady!", // LOCALIZE_ME
+					#text="",
+					sound=vault_dialog1_talk,
+					firetargets="loop_music_again",
+					pause = 3.2
+
+	@hostage5			//#text="No! I won't do it!",
+					#text="",
+					sound=vault_dialog2_talk,
+					pause = 1.8
+
+	@vault_terrorist		//#text="I said do it now! Do you want to die?", // LOCALIZE_ME
+					#text="",
+					sound=vault_dialog3_talk,
+					pause = 3.3
+
+	@hostage5			//#text="No...please don't shoot me!",
+					#text="",
+					sound=vault_dialog4_talk,
+					pause = 1.8
+
+	@RadioStyle			//#text="The vault is soundproof, you should be able to
+					//take him out without alerting anybody.",
+					#text="",
+					sound=vault_dialog5_talk,
+					firetargets="new_objective06_sequence", // OBJECTIVE06
+					pause = 4.2
+
+}
+
+%help_us_hostage_dialog
+{
+
+	@help_us_hostage		//#text="*cough* Please help us. There are....3 robbers....
+					//holding hostages....",
+					#text="",
+					sound=help_us_dialog1_talk,
+					pause = 5
+
+}
+
+%injured_hostage_use
+{
+
+	@help_us_hostage		//#text="asdfasdfasdfasdfasdfasdfasdfasdfasfasdfasdfasdfsadf",
+					#text="",
+					sound=injured_hostage_talk,
+					pause = 5
+
+}
+
+%intruder_kill_hostage_dialog
+{
+
+	@patrolling_terrorist1	//#text="Intruder!", // LOCALIZE_ME
+					#text="",
+					sound=intruder_dialog1_talk,
+					pause = 1.5
+
+	@patrolling_terrorist1	//#text="Execute the hostages!", // LOCALIZE_ME
+					#text="",
+					sound=intruder_dialog2_talk,
+					pause = 3
+
+}
+
+%recover_packages_dialog
+{
+	@ct_helper1		//#text="Recover the packages to this location, we will
+				//get them out to safety.",
+				#text="",
+				sound=recover_dialog1_talk,
+				firetargets="new_objective03_sequence", // OBJECTIVE03
+				pause = 3.7
+
+	@ct_helper1		//#text="Don't get spotted, we can't afford letting them
+				//know we're in the building.",
+				#text="",
+				sound=recover_dialog2_talk,
+				firetargets="ct_helper1_ckv1", // NEW
+				firetargets="level_music_r", // NEW
+				pause = 3.2
+
+}
+
+%vault_access_card_dialog
+{
+
+	@hostage3		//#text="There's a woman in the vault, locked in there with
+				//one of the robbers - the access card to the vault is on
+				//the table, please save her!",
+				#text="",
+				sound=vault_card_dialog1_talk,
+				pause = 6.5
+
+}
+
+%taking_over_a_breeze_dialog
+{
+
+	@patrolling_terrorist1	//#text="Be on the lookout for any infiltrators!", // LOCALIZE_ME
+					#text="",
+					sound=taking_over_dialog1_talk,
+					pause = 2.2
+
+	@patrolling_terrorist3	//#text="Taking over this place was a breeze.", // LOCALIZE_ME
+					#text="",
+					sound=taking_over_dialog2_talk,
+					pause = 2.4
+
+	@patrolling_terrorist1	//#text="Yeah, soon we'll all be rich!", // LOCALIZE_ME
+					#text="",
+					sound=taking_over_dialog3_talk,
+					pause = 2.5
+
+}
+
+%climax_dialog
+{
+
+	@RadioStyle			//#text="Roger that, copy three packages, three hostiles.
+					//ready for a firefight, we're coming in.",
+					#text="",
+					sound=climax_dialog1_talk,
+					firetargets="new_objective07_complete", // OBJECTIVE07
+					pause = 5.9
+
+	@RadioStyle			//#text="All teams, we are go, repeat, go status.",
+					#text="",
+					sound=climax_dialog2_talk,
+					firetargets="new_objective08_sequence", // OBJECTIVE08
+					pause = 3.1
+
+	@RadioStyle			//#text="Moving in.",
+					#text="",
+					sound=climax_dialog3_talk,
+					pause = 1.2
+
+	@RadioStyle			//#text="In position.",
+					#text="",
+					sound=climax_dialog4_talk,
+					pause = 1.2
+
+	@RadioStyle			//#text="Ready.",
+					#text="",
+					sound=climax_dialog5_talk,
+					pause = 1.1
+
+	@RadioStyle			//#text="Go go go!",
+					#text="",
+					sound=climax_dialog6_talk,
+					firetargets="climax_manager",
+					pause = 3
+
+	@temp_terrorist3		//#text="Cops!",
+					#text="",
+					sound=climax_dialog7_talk,
+					pause = 1.2
+
+	@temp_terrorist3		//#text="Kill them all!",
+					#text="",
+					sound=climax_dialog8_talk,
+					pause = 2.5
+
+	@ct_through_window1	//#text="Target acquired.",
+					#text="",
+					sound=climax_dialog9_talk,
+					pause = 1.5
+
+	@ct_through_window1	//#text="Taking fire!",
+					#text="",
+					sound=climax_dialog10_talk,
+					pause = 1.5
+
+}
+
+%officer_down_dialog
+{
+
+	@RadioStyle			//#text="Officer down, repeat, officer down!
+					//All units converge on last known position!",
+					#text="",
+					sound=officer_down_talk,
+					pause = 5.5
+
+}
+
+%hostage_down_dialog
+{
+
+	@RadioStyle		#text="",
+				sound=hostage_down_talk,
+				pause = 1.2
+
+}
+
+%final_boss_taunt_dialog1
+{
+
+	@T1Style			//#text="I'll kill all of you!", // LOCALIZE_ME
+					#text="",
+					sound=final_boss1_taunt,
+					firetargets="new_objective09_sequence", // OBJECTIVE09
+					pause = 3
+
+}
+
+%final_boss_taunt_dialog2
+{
+
+	@T1Style			//#text="Eat this!", // LOCALIZE_ME
+					#text="",
+					sound=final_boss2_taunt,
+					pause = 2.5
+
+}
+
+%final_boss_taunt_dialog3
+{
+
+	@final_boss_child		//#text="You haven't stopped me yet!", // LOCALIZE_ME
+					#text="",
+					sound=final_boss3_taunt,
+					pause = 3
+
+}
+
+%end_mission_dialog
+{
+
+	@RadioStyle			//#text="Packages are secure!",
+					#text="",
+					sound=end_dialog1_talk,
+					firetargets="new_objective08_complete", // OBJECTIVE08
+					firetargets="new_objective09_complete", // OBJECTIVE09
+					pause = 3.5
+
+	@RadioStyle			//#text="Situation is under control. Good job.
+					//Let's get everybody out of here.",
+					#text="",
+					sound=end_dialog2_talk
+
+					#firetargets="mission_success_seq",
+					pause = 3
+
+}
+
+
+//============================================
+// Mission Success
+//============================================
+
+%mission_success
+{ 
+	@TitleStyle		#text="#GENERIC_SUCCESS",
+				holdtime = 5
+
+}
+
+//============================================
+// Mission Failure
+//============================================
+
+%mission_failure_message1
+{
+	@FailureStyle	#text="#MIAMI_FAILURE3",
+				holdtime = 4
+
+}
+
+%mission_failure_message2
+{
+	@FailureStyle	#text="#MIAMI_FAILURE4",
+				holdtime = 4
+
+}
+
+%mission_failure_message3
+{
+	@FailureStyle	#text="#MIAMI_FAILURE5",
+				holdtime = 4
+
+}
+
+
+//=============================================
+// Mission Objectives
+//=============================================
+
+%new_objective03
+{
+	@ObjectiveStyle	#text = "#OBJ3_MIAMI_NEW", //#text = "NEW OBJECTIVE: Rescue all hostages in office areas (Escort hostages to computer room)"
+				firetargets="new_objective03_complete"
+}
+
+%new_objective04
+{
+	@ObjectiveStyle	#text = "#OBJ4_MIAMI_NEW", //#text = "NEW OBJECTIVE: Rescue hostage in manager’s office and retrieve keycard for vault"
+				firetargets="new_objective04_complete"
+}
+
+%new_objective05
+{
+	@ObjectiveStyle	#text = "#OBJ5_MIAMI_NEW", //#text = "NEW OBJECTIVE: Rescue hostage being held in bank vault"
+				firetargets="new_objective05_complete"
+}
+
+%new_objective06
+{
+	@ObjectiveStyle	#text = "#OBJ6_MIAMI_NEW", //#text = "NEW OBJECTIVE: Eliminate robber holding hostage in vault"
+				firetargets="new_objective06_complete"
+}
+
+%new_objective07
+{
+	@ObjectiveStyle	#text = "#OBJ7_MIAMI_NEW", //#text = "NEW OBJECTIVE: Proceed to lobby area undetected and use Radio to relay tactical info"
+				firetargets="new_objective07_complete"
+}
+
+%new_objective08
+{
+	@ObjectiveStyle	#text = "#OBJ8_MIAMI_NEW", //#text = "NEW OBJECTIVE: Keep hostages safe"
+				firetargets="new_objective08_complete"
+}
+
+%new_objective09
+{
+	@ObjectiveStyle	#text = "#OBJ9_MIAMI_NEW", //#text = "NEW OBJECTIVE: Neutralize robber"
+				firetargets="new_objective09_complete"
+}
+
+

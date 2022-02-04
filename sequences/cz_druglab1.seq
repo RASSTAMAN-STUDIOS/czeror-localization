@@ -1,0 +1,112 @@
+//============================================
+// Drug Lab Dialog Sequences (cz_druglab1)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//==================================================================
+// Sentences
+//==================================================================
+
+!sentences
+{
+
+leader1_talk0 junglecamp/slc1_intrec
+leader2_talk0 junglecamp/slc1_mainprod
+leader3_talk0 junglecamp/slc1_cartel
+leader4_talk0 junglecamp/slc1_badnew
+leader5_talk0 junglecamp/slc1_2pol
+leader6_talk0 junglecamp/slc1_spidel
+leader7_talk0 junglecamp/slc1_eyeop
+enemy_fire1_talk junglecamp/slp_shooting
+
+}
+
+//==================================================================
+// Speaker Style and Definitions
+//==================================================================
+
+%squad_leader		
+{
+	@CT1Style
+	$speaker=squad_leader
+}
+
+//==================================================================
+// Sequence ID's
+//==================================================================
+
+%Opening_Sequence			
+{
+	#firetargets = "hud_off"
+	#pause = 1
+	
+	#firetargets = "start_fade"	
+
+	@TitleStyle
+	#text = "#DRUGLAB_TITLE", // LOCALIZE_ME
+	pause = 5,
+	holdtime = 3
+
+	@SubtitleStyle
+	#text = "#DRUGLAB_LOCAL" // LOCALIZE_ME
+	#pause = 6.5
+
+}
+
+%squad_briefing
+{
+
+	@squad_leader		//#text="Intelligence recently managed to locate the
+					//primary operations facility of one of the biggest 
+					//Colombian drug czars.",
+					#text="",
+					sound=leader1_talk,
+					pause = 8
+
+	@squad_leader		//#text="We are heading to their main production,
+					//packaging, and shipping centers.",
+					#text="",
+					sound=leader2_talk,
+					pause = 5
+
+	@squad_leader		//#text="The drug cartel has been tipped off that we
+					//are coming, and are expecting us.",
+					#text="",
+					sound=leader3_talk,
+					pause = 5
+
+	@squad_leader		//#text="Here's the bad news.",
+					#text="",
+					sound=leader4_talk,
+					pause = 2.5
+
+	@squad_leader		//#text="Knowing that, they've captured 2 political hostages.",
+					#text="",
+					sound=leader5_talk,
+					pause = 5
+
+	@squad_leader		//#text="Spider team will breech the compound, find and secure
+					//the packages, eliminate any opposition, and destroy all
+					//drug production equipment.",
+					#text="",
+					sound=leader6_talk,
+					pause = 8.4
+
+	@squad_leader		//#text="Keep your eyes open on this one gentlemen,
+					//these guys will not be playing around.",
+					#text="",
+					sound=leader7_talk,
+					pause = 8
+
+}
+
+%taking_enemy_fire
+{
+
+	@RadioStyle			//#text="We have incoming enemy fire!",
+					#text="",
+					sound=enemy_fire1_talk,
+					pause = 3
+
+}
+

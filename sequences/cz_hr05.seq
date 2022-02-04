@@ -1,0 +1,81 @@
+!sentences
+{
+	// ==============================================================
+	// High Rise
+	// ==============================================================
+
+	Enemy_gunship0 		HighRise/sasp_enemydown
+
+	//Lightning and thunder ambience
+
+	HR_thunder0			ambience/HR_thunder1
+	HR_thunder1			ambience/HR_thunder3
+	HR_thunder2			ambience/HR_thunder4
+	HR_thunder3			ambience/HR_Thunstrike
+	HR_thunder4			ambience/HR_rollthun
+
+}
+
+%CNC_voice
+{
+	@RadioStyle
+}
+
+%Killed_bad_chopper
+{
+	@CNC_voice	#sound = Enemy_gunship,	pause = 3,	channel = 4
+		//text = "Enemy gunship is down, repeat, target eliminated."
+
+}
+
+%lightning_thun_amb1
+{
+	#pause = 10
+
+	#firetargets = "setoff_bolt_10"	
+	#firetargets = "bolt_flash"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#pause = 16
+
+	#firetargets = "setoff_bolt_11"	
+	#pause = 1.4
+	#sound = HR_thunder
+
+	
+	#firetargets = "lightning_thun_amb2"
+	
+}
+
+%lightning_thun_amb2
+{
+	#pause = 24
+
+	#firetargets = "setoff_bolt_12"
+	#firetargets = "bolt_flash"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#firetargets = "lightning_thun_amb1"
+
+	#pause = 12
+
+	#firetargets = "setoff_bolt_14"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#firetargets = "lightning_thun_amb1"	
+}
+
+// =====================================================================
+// Mission Fails
+// =====================================================================
+
+%Mission_failed01
+{
+	#pause = 1.2
+	@FailureStyle
+	#text =	"#RiseHard_Felltodeath"
+
+}

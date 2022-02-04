@@ -1,0 +1,197 @@
+!sentences
+{
+
+	// ==============================================================
+	// First Room of Recon 04 has an ambush area
+	// ==============================================================
+
+	SAS_1_recon4guy0 brecon/sas1_ran
+	// wav_time_4.342
+	SAS_2_recon4guy0 brecon/sas2_lookout
+	// wav_time_1.694
+	SAS_3_recon4guy0 brecon/sas3_death
+	// wav_time_3.167
+	SAS_4_recon4guy0 brecon/sas10_toomany
+	// wav_time_1.768
+	SAS_5_recon4guy0 brecon/sas10_flank
+	// wav_time_5.095
+	SAS_6_recon4guy0 brecon/sas10_holdout
+	// wav_time_3.042
+	// Our team has been scattered all over, they knew we were coming!
+	SAS_7_recon4com0 brecon/cnc_scatt
+	// wav_time_2.786
+	// As you reach the area to ambush the Ts from behind
+
+	TER_1_recon4guy0 brecon/tr_showinf
+
+	TER_2_recon4guy0 brecon/tr_behind
+
+	// As soon as you go outside a sarge request air support
+	SAS_Op4_support0 brecon/sas4_mounted
+
+	// ==============================================================
+	// Right before the tank sequence begins the commander says this
+	// ==============================================================
+	SAS_Com_heavy brecon/sasg_advised
+
+	// ==============================================================
+	// The Terrorist leader will taunt the player when running away.
+	// ==============================================================
+	T_leader_1_taunt0 brecon/tl_nevercatch
+	T_leader_2_taunt0 brecon/tl_stop
+	T_leader_3_taunt0 brecon/tl_haha
+	T_leader_4_taunt0 brecon/tl_toolate
+	T_leader_5_taunt0 brecon/tl_stand
+
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%SAS_Com_radio
+{
+	@RadioStyle
+}
+
+%Starting_CT1
+{
+	@CT1Style
+}
+
+%Starting_CT2
+{
+	@CT2Style
+}
+
+%Starting_CT3
+{
+	@CT3Style
+}
+
+%SAS_commander
+{
+	@CT1Style
+}
+
+%T_leader
+{
+	@T3Style
+}
+
+
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+
+
+%Bigfight01
+{
+		
+	// ======
+	
+	@Starting_CT1	#sound=SAS_1_recon4guy, 
+	speaker=Mini_commander, listener	= player,
+	channel = 1,
+	pause = 4.342	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	// text="Their leader ran through here with the weapon on his back, we couldn't stop him, maybe if we…"
+
+	@ObjectiveStyle #text = "#OBJ3_BRECON_NEW"
+
+	@Starting_CT2	#sound=SAS_5_recon4guy, 
+	speaker=CTguy2,
+	channel = 2,
+	pause = 14
+	// text="Sir, I think we can hold them off just long enough for you to flank and give 'em the Beruit unload!"
+
+	@Starting_CT3	#sound=SAS_6_recon4guy, 
+	speaker=tableguy, listener	= player,
+	channel = 3,
+	pause = 3.042	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	// text="Ahhhh!  I don't know how much longer we can hold out!"
+
+	@SAS_Com_radio	#sound=SAS_7_recon4com, 
+	channel = 2.786
+	// text="Our team has been scattered all over, they knew we were coming!"
+
+	// =======
+}
+
+//%Bigfight02
+//{
+//		
+//	// ======
+//	
+//	#sound=TER_2_recon4guy,
+//	channel = 1, 
+//	speaker=guy2, 
+//	text=""
+//	
+//	// =======
+//}
+
+%Bigfight03
+{
+		
+	// ======
+	
+	@SAS_commander	#sound=SAS_Op4_support,
+	channel = 4, 
+	speaker=stayback_guy01 
+	// text="Command, that gun emplacement is ripping us to shreds!  Request air support, and expedite!"
+	
+	// =======
+}
+
+%start_run1
+{
+		
+	// ======
+	
+	@T_leader	#sound=T_leader_3_taunt,
+	channel = 3, 
+	speaker=invis_blockers
+	// text="HAHAHA!"
+	
+	// =======
+}
+
+%bigpoop501
+{
+		
+	// ======
+	
+	@T_leader	#sound=T_leader_1_taunt,
+	channel = 2, 
+	speaker=run2
+	// text="You'll never catch me!"
+	
+	// =======
+}
+
+%bombsequence_mm0
+{
+		
+	// ======
+	
+	@SAS_Com_radio	#sound=SAS_Com_heavy,
+	channel = 1
+	// text="Be advised ground teams, heavy armor incoming your position, air support is having another go at it." 
+	
+	// ======= 
+}
+
+%start_run4
+{
+		
+	// ======
+	
+	@T_leader	#sound=T_leader_3_taunt,
+	channel = 1, 
+	speaker=run4
+	// text="HAHAHA!"
+	
+	// =======
+}

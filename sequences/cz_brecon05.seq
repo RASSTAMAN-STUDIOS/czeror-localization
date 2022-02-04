@@ -1,0 +1,70 @@
+!sentences
+{
+
+	// ==============================================================
+	// The Terrorist leader will taunt the player when running away.
+	// ==============================================================
+	T_leader_1_taunt0 brecon/tl_nevercatch
+	T_leader_2_taunt0 brecon/tl_stop
+	T_leader_3_taunt0 brecon/tl_haha
+	T_leader_4_taunt0 brecon/tl_toolate
+	T_leader_5_taunt0 brecon/tl_stand
+
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%SAS_Com_radio
+{
+	@RadioStyle
+}
+
+%T_leader
+{
+	@T3Style
+}
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%start_run1
+{
+		
+	// ======
+	
+	@T_leader	#sound=T_leader_4_taunt,
+	channel = 1, 
+	speaker=run1
+	//text="You’re too late!"	
+
+	// =======
+}
+
+%start_run2
+{
+		
+	// ======
+	
+	@T_leader	#sound=T_leader_5_taunt,
+	channel = 1, 
+	speaker=run2
+	// text="You don’t stand a chance!"	
+
+	// =======
+}
+
+%start_run3
+{
+		
+	// ======
+	
+	@T_leader	#sound=T_leader_2_taunt,
+	channel = 1, 
+	speaker=run3
+	// text="Stop them!  They must not get me!"
+	
+	// =======
+}

@@ -1,0 +1,535 @@
+//============================================
+// Pipedream1 Dialog Sequences (cz_pipedream1)
+// Mike "BALD" Porter
+//============================================
+
+!sentences
+{
+	Spetsnaz_Leader01_talk0 pipedream/spzl_rebelstaken
+	Spetsnaz_Leader02_talk0 pipedream/spzl_armedair
+	Spetsnaz_Leader03_talk0 pipedream/spzl_letsgocom
+		
+	Spetsnaz_Soldier01_talk0 pipedream/spzs_toomany
+
+	Spetsnaz_Pilot01_talk0 pipedream/spzp_movingin
+	Spetsnaz_Pilot02_talk0 pipedream/spzp_targelim
+
+	Terrorist_A01_talk0 pipedream/pipet1_plantbomb
+
+	Terrorist_B01_talk0 pipedream/pipet2_almost
+	Terrorist_B02_talk0 pipedream/pipet2_arg   
+	Terrorist_C01_talk0 pipedream/pipet3_getload
+	
+	Terrorist_Alert0 t/t_intrudov_ru
+	Terrorist_Alert1 t/t_movein_ru
+	Terrorist_Alert2 t/t_theretheya_ru
+	
+//============================================
+//NPC Chatter
+//============================================    
+
+	NPC_OK_RUM h/npc_m_yesdo_ru
+	NPC_OK_RUM h/npc_m_right_ru
+	NPC_OK_RUM h/npc_m_ok_ru
+
+	NPC_WAIT_RUM h/npc_m_waithere_ru
+	NPC_WAIT_RUM h/npc_m_stayhere_ru
+	NPC_WAIT_RUM h/npc_m_movemusc_ru
+
+	NPC_STOP_RUM h/npc_m_notfurth_ru
+
+	NPC_STARE_RUM h/npc_m_lookme_ru
+	NPC_STARE_RUM h/npc_m_yousure_ru
+
+	NPC_HELLO_RUM h/npc_m_hello_ru
+	NPC_HELLO_RUM h/npc_m_officer_ru
+
+	NPC_ANSWER_RUM h/npc_m_iworried_ru
+	NPC_ANSWER_RUM h/npc_m_canttell_ru
+	NPC_ANSWER_RUM h/npc_m_whatdoth_ru
+	NPC_ANSWER_RUM h/npc_m_dontid_ru
+	
+	NPC_QUESTION_RUM h/npc_m_whatgon_ru
+	NPC_QUESTION_RUM h/npc_m_didhear_ru
+	NPC_QUESTION_RUM h/npc_m_whoare_ru
+	NPC_QUESTION_RUM h/npc_m_thosepol_ru
+	
+	NPC_IDLE_RUM h/npc_m_howhapp_ru
+	NPC_IDLE_RUM h/npc_m_whyme_ru
+	NPC_IDLE_RUM h/npc_m_sudden_ru
+	NPC_IDLE_RUM h/npc_m_whatgo_ru
+	
+	NPC_NOGO_RUM h/npc_m_dontgoth_ru
+	
+	NPCONST_RUM h/npc_m_iseeone_ru
+	NPCONST_RUM h/npc_m_theyhere_ru
+	NPCONST_RUM h/npc_m_theygotguns_ru
+	
+	NPC_HEAR_RUM h/npc_m_hearthat_ru
+	NPC_HEAR_RUM h/npc_m_someover_ru
+	
+	
+	NPC_WOUND_RUM h/npc_m_beenshot_ru
+	NPC_WOUND_RUM h/npc_m_ow_ru
+	NPC_WOUND_RUM h/npc_m_arg_ru
+	
+	NPCORTAL_RUM h/npc_m_notgoingm_ru
+	NPCORTAL_RUM h/npc_m_noo_ru
+	NPCORTAL_RUM h/npc_m_ahhh1_ru
+	
+	NPC_CUREA_RUM h/npc_m_youdontlo_ru
+	NPC_CUREA_RUM h/npc_m_sureOK_ru
+	
+	NPC_HEAL_RUM h/npc_m_heretake_ru
+	NPC_HEAL_RUM h/npc_m_letme_ru
+	
+	NPC_PLFEAR_RUM h/npc_m_thoughtc_ru
+	NPC_PLFEAR_RUM h/npc_m_getawaym_ru
+	NPC_PLFEAR_RUM h/npc_m_helost_ru
+	
+	
+	NPC_FEAR_RUM h/npc_m_ahh2_ru
+	NPC_FEAR_RUM h/npc_m_help2_ru
+	NPC_FEAR_RUM h/npc_m_whatgo2_ru
+	
+	NPC_SCREAM_RUM h/npc_m_omg_ru
+	NPC_SCREAM_RUM h/npc_m_helpme_ru
+	NPC_SCREAM_RUM h/npc_m_ahh3_ru
+	NPC_SCREAM_RUM h/npc_m_thisnot_ru
+
+	NPC_SCREAM_RUM h/npc_m_whatstop_ru
+	NPC_SCREAM_RUM h/npc_m_dontdo_ru
+	
+	NPC_OK_RUF h/npc_f_yesdo_ru
+	NPC_OK_RUF h/npc_f_right_ru
+	NPC_OK_RUF h/npc_f_ok_ru
+	
+	NPC_WAIT_RUF h/npc_f_waithere_ru
+	NPC_WAIT_RUF h/npc_f_stayhere_ru
+	NPC_WAIT_RUF h/npc_f_movemusc_ru
+	
+	NPC_STOP_RUF h/npc_f_notfurth_ru
+	
+	NPC_STARE_RUF h/npc_f_lookme_ru
+	NPC_STARE_RUF h/npc_f_yousure_ru
+	
+	NPC_HELLO_RUF h/npc_f_hello_ru
+	NPC_HELLO_RUF h/npc_f_officer_ru
+	
+	NPC_ANSWER_RUF h/npc_f_iworried_ru
+	NPC_ANSWER_RUF h/npc_f_canttell_ru
+	NPC_ANSWER_RUF h/npc_f_whatdoth_ru
+	NPC_ANSWER_RUF h/npc_f_dontid_ru
+	
+	NPC_QUESTION_RUF h/npc_f_whatgon_ru
+	NPC_QUESTION_RUF h/npc_f_didhear_ru
+	NPC_QUESTION_RUF h/npc_f_whoare_ru
+	NPC_QUESTION_RUF h/npc_f_thosepol_ru
+	
+	NPC_IDLE_RUF h/npc_f_howhapp_ru
+	NPC_IDLE_RUF h/npc_f_whyme_ru
+	NPC_IDLE_RUF h/npc_f_sudden_ru
+	NPC_IDLE_RUF h/npc_f_whatgo_ru
+	
+	NPC_NOGO_RUF h/npc_f_dontgoth_ru
+	
+	NPCONST_RUF h/npc_f_iseeone_ru
+	NPCONST_RUF h/npc_f_theyhere_ru
+	NPCONST_RUF h/npc_f_theygotguns_ru
+	
+	NPC_HEAR_RUF h/npc_f_hearthat_ru
+	NPC_HEAR_RUF h/npc_f_someover_ru
+	
+	
+	NPC_WOUND_RUF h/npc_f_beenshot_ru
+	NPC_WOUND_RUF h/npc_f_ow_ru
+	NPC_WOUND_RUF h/npc_f_arg_ru
+	
+	NPCORTAL_RUF h/npc_f_notgoingm_ru
+	NPCORTAL_RUF h/npc_f_noo_ru
+	NPCORTAL_RUF h/npc_f_ahhh1_ru
+	
+	NPC_CUREA_RUF h/npc_f_youdontlo_ru
+	NPC_CUREA_RUF h/npc_f_sureOK_ru
+	
+	NPC_HEAL_RUF h/npc_f_heretake_ru
+	NPC_HEAL_RUF h/npc_f_letme_ru
+	
+	NPC_PLFEAR_RUF h/npc_f_thoughtc_ru
+	NPC_PLFEAR_RUF h/npc_f_getawaym_ru
+	NPC_PLFEAR_RUF h/npc_f_helost_ru
+	
+	
+	NPCEAR_RUF h/npc_f_ahh2_ru
+	NPCEAR_RUF h/npc_f_help2_ru
+	NPCEAR_RUF h/npc_f_whatgo2_ru
+	
+	NPC_SCREAM_RUF h/npc_f_omg_ru
+	NPC_SCREAM_RUF h/npc_f_helpme_ru
+	NPC_SCREAM_RUF h/npc_f_ahh3_ru
+	NPC_SCREAM_RUF h/npc_f_thisnot_ru
+	
+	NPC_SCREAM_RUF h/npc_f_whatstop_ru
+	NPC_SCREAM_RUF h/npc_f_dontdo_ru
+	
+//============================================
+//Hostage Chatter
+//============================================    
+
+	H_HELP_RUM h/h_m_getmeout_ru
+	H_HELP_RUM h/h_m_okletsgo_ru
+	H_HELP_RUM h/h_m_gethellout_ru
+	H_HELP_RUM h/h_m_ohlets_ru
+	
+	H_THANK_RUM h/h_m_thanksave_ru
+	H_THANK_RUM h/h_m_owelife_ru
+	H_THANK_RUM h/h_m_gladover_ru
+	H_THANK_RUM h/h_m_thanks_ru
+	
+	H_PAIN_RUM h/h_m_pain1_ru
+	H_PAIN_RUM h/h_m_pain2_ru
+	H_PAIN_RUM h/h_m_pain3_ru
+	H_PAIN_RUM h/h_m_pain4_ru
+	
+	H_DEATH_RUM h/h_m_death1_ru
+	H_DEATH_RUM h/h_m_death2_ru
+	H_DEATH_RUM h/h_m_death3_ru
+	H_DEATH_RUM h/h_m_death4_ru
+	
+	H_PLFEAR_RUM h/h_m_mygodw_ru
+	H_PLFEAR_RUM h/h_m_ithought_ru
+	H_PLFEAR_RUM h/h_m_pleasenok_ru
+	
+	H_FEAR_RUM h/h_m_dontdie_ru
+	H_FEAR_RUM h/h_m_yousavr_ru
+	H_FEAR_RUM h/h_m_wherewego_ru
+	
+	H_SCREAM_RUM h/h_m_ahh1_ru
+	H_SCREAM_RUM h/h_m_lookout_ru
+	H_SCREAM_RUM h/h_m_they'rehere_ru
+	
+	H_SICK_RUM h/h_m_cantgo_ru
+	H_SICK_RUM h/h_m_toosick_ru
+	H_SICK_RUM h/h_m_goinpuke_ru
+	
+	H_BETTER_RUM h/h_m_feelmuch_ru
+	H_BETTER_RUM h/h_m_didtr_ru
+	H_BETTER_RUM h/h_m_thankshot_ru
+	
+	H_HELP_RUF h/h_f_mygoodp_ru
+	H_HELP_RUF h/h_f_neverbeen_ru
+	H_HELP_RUF h/h_f_scaredp_ru
+
+	H_THANK_RUF h/h_f_thankf_ru
+	H_THANK_RUF h/h_f_veryb_ru
+	H_THANK_RUF h/h_f_courage_ru
+	
+	H_PAIN_RUF h/h_f_pain1_ru
+	H_PAIN_RUF h/h_f_pain2_ru
+	H_PAIN_RUF h/h_f_pain3_ru
+	H_PAIN_RUF h/h_f_pain4_ru
+	
+	H_DEATH_RUF h/h_f_death1_ru
+	H_DEATH_RUF h/h_f_death2_ru
+	H_DEATH_RUF h/h_f_death3_ru
+	H_DEATH_RUF h/h_f_death4_ru
+	
+	H_PLFEAR_RUF h/h_f_mygod_ru
+	H_PLFEAR_RUF h/h_f_myside_ru
+	H_PLFEAR_RUF h/h_f_plsnokill_ru
+	
+	HEAR_RUF h/h_f_ohhelp_ru
+	HEAR_RUF h/h_f_ohmy_ru
+	HEAR_RUF h/h_f_help_ru
+	
+	H_SCREAM_RUF h/h_f_ahh1_ru
+	H_SCREAM_RUF h/h_f_lookout_ru
+	H_SCREAM_RUF h/h_f_theyhere_ru
+	
+	H_SICK_RUF h/h_f_dontfeel_ru
+	H_SICK_RUF h/h_f_toosick_ru
+	H_SICK_RUF h/h_f_puke_ru
+	
+	H_BETTER_RUF h/h_f_feelbett_ru
+	H_BETTER_RUF h/h_f_trick_ru
+	H_BETTER_RUF h/h_f_shotgo_ru
+	
+}
+	
+//============================================
+//	Speaker, Style & Definitions
+//============================================
+
+%Spetsnaz_Leader
+{
+	@CT1Style
+	$speaker = duder03
+	$listener = player
+}
+
+%Spetsnaz_Soldier
+{
+	@RadioStyle
+	$speaker = duder02
+}
+
+%Spetsnaz_Pilot
+{
+	@RadioStyle
+}
+
+%Terrorist_A
+{
+	@T1Style
+	$speaker = gunter	
+}	
+
+%Terrorist_B
+{
+	@T2Style         
+	$speaker = mollahabdar
+	$listener = gunter
+}	
+
+%Terrorist_C
+{
+	@T3Style
+	$speaker = bootybutt
+}
+
+%Terrorist_Garage
+{
+	@T3Style
+	$speaker = budbl
+	$listener = player
+}
+
+//============================================
+//	End Definitions
+//============================================
+
+//============================================
+//	Begin Regular Sequence  Info
+//============================================
+
+						
+%apcSequence
+{
+	#firetargets="hudthing"
+	#pause = .1
+	#firetargets="truckisdriving"
+	#pause = 1
+	#firetargets="fadething"
+	#firetargets="freeze"
+	#firetargets="opening_music"
+	@TitleStyle 		#text = "#PIPEDREAM_TITLE",
+						pause = 5
+						
+	@SubtitleStyle 		#text = "#PIPEDREAM_SUBTITLE_A",
+						pause = 7.5
+	
+	#firetargets="c_dn_off"
+
+	#pause = 4	         
+	#firetargets="rumble_1"							
+	@Spetsnaz_Leader	#text = "", //"Rebels have taken over the oil pipeline 
+								 	//on the border of Turkmenistan. Workers at 
+								 	//the facility have been taken captive.  
+								 	//We are going in to eliminate any opposition 
+								 	//and get the hostages out.  Expect 
+								 	//heavy resistance.",
+						sound =	Spetsnaz_Leader01_talk,
+						pause = 8
+	#pause = 1
+     	@ObjectiveStyle
+	#text = "#OBJ1_PDREAM_NEW"
+	#firetargets = "OBJ1" 
+	#pause = 5
+		@ObjectiveStyle          
+	#text = "#OBJ2_PDREAM_NEW"		
+	#firetargets = "OBJ2"
+
+	#firetargets="rumble_2"
+	@Spetsnaz_Leader	#text = "", //"Armed air support is on standby and will 
+									//provide cover where needed.",
+						sound = Spetsnaz_Leader02_talk,
+						pause = 3         
+						                  
+						                  
+	#firetargets="rumble_3"
+	#pause = 1
+	#firetargets="seguefadeout"
+	#pause = 5
+	#firetargets="truckintro"	
+	#pause = 1
+	#firetargets="truckisdriving"	
+	#firetargets="APCQuake"
+	#firetargets="closekeyidle"
+	#pause = 5
+	#firetargets="seguefadein"
+	#firetargets="truckidle"
+	#firetargets="apc-door"
+	#pause = .3
+	#firetargets="duder01_ck2"
+	#pause = .1
+	@Spetsnaz_Leader	#text = "", //"Lets go, comrades",
+						sound = Spetsnaz_Leader03_talk
+	#firetargets="Guy1Go"  
+	#pause = .5
+	#firetargets="duder02_ck2"
+	#pause = .1
+	#firetargets="Guy2Go"  
+	#pause = .5
+	#firetargets="duder03_ck2"
+	#pause = .1
+	#firetargets="Guy3Go"
+	#firetargets="weaponthing"
+	#pause = .1
+	#firetargets="weaponthing2"
+	#firetargets="hudthing1"
+	#pause = 5
+	#firetargets="freeze"
+}
+
+%player_enter
+{
+	#firetargets="duder01_ck2"
+	#firetargets="duder02_ck2"
+	#pause = .1
+	#firetargets="Guy1Go3"  
+	#firetargets="Guy2Go3"  
+	#pause = .5
+	#firetargets="starthall_guys_ck"
+	#firetargets="duder03_ck2"
+	#pause = .1
+	#firetargets="Guy3Go3"
+}
+
+%cratebashSequence
+{   
+	#pause = 1.3            
+	#firetargets="crates"
+}	
+
+%truckloadingSequence
+{
+	@Terrorist_C		#text = "",//"Get those weapons loaded! We need to move! Yel-la, yeal-la!",	//LOCALIZE_ME						
+						sound = Terrorist_C01_talk,
+						pause = 3									  						
+}						
+
+
+%explodeSequence
+{                        
+	
+	#firetargets="hasnotstartedyet"
+	#firetargets="kickthewindow"
+	#pause = .1      
+	#firetargets="snipeglass"
+	#firetargets="snipeglass3"
+	#firetargets="helicoptersounds"
+	#pause = 2
+	@Spetsnaz_Soldier	#text = "", //"There's too many of them! We need air support!",						
+						sound = Spetsnaz_Soldier01_talk,
+						pause = 3
+	#pause = 1.5    
+	#firetargets="lastguykilled"
+	#pause = 1
+	@Spetsnaz_Pilot		#text = "", //"Da, affirmative. Moving in on target.",						
+						sound = Spetsnaz_Pilot01_talk,
+						pause = 4
+	#firetargets="all_no_invul"					
+	#firetargets="heloseq_trigger"  
+	#firetargets="heli_attack"  
+	#pause = 1             
+	#killtargets="killthebuildingguys"
+	#firetargets="c_dn_on"	
+	#pause = 3 
+	#firetargets="lawsshooters"		
+	#pause = .5
+	#killtargets="badguys"	
+	#firetargets="blowstuffup"	//makes the building blow up anim play
+	#firetargets="buildingfall"
+	#firetargets="explodedamage"
+	#killtargets="snipeglass1"
+	#killtargets="snipeglass2"
+	#firetargets="wallexplosion"
+	#firetargets="bhudda"
+	#pause = 1	
+	#firetargets="throwthedude"
+	#firetargets="wallexplosion1"	
+	#killtargets="small_gun4"
+	#killtargets="small_gun5"	
+	#killtargets="smallgun5"	
+	#killtargets="smallgun6"	
+	#killtargets="doorthing" 
+	#firetargets="smoke0"
+	#firetargets="debrisclip"	 
+	#pause = 2
+	#firetargets="wallexplosion2"	
+	#killtargets="destroydoorok"
+	#killtargets="destroydoor"	
+	#pause = .2         
+	#firetargets="smoke"
+	#firetargets="wallexplosion3"	
+	#firetargets="destroydoormetal"	 		
+	@Spetsnaz_Pilot		#text = "", //"Target eliminated, moving back to standby position.",						
+						sound = Spetsnaz_Pilot02_talk,
+						pause = 3						
+	#pause = 6 
+	#firetargets="explodedamage"		
+}
+
+
+%gdoorSequence
+{
+	#firetargets="gdoormovesound"                
+	#pause = .5                    
+	#killtargets="garagesound"
+	#killtargets="doorblocker0" 
+	#pause = 1
+	@Terrorist_Garage
+	#sound = Terrorist_Alert
+}
+
+%toggledooropenSequence
+{
+	#firetargets="redonetolowerrspeeds"
+	#firetargets="killthisdoor"
+	#firetargets="fgdoor1"
+	#firetargets="gdoormovesound"
+	#pause = .5
+	#killtargets="doorblocker1"	
+	#firetargets="c_dn_off"	
+	#firetargets="c_dn_off0"
+	#pause = .5
+	#firetargets="Guy3Go4"
+	#firetargets="Guy1Go4"
+	#pause = 1
+	#firetargets="Guy2Go4"
+}
+
+//============================================
+//	End Regular Sequence Info
+//============================================
+
+
+
+
+
+
+%behind_you_init_sequence
+{
+	#firetargets = "behind_you_door_t1_spawn"
+	#firetargets = "behind_you_door_t2_spawn"
+}
+
+
+
+
+%behind_you_sequence
+{
+	#firetargets = "behind_you_door_t1_script"
+	#pause = 0.3
+	#firetargets = "behind_you_door2"
+}

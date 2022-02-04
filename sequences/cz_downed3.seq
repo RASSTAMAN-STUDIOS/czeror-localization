@@ -1,0 +1,240 @@
+//============================================
+// Downed Pilot Dialog Sequences (cz_downed3)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//============================================
+//	Sentences
+//============================================
+
+!sentences
+{
+
+unknown_1_dialog0 downed/hosm_mygodfn
+unknown_2_dialog0 downed/gsg9gl_locahosa
+unknown_3_dialog0 downed/cnc_gethsafp
+unknown_4_dialog0 downed/gsg9gl_exhosmeet
+advised_1_dialog0 downed/gsg9gl_firsthosr
+sleep_tight_dialog0 downed/tg1_sleep
+
+//============================================
+//	Hostage and NPC Chatter - German
+//============================================
+
+H_HELP_GE0 h/h_m_getmeout_ge
+H_HELP_GE1 h/h_m_okletsgo_ge
+H_HELP_GE2 h/h_m_gethellout_ge
+H_HELP_GE3 h/h_m_ohlets_ge
+
+H_THANK_GE0 h/h_m_thanksave_ge
+H_THANK_GE1 h/h_m_owelife_ge
+H_THANK_GE2 h/h_m_gladover_ge
+H_THANK_GE3 h/h_m_thanks_ge
+
+H_PAIN_GE0 h/h_m_pain1_ge
+H_PAIN_GE1 h/h_m_pain2_ge
+H_PAIN_GE2 h/h_m_pain3_ge
+H_PAIN_GE3 h/h_m_pain4_ge
+
+H_DEATH_GE0 h/h_m_death1_ge
+H_DEATH_GE1 h/h_m_death2_ge
+H_DEATH_GE2 h/h_m_death3_ge
+H_DEATH_GE3 h/h_m_death4_ge
+
+H_PLFEAR_GE0 h/h_m_mygodw_ge
+H_PLFEAR_GE1 h/h_m_ithought_ge
+H_PLFEAR_GE2 h/h_m_pleasenok_ge
+
+H_FEAR_GE0 h/h_m_dontdie_ge
+H_FEAR_GE1 h/h_m_yousavr_ge
+H_FEAR_GE2 h/h_m_wherewego_ge
+
+H_SCREAM_GE0 h/h_m_ahh1_ge
+H_SCREAM_GE1 h/h_m_lookout_ge
+H_SCREAM_GE2 h/h_m_they'rehere_ge
+
+H_SICK_GE0 h/h_m_cantgo_ge
+H_SICK_GE1 h/h_m_toosick_ge
+H_SICK_GE2 h/h_m_goinpuke_ge
+
+H_BETTER_GE0 h/h_m_feelmuch_ge
+H_BETTER_GE1 h/h_m_didtr_ge
+H_BETTER_GE2 h/h_m_thankshot_ge
+
+NPC_OK_GE0 npc/npc_m_yesdo_ge
+NPC_OK_GE1 npc/npc_m_right_ge
+NPC_OK_GE2 npc/npc_m_ok_ge
+
+NPC_WAIT_GE0 npc/npc_m_waithere_ge
+NPC_WAIT_GE1 npc/npc_m_stayhere_ge
+NPC_WAIT_GE2 npc/npc_m_movemusc_ge
+
+NPC_STOP_GE0 npc/npc_m_notfurth_ge
+
+NPC_STARE_GE0 npc/npc_m_lookme_ge
+NPC_STARE_GE1 npc/npc_m_yousure_ge
+
+NPC_HELLO_GE0 npc/npc_m_hello_ge
+NPC_HELLO_GE1 npc/npc_m_officer_ge
+
+NPC_ANSWER_GE0 npc/npc_m_iworried_ge
+NPC_ANSWER_GE1 npc/npc_m_canttell_ge
+NPC_ANSWER_GE2 npc/npc_m_whatdoth_ge
+NPC_ANSWER_GE3 npc/npc_m_dontid_ge
+
+NPC_QUESTION_GE0 npc/npc_m_whatgon_ge
+NPC_QUESTION_GE1 npc/npc_m_didhear_ge
+NPC_QUESTION_GE2 npc/npc_m_whoare_ge
+NPC_QUESTION_GE3 npc/npc_m_thosepol_ge
+
+NPC_IDLE_GE0 npc/npc_m_howhapp_ge
+NPC_IDLE_GE1 npc/npc_m_whyme_ge
+NPC_IDLE_GE2 npc/npc_m_sudden_ge
+NPC_IDLE_GE3 npc/npc_m_whatgo_ge
+
+NPC_NOGO_GE0 npc/npc_m_dontgoth_ge
+
+NPCONST_GE0 npc/npc_m_iseeone_ge
+NPCONST_GE1 npc/npc_m_theyhere_ge
+NPCONST_GE2 npc/npc_m_theygotguns_ge
+
+NPC_HEAR_GE0 npc/npc_m_hearthat_ge
+NPC_HEAR_GE1 npc/npc_m_someover_ge
+
+
+NPC_WOUND_GE0 npc/npc_m_beenshot_ge
+NPC_WOUND_GE1 npc/npc_m_ow_ge
+NPC_WOUND_GE2 npc/npc_m_arg_ge
+
+NPC_MORTAL_GE0 npc/npc_m_notgoingm_ge
+NPC_MORTAL_GE1 npc/npc_m_noo_ge
+NPC_MORTAL_GE2 npc/npc_m_ahhh1_ge
+
+NPC_CUREA_GE0 npc/npc_m_youdontlo_ge
+NPC_CUREA_GE1 npc/npc_m_sureOK_ge
+
+NPC_HEAL_GE0 npc/npc_m_heretake_ge
+NPC_HEAL_GE1 npc/npc_m_letme_ge
+
+NPC_PLFEAR_GE0 npc/npc_m_thoughtc_ge
+NPC_PLFEAR_GE1 npc/npc_m_getawaym_ge
+NPC_PLFEAR_GE2 npc/npc_m_helost_ge
+
+NPC_PAIN_GE0 h/h_m_pain1_ge
+NPC_PAIN_GE1 h/h_m_pain2_ge
+NPC_PAIN_GE2 h/h_m_pain3_ge
+NPC_PAIN_GE3 h/h_m_pain4_ge
+
+NPC_FEAR_GE0 npc/npc_m_ahh2_ge
+NPC_FEAR_GE1 npc/npc_m_help2_ge
+NPC_FEAR_GE2 npc/npc_m_whatgo2_ge
+
+NPC_SCREAM_GE0 npc/npc_m_omg_ge
+NPC_SCREAM_GE1 npc/npc_m_helpme_ge
+NPC_SCREAM_GE2 npc/npc_m_ahh3_ge
+NPC_SCREAM_GE3 npc/npc_m_thisnot_ge
+
+NPC_SCREAM_GE0 npc/npc_m_whatstop_ge
+NPC_SCREAM_GE1 npc/npc_m_dontdo_ge
+
+}
+
+//============================================
+//	Speaker Style & Definitions
+//============================================
+
+%unknown_hostage1		
+{
+	@NPC1Style
+	$speaker=unknown_hostage1
+}
+
+%ct_spawner1_child		
+{
+	@CT1Style
+	$speaker=ct_spawner1_child
+}
+
+//============================================
+//	Sequence ID's
+//============================================
+
+%unknown_hostage_dialog1
+{ 
+
+	@unknown_hostage1		//#text="My god! You found me! We must get out of
+					//here soon, this place could come down at any
+					//moment!",
+					#text="",
+					sound=unknown_1_dialog,
+					pause = 5.5
+
+	@ct_spawner1_child	//#text="Alpha1, we have located one package,
+					//please advise.",
+					#text="",
+					sound=unknown_2_dialog,
+					pause = 5
+
+	@RadioStyle			//#text="Get the package to safety and continue looking
+					//or our pilots.",
+					#text="",
+					sound=unknown_3_dialog,
+					pause = 3.5
+
+	@ct_spawner1_child	//#text="Roger that, you move forward and locate the
+					//pilots, we will secure the package and meet back with
+					//you shortly.",
+					#text="",
+					sound=unknown_4_dialog,
+					pause = 6
+
+}
+
+%be_advised_teams
+{
+
+	@RadioStyle			//#text="Be advised teams, one package has been secured -
+					//we are returning to the compound.",
+					#text="",
+					sound=advised_1_dialog,
+					pause = 6
+
+}
+
+%sleep_tight_bastard
+{ 
+
+	@T1Style			#text="#DOWNED3_GASSED", // LOCALIZE_ME
+					sound=sleep_tight_dialog,
+					pause = 8
+
+}
+
+//============================================
+//	Mission Failure
+//============================================
+
+%mission_failure_message1
+{
+	@FailureStyle	#text="#DOWNED_FAILURE3",
+				holdtime = 4
+
+}
+
+%mission_failure_message2
+{
+	@FailureStyle	#text="#DOWNED_FAILURE4",
+				holdtime = 4
+
+}
+
+
+//=============================================
+// Mission Objectives
+//=============================================
+
+%new_objective03
+{
+	@ObjectiveStyle	#text = "#OBJ3_DPILOT_NEW", //#text = "NEW OBJECTIVE: Move on and locate pilots"
+				firetargets="new_objective03_complete"
+}

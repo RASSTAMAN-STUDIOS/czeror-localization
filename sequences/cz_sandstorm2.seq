@@ -1,0 +1,360 @@
+!sentences
+{
+	SASleader1_0 sandstorm/sasl_enemyair
+	SASleader2_0 sandstorm/sasl_findawaygate
+	SASleader3_0 sandstorm/sass_whatdonick
+	SASleader4_0 sandstorm/sass_berk
+	SASleader5_0 sandstorm/sass_spotabort
+	SASleader6_0 sandstorm/sass_buggerspot
+	SASleader7_0 sandstorm/sass_takinghf
+	SASleader8_0 sandstorm/sass_mandown
+	SASleader9_0 sandstorm/sass_death2
+	TrainGuard1_0 sandstorm/sands1_intrud
+	TrainGuard2_0 sandstorm/sands2_soundalarm
+	CNCvoice1_0 sandstorm/cnc_yourmatesd
+	CNCvoice2_0 sandstorm/cnc_bloodyhe
+}
+
+
+
+
+
+%titletext
+{
+	#pause = 0.1
+	#firetargets = "freeze_player"
+
+//	#firetargets = "hud_off"
+
+	#pause = 1.0
+
+	#firetargets = "intro_fade_start"
+
+	#firetargets = "levelstart_autosave"
+
+	#pause = 1.0
+
+//	@TitleStyle		#text = "SANDSTORM"
+
+//	#pause = 5.0
+
+	@SubtitleStyle	#text = "#SANDSTORM_SUBTITLE2"
+
+	#pause = 6.5
+
+	#firetargets = "freeze_player"
+	#firetargets = "equip"
+	#firetargets = "hud_on"
+	#pause = 0.1
+	#firetargets = "equip2"
+
+	#firetargets="objective1"
+	@ObjectiveStyle
+	#text="#OBJ1_STORM_NEW"
+}
+
+
+
+
+
+%CTs_moveout_sequence
+{
+	#firetargets = "patrol_chopper2_spawn"
+
+	#pause = 5.0
+
+	#firetargets = "train_ct1_script1"
+	#pause = 0.5
+	#firetargets = "train_ct2_script1"
+
+	#pause = 4.0
+
+	#firetargets = "patrol_chopper2_changetarget"
+}
+
+
+
+
+
+%CTs_warning_sequence
+{
+	@CT1Style
+	$speaker = train_ct1
+	#text = "",
+//	#text = "Bollucks!  ...enemy air patrols!
+//This path is too well-guarded.",
+	sound = SASleader1_,
+	pause = 3.0
+
+	@CT2Style
+	$speaker = train_ct2
+	#text = "",
+//	#text = "Find a way to open that gate.
+//We'll hold this position.",
+	sound = SASleader2_,
+	pause = 5.0
+}
+
+
+
+
+
+
+%alarm_warning1_sequence
+{
+	@CT1Style
+	$speaker = train_ct1
+	#text = "",
+//	#text = "What are you doing!
+//You'll get us all nicked for sure!",
+	sound = SASleader3_,
+	pause = 5.0
+}
+
+
+
+
+
+
+
+
+%alarm_warning2_sequence
+{
+	@CT2Style
+	$speaker = train_ct2
+	#text = "",
+//	#text = "Stay back, you berk!
+//You to find another way around.",
+	sound = SASleader4_,
+	pause = 5.0
+}
+
+
+
+
+
+
+
+
+
+
+%trainalert_sequence
+{
+	#firetargets = "train_t1_script"
+	#firetargets = "train_t2_script"
+	#firetargets = "train_t3_script"
+	#firetargets = "train_t8_script"
+
+	@RadioStyle
+	#text = "You've been spotted!
+Abort! Abort!",
+	sound = SASleader5_
+//	pause = 1.0
+
+	#firetargets = "train_ct1_script4"
+//	#pause = 1.5
+	#firetargets = "train_ct2_script4"
+
+	@T1Style
+	$speaker = train_t1
+	#text = "",
+//	#text = "Intruders!",
+	sound = TrainGuard1_
+//	pause = 1.0
+
+	@T2Style
+	$speaker = train_t2
+	#text = "",
+//	#text = "Sound the alarm!  Yel-la, yel-la!",
+	sound = TrainGuard2_
+
+	@CT2Style
+	$speaker = train_ct2
+	#text = "",
+//	#text = "Taking heavy fire!  Bloody hell!",
+	sound = SASleader7_,
+	pause = 1.0
+
+	@CT1Style
+	$speaker = train_ct1
+	#text = "",
+//	#text = "Man down!",
+	sound = SASleader8_,
+	pause = 1.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Bloody hell, man down!
+//Repeat, man down!",
+	sound = CNCvoice2_
+//	pause = 1.0
+
+	@FailureStyle
+	#text = "#SANDSTORM_FAILURE_SPOTTED"
+
+//	#pause = 4.0
+
+	#firetargets = "trainalert_mission_failure"
+}
+
+
+
+
+
+
+
+
+
+
+%office_trainalert_sequence
+{
+	#firetargets = "train_t1_script"
+	#firetargets = "train_t2_script"
+	#firetargets = "train_t3_script"
+	#firetargets = "train_t8_script"
+
+
+//	@CT1Style
+//	$speaker = train_ct1
+//	#text = "",
+//	#text = "Bugger all! ...we've been spotted!",
+//	sound = SASleader6_
+//	pause = 3.0
+
+	#firetargets = "train_ct1_script4"
+	#pause = 1.5
+	#firetargets = "train_ct2_script4"
+
+	@T1Style
+	$speaker = train_t1
+	#text = "",
+//	#text = "Intruders!",
+	sound = TrainGuard1_
+//	pause = 3.0
+
+	@T2Style
+	$speaker = train_t2
+	#text = "",
+//	#text = "Sound the alarm!  Yel-la, yel-la!",
+	sound = TrainGuard2_
+
+	@CT2Style
+	$speaker = train_ct2
+	#text = "",
+//	#text = "Taking heavy fire!  Bloody hell!",
+	sound = SASleader7_
+//	pause = 5.0
+
+	#firetargets = "train_t6_spawn"
+	#firetargets = "train_t7_spawn"
+	#pause = 0.5
+	#firetargets = "train_t6_script"
+	#firetargets = "train_t7_script"
+
+	@CT1Style
+	$speaker = train_ct1
+	#text = "",
+//	#text = "Man down!",
+	sound = SASleader8_,
+	pause = 1.0
+
+	#firetargets = "train_alert1_spawn"
+//	#pause = 2.0
+	#firetargets = "train_alert2_spawn"
+//	#pause = 2.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Bloody hell, man down!
+//Repeat, man down!",
+	sound = CNCvoice2_,
+	pause = 1.0
+
+	@CT2Style
+	$speaker = train_ct2
+	#text = "",
+//	#text = "Arrghhh!",
+	sound = SASleader8_,
+	pause = 1.0
+
+	#firetargets = "train_alert3_spawn"
+//	#pause = 2.0
+	#firetargets = "train_alert4_spawn"
+
+	#pause = 6.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Your mates are down, but since you made it inside
+//the facility just keep going. You must
+//destroy bio-chem storage tanks at all costs.",
+	sound = CNCvoice1_,
+	pause = 5.0
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%startCTs_sequence
+{
+
+}
+
+
+
+
+%bigdoor_sequence
+{
+	#firetargets = "bigdoor"
+
+	#pause = 6.0
+
+	#firetargets = "train_ct1_script4"
+	#pause = 1.5
+	#firetargets = "train_ct2_script4"
+}
+
+
+
+%all_CTs_inside_sequence
+{
+	#firetargets = "train_ct1"
+	#pause = 1.0
+	#firetargets = "train_ct2"
+}
+
+
+
+
+
+%gararage1_sequence
+{
+	#firetargets="objective1"
+
+	#firetargets = "garage_t1_script"
+
+	#pause = 6.0
+
+	#firetargets = "garage_t2_script"
+
+	#firetargets="objective2"
+	@ObjectiveStyle
+	#text="#OBJ2_STORM_NEW"
+}
+
+
+
+
+
+

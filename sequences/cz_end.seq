@@ -1,0 +1,140 @@
+//============================================
+// Ending Sequence (cz_end)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+%end_credits1
+{
+	@TitleStyle		#text="#ENDING_TITLE1",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits2
+{
+	@TitleStyle		#text="#ENDING_TITLE2",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits3
+{
+	@TitleStyle		#text="#ENDING_TITLE3",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits4
+{
+	@TitleStyle		#text="#ENDING_TITLE4",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits5
+{
+	@TitleStyle		#text="#ENDING_TITLE5",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits6
+{
+	@TitleStyle		#text="#ENDING_TITLE6",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits7
+{
+	@TitleStyle		#text="#ENDING_TITLE7",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits8
+{
+	@TitleStyle		#text="#ENDING_TITLE8",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits9
+{
+	@TitleStyle		#text="#ENDING_TITLE9",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits10
+{
+	@TitleStyle		#text="#ENDING_TITLE10",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits11
+{
+	@TitleStyle		#text="#ENDING_TITLE11",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits12
+{
+	@TitleStyle		#text="#ENDING_TITLE12",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits13
+{
+	@TitleStyle		#text="#ENDING_TITLE13",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits14
+{
+	@TitleStyle		#text="#ENDING_TITLE14",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits15
+{
+	@TitleStyle		#text="#ENDING_TITLE15",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_credits16
+{
+	@TitleStyle		#text="#ENDING_TITLE16",
+				pause = 6,
+				holdtime = 3
+
+}
+
+%end_thankyou
+{
+	@TitleStyle		#text="#ENDING_THANKYOU1",
+				pause = 6,
+				holdtime = 3	
+
+}

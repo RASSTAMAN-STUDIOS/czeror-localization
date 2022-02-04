@@ -1,0 +1,187 @@
+// Brecon 02 dialog sequence files
+
+
+!sentences
+{
+	// ==============================================================
+	//cz_e02m2
+	//As soon as the level starts
+	// ==============================================================
+	SAS_Com_warning brecon/sasg_rememb
+
+	// ==============================================================
+	// guards talking to each other a lot.
+	// ==============================================================
+
+	Conv2_01_Guards0 brecon/rg7_light
+	// wav_time_1.298
+	Conv2_02_Guards0 brecon/rg8_nope
+	// wav_time_1.010
+	Conv2_03_Guards0 brecon/rg7_yousure
+	// wav_time_0.747
+	Conv2_04_Guards0 brecon/rg8_yup
+	// wav_time_0.756
+	Conv2_05_Guards0 brecon/rg7_sawyou
+	// wav_time_1.956
+	Conv2_06_Guards0 brecon/rg8_wasnt
+	// wav_time_1.403
+	Conv2_07_Guards0 brecon/rg7_years
+	// wav_time_2.594
+	Conv2_08_Guards0 brecon/rg8_tired
+	// wav_time_4.194
+	Conv2_09_Guards0 brecon/rg7_loan
+	// wav_time_3.222
+	// =====
+
+	// Sleepy guards
+
+	sleepy_guy1_wake0 brecon/rg3_whatwas
+	sleepy_guy2_wake0 brecon/rg3_isanyone
+	sleepy_guy3_wake0 brecon/rg3_nothingh
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%SAS_Commander
+{
+	@RadioStyle
+	$listener	= Player
+}
+
+%T_talking01
+{
+	@T1Style
+	$speaker	= firstA_guard2
+	$listener	= firstA_guard1
+}
+
+%T_talking02
+{
+	@T2Style
+	$speaker	= firstA_guard1 
+	$listener	= firstA_guard2
+}
+
+%T_Sleeping
+{
+	@T1Style
+	$speaker	= guard3
+}
+
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%Equip_time
+{
+	#pause = 6
+	#firetargets = "equip_delayed"
+}
+
+%warning
+{
+	#sound = SAS_Com_warning
+	@ObjectiveStyle #text = "#OBJ1_BRECON_NEW"
+	// text="Remember, you must not be detected while infiltrating the building.  
+	//	Use your fiber optic camera to locate guards and help keep 
+	//	yourself out of sight."
+}
+
+%Conversation01
+{
+	// =======
+
+	#pause = 2
+	
+	@T_talking01	#sound=Conv2_01_Guards, 
+	// speaker=firstA_guard1, listener	= firstA_guard2,
+	pause = 3.298	// LOCALIZE_WAVFILE_LENGTH_ADJUST +add 2 seconds for extra delay
+	//text="Hey, you got a light?"
+	
+	@T_talking02	#sound=Conv2_02_Guards, 
+	// speaker=firstA_guard2,	listener	= firstA_guard1,
+	pause = 2.010	// LOCALIZE_WAVFILE_LENGTH_ADJUST +add 1 seconds for extra delay
+	//text="Nope."
+	
+	@T_talking01	#sound=Conv2_03_Guards, 
+	speaker=firstA_guard1,	listener	= firstA_guard2,
+	pause = 3.747	// LOCALIZE_WAVFILE_LENGTH_ADJUST +add 2 seconds for extra delay
+	//text="You sure?"	
+
+	@T_talking02	#sound=Conv2_04_Guards, 
+	speaker=firstA_guard2,	listener	= firstA_guard1,
+	pause = 2.756	// LOCALIZE_WAVFILE_LENGTH_ADJUST +add 1 seconds for extra delay
+	//text="Yup."
+
+	@T_talking01	#sound=Conv2_05_Guards, 
+	speaker=firstA_guard1, listener	= firstA_guard2,
+	pause = 2.956	// LOCALIZE_WAVFILE_LENGTH_ADJUST +add 2 seconds for extra delay
+	//text="I saw you light a cigarette outside."
+	
+	@T_talking02	#sound=Conv2_06_Guards, 
+	speaker=firstA_guard2,	listener	= firstA_guard1,
+	pause = 1.403	// LOCALIZE_WAVFILE_LENGTH_ADJUST 
+	//text="Wasn’t me."
+
+	@T_talking01	#sound=Conv2_07_Guards, 
+	speaker=firstA_guard1, listener	= firstA_guard2,
+	pause = 2.594	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	//text="Of course it was, I’ve known you for 6 years!"
+
+	@T_talking02	#sound=Conv2_08_Guards, 
+	speaker=firstA_guard2, listener	= firstA_guard1,
+	pause = 7.194	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	//text="Look.  I’m tired of losing my lighter.  Go ask somebody else." +add 3 seconds for extra delay
+
+	@T_talking01	#sound=Conv2_09_Guards, 
+	speaker=firstA_guard1, listener	= firstA_guard2,
+	pause = 25
+	//text="Hrumph.  See if I loan you any smokes next time you’re out!"
+	
+	#firetargets="no_more_pissing"
+	// =======
+}
+
+%awake01
+{
+	// =======
+	
+	@T_Sleeping	#sound=sleepy_guy1_wake 
+	// speaker=guard3 
+	// text="What was that?!"
+
+}
+
+%awake02
+{
+	// =======
+	
+	@T_Sleeping	#sound=sleepy_guy2_wake 
+	// speaker=guard3, 
+	// text="Is anyone there?"
+
+}
+
+%awake03
+{
+	// =======
+	
+	@T_Sleeping	#sound=sleepy_guy3_wake 
+	// speaker=guard3, 
+	// text="Nothing….I must be hearing things again….(yawn)"
+
+}
+
+// =====================================================================
+// Mission Fails
+// =====================================================================
+
+%Mission_failed01
+{
+	#pause = 1.2
+	@FailureStyle
+	#text =	"#BRecon02_failed01"
+}

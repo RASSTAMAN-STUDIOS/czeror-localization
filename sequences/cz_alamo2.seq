@@ -1,0 +1,441 @@
+!sentences
+{
+Nego1_0	alamo/nego_kabob
+CNC1_0	alamo/cnc_messy
+Nego2_0	alamo/nego_bomb
+CNC2_0	alamo/cnc_whatyeah
+CNC3_0	alamo/cnc_holed
+CNC4_0	alamo/cnc_schedm
+CNC5_0	alamo/cnc_sweetass
+Team1_0	alamo/team1_weopen
+T1_0		alamo/t_swine
+T2_0		alamo/t_snore
+Team2_0	alamo/team1_wdmeet
+Team3_0	alamo/team1_takingf
+Team4_0	alamo/team1_imhitimhit
+Team5_0	alamo/team2_surround
+Team6_0	alamo/team1_pain
+Team7_0	alamo/team2_imhityougo
+Team8_0	alamo/team1_death
+Team9_0	alamo/team2_death
+HosF1_0	alamo/hosf_helpus3
+HosF2_0	alamo/hosf_thankgod3
+CNC6_0	alamo/cnc_yourteamdown
+CNC7_0	alamo/cnc_airlift
+CNC8_0	alamo/cnc_radioairt
+CNC9_0	alamo/cnc_roghosp
+CNC10_0	alamo/cnc_holdplong
+Pilot1_0	alamo/pilot_tkfire
+Pilot2_0	alamo/pilot_dustover
+Pilot3_0	alamo/pilot_teamposd
+CNC11_0	alamo/cnc_rogbhome
+
+hostage_down_talk0 miami/cnc_packisdown
+
+	H_HELP_AM0 h/h_m_getmeout_am
+	H_HELP_AM1 h/h_m_okletsgo_am
+	H_HELP_AM2 h/h_m_gethellout_am
+	H_HELP_AM3 h/h_m_ohlets_am
+
+	H_THANK_AM0 h/h_m_thanksave_am
+	H_THANK_AM1 h/h_m_owelife_am
+	H_THANK_AM2 h/h_m_gladover_am
+	H_THANK_AM3 h/h_m_thanks_am
+
+	H_PAIN_AM0 h/h_m_pain1_am
+	H_PAIN_AM1 h/h_m_pain2_am
+	H_PAIN_AM2 h/h_m_pain3_am
+	H_PAIN_AM3 h/h_m_pain4_am
+
+	H_DEATH_AM0 h/h_m_death1_am
+	H_DEATH_AM1 h/h_m_death2_am
+	H_DEATH_AM2 h/h_m_death3_am
+	H_DEATH_AM3 h/h_m_death4_am
+
+	H_PLFEAR_AM0 h/h_m_mygodw_am
+	H_PLFEAR_AM1 h/h_m_ithought_am
+	H_PLFEAR_AM2 h/h_m_pleasenok_am
+
+	H_FEAR_AM0 h/h_m_dontdie_am
+	H_FEAR_AM1 h/h_m_yousavr_am
+	H_FEAR_AM2 h/h_m_wherewego_am
+
+	H_SCREAM_AM0 h/h_m_ahh1_am
+	H_SCREAM_AM1 h/h_m_lookout_am
+	H_SCREAM_AM2 h/h_m_they'rehere_am
+
+	H_SICK_AM0 h/h_m_cantgo_am
+	H_SICK_AM1 h/h_m_toosick_am
+	H_SICK_AM2 h/h_m_goinpuke_am
+
+	H_BETTER_AM0 h/h_m_feelmuch_am
+	H_BETTER_AM1 h/h_m_didtr_am
+	H_BETTER_AM2 h/h_m_thankshot_am
+
+	//**hostage female chatter
+
+	H_HELP_AMF0 h/h_f_mygoodp_am
+	H_HELP_AMF1 h/h_f_neverbeen_am
+	H_HELP_AMF2 h/h_f_scaredp_am
+
+	H_THANK_AMF0 h/h_f_thankf_am
+	H_THANK_AMF1 h/h_f_veryb_am
+	H_THANK_AMF2 h/h_f_courage_am
+
+	H_PAIN_AMF0 h/h_f_pain1_am
+	H_PAIN_AMF1 h/h_f_pain2_am
+	H_PAIN_AMF2 h/h_f_pain3_am
+	H_PAIN_AMF3 h/h_f_pain4_am
+
+	H_DEATH_AMF0 h/h_f_death1_am
+	H_DEATH_AMF1 h/h_f_death2_am
+	H_DEATH_AMF2 h/h_f_death3_am
+	H_DEATH_AMF3 h/h_f_death4_am
+
+	H_PLFEAR_AMF0 h/h_f_mygod_am
+	H_PLFEAR_AMF1 h/h_f_myside_am
+	H_PLFEAR_AMF2 h/h_f_plsnokill_am
+
+	HEAR_AMF0 h/h_f_ohhelp_am
+	HEAR_AMF1 h/h_f_ohmy_am
+	HEAR_AMF2 h/h_f_help_am
+
+	H_SCREAM_AMF0 h/h_f_ahh1_am
+	H_SCREAM_AMF1 h/h_f_lookout_am
+	H_SCREAM_AMF2 h/h_f_theyhere_am
+
+	H_SICK_AMF0 h/h_f_dontfeel_am
+	H_SICK_AMF1 h/h_f_toosick_am
+	H_SICK_AMF2 h/h_f_puke_am
+
+	H_BETTER_AMF0 h/h_f_feelbett_am
+	H_BETTER_AMF1 h/h_f_trick_am
+	H_BETTER_AMF2 h/h_f_shotgo_am
+}
+
+
+%hq1_sequence
+{
+	#firetargets = "hq1_t1_spawn"
+	#firetargets = "hq1_t3_spawn"
+
+	#pause = 1.5
+
+	#firetargets = "hq1_t1_script"
+	#pause = 0.5
+	#firetargets = "hq1_t2_script"
+}
+
+
+%hq2_sequence
+{
+	#firetargets = "hq2_t1_spawn"
+	#firetargets = "hq2_t2_spawn"
+	#firetargets = "hq2_t3_spawn"
+	#pause = 0.5
+
+	#firetargets = "hq2_t1_script"
+	#pause = 3.0
+	#firetargets = "hq2_t2_script"
+	#pause = 3.0
+	#firetargets = "hq2_t3_script"
+}
+
+
+
+%kabob1_sequence
+{
+	#firetargets = "kabob1_t1_spawn"
+	#firetargets = "kabob1_t2_spawn"
+
+	#pause = 0.5
+
+
+	#firetargets = "kabob1_t1_script"
+	#pause = 0.5
+	#firetargets = "kabob1_t2_script"
+	#pause = 0.5
+	#firetargets = "kabob1window_t1"
+}
+
+
+%kabob1_sequence2
+{
+	#firetargets = "kabob1_t3_spawn"
+	#firetargets = "kabob1_t5_spawn"
+	#firetargets = "kabob1_t7_spawn"
+	#firetargets = "kabob1_t8_spawn"
+	#firetargets = "kabob1_t9_spawn"
+}
+
+
+
+
+%windowgoon1_sequence
+{
+	#firetargets = "windowgoon1_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "windowgoon1_window"
+	#firetargets = "windowgoon1_script"
+}
+
+
+
+%windowgoon2_sequence
+{
+	#firetargets = "windowgoon2_spawn"
+	#firetargets = "kabob1_t4_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "windowgoon2_window"
+	#firetargets = "windowgoon2_script"
+}
+
+
+
+%windowgoon3_sequence
+{
+	#firetargets = "windowgoon3_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "windowgoon3_window"
+	#firetargets = "windowgoon3_script"
+}
+
+
+
+
+
+%alamo3_sequence
+{
+	#firetargets = "chopper_spawn"
+
+	#firetargets = "BattleMusic"
+
+	@RadioStyle
+	#text = "",
+//	#text = "Roger that, package is in position.  Dustoff is inbound.",
+	sound = CNC9_,
+	pause = 4.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Hold that position as long as possible, you've got multiple terries moving in fast!",
+	sound = CNC10_,
+	pause = 4.0
+
+	#firetargets = "chopper_attacker5_spawn"
+
+	#pause = 2.5
+
+	@RadioStyle
+	#text = "",
+//	#text = "The LZ's too hot, we're taking ground fire.  We can't land until the area is clear.",
+	sound = Pilot1_,
+	pause = 4.0
+
+	#firetargets = "chopper_attacker3_door"
+	#pause = 1.0
+	#firetargets = "chopper_attacker3_spawn"
+
+	#pause = 5.5
+
+	#firetargets = "chopper_attacker4_spawn"
+
+	#pause = 3.5
+
+	#firetargets = "chopper_attacker1_door"
+	#pause = 1.0
+	#firetargets = "chopper_attacker1_spawn"
+
+	#pause = 5.5
+
+	#firetargets = "chopper_attacker2_spawn"
+
+	#pause = 2.5
+}
+
+
+
+
+%assault11_sequence
+{
+//	#firetargets = "kabob1_t5_script"
+//	#firetargets = "kabob1_t8_script"
+}
+
+
+
+%assault12_sequence
+{
+	#firetargets="objective1"
+
+	#firetargets = "kabob1_t6_spawn"
+	#firetargets = "kabob1_t7_spawn"
+	#pause = 0.5
+	#firetargets = "kabob1_t6_script"
+	#firetargets = "kabob1_t7_script"
+
+	#pause = 5.5
+
+	#firetargets="objective3"
+	@ObjectiveStyle
+	#text="#OBJ3_ALAMO_NEW"
+}
+
+
+
+
+%hostage1_sequence
+{
+	#firetargets = "gaurd1_spawn"
+	#firetargets = "guard2_spawn"
+	#firetargets = "m249guard_spawn"
+}
+
+
+
+
+%hostage2_sequence
+{
+	#firetargets="objective3"
+
+	@NPC1Style
+	$speaker = embassy_embassador
+	#text = "",
+//	#text = "Help us!",
+	sound = HosF1_,
+	pause = 1.0
+
+	#pause = 1.5
+
+	@NPC2Style
+	$speaker = embassy_judge
+	#text = "",
+//	#text = "Thank god you're here!",
+	sound = HosF2_,
+	pause = 2.0
+
+	#pause = 1.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Get the package to higher ground so we can air lift them outta there!",
+	sound = CNC7_,
+	pause = 4.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Once the package is in position, radio for dustoff!",
+	sound = CNC8_,
+	pause = 4.0
+
+	#firetargets="objective4"
+	@ObjectiveStyle
+	#text="#OBJ4_ALAMO_NEW"
+}
+
+
+
+
+
+
+%hostage17_sequence
+{
+	@RadioStyle
+	#text = "You are NOT supposed to be here!",
+	pause = 4.0
+}
+
+
+
+
+
+%hostages_saved_sequence
+{
+	#firetargets="objective4"
+}
+
+
+
+
+
+
+
+%dustoffready_sequence
+{
+	@RadioStyle
+	#text = "",
+//	#text = "We're ready for dustoff, get over here!",
+	sound = Pilot2_,
+	pause = 4.0
+
+	#firetargets="objective5"
+	@ObjectiveStyle
+	#text="#OBJ5_ALAMO_NEW"
+}
+
+
+
+
+%dustoff_sequence
+{
+	#firetargets = "hostages_invulnerable"
+
+	#firetargets = "endmission_manager"
+
+	#pause = 24.0
+
+	#firetargets="objective5"
+
+	@RadioStyle
+	#text = "",
+//	#text = "OK command, team is in position and we are dusting off.",
+	sound = Pilot3_
+
+	#pause = 3.0
+
+	@TitleStyle
+	#text = "#GENERIC_SUCCESS"
+
+	@RadioStyle
+	#text = "",
+//	#text = "Roger that Alpha6, bring 'em home…",
+	sound = CNC11_,
+	pause = 4.0
+}
+
+
+
+
+
+
+
+
+%hostage_down_sequence
+{
+	@FailureStyle
+	#text = "#ALAMO_FAILURE_HOSTAGE",
+	sound = hostage_down_talk,
+	firetargets = "mission_failure_hostage",
+	pause = 2.5
+}
+
+
+
+
+%chopper_down_sequence
+{
+	#firetargets = "chopper_attackers_killtarget"
+
+	@FailureStyle
+	#text = "#ALAMO_FAILURE_CHOPPER",
+//	sound = hostage_down_talk,
+	firetargets = "mission_failure_chopper",
+	pause = 2.5
+}
+

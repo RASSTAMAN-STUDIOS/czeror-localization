@@ -1,0 +1,434 @@
+!sentences
+{
+	// ==============================================================
+	// High Rise
+	// ==============================================================
+ 
+	friendly_air_support0 	HighRise/cnc_fraireng
+	
+	Hes_in_here0 		HighRise/hight1_heinhere
+	Kill_him0 			HighRise/hight2_killhim
+	Shoot0 			HighRise/hight1_shoot
+	
+	Enemy_gunship0 		HighRise/sasp_enemydown
+	located_the_warhead0 	HighRise/sasp_locwar
+	Arrrrghhhh0 		HighRise/sasp_enemydown
+	
+	Our_air_support0 		HighRise/cnc_allrepinalpha cnc_airhitdown
+	
+	You_fool0 			HighRise/hightl_folllate
+	armed_the_detonator0 	HighRise/hightl_alreadyarmed
+	HAHAHA0 			HighRise/hightl_laugh1
+	fiery_judgment0 		HighRise/hight3_dieopp
+	cannot_win0 		HighRise/hightl_cannotwin
+	
+	Welcome_fool0 		HighRise/hightl_welcomfool
+
+	//T leader tuanting
+	Wake_up0			HighRise/hightl_wakeopp
+	// wav_time_2.189
+	nothing_to_fear0		HighRise/hightl_nothingfear
+	// wav_time_5.299
+	wish_to_fight0		HighRise/hightl_stillsome
+	// wav_time_7.922
+	that_knife0			HighRise/hightl_pickupkn
+	// wav_time_5.436
+
+	wont_you_die0		HighRise/hightl_wontdie
+	Take_him_out0		HighRise/hightl_takehimout
+
+	Die_infidel0		HighRise/hight3_dieopp
+	shall_not_interfere0	HighRise/hight4_notinter
+	out_of_time0		HighRise/hightl_runoutoftime
+	have_no_chance0		HighRise/hightl_nochance
+	get_closer_and_closer0	HighRise/hightl_beepclose
+	fate_my_friend0		HighRise/hightl_cantstopfate
+
+	won_my_friend0		HighRise/hightl_haventwon
+
+	glass_is_bulletproof0	HighRise/hightl_glassbullet
+	// wav_time_1.904
+	get_to_me0			HighRise/hightl_cantgettome
+	// wav_time_1.438
+	
+	Oh_no0			HighRise/hightl_ohno
+	Arrrrrgggghhhhhhh0	HighRise/hightl_death
+
+	//CNC 
+	Support_is_on_the_way0	HighRise/cnc_havedisnuke
+	// wav_time_4.667
+
+	triggering_device0	HighRise/cnc_hehadtrigg
+
+	open_and_disarm0		HighRise/cnc_bodgeopen
+
+	running_out0		HighRise/cnc_timerunning
+
+	//You WIN YAY!!
+	has_been_disarmed0	HighRise/cnc_nukedisarmed cnc_congratscat cnc_averted
+	Woohoo0			HighRise/sass_woohoo
+	Thank_god0			HighRise/sass_thankgod
+	Excellent_work0		HighRise/sass_brilljob
+	Congratulations_soldier0	HighRise/cnc_congratscat
+	catastrophe0		HighRise/cnc_averted
+
+	Oh_you_think0		HighRise/hightl_remote
+	Get_ready_to0		HighRise/hightl_maker
+
+	//Lightning and thunder ambience
+
+	HR_thunder0			ambience/HR_thunder1
+	HR_thunder1			ambience/HR_thunder3
+	HR_thunder2			ambience/HR_thunder4
+	HR_thunder3			ambience/HR_Thunstrike
+	HR_thunder4			ambience/HR_rollthun
+
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%CNC_voice
+{
+	@RadioStyle
+}
+
+%Ter_soldier_1
+{
+	@T1Style
+	$speaker	= t13
+}
+
+%Ter_Leader1
+{
+	@T3Style
+	$speaker	= T_leader
+	$listener	= Player
+}
+
+%Ter_Leader2
+{
+	@T3Style
+}
+
+
+%Ter_Leader3
+{
+	@T3Style
+	$speaker	= T_leader3
+	$listener	= Player
+}
+
+%Ter_Leader4
+{
+	@T3Style
+	$speaker	= T_leader4
+	$listener	= Player
+}
+
+
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%CNC_talk_01
+{
+	@CNC_voice	#sound = friendly_air_support,	channel = 4
+		//text = "Be advised, friendly air support has arrived."
+
+}
+
+%Hall_ambush1
+{
+	@Ter_soldier_1	#sound = Hes_in_here,	pause = 1.5,	channel = 4
+		//text = "He's in here!"
+	
+	@Ter_soldier_1	#sound = Kill_him,	pause = 1.5,	channel = 4
+		//text = "Kill him!"
+
+	@Ter_soldier_1	#sound = Shoot,	channel = 4
+		//text = "Shoot!!!"
+
+}
+
+%Killed_bad_chopper
+{
+	@CNC_voice	#sound = Enemy_gunship,	pause = 3,	channel = 4
+		//text = "Enemy gunship is down, repeat, target eliminated."
+
+}
+
+
+%Killed_good_chopper
+{
+	@CNC_voice	#sound = Arrrrghhhh,	pause = 3,	channel = 4
+		//text = "Arrrrghhhh!"
+
+	@CNC_voice	#sound = Our_air_support,	channel = 4
+		//text = "Our air support is going down"
+}
+
+%CNC_talk_02
+{
+	#pause = 3	
+
+	#firetargets = "kill_bad_chopper"
+
+	@CNC_voice	#sound = located_the_warhead,	pause = 8,	channel = 4
+		//text = "I've located the warhead, it's inside the com structure 
+		//		at the very top of the building."
+
+	#firetargets = "kill_good_chopper"
+
+	
+}
+
+%T_leader_talk01
+{
+	@Ter_Leader1	#sound = You_fool,	pause = 3,	channel = 4
+		//text = "You fool! You're too late!"
+
+	@Ter_Leader1	#sound = armed_the_detonator,	pause = 3,	channel = 4
+		//text = "I have already armed the detonator!"
+
+	@Ter_Leader1	#sound = HAHAHA,	channel = 1
+		//text = "HAHAHA!"
+
+	@Ter_Leader1	#sound = fiery_judgment,	pause = 3,	channel = 4
+		//text = "You will all die in a fiery judgment!"
+
+	#firetargets = "T_leader_can_walk_now50"
+	#pause = .2
+	#firetargets = "super_runout_guy"
+	#firetargets = "super_runout_tleader"
+
+	@Ter_Leader1	#sound = cannot_win,	pause = 3,	channel = 4
+		//text = "You cannot win!"
+	
+}
+
+
+%T_leader_talk02
+{
+	#pause = .2
+	
+	@Ter_Leader2	#sound = Welcome_fool,	channel = 3
+		//text = "(sound of player being hit in the back of the head) 
+		//		(subdued laughter)...Welcome fool!"
+}
+
+
+%T_leader_talk03
+{
+	
+	@Ter_Leader3	#sound = Wake_up,	pause = 3.189,	channel = 4
+		//text = "(volume fade in) Wake up!  Wake up infidel!"
+
+	@Ter_Leader3	#sound = nothing_to_fear,	pause = 5.299,	channel = 4
+		//text = "You have nothing to fear you will soon be judged."
+
+	@Ter_Leader3	#sound = wish_to_fight,	pause = 7.922,	channel = 4
+		//text = "Ahhh, you still wish to fight, so be it, it matters not!  
+		//		In just a few minutes nothing will matter!"
+
+	@ObjectiveStyle #text = "#OBJ9_HRISE_NEW"	
+
+	@Ter_Leader3	#sound = that_knife,	pause = 5.436,	channel = 4
+		//text = "Go ahead pick up that knife and try to strike me down you fool!"
+
+	#firetargets = "Freeze_again1"
+
+}
+
+%T_leader_talk04
+{
+	@Ter_Leader3	#sound = wont_you_die,	pause = 4,	channel = 4
+		//text = "Why won't you die!?"
+}
+
+%T_leader_Bullet_proof
+{
+	// #pause = 4
+	
+	@Ter_Leader4	#sound = glass_is_bulletproof,	pause = 1.904,	channel = 4
+		//text = "This glass is bulletproof!"
+
+	@Ter_Leader4	#sound = get_to_me,	pause = 1.438,	channel = 4
+		//text = "You can't get to me!"
+	
+	@Ter_Leader4	#sound = Die_infidel,	pause = 1,	channel = 4
+		//text = "Die infidel!"
+
+	#firetargets = "Doors_swing_open"
+} 
+
+%T_leader_talk05
+{
+	
+	@Ter_Leader4	#sound = Take_him_out,	pause = 8,	channel = 4
+
+	@ObjectiveStyle #text = "#OBJ10_HRISE_NEW"
+
+	@CNC_voice	#sound = Support_is_on_the_way,	pause = 4.667,	channel = 4
+
+}
+
+%T_leader_BlabBlab
+{
+	@ObjectiveStyle #text = "#OBJ12_HRISE_NEW"
+
+	@Ter_Leader4	#sound = Oh_you_think,	pause = 7
+	
+	@Ter_Leader4	#sound = Get_ready_to
+
+}
+
+%start_boss_battle_beeps03
+{
+
+	@ObjectiveStyle #text = "#OBJ11_HRISE_NEW"
+
+}
+
+%T_leader_Die1
+{
+	
+	// @Ter_Leader4	#sound = Oh_no,	pause = 4,	channel = 4
+		//text = "Oh no!"
+}
+
+%T_leader_Die2
+{
+	// #firetargets = "BLOOOM555", pause = 2
+
+	// @Ter_Leader4	#sound = Arrrrrgggghhhhhhh, pause = 2
+		//text = "Arrrrrgggghhhhhhh!"
+
+	// @CNC_voice	#sound = open_and_disarm,	pause = 4,	channel = 4
+		//text = "Ok, you're going to have to crack the warhead open and disarm 
+		//		the nuke by hand!"
+
+	// @CNC_voice	#sound = triggering_device,	pause = 12,	channel = 4
+		//text = "He had the triggering device!  You can't disarm the nuke safely 
+		//		without it, stand by..."
+	#pause = 2
+	#firetargets = "end_map"
+
+}
+
+%CNC_talk203
+{
+	
+	
+}
+
+%CNC_talk205
+{
+	
+	// @CNC_voice	#sound = has_been_disarmed,	pause = 4,	channel = 4
+		//text = "The nuke has been disarmed!  All teams stand down."
+
+	// @CNC_voice	#sound = Woohoo,	pause = 4,	channel = 4
+		//text = "Woohoo!"
+
+	// @CNC_voice	#sound = Thank_god,	pause = 4,	channel = 4
+		//text = "Thank god!"
+
+	// @CNC_voice	#sound = Excellent_work,	pause = 4,	channel = 4
+		//text = "Excellent work!"
+
+	@CNC_voice	#sound = Congratulations_soldier,	pause = 4,	channel = 4
+		//text = "Congratulations soldier, the enemy has been scattered and defeated."
+
+	@CNC_voice	#sound = catastrophe,	pause = 4,	channel = 4
+		//text = "You have averted a certain catastrophe this day.  You, the shadow 
+		//		that protects our world from those who are bent on destroying it.  
+		//		Thank you."
+}
+
+%lightning_thun_amb1
+{
+	#pause = 10
+
+	#firetargets = "setoff_bolt_10"	
+	#firetargets = "bolt_flash"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#pause = 16
+
+	#firetargets = "setoff_bolt_11"	
+	#pause = 1.4
+	#sound = HR_thunder
+
+	
+	#firetargets = "lightning_thun_amb2"
+	
+}
+
+%lightning_thun_amb2
+{
+	#pause = 24
+
+	#firetargets = "setoff_bolt_12"
+	#firetargets = "bolt_flash"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#firetargets = "lightning_thun_amb1"
+
+	#pause = 12
+
+	#firetargets = "setoff_bolt_14"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#firetargets = "lightning_thun_amb1"	
+}
+
+%HUGE_BOMB_WOW_OMG
+{
+	#pause = 25	
+
+	@CNC_voice	#sound = running_out
+		//text = "Time is running out!"
+	
+	// #firetargets = "Bigboom"
+
+}
+
+%DEFUSED_BOMB_WOW_OMG
+{
+	// #text = "Defused"
+	#killtargets = "start_boss_battle_beeps"
+	#killtargets = "Start_bomb_count"
+	#killtargets = "Bigboom"
+}
+
+// =====================================================================
+// Mission Fails
+// =====================================================================
+
+%Mission_failed01
+{
+	#pause = 1.2
+	@FailureStyle
+	#text =	"#RiseHard_Felltodeath"
+
+}
+
+%Mission_failed02
+{
+	
+	@FailureStyle
+	#text =	"#RiseHard_Nuke01", color = .1 .1 .1 
+
+}
+
+%Mission_success
+{
+	@titlestyle
+	#text =	"#GENERIC_SUCCESS"
+}

@@ -1,0 +1,638 @@
+!sentences
+{
+
+	lockeddoor doors/door_metal_locked1
+
+	dOpenD0 fastline/japco_getdop
+	dHoldOn0 fastline/japco_holdonth
+	dMedic0 fastline/japco_medict
+	dCOOpen0 fastline/japco_entirest
+	dSHim0 fastline/ct3_stayhim
+	dGAlive0 fastline/ct3_guyalive
+	dNeed0 fastline/ct2_needgo
+	dWGo0 fastline/ct2_wheredo
+	
+	dCTCO-A0 fastline/japco_survthy 
+	dCTCO-B0 fastline/japco_wedefcl
+	dCTCO-C0 fastline/japco_realmess
+
+	ct1_watchout0 fastline/ct2_watchout
+	ct1_gab0 fastline/ct3_talklate
+	ct1_gab1 fastline/ct3_letsgo
+
+	medic2_getmove0 fastline/japco_getmove
+
+	dWCT-A0 fastline/ct2_becare
+	dWCT-A1 fastline/ct2_keepalrt
+
+	dnpc_overhere0 fastline/bman2_offoverh
+
+	dnpc_behind_gate0 npc/npc_m_whyme_ja
+	dnpc_behind_gate1 npc/npc_m_helpme_ja
+	dnpc_behind_gate2 fastline/bman2_offoverh
+	
+	NPC_F_SCREAM0 npc/npc_f_helpme_ja
+
+	NPC_OK_JA0 npc/npc_m_yesdo_ja
+	NPC_OK_JA1 npc/npc_m_right_ja
+	NPC_OK_JA2 npc/npc_m_ok_ja
+
+	NPC_WAIT_JA0 npc/npc_m_waithere_ja
+	NPC_WAIT_JA1 npc/npc_m_stayhere_ja
+	NPC_WAIT_JA2 npc/npc_m_movemusc_ja
+
+	NPC_STOP_JA0 npc/npc_m_notfurth_ja
+
+	NPC_STARE_JA0 npc/npc_m_lookme_ja
+	NPC_STARE_JA1 npc/npc_m_yousure_ja
+
+	NPC_HELLO_JA0 npc/npc_m_hello_ja
+	NPC_HELLO_JA1 npc/npc_m_officer_ja
+
+	NPC_ANSWER_JA0 npc/npc_m_iworried_ja
+	NPC_ANSWER_JA1 npc/npc_m_canttell_ja
+	NPC_ANSWER_JA2 npc/npc_m_whatdoth_ja
+	NPC_ANSWER_JA3 npc/npc_m_dontid_ja
+
+	NPC_QUESTION_JA0 npc/npc_m_whatgon_ja
+	NPC_QUESTION_JA1 npc/npc_m_didhear_ja
+	NPC_QUESTION_JA2 npc/npc_m_whoare_ja
+	NPC_QUESTION_JA3 npc/npc_m_thosepol_ja
+
+	NPC_IDLE_JA0 npc/npc_m_howhapp_ja
+	NPC_IDLE_JA1 npc/npc_m_whyme_ja
+	NPC_IDLE_JA2 npc/npc_m_sudden_ja
+	NPC_IDLE_JA3 npc/npc_m_whatgo_ja
+
+	NPC_NOGO_JA0 npc/npc_m_dontgoth_ja
+
+	NPC_MONST_JA0 npc/npc_m_iseeone_ja
+	NPC_MONST_JA1 npc/npc_m_theyhere_ja
+	NPC_MONST_JA2 npc/npc_m_theygotguns_ja
+
+	NPC_HEAR_JA0 npc/npc_m_hearthat_ja
+	NPC_HEAR_JA1 npc/npc_m_someover_ja
+
+
+	NPC_WOUND_JA npc/npc_m_beenshot_ja
+	NPC_WOUND_JA npc/npc_m_ow_ja
+	NPC_WOUND_JA npc/npc_m_arg_ja
+
+	NPC_MORTAL_JA0 npc/npc_m_notgoingm_ja
+	NPC_MORTAL_JA1 npc/npc_m_noo_ja
+	NPC_MORTAL_JA2 npc/npc_m_ahhh1_ja
+
+	NPC_CUREA_JA0 npc/npc_m_youdontlo_ja
+	NPC_CUREA_JA1 npc/npc_m_sureOK_ja
+
+	NPC_HEAL_JA0 npc/npc_m_heretake_ja
+	NPC_HEAL_JA1 npc/npc_m_letme_ja
+
+	NPC_PLFEAR_JA0 npc/npc_m_thoughtc_ja
+	NPC_PLFEAR_JA1 npc/npc_m_getawaym_ja
+	NPC_PLFEAR_JA2 npc/npc_m_helost_ja
+
+	NPC_PAIN_JA0 h/h_m_pain1_ja
+	NPC_PAIN_JA1 h/h_m_pain2_ja
+	NPC_PAIN_JA2 h/h_m_pain3_ja
+
+	NPC_FEAR_JA0 npc/npc_m_help2_ja
+	NPC_FEAR_JA1 npc/npc_m_whatgo2_ja
+
+	NPC_SCREAM_JA0 npc/npc_m_omg_ja
+	NPC_SCREAM_JA1 npc/npc_m_helpme_ja
+	NPC_SCREAM_JA2 npc/npc_m_ahh3_ja
+	NPC_SCREAM_JA3 npc/npc_m_thisnot_ja
+	NPC_SCREAM_JA4 npc/npc_m_whatstop_ja
+	NPC_SCREAM_JA5 npc/npc_m_dontdo_ja
+
+
+	//**NPC female chatter
+
+
+	NPC_OK_JAF0 npc/npc_f_yesdo_ja
+	NPC_OK_JAF1 npc/npc_f_right_ja
+	NPC_OK_JAF2 npc/npc_f_ok_ja
+
+	NPC_WAIT_JAF0 npc/npc_f_waithere_ja
+	NPC_WAIT_JAF1 npc/npc_f_stayhere_ja
+	NPC_WAIT_JAF2 npc/npc_f_movemusc_ja
+
+	NPC_STOP_JAF0 npc/npc_f_notfurth_ja
+
+	NPC_STARE_JAF0 npc/npc_f_lookme_ja
+	NPC_STARE_JAF1 npc/npc_f_yousure_ja
+
+	NPC_HELLO_JAF0 npc/npc_f_hello_ja
+	NPC_HELLO_JAF1 npc/npc_f_officer_ja
+
+	NPC_ANSWER_JAF0 npc/npc_f_iworried_ja
+	NPC_ANSWER_JAF1 npc/npc_f_canttell_ja
+	NPC_ANSWER_JAF2 npc/npc_f_whatdoth_ja
+	NPC_ANSWER_JAF3 npc/npc_f_dontid_ja
+
+	NPC_QUESTION_JAF0 npc/npc_f_whatgon_ja
+	NPC_QUESTION_JAF1 npc/npc_f_didhear_ja
+	NPC_QUESTION_JAF2 npc/npc_f_whoare_ja
+	NPC_QUESTION_JAF3 npc/npc_f_thosepol_ja
+
+	NPC_IDLE_JAF0 npc/npc_f_howhapp_ja
+	NPC_IDLE_JAF1 npc/npc_f_whyme_ja
+	NPC_IDLE_JAF2 npc/npc_f_sudden_ja
+	NPC_IDLE_JAF3 npc/npc_f_whatgo_ja
+
+	NPC_NOGO_JAF0 npc/npc_f_dontgoth_ja
+
+	NPC_MONST_JAF0 npc/npc_f_iseeone_ja
+	NPC_MONST_JAF1 npc/npc_f_theyhere_ja
+	NPC_MONST_JAF2 npc/npc_f_theygotguns_ja
+
+	NPC_HEAR_JAF0 npc/npc_f_hearthat_ja
+	NPC_HEAR_JAF1 npc/npc_f_someover_ja
+
+
+	NPC_WOUND_JAF0 npc/npc_f_beenshot_ja
+	NPC_WOUND_JAF1 npc/npc_f_ow_ja
+	NPC_WOUND_JAF2 npc/npc_f_arg_ja
+
+	NPC_MORTAL_JAF0 npc/npc_f_notgoingm_ja
+
+
+
+
+
+	NPC_MORTAL_JAF1 npc/npc_f_noo_ja
+	NPC_MORTAL_JAF2 npc/npc_f_ahhh1_ja
+
+	NPC_CUREA_JAF0 npc/npc_f_youdontlo_ja
+	NPC_CUREA_JAF1 npc/npc_f_sureOK_ja
+
+	NPC_HEAL_JAF0 npc/npc_f_heretake_ja
+	NPC_HEAL_JAF1 npc/npc_f_letme_ja
+
+	NPC_PLFEAR_JAF0 npc/npc_f_thoughtc_ja
+	NPC_PLFEAR_JAF1 npc/npc_f_getawaym_ja
+	NPC_PLFEAR_JAF2 npc/npc_f_helost_ja
+
+	NPC_PAIN_JAF0 h/h_f_pain1_ja
+	NPC_PAIN_JAF1 h/h_f_pain2_ja
+	NPC_PAIN_JAF2 h/h_f_pain3_ja
+
+	NPC_FEAR_JAF0 npc/npc_f_ahh2_ja
+	NPC_FEAR_JAF1 npc/npc_f_whatgo2_ja
+
+	NPC_SCREAM_JAF0 npc/npc_f_omg_ja
+	NPC_SCREAM_JAF1 npc/npc_f_helpme_ja
+	NPC_SCREAM_JAF2 npc/npc_f_ahh3_ja
+	NPC_SCREAM_JAF3 npc/npc_f_thisnot_ja
+	NPC_SCREAM_JAF4 npc/npc_f_whatstop_ja
+	NPC_SCREAM_JAF5 npc/npc_f_dontdo_ja
+
+	H_THANK_JA0 h/h_m_thanksave_ja
+	H_THANK_JA1 h/h_m_owelife_ja
+	H_THANK_JA2 h/h_m_gladover_ja
+	H_THANK_JA3 h/h_m_thanks_ja
+
+}
+
+%ct1
+{
+	@CT1Style
+	$speaker	= ct1
+	$listener	= player
+}
+
+%ctCO
+{
+	@CT1Style
+	$speaker	= ctCO
+	$listener	= player
+}
+
+%ct2
+{
+	@CT2Style
+	$speaker	= ct2
+	$listener	= player
+}
+
+%WCT
+{
+	@CT2Style
+	$speaker	= WCT
+	$listener	= player
+}
+
+%medic2
+{
+	@CT1Style
+	$speaker	= medic2
+	$listener	= player
+}
+
+%npc_f_1
+{
+	@NPC1Style
+	$speaker	= npc_f_1
+	$listener	= player
+}
+
+%npcGate2
+{
+	@NPC1Style
+	$speaker	= npcGate2
+	$listener	= player
+}
+
+
+%bman_gate_free
+{
+	@NPC1Style
+	$speaker	= bman_gate_free
+	$listener	= player
+}
+
+%live_npc1
+{
+	@NPC1Style
+	$speaker	= live_npc1
+	$listener	= player
+}
+
+%live_npc2
+{
+	@NPC1Style
+	$speaker	= live_npc2
+	$listener	= player
+}
+
+%npc_overhere
+{
+	#pause = 1
+	@npcGate2
+	#sound = dnpc_overhere
+	#pause = 4
+}
+
+%npc_overhere_chat
+{
+	@npcGate2
+	#sound = dnpc_behind_gate
+	#pause = 11
+	#repeat = -1
+}
+
+%live_npc1_help
+{
+	#firetargets = "live_npc1_off"
+	#firetargets = "cCT2-N"
+	@live_npc1
+	#sound = NPC_FEAR_JA
+	#pause = 2
+	@ct2
+	#sound = dGAlive
+	#pause = 4
+	#firetargets = "live_npc1_on"
+	#firetargets = "cCT2-1"
+}
+
+%live_npc1_use
+{
+	#firetargets = "live_npc1_off"
+	@live_npc1
+	#sound = NPC_WOUND_JA
+	#pause = 4
+	#firetargets = "live_npc1_on"
+}
+
+%live_npc2_use
+{
+	#firetargets = "live_npc2_off"
+	@live_npc2
+	#sound = NPC_WOUND_JA
+	#pause = 4
+	#firetargets = "live_npc2_on"
+}
+
+%bman_free_use
+{
+	#firetargets = "bman_free_off"
+	@bman_gate_free
+	#sound = H_THANK_JA
+	#pause = 4
+
+	#firetargets = "bman_free_on"
+}
+
+%medic2_use
+{
+	#firetargets = "medic2-N"
+	@medic2
+	#sound = medic2_getmove
+	#pause = 2
+	#firetargets = "medic2-Y"
+}
+
+%CT1-1
+{
+	#firetargets = "cCT1-N"
+	@ct1
+	#sound = dSHim
+	#pause = 4
+	#firetargets = "cCT1-1"
+}
+
+%CT1-chat
+{
+	#firetargets = "cCT1-N"
+	@ct1
+	#sound = ct1_gab
+	#pause = 4
+	#firetargets = "cCT1-chatck"
+}
+
+%watch_out
+{
+	#firetargets = "cCT1-N"
+	@ct1
+	#sound = ct1_watchout
+	#pause = 2
+	#firetargets = "cCT1-1"
+}
+
+%CT2-1
+{
+	#firetargets = "cCT2-N"
+	@ct2
+	#sound = dSHim
+	#pause = 4
+	#firetargets = "cCT2-1"
+}
+
+%WCT-1
+{
+	#firetargets = "cWCT-N"
+	@WCT
+	#sound = dWCT-A
+	#pause = 2
+	#firetargets = "cWCT-1"
+}
+
+%CTCO-1
+{
+	#firetargets = "cCTCO-N"
+	@ctCO
+	#sound = dCTCO-A
+	#pause = 3
+	#firetargets = "cCTCO-2"
+}
+
+%CTCO-2
+{
+	#firetargets = "cCTCO-N"
+	@ctCO
+	#sound = dCTCO-B
+	#pause = 4
+	#firetargets = "cCTCO-3"
+}
+
+%CTCO-3
+{
+	#firetargets = "cCTCO-N"
+	@ctCO
+	#sound = dCTCO-C
+	#pause = 2
+	#firetargets = "cCTCO-3"
+}
+
+%level_start
+{
+
+	#firetargets = "hudOff"
+	#pause = .2 
+	#firetargets = "intro_music"
+	#firetargets = "freeze"
+	#firetargets = "gibs"
+	
+	#pause = 1
+	
+	#firetargets = "fadeStart"
+	
+	@TitleStyle		#text = "#FASTLINE_TITLE" 
+	
+	#pause = 4
+	
+	@SubtitleStyle	#text = "#FASTLINE_SUBTITLE"
+	#pause = 6
+	
+	
+	//------- Medic rescue stuff
+	
+	#firetargets = "camFloor"
+	
+	#sound = dMedic, speaker = ctCO
+	
+	#pause = 1
+	
+	#firetargets = "fadeIn"
+	
+	#pause = 2
+	
+	#firetargets = "fadeOut"
+	
+	
+	
+	//---- Player Starts up
+	
+	
+	#pause = 4
+	#firetargets = "freeze"
+	#firetargets = "killStretcher"
+	#firetargets = "renMedic"
+	#firetargets = "fadeIn"
+	#pause = 2
+	#firetargets = "get_up"
+	#pause = .5
+	#pause = .25
+	#firetargets = "giveStartHealth"
+	#firetargets = "hudOn"
+	#firetargets = "freeze"
+	
+	
+	#pause = .5
+	
+	//#sound = dCOOpen, speaker = ctCO,listener	= player
+	
+	//#firetargets = "cCTCO-N"
+	
+	#firetargets = "manFire"
+	
+	#pause = 1.5
+	
+	#firetargets = "seqCTCO-1"
+	
+	#pause = 3.2
+	
+	#firetargets = "seqCTCO-2"
+	
+	#pause = 4
+	
+	#firetargets = "freeze"	
+}
+
+%foundguy
+{
+	#firetargets = "ct1NoMove"
+	#firetargets = "cCT1-N"
+	@ct1
+	#sound = dSHim
+	#pause = 2
+	#firetargets = "cCT1-1"	
+}
+
+%ElevUp
+{
+	#firetargets = "doorElevUp1"
+	#firetargets = "doorblock"
+	
+	#pause = 1
+	
+	#firetargets = "showTrainDoorUp"
+	#firetargets = "hideDoorElevUp1"
+	
+	#firetargets = "trainDoorUp"
+	#firetargets = "elev"
+	
+	#pause = 3.5
+	
+
+	#firetargets = "spawnElevUp"
+	
+	#pause = 1
+	
+	#firetargets = "soundElevUp"
+	
+	#pause = .5
+	#firetargets = "throwSmoke0"
+	#firetargets = "hideTrainDoorUp"
+	#firetargets = "showDoorElevUp2"
+	
+	#pause = .1
+	
+	#firetargets = "doorElevUp2"
+	#pause = 1
+	#firetargets = "watch_out"
+	#pause = .5
+	#firetargets = "ct1_moveup"
+	#pause = .5
+	#firetargets = "ct1_idle_ck"
+	#pause = 1
+	#firetargets = "t_pillar_roll_ck"
+	#pause = .2
+	#firetargets = "t_pillar_roll"
+	#pause = 3
+	#firetargets = "t_hiding1_move"
+	#pause = 2
+	#firetargets = "t_hiding2_move"	
+}
+
+%ct1_gate1_seq
+{
+	#firetargets = "light_newgate1_ck"
+	#firetargets = "newgate1"
+	#firetargets = "ct1_ck_du"
+	#pause = .1
+	#firetargets = "ct1"
+	#pause = .1
+	#firetargets = "cCT1-chatck"
+}
+
+%hostage_shot
+{
+
+	#firetargets = "killShotDead"
+	#firetargets = "gunshot4"
+	#firetargets = "gibShotDead"
+	#pause = .5
+	#firetargets = "gunshotscream"
+	#pause = .4
+	#firetargets = "soundBody"
+	#pause = .5
+	#firetargets = "npc_f_1_flee"
+	#pause = .5
+	@npc_f_1
+	#sound=NPC_F_SCREAM
+	#pause = 1
+	#firetargets = "npc_overhere_chat"
+}
+
+%manGate2
+{
+	#firetargets = "killNPCGate2"
+	#firetargets = "lightoffGate2"
+	#firetargets = "lightoffGate2a"
+	#firetargets = "lightonGate2"
+	#firetargets = "lightonGate2a"
+	#firetargets = "relayGate2"
+
+	#killtargets = "overhere_trig"
+	#pause = .25
+	#killtargets = "npcGate2"
+	#killtargets = "npc_overhere_chat"
+	#firetargets = "bman_gate_sp"
+	#firetargets = "gate2"
+	#firetargets = "free_seq_global"
+}
+
+%where_you_go
+{
+	@ctCO
+	#sound = dWGo
+	#pause = 4
+}
+
+%GiveWeapons
+{
+	#firetargets = "cWCT-N"
+	@WCT
+	#sound = dNeed
+	#firetargets = "WCTMove0"
+	#pause = 1
+	#firetargets = "equipPlayer"
+	#pause = .25
+	#firetargets = "equipPlayer2"
+	#pause = 2
+	#firetargets = "cWCT-1"
+	#pause = 2
+	#firetargets = "WCTMove"	
+
+	#pause = 5
+	
+	#firetargets = "hideStretcher"
+
+	@ObjectiveStyle
+	#text="#OBJ3_FLINE_NEW"
+	#firetargets="objective3"
+}
+
+%LockedSound
+{
+	#sound = lockeddoor
+}
+
+%teamkill_failure
+{
+	#firetargets="missionfail"
+	#pause = 3
+	@FailureStyle
+	#text="#FASTLINE_TEAM_FAIL"
+}
+
+
+%npc_failure
+{
+	#firetargets="missionfail"
+	#pause = 3
+	@FailureStyle
+	#text="#FASTLINE_NPC_FAIL"
+}

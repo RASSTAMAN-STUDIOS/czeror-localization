@@ -1,0 +1,369 @@
+!sentences
+{
+	seal1_rogherthat0 hankagai/seal1_rogherthat
+	cnc_okanmove0 truth/cnc_okanmove
+	okano_hosres0 truth/okano_hosres
+	leader_hitfront0 truth/leader_hitfront
+	leader_hearme0 truth/leader_hearme
+	hos1_vxkill0 truth/hos1_vxkill
+	hos1_sowrong0 truth/hos1_sowrong
+	clan1_shutup0 truth/clan1_shutup
+	clan2_planmot0 truth/clan2_planmot
+	clan3_forcetruth0 truth/clan3_forcetruth
+	clan4_whenst0 truth/clan4_whenst
+	clan2_soonen0 truth/clan2_soonen
+	clan4_lockus0 truth/clan4_lockus
+	leader_gogogo0 truth/leader_gogogo
+	leader_timeshort0 truth/leader_timeshort
+	int_alert0 t/t_intrudov_ja
+	int_who0 t/t_whos_ja
+
+	H_HELP_JA0 h/h_m_getmeout_ja
+	H_HELP_JA1 h/h_m_okletsgo_ja
+	H_HELP_JA2 h/h_m_gethellout_ja
+	H_HELP_JA3 h/h_m_ohlets_ja
+
+	H_THANK_JA0 h/h_m_thanksave_ja
+	H_THANK_JA1 h/h_m_owelife_ja
+	H_THANK_JA2 h/h_m_gladover_ja
+	H_THANK_JA3 h/h_m_thanks_ja
+
+	H_PAIN_JA0 h/h_m_pain1_ja
+	H_PAIN_JA1 h/h_m_pain2_ja
+	H_PAIN_JA2 h/h_m_pain3_ja
+
+	H_DEATH_JA0 h/h_m_death1_ja
+	H_DEATH_JA1 h/h_m_death2_ja
+	H_DEATH_JA2 h/h_m_death3_ja
+	H_DEATH_JA3 h/h_m_death4_ja
+
+	H_PLFEAR_JA0 h/h_m_mygodw_ja
+	H_PLFEAR_JA1 h/h_m_ithought_ja
+	H_PLFEAR_JA2 h/h_m_pleasenok_ja
+
+	H_FEAR_JA0 h/h_m_dontdie_ja
+	H_FEAR_JA1 h/h_m_yousavr_ja
+	H_FEAR_JA2 h/h_m_wherewego_ja
+
+	H_SCREAM_JA0 h/h_m_ahh1_ja
+	H_SCREAM_JA1 h/h_m_lookout_ja
+	H_SCREAM_JA2 h/h_m_they'rehere_ja
+
+	H_SICK_JA0 h/h_m_cantgo_ja
+	H_SICK_JA1 h/h_m_toosick_ja
+	H_SICK_JA2 h/h_m_goinpuke_ja
+
+	H_BETTER_JA0 h/h_m_feelmuch_ja
+	H_BETTER_JA1 h/h_m_didtr_ja
+	H_BETTER_JA2 h/h_m_thankshot_ja
+
+	//**hostage female chatter
+
+	H_HELP_JAF0 h/h_f_mygoodp_ja
+	H_HELP_JAF1 h/h_f_neverbeen_ja
+	H_HELP_JAF2 h/h_f_scaredp_ja
+
+	H_THANK_JAF0 h/h_f_thankf_ja
+	H_THANK_JAF1 h/h_f_veryb_ja
+	H_THANK_JAF2 h/h_f_courage_ja
+
+	H_PAIN_JAF0 h/h_f_pain1_ja
+	H_PAIN_JAF1 h/h_f_pain2_ja
+	H_PAIN_JAF2 h/h_f_pain3_ja
+
+	H_DEATH_JAF0 h/h_f_death1_ja
+	H_DEATH_JAF1 h/h_f_death2_ja
+	H_DEATH_JAF2 h/h_f_death3_ja
+	H_DEATH_JAF3 h/h_f_death4_ja
+
+	H_PLFEAR_JAF0 h/h_f_mygod_ja
+	H_PLFEAR_JAF1 h/h_f_myside_ja
+	H_PLFEAR_JAF2 h/h_f_plsnokill_ja
+
+	H_HEAR_JAF0 h/h_f_ohhelp_ja
+	H_HEAR_JAF1 h/h_f_ohmy_ja
+	H_HEAR_JAF2 h/h_f_help_ja
+
+	H_SCREAM_JAF0 h/h_f_ahh1_ja
+	H_SCREAM_JAF1 h/h_f_lookout_ja
+	H_SCREAM_JAF2 h/h_f_theyhere_ja
+
+	H_SICK_JAF0 h/h_f_dontfeel_ja
+	H_SICK_JAF1 h/h_f_toosick_ja
+	H_SICK_JAF2 h/h_f_puke_ja
+
+	H_BETTER_JAF0 h/h_f_feelbett_ja
+	H_BETTER_JAF1 h/h_f_trick_ja
+	H_BETTER_JAF2 h/h_f_shotgo_ja
+
+}
+
+%ctsquad_ldr
+{
+	@CT1Style
+	$speaker	= ctsquad_ldr
+	$listener	= player
+}
+
+%jerky1
+{
+	@T1Style
+	$speaker	= jerky1
+	$listener	= hostage1
+}
+
+%area1_t1
+{
+	@T1Style
+	$speaker	= area1_t1
+	$listener	= player
+}
+
+%clan_mbr2
+{
+	@T1Style
+	$speaker	= clan_mbr2
+	$listener	= paul_revere
+}
+
+%paul_revere
+{
+	@T2Style
+	$speaker	= paul_revere
+	$listener	= clan_mbr2
+}
+
+%clan_mbr3
+{
+	@T3Style
+	$speaker	= clan_mbr3
+	$listener	= paul_revere
+}
+
+%locker
+{
+	@T1Style
+	$speaker	= locker
+	$listener	= player
+}
+
+%hostage1
+{
+	@NPC1Style
+	$speaker = hostage1
+	$listener = jerky1
+}
+
+%hostage1_r
+{
+	@NPC1Style
+	$speaker = hostage1
+	$listener = player
+}
+
+%enter_truth
+{
+	#firetargets="hud_off"
+	#pause = .1
+	#firetargets="introfreeze"
+	#pause = 1.
+	#firetargets="truth2_save"
+	#firetargets="intro_fade_end"
+	#firetargets="start_music"
+	@SubtitleStyle
+	#text="#TRUTH_START_SUBTITLE"
+	#pause = 9.5
+	@ctsquad_ldr
+	#sound=leader_hitfront
+	//#text="We'll cover you while you head for the side entrance.
+	//Once you're in position we'll hit the front."
+	#pause = 3
+	#firetargets="equipment"
+	#firetargets="hud_on"
+	#pause = .1
+	#firetargets="equipment2"
+	#firetargets="introfreeze"
+	#firetargets="objective1"
+	@ObjectiveStyle
+	#text="#OBJ1_TRUTH_NEW"
+	#pause = 3
+	#firetargets="objective5"
+	@ObjectiveStyle
+	#text="#OBJ5_TRUTH_NEW"
+
+}
+
+%ct_entrance
+{
+	#pause = 1.5
+	@RadioStyle
+	#sound=seal1_rogherthat
+	#pause = 1.5
+	#firetargets="objective1"
+	#firetargets="ctsquad_ldr_ck"
+	#firetargets="ctsquad_2_ck"
+	#firetargets="ctsquad_1_ck"
+	#pause = .1
+	#firetargets="breakin_seq1"
+	#firetargets="breakin_seq3"
+	#pause = 1.2
+	#firetargets="breakin_seq2"
+	#pause = 3
+	@ctsquad_ldr
+	//#text="Go! Go! Go!"
+	#sound=leader_gogogo,
+	pause = 6
+	@area1_t1
+	#sound=int_who
+	#firetargets="open_entry"
+	#pause = 2
+	#firetargets="breach_sound"
+	#firetargets="frontdoor"
+	#pause = 3
+	#firetargets="frontdoor"
+	#firetargets="pa_1"
+	#pause = 12
+	#firetargets="pa_2"
+	#pause = 21
+	#firetargets="pa_3"
+}
+
+%not_listening
+{
+	@ctsquad_ldr
+
+	//#text="Didn't you hear me?  You take the side entrance!"
+	#sound=leader_hearme,
+	pause = 4	
+}
+
+%overheard
+{
+	#firetargets="rescue_ck"
+	@hostage1
+	//#text="Why are you doing this?  The VX will kill us all!"
+	#sound=hos1_vxkill,
+	pause = 3.7		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@jerky1
+	#text="#TRUTH_SHUTUP"
+	#sound=clan1_shutup,
+	pause = 4		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+}
+
+%open_entry_bars
+{
+	#firetargets="entry_bars"
+	@jerky1
+	#sound=int_alert
+	#firetargets="area1_t1_ck"
+	#pause = .2
+	#firetargets="entry_opened"
+	#firetargets="open_entry_shots"
+}
+
+%hostage1_rescue
+{
+	#firetargets="hostage1_wait"
+	#firetargets="hostage1_global"
+	@hostage1_r
+	//#text="I just don't know when it all went so wrong.
+	//I know there are at least 5 others being held hostage.
+	//I can make it out from here myself. Be careful."
+	#sound=hos1_sowrong,
+	listener=player,
+	pause = 7.8
+	#firetargets="hostage1_go"
+	#pause = .25
+	#firetargets="objective2"
+	@ObjectiveStyle
+	#text="#OBJ2_TRUTH_NEW"
+	#firetargets="hostage_atdoor0"
+}
+
+%overheard2
+{
+	@clan_mbr2
+	#text="#TRUTH_NOONE"
+	#sound=clan2_planmot,
+	pause = 3.75		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@paul_revere
+	#text="#TRUTH_ABSOLUT"
+	#sound=clan3_forcetruth,
+	pause = 4.7		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@clan_mbr3
+	#text="#TRUTH_WHEN"
+	#sound=clan4_whenst,
+	pause = 1.5		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@paul_revere
+	#text="#TRUTH_SOON"
+	#sound=clan2_soonen,
+	pause = 2.4		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+}
+
+%area1_surprise
+{
+	#firetargets="stealth1_trig_off"
+	#killtargets="overheard2"
+	#firetargets="revere_warn"
+	#firetargets="paul_revere_seq1"
+	#pause = .5
+	#firetargets="revere_guard_seq"
+}
+
+%dojo_bars_lockdown
+{
+	@locker
+	#text="#TRUTH_LOCKDOWN"
+	#sound=clan4_lockus,
+	pause = 1.2
+	#firetargets="dojo_bars"
+	#pause = 3
+	#firetargets="pa_4"
+	#pause = 15
+	#firetargets="pa_5"
+}
+
+%vent_spawn_seq2
+{
+	#firetargets="vent_spawn2"
+}
+
+%squadleader_use
+{
+	@ctsquad_ldr
+	//#text="Lets get moving, time is short."
+	#sound=leader_timeshort
+}
+
+
+
+%teamkill_failure
+{
+	#firetargets="missionfail"
+	#pause = 3
+	@FailureStyle
+	#text="#TRUTH_TEAM_FAIL"
+}
+
+
+%hostage_out
+{
+	@RadioStyle
+	//#text="Hostage has been rescued."
+	#sound=okano_hosres,
+	pause = 3
+}
+
+%hostage_dead
+{
+	#killtargets="teamkill_failure"
+	#killtargets="hostage_rescued_all"
+	#killtargets="find_hostages"
+	#firetargets="missionfail"
+	@RadioStyle
+	//#text="What do you mean you lost a hostage?! Baka!"
+	#sound=cnc_losthos
+	#pause = 3
+	@FailureStyle
+	#text="#TRUTH_HOST_FAIL"
+}

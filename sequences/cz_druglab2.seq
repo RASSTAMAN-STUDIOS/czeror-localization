@@ -1,0 +1,225 @@
+//============================================
+// Drug Lab Dialog Sequences (cz_druglab2)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//==================================================================
+// Sentences
+//==================================================================
+
+!sentences
+{
+
+leader1a_talk0 junglecamp/slc2_spidsplt
+leader2a_talk0 junglecamp/slc2_eyeout
+leader3a_talk0 junglecamp/slc2_rogert
+//leader4a_talk0 junglecamp/slm_hitbad
+leader5a_talk0 junglecamp/cnc_spiderdown
+
+under_attack_1_dialog0 junglecamp/t4_campunder
+under_attack_2_dialog0 junglecamp/t4_protect
+under_attack_3_dialog0 junglecamp/t3_killall
+teammate3_1_talk0 junglecamp/slc2_bombeq
+teammate3_2_talk0 junglecamp/sla_noquiet
+teammate3_3_talk0 junglecamp/slc2_holdit
+teammate3_4_talk0 junglecamp/slc2_findan
+goboom_guy_1_talk0 ct/ct_death3_am
+
+}
+
+//==================================================================
+// Speaker Style and Definitions
+//==================================================================
+
+%teamguy1		
+{
+	@CT1Style
+	$speaker=teamguy1
+}
+
+%teammate3_spawned		
+{
+	@CT1Style
+	$speaker=teammate3_spawned
+}
+
+%first_door_kicker		
+{
+	@T1Style
+	$speaker=first_door_kicker
+}
+
+%terrorist_speaker01		
+{
+	@T1Style
+	$speaker=terrorist_speaker01
+}
+
+%terrorist_speaker03		
+{
+	@T1Style
+	$speaker=terrorist_speaker03
+}
+
+//==================================================================
+// Sequence ID's
+//==================================================================
+
+%beginning_of_mission
+{
+
+	@teamguy1		//#text="Spider team, we are splitting up - you and
+				//Martin take the main entrance, Alex and I are
+				//going through the rough.",
+				#text="",
+				sound=leader1a_talk,
+				pause = 5.3
+
+	@teamguy1		//#text="Keep an eye out for mines!",
+				#text="",
+				sound=leader2a_talk,
+				pause = 2
+
+				//#text="Roger that, we are moving in through the
+				//ground level.",
+				#text="",
+				sound=leader3a_talk,
+				pause = 3
+
+}
+
+%squad_leader_sniped
+{
+
+	@teamguy1		//#text="I'm hit pretty bad, Sniper in the tower.
+				//I'll stay here and wait for evac.",
+				#text="",
+				sound=leader4a_talk,
+				pause = 6
+
+}
+
+%squad_encounter1a
+{
+
+	@teammate3_spawned		//#text="Bomb this equipment soldier!",
+						#text="",
+						sound=teammate3_1_talk,
+						firetargets="new_objective02_sequence", // NEW
+						pause = 3
+
+}
+
+%squad_encounter1b
+{
+	
+	@teammate3_spawned		//#text="Allright! No need for a quiet entrance!",
+						#text="",
+						sound=teammate3_2_talk,
+						firetargets="new_objective01_complete", // NEW
+						pause = 4
+
+}
+
+%squad_encounter2
+{
+
+	@teammate3_spawned		//#text="Hold it...there's a target in the window
+						//with a rocket. We need to find another way around.",
+						#text="",
+						sound=teammate3_3_talk,
+						pause = 6
+
+	@teammate3_spawned		//#text="Find another way in, flush out that rocket
+						//position and we'll move in through the ground floors.",
+						#text="",
+						sound=teammate3_4_talk,
+						firetargets="new_objective03_sequence", // NEW
+						pause = 8
+
+}
+
+%camp_under_attack
+{
+
+	@first_door_kicker		//#text="The camp is under attack!",
+						#text="",
+						sound=under_attack_1_dialog,
+						pause = 2.3
+
+	@terrorist_speaker01		//#text="Protect the drugs!",
+						#text="",
+						sound=under_attack_2_dialog,
+						pause = 2
+
+	@terrorist_speaker03		//#text="Kill them all!",
+						#text="",
+						sound=under_attack_3_dialog,
+						pause = 2
+
+}
+
+%man_down
+{
+
+	@RadioStyle		//#text="Spider team, we have a man down, repeat, man down!",
+				#text="",
+				sound=leader5a_talk,
+				pause = 3.7
+
+}
+
+%ct_mine_death
+{
+
+	@RadioStyle		//#text="Spider team, we are splitting up - you and
+				//Martin take the main entrance, Alex and I are
+				//going through the rough.",
+				#text="",
+				sound=goboom_guy_1_talk,
+				pause = 5.3
+
+}
+
+//==================================================================
+// Mision Failure
+//==================================================================
+
+%mission_failure_message1
+{
+	@FailureStyle	#text="#DRUGLAB_FAILURE1",
+				holdtime = 4
+
+}
+
+%mission_failure_message2
+{
+	@FailureStyle	#text="#DRUGLAB_FAILURE2",
+				holdtime = 4
+
+}
+
+
+//=============================================
+// Mission Objectives
+//=============================================
+
+%new_objective01
+{
+	@ObjectiveStyle	#text = "#OBJ1_JCAMP_NEW", //#text = "NEW OBJECTIVE: Breach compound",
+				firetargets="new_objective01_complete"
+}
+
+%new_objective02
+{
+	@ObjectiveStyle	#text = "#OBJ2_JCAMP_NEW", //#text = "NEW OBJECTIVE: Plant RC Bombs on processing equipment",
+				firetargets="new_objective02_complete"
+}
+
+%new_objective03
+{
+	@ObjectiveStyle	#text = "#OBJ3_JCAMP_NEW", //#text = "Locate alternate entrance into compound",
+				firetargets="new_objective03_complete"
+}
+
+

@@ -1,0 +1,482 @@
+!sentences
+{
+	// ==============================================================
+	//cz_e02m2
+	//As soon as the level starts
+	// ==============================================================
+	SAS_Com_warning brecon/sasg_rememb
+
+	// ==============================================================
+	// guards talking to each other a lot.
+	// ==============================================================
+	Conv1_01_Guards0 brecon/rg5_cold
+	// wav_time_2.201
+	Conv1_02_Guards0 brecon/rg6_afford
+	// wav_time_5.538
+	Conv1_03_Guards0 brecon/rg5_hands
+	// wav_time_8.717
+	Conv1_04_Guards0 brecon/rg6_ici
+	// wav_time_3.808
+	// =====
+
+	Conv3_01_Guards0 brecon/rg1_warn
+	// wav_time_6.107
+	Conv3_02_Guards0 brecon/rg2_ofcourse
+	// wav_time_4.409
+	Conv3_03_Guards0 brecon/rg1_think
+	// wav_time_2.299
+	Conv3_04_Guards0 brecon/rg2_uneth
+	// wav_time_5.026
+	Conv3_05_Guards0 brecon/rg1_revolve
+	// wav_time_3.982
+	Conv3_06_Guards0 brecon/rg2_point
+	// wav_time_6.040
+	Conv3_07_Guards0 brecon/rg1_hope
+	// wav_time_0.999
+	// =====
+
+	Conv4_01_Guards0 brecon/rg3_wonder
+	// wav_time_6.246
+	Conv4_02_Guards0 brecon/rg4_special
+	// wav_time_3.228
+	Conv4_03_Guards0 brecon/rg3_ship
+	// wav_time_1.780
+	Conv4_04_Guards0 brecon/rg4_serious
+	// wav_time_1.553
+	Conv4_05_Guards0 brecon/rg3_talking
+	// wav_time_2.078
+	Conv4_06_Guards0 brecon/rg4_notsup
+	// wav_time_3.479
+	Conv4_07_Guards0 brecon/rg3_comon
+	// wav_time_2.660
+	Conv4_08_Guards0 brecon/rg4_nope
+	// wav_time_4.827
+	Conv4_09_Guards0 brecon/rg3_either
+	// wav_time_4.203
+	Conv4_10_Guards0 brecon/rg4_watch
+	// wav_time_2.642
+	// =====
+
+	// Sleepy guards
+
+	sleepy_guy1_wake0 brecon/rg3_whatwas
+	sleepy_guy2_wake0 brecon/rg3_isanyone
+	sleepy_guy3_wake0 brecon/rg3_nothingh
+
+	// ==============================================================
+	// Start of Brecon stuff
+	// ==============================================================
+	// talking in sleep
+
+	sleepy_guy4_wake0 brecon/rg4_thatyou
+
+	// ==============================================================
+	// This sequence is for when the player is told to take a picture of the nuke
+	// ==============================================================
+	Terrorist_Leader0 brecon/t1_excited tl_gift tl_nolonger
+	Terrorist_people0 brecon/t1_excited t2_excited t3_crowd 
+
+	// ==============================================================
+	// when player takes the picture
+	// ==============================================================
+	SAS_01_Com0 brecon/sasg_pict
+	SAS_02_Com0 brecon/sasg_confirm
+
+	// After it is confermed that there is a nuke you are found out
+	TER_1_Yelling0 brecon/rg9_intruder
+
+	// Ts shoot open the door causing a bunch of noise before the CTS have a chance to move in
+	SAS_03_Com0 brecon/sasg_gunfire
+
+	// In the shaft you get found out
+	TER_2_Yelling0 brecon/rg9_shaft
+
+	// ==============================================================
+	// Right after warehouse fight
+	// ==============================================================
+	Injured_SAS brecon/sasinj1_nuke
+
+	// SAS guy runs over and starts messing with door switch
+	SAS_1_opendoor0 brecon/sas4_openmin
+
+	// He says this when he gets the door to open
+	SAS_2_opendoor0 brecon/sas4_gotit
+
+	// ==============================================================
+	// The Terrorist leader will taunt the player when running away.
+	// ==============================================================
+	T_leader_1_taunt0 brecon/tl_nevercatch
+	T_leader_2_taunt0 brecon/tl_stop
+	T_leader_3_taunt0 brecon/tl_haha
+	T_leader_4_taunt0 brecon/tl_toolate
+	T_leader_5_taunt0 brecon/tl_stand
+}
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%SAS_Commander
+{
+	@RadioStyle
+}
+
+%T_talking01
+{
+	@T1Style
+	$speaker	= tricky1
+	
+}
+
+%T_talking02
+{
+	@T2Style
+	$speaker	= tricky3 
+}
+
+%T_talking03
+{
+	@T1Style
+	$speaker	= loneguy1
+	$listener	= loneguy2
+}
+
+%T_talking04
+{
+	@T2Style
+	$speaker	= loneguy2 
+	$listener	= loneguy1
+}
+
+%T_talking05
+{
+	@T1Style
+	$speaker	= wtfguy1
+}
+
+%T_talking06
+{
+	@T2Style
+	$speaker	= wtfguy2 
+}
+
+%T_Sleeping
+{
+	@T1Style
+	$speaker	= guard3
+}
+
+
+%T_leader_speach
+{
+	@T1Style
+}
+
+%Yelling_guy01
+{
+	@T2Style
+}
+
+%Yelling_guy02
+{
+	@T3Style
+}
+
+%Injured_CT
+{
+	@CT1Style
+}
+
+%Open_door_guy
+{
+	@CT2Style
+}
+
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%Conversation01
+{
+		
+	// ======
+
+	@T_talking01	#sound=Conv3_01_Guards, listener	= tricky3 
+	// #text="Do you think we will get any warning before the plan goes 
+	//	into effect?  I want to let my family know so they can 
+	//	get out of here."
+	#pause = 6.107	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking02	#sound=Conv3_02_Guards, listener	= tricky1
+	// #text="Of course they will warn us.  Uhh…I think"
+	#pause = 4.409	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking01	#sound=Conv3_03_Guards, listener	= tricky3
+	// #text="What?! What do you mean, uhh...you think?!"
+	#pause = 2.299	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking02	#sound=Conv3_04_Guards, listener	= tricky1 
+	// #text="Well, they should warn us.  It would be unethical not to"
+	#pause = 5.026	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking01	#sound=Conv3_05_Guards, listener	= tricky3
+	// #text="Unethical?!  This organization revolves around being unethical!"
+	#pause = 3.982	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking02	#sound=Conv3_06_Guards, listener	= tricky1 
+	// #text="Hmm, you do have a point.  Well, I still think they will warn us."
+	#pause = 6.040	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking01	#sound=Conv3_07_Guards, listener	= tricky3
+	// #text="I hope you’re right."
+			
+	// =======
+}
+
+%Conversation02
+{
+		
+	// ======
+	
+	@T_talking03	#sound=Conv1_01_Guards 
+	// text="Whew…Its cold",
+	#pause = 2.201	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	
+	@T_talking04	#sound=Conv1_02_Guards 
+	// text="Yeah, you think they could afford to turn on the heater knowing 
+	//	that we would all be here today.",
+	#pause = 5.538	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking03	#sound=Conv1_03_Guards 
+	// text="Absolutely.  My hands are freezing. I hope nobody tries to get 
+	//	in this place, I don’t think I could pull the trigger with these fingers!",
+	#pause = 8.717	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	
+	@T_talking04	#sound=Conv1_04_Guards 
+	// text="No problem.  We could always throw icicles at an intruder.",
+	#pause = 3.808	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	
+	@T_talking03	#sound=T_leader_3_taunt 
+	// text="HAHAHA",
+	#pause = .3
+	
+
+	@T_talking04	#sound=T_leader_3_taunt 
+	// text="HAHAHA"
+	
+
+
+	// =======
+}
+
+%Conversation03
+{
+		
+	// ======
+	
+	@T_talking05	#sound=Conv4_01_Guards,  listener	= wtfguy2
+	// text="I wonder why they requested everyone's presence today.  Lots of security to guard a warehouse.",
+	#pause = 6.246	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	
+	@T_talking06	#sound=Conv4_02_Guards,	listener	= wtfguy1 
+	// text="What?  You don’t know about the special shipment that came in?",
+	#pause = 3.228	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking05	#sound=Conv4_03_Guards, listener	= wtfguy2
+	// text="Shipment?  What shipment?",
+	#pause = 1.780	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	
+	@T_talking06	#sound=Conv4_04_Guards,	listener	= wtfguy1
+	// text="Seriously…you don’t know?",
+	#pause = 1.553	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking05	#sound=Conv4_05_Guards,	listener	= wtfguy2
+	// text="No!  What are you talking about?!",
+	#pause = 2.078	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking06	#sound=Conv4_06_Guards,	listener	= wtfguy1
+	// text="Well, if you don’t know…I’m not supposed to tell you.",
+	#pause = 3.479	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking05	#sound=Conv4_07_Guards,	listener	= wtfguy2
+	// text="Huh?!  Come on now, you can tell me…",
+	#pause = 2.660	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking06	#sound=Conv4_08_Guards,	listener	= wtfguy1
+	// text="Nope.  Sounds like you’re on a need to know basis, and it looks you don’t need to know.",
+	#pause = 4.827	// LOCALIZE_WAVFILE_LENGTH_ADJUST
+
+	@T_talking05	#sound=Conv4_09_Guards,	listener	= wtfguy2
+	// text="Ahhhh, I see. You don’t know what it is either!  Ha!",
+	#pause = 4.203 
+	
+	
+	#firetargets="wtf_animguy4"
+
+	@T_talking06	#sound=Conv4_10_Guards, listener	= wtfguy1
+	// text="Erm…Shouldn’t you be watching the air vents?",
+	#pause = 5 
+	
+
+	// =======
+}
+
+%Conversation04
+{
+		
+	// ======
+	
+	@T_Sleeping	#sound=sleepy_guy4_wake, 
+	speaker=guard3, 
+	pause = 5,
+	// text="(Talking to himself in his sleep) Sasha, golubchik! Is that you?  Mumble (snore…)",
+	firetargets="alerted_checking_snore"
+
+	#firetargets="alerted_checking_snore"
+
+	// =======
+}
+
+%Conversation05
+{
+		
+	// ======
+	
+	@Open_door_guy	#sound=SAS_1_opendoor, 
+	speaker=switch_guy
+	// #text="I'll have this door open in a tick sir!" 
+	#pause = 5
+	
+
+	@Open_door_guy	#sound=SAS_2_opendoor, 
+	speaker=switch_guy 
+	// #text="Got it!"
+
+	// =======
+}
+
+%Speach
+{
+		
+	// ====== 
+	
+	@T_leader_speach	#sound=Terrorist_Leader,
+	speaker=bomb_runner1,  
+	pause = 6 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#text= "#BRecon03_speach1" // LOCALIZE_ME
+
+	#sound=Terrorist_people,
+	speaker=people_death
+	#pause = 5 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#text= "#BRecon03_speach2" // LOCALIZE_ME
+
+	// =======
+}
+
+%pic_talk1
+{
+		
+	// ====== 
+	
+	@SAS_Commander	#sound=SAS_01_Com
+	// #text="Picture received.  Intel is analyzing it."
+
+	// =======
+}
+
+%pic_talk2
+{
+		
+	// ====== 
+	
+	@SAS_Commander	#sound=SAS_02_Com
+	// #text="Right.  We have confirmation of a nuclear weapon inside the warehouse, 
+	// 	all teams move into position."
+	@ObjectiveStyle #text = "#OBJ2_BRECON_NEW"
+
+	// =======
+}
+
+%pic_talk3
+{
+		
+	// ====== 
+	
+	@SAS_Commander	#sound=SAS_03_Com,
+	speaker=catcher1
+	// #text="Gunfire?!  Bloody hell, who's firing?!  All teams…move in immediately!  Keep them from moving that nuke!"
+	// ======= 
+}
+
+%pic_talk4
+{
+		
+	// ====== 
+	
+	// @Yelling_guy01	#sound=TER_1_Yelling,
+	// speaker=grunt1
+	// #text="I found the Intruder!  Over here!"
+	// =======
+}
+
+%elev_shaft_voices
+{
+		
+	// ====== 
+	
+	// @Yelling_guy02	#sound=TER_1_Yelling,
+	// speaker=elaguy_mad
+	// #text="I found the Intruder!  Over here!"
+	// =======
+}
+
+%die_talk1
+{
+		
+	// ====== 
+	
+	@Injured_CT	#sound=Injured_SAS,
+	speaker=barney_dying
+	// #text="The nuke is missing, their leader has carried it off…through that door…go!"
+	
+	#pause = 2.5	
+
+	#firetargets="Poor_guy_pointing"
+
+	// =======
+}
+
+%Guy_anims
+{
+	#firetargets="Guy_anim10"
+	#pause = 1
+	#firetargets="Guy_anim11"
+	#pause = .2
+	#firetargets="Guy_anim12"
+	#pause = 2
+	#firetargets="Guy_anim13"
+	#pause = 1.75
+
+
+	#repeat=-1
+}
+
+// =====================================================================
+// Mission Fails
+// =====================================================================
+
+%Mission_failed01
+{
+	#pause = 1.2
+	@FailureStyle
+	#text =	"#BRecon02_failed01" // LOCALIZE_ME
+
+}
+
+%Mission_failed02
+{
+	#pause = 1.2
+	@FailureStyle
+	#text = "#BRecon03_failed02" // LOCALIZE_ME
+
+}

@@ -1,0 +1,366 @@
+//============================================
+// Downed Pilot Dialog Sequences (cz_downed4)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//============================================
+//	Sentences
+//============================================
+
+!sentences
+{
+
+stop_banging_1_dialog0 downed/t2_heywhatg
+stop_banging_2_dialog0 downed/tg1_stopbeat
+stop_banging_3_dialog0 downed/tg1_dontmakec
+stop_banging_4_dialog0 downed/tg1_thatsit
+cell_taunt_1_dialog0 downed/tg1_readybeat
+whos_shooting_1_dialog0 downed/t2_whoshoot
+ct_hostage_1_dialog0 downed/gsg9gl_bringhhere
+hostage_rescue_1_dialog0 downed/gsg9gl_locsecp
+end_mission_1_dialog0 downed/gsg9gl_waitext
+end_mission_2_dialog0 downed/cnc_loudclrshrt
+ct_spawner2a_talk0 downed/gsg9gl_standing gsg9gl_moveitout
+ct_spawner2a_talk0 downed/gsg9gl_suggget
+get_moving_talk0 downed/gsg9gl_standing gsg9gl_moveitout
+//ct_spawner2a_talk0 downed/gsg9gl_letmvout
+//ct_spawner3a_talk0 downed/gsg9gl_letmvout
+
+
+//============================================
+//	Hostage and NPC Chatter - German
+//============================================
+
+H_HELP_GE0 h/h_m_getmeout_ge
+H_HELP_GE1 h/h_m_okletsgo_ge
+H_HELP_GE2 h/h_m_gethellout_ge
+H_HELP_GE3 h/h_m_ohlets_ge
+
+H_THANK_GE0 h/h_m_thanksave_ge
+H_THANK_GE1 h/h_m_owelife_ge
+H_THANK_GE2 h/h_m_gladover_ge
+H_THANK_GE3 h/h_m_thanks_ge
+
+H_PAIN_GE0 h/h_m_pain1_ge
+H_PAIN_GE1 h/h_m_pain2_ge
+H_PAIN_GE2 h/h_m_pain3_ge
+H_PAIN_GE3 h/h_m_pain4_ge
+
+H_DEATH_GE0 h/h_m_death1_ge
+H_DEATH_GE1 h/h_m_death2_ge
+H_DEATH_GE2 h/h_m_death3_ge
+H_DEATH_GE3 h/h_m_death4_ge
+
+H_PLFEAR_GE0 h/h_m_mygodw_ge
+H_PLFEAR_GE1 h/h_m_ithought_ge
+H_PLFEAR_GE2 h/h_m_pleasenok_ge
+
+H_FEAR_GE0 h/h_m_dontdie_ge
+H_FEAR_GE1 h/h_m_yousavr_ge
+H_FEAR_GE2 h/h_m_wherewego_ge
+
+H_SCREAM_GE0 h/h_m_ahh1_ge
+H_SCREAM_GE1 h/h_m_lookout_ge
+H_SCREAM_GE2 h/h_m_they'rehere_ge
+
+H_SICK_GE0 h/h_m_cantgo_ge
+H_SICK_GE1 h/h_m_toosick_ge
+H_SICK_GE2 h/h_m_goinpuke_ge
+
+H_BETTER_GE0 h/h_m_feelmuch_ge
+H_BETTER_GE1 h/h_m_didtr_ge
+H_BETTER_GE2 h/h_m_thankshot_ge
+
+NPC_OK_GE0 npc/npc_m_yesdo_ge
+NPC_OK_GE1 npc/npc_m_right_ge
+NPC_OK_GE2 npc/npc_m_ok_ge
+
+NPC_WAIT_GE0 npc/npc_m_waithere_ge
+NPC_WAIT_GE1 npc/npc_m_stayhere_ge
+NPC_WAIT_GE2 npc/npc_m_movemusc_ge
+
+NPC_STOP_GE0 npc/npc_m_notfurth_ge
+
+NPC_STARE_GE0 npc/npc_m_lookme_ge
+NPC_STARE_GE1 npc/npc_m_yousure_ge
+
+NPC_HELLO_GE0 npc/npc_m_hello_ge
+NPC_HELLO_GE1 npc/npc_m_officer_ge
+
+NPC_ANSWER_GE0 npc/npc_m_iworried_ge
+NPC_ANSWER_GE1 npc/npc_m_canttell_ge
+NPC_ANSWER_GE2 npc/npc_m_whatdoth_ge
+NPC_ANSWER_GE3 npc/npc_m_dontid_ge
+
+NPC_QUESTION_GE0 npc/npc_m_whatgon_ge
+NPC_QUESTION_GE1 npc/npc_m_didhear_ge
+NPC_QUESTION_GE2 npc/npc_m_whoare_ge
+NPC_QUESTION_GE3 npc/npc_m_thosepol_ge
+
+NPC_IDLE_GE0 npc/npc_m_howhapp_ge
+NPC_IDLE_GE1 npc/npc_m_whyme_ge
+NPC_IDLE_GE2 npc/npc_m_sudden_ge
+NPC_IDLE_GE3 npc/npc_m_whatgo_ge
+
+NPC_NOGO_GE0 npc/npc_m_dontgoth_ge
+
+NPCONST_GE0 npc/npc_m_iseeone_ge
+NPCONST_GE1 npc/npc_m_theyhere_ge
+NPCONST_GE2 npc/npc_m_theygotguns_ge
+
+NPC_HEAR_GE0 npc/npc_m_hearthat_ge
+NPC_HEAR_GE1 npc/npc_m_someover_ge
+
+
+NPC_WOUND_GE0 npc/npc_m_beenshot_ge
+NPC_WOUND_GE1 npc/npc_m_ow_ge
+NPC_WOUND_GE2 npc/npc_m_arg_ge
+
+NPC_MORTAL_GE0 npc/npc_m_notgoingm_ge
+NPC_MORTAL_GE1 npc/npc_m_noo_ge
+NPC_MORTAL_GE2 npc/npc_m_ahhh1_ge
+
+NPC_CUREA_GE0 npc/npc_m_youdontlo_ge
+NPC_CUREA_GE1 npc/npc_m_sureOK_ge
+
+NPC_HEAL_GE0 npc/npc_m_heretake_ge
+NPC_HEAL_GE1 npc/npc_m_letme_ge
+
+NPC_PLFEAR_GE0 npc/npc_m_thoughtc_ge
+NPC_PLFEAR_GE1 npc/npc_m_getawaym_ge
+NPC_PLFEAR_GE2 npc/npc_m_helost_ge
+
+NPC_PAIN_GE0 h/h_m_pain1_ge
+NPC_PAIN_GE1 h/h_m_pain2_ge
+NPC_PAIN_GE2 h/h_m_pain3_ge
+NPC_PAIN_GE3 h/h_m_pain4_ge
+
+NPC_FEAR_GE0 npc/npc_m_ahh2_ge
+NPC_FEAR_GE1 npc/npc_m_help2_ge
+NPC_FEAR_GE2 npc/npc_m_whatgo2_ge
+
+NPC_SCREAM_GE0 npc/npc_m_omg_ge
+NPC_SCREAM_GE1 npc/npc_m_helpme_ge
+NPC_SCREAM_GE2 npc/npc_m_ahh3_ge
+NPC_SCREAM_GE3 npc/npc_m_thisnot_ge
+
+NPC_SCREAM_GE0 npc/npc_m_whatstop_ge
+NPC_SCREAM_GE1 npc/npc_m_dontdo_ge
+
+}
+
+//============================================
+//	Speaker Style & Definitions
+//============================================
+
+%dungeon_terrorist1		
+{
+	@T1Style
+	$speaker=dungeon_terrorist1
+}
+
+%scared_shitless		
+{
+	@T1Style
+	$speaker=scared_shitless
+}
+
+%ct_spawner4_child		
+{
+	@CT1Style
+	$speaker=ct_spawner4_child
+}
+
+%ct_spawner2a_child		
+{
+	@CT1Style
+	$speaker=ct_spawner2a_child
+}
+
+%ct_spawner3a_child		
+{
+	@CT1Style
+	$speaker=ct_spawner3a_child
+}
+
+//============================================
+//	Sequence ID's
+//============================================
+
+%stop_banging_on_door1
+{
+
+	@dungeon_terrorist1	//#text="Hey?! What's going on over there?", // LOCALIZE_ME
+					#text="#DOWNED4_CELL1", // LOCALIZE_ME
+					sound=stop_banging_1_dialog,
+					pause = 4
+
+}
+
+%stop_banging_on_door2
+{
+
+	@dungeon_terrorist1	//#text="Stop beating on the door.", // LOCALIZE_ME
+					#text="#DOWNED4_CELL2", // LOCALIZE_ME
+					sound=stop_banging_2_dialog,
+					pause = 4
+
+}
+
+%stop_banging_on_door3
+{
+
+	@dungeon_terrorist1	//#text="Don't make me come in there!", // LOCALIZE_ME
+					#text="#DOWNED4_CELL3", // LOCALIZE_ME
+					sound=stop_banging_3_dialog,
+					pause = 4
+
+}
+
+%stop_banging_on_door4
+{
+
+	@dungeon_terrorist1	//#text="Allright, that's it!", // LOCALIZE_ME
+					#text="#DOWNED4_CELL4", // LOCALIZE_ME
+					sound=stop_banging_4_dialog,
+					pause = 4
+
+}
+
+%checking_cell_taunt
+{
+
+	@dungeon_terrorist1	//#text="You ready for a beating?", // LOCALIZE_ME
+					#text="#DOWNED4_CELL5", // LOCALIZE_ME
+					sound=cell_taunt_1_dialog,
+					pause = 4
+
+}
+
+%whos_shooting
+{
+
+	@scared_shitless		//#text="Who's shooting?", // LOCALIZE_ME
+					#text="#DOWNED4_CELL6",
+					sound=whos_shooting_1_dialog,
+					pause = 2
+
+}
+
+%bring_hostages_here
+{
+
+	@ct_spawner4_child	//#text="Recover packages to this position.",
+					#text="",
+					sound=ct_hostage_1_dialog,
+					firetargets="new_objective05_sequence", // NEW
+					pause = 2.5
+
+}
+
+%hostage_1_rescued
+{
+
+	@ct_spawner4_child	//#text="Alpha1, We have located and secured one of
+					//the pilots.",
+					#text="",
+					sound=hostage_rescue_1_dialog,
+					pause = 4
+
+}
+
+%end_mission
+{
+
+	@ct_spawner4_child	//#text="Alpha1, all packages secure and we have eliminated
+					//all terrorists. Awaiting extraction. Over.",
+					#text="",
+					sound=end_mission_1_dialog,
+					pause = 6.5
+
+	@RadioStyle			//#text="Loud and clear Bravo team. We’ll be there
+					//shortly.",
+					#text="",
+					sound=end_mission_2_dialog,
+					firetargets="new_objective05_complete", // NEW
+					pause = 1
+					#firetargets="new_objective03_complete" // NEW
+					#pause = 4
+
+}
+
+%lets_move_out1
+{
+
+	@ct_spawner2a_child	//#text="Lets move out.",
+					#text="",
+					sound=ct_spawner2a_talk,
+					pause = 3.1
+
+}
+
+%lets_move_out2
+{
+
+	@ct_spawner2a_child	//#text="Lets move out.",
+					#text="",
+					sound=ct_spawner3a_talk,
+					pause = 3.1
+
+}
+
+%get_moving_dialog
+{
+
+	@ct_spawner2a_child	//#text="We won't accomplish our mission with you standing around soldier. Move it out!",
+					#text="",
+					sound=get_moving_talk,
+					pause = 5.1
+
+
+}
+
+//============================================
+// Mission Success
+//============================================
+
+%mission_success
+{ 
+	@TitleStyle		#text="#GENERIC_SUCCESS",
+				holdtime = 5
+}
+
+//============================================
+// Mission Failure
+//============================================
+
+%mission_failure_text1
+{
+	@FailureStyle	#text="#DOWNED_FAILURE5",
+				holdtime = 4
+
+}
+
+%mission_failure_text2
+{
+	@FailureStyle	#text="#DOWNED_FAILURE6",
+				holdtime = 4
+
+}
+
+
+//=============================================
+// Mission Objectives
+//=============================================
+
+%new_objective04
+{
+	@ObjectiveStyle	#text = "#OBJ4_DPILOT_NEW", //#text = "NEW OBJECTIVE: Find way to escape from prison cell"
+				firetargets="new_objective04_complete"
+}
+
+%new_objective05
+{
+	@ObjectiveStyle	#text = "#OBJ5_DPILOT_NEW", //#text = "NEW OBJECTIVE: Escort hostages to rescue zone"
+				firetargets="new_objective05_complete"
+}

@@ -1,0 +1,162 @@
+!sentences
+{
+	leader_apolog0 truth/leader_apolog
+	leader_longst0 truth/leader_longst
+	leader_defect0 truth/leader_defect
+	leader_infiltag0 truth/leader_infiltag
+	leader_example0 truth/leader_example
+	leader_timeshort0 truth/leader_timeshort
+
+	ctsquad_2_chat0 fastline/ct3_talklate
+	ctsquad_3_chat0 fastline/ct3_letsgo
+	spar_3_chat0 hankagai/vip_hello1
+	spar_1_chat0 hankagai/vip_goodto
+}
+
+// Speaker Defines
+
+%ctsquad_ldr
+{
+	@CT1Style
+	$speaker	= ctsquad_ldr
+	$listener	= player
+}
+
+%ctsquad_2
+{
+	@CT1Style
+	$speaker	= ctsquad_2
+	$listener	= player
+}
+
+%ctsquad_3
+{
+	@CT2Style
+	$speaker	= ctsquad_3
+	$listener	= player
+}
+
+%spar_3
+{
+	@CT1Style
+	$speaker	= spar_3
+	$listener	= player
+}
+
+%spar_1
+{
+	@CT2Style
+	$speaker	= spar_1
+	$listener	= player
+}
+
+// Sequences
+
+%truth_intro
+{
+	#firetargets="hud_off"
+	#pause = .05
+	#firetargets="introfreeze"
+	#pause = 1
+	#firetargets="intro_fade_end"
+	#firetargets="truth1_save"
+	@TitleStyle
+	#text="#TRUTH_TITLE"
+	#pause = 5
+	#firetargets="taichi2_ck"
+	#firetargets="opening_music"
+	#firetargets="citysnd"
+	@SubtitleStyle
+	#text="#TRUTH_BRIEF_SUBTITLE"
+	#pause = 6.5
+	@ctsquad_ldr
+	//#text="My apologies for meeting here, but this
+	//situation requires a quick resolution."
+	#sound=leader_apolog,
+	pause = 5		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@ctsquad_ldr
+ 	//#text="Long story short, the Shinjitsu No Konton cult
+	//are in possession of VX nerve gas and are planning
+	//on releasing it into a crowded populous."
+	#sound=leader_longst,
+	pause = 3.15		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	#firetargets="talk1"
+	#pause = 5			// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@ctsquad_ldr
+	//#text="A defecting member of their clan has divulged the location
+	//of their compound, in doing so he and many other members who are in
+	//disagreement with the cults VX plans have been held against their will."
+	#sound=leader_defect,
+	pause = 10.46		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@ctsquad_ldr
+	//#text="We will be infiltrating the compound,
+	//locating and tagging all VX gas
+	//locations for the hazmat teams,
+	//and liberating as many hostages as possible."
+	#sound=leader_infiltag,
+	pause = 8.1		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@ctsquad_ldr
+	//#text="There are some examples over there of
+	//what the VX containers should look like."
+	#firetargets="introfreeze"
+	#sound=leader_example
+	#firetargets="ctsquad_2_on"
+	#firetargets="ctsquad_3_on"
+	#firetargets="truth1_save"
+	#pause = 5		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@ctsquad_ldr
+	//#text="Lets get moving, time is short."
+	#sound=leader_timeshort,
+	pause = 4
+	#firetargets = "ctsquad_ldr_on"
+	#pause = 15
+	#killtargets="leave_trig"
+	#firetargets="leave_brief"
+}
+
+// use dialog
+
+%spar_3_use
+{
+	#firetargets = "spar_3_off"
+	@spar_3
+	#sound = spar_3_chat
+	#pause = 4
+	#firetargets = "spar_3_on"
+}
+
+%spar_1_use
+{
+	#firetargets = "spar_1_off"
+	@spar_1
+	#sound = spar_1_chat
+	#pause = 4
+	#firetargets = "spar_1_on"
+}
+
+%ctsquad_2_use
+{
+	#firetargets = "ctsquad_2_off"
+	@ctsquad_2
+	#sound = ctsquad_2_chat
+	#pause = 4
+	#firetargets = "ctsquad_2_on"
+}
+
+%ctsquad_3_use
+{
+	#firetargets = "ctsquad_3_off"
+	@ctsquad_3
+	#sound = ctsquad_3_chat
+	#pause = 4
+	#firetargets = "ctsquad_3_on"
+}
+
+%ctsquad_ldr_use
+{
+	#firetargets = "ctsquad_ldr_off"
+	@ctsquad_ldr
+	#sound = leader_timeshort
+	#pause = 4
+	#firetargets = "ctsquad_ldr_on"
+}

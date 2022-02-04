@@ -1,0 +1,374 @@
+!sentences
+{
+	snip_youcant0 hankagai/snip_youcant
+	snip_outwayo0 hankagai/snip_outwayo
+	snip_stophim0 hankagai/snip_stophim
+	snip_dontlet0 hankagai/snip_dontlet
+	oldman_hey0 hankagai/oldman_hey
+	oldman_kickbas0 hankagai/oldman_kickbas
+	oldman_bendrim0 hankagai/oldman_bendrim
+	oldman_gethood0 hankagai/oldman_gethood
+	cnc_chasedmn0 hankagai/cnc_chasedmn
+	cnc_invite0 hankagai/cnc_invite
+	cnc_keepaftert0 hankagai/cnc_keepaftert
+	cnc_yougolose0 hankagai/cnc_yougolose
+	clerkf_scream0 hankagai/femhos_ahh
+	
+	NPC_OK_JA0 npc/npc_m_yesdo_ja
+	NPC_OK_JA1 npc/npc_m_right_ja
+	NPC_OK_JA2 npc/npc_m_ok_ja
+
+	NPC_WAIT_JA0 npc/npc_m_waithere_ja
+	NPC_WAIT_JA1 npc/npc_m_stayhere_ja
+	NPC_WAIT_JA2 npc/npc_m_movemusc_ja
+
+	NPC_STOP_JA0 npc/npc_m_notfurth_ja
+
+	NPC_STARE_JA0 npc/npc_m_lookme_ja
+	NPC_STARE_JA1 npc/npc_m_yousure_ja
+
+	NPC_HELLO_JA0 npc/npc_m_hello_ja
+	NPC_HELLO_JA1 npc/npc_m_officer_ja
+
+	NPC_ANSWER_JA0 npc/npc_m_iworried_ja
+	NPC_ANSWER_JA1 npc/npc_m_canttell_ja
+	NPC_ANSWER_JA2 npc/npc_m_whatdoth_ja
+	NPC_ANSWER_JA3 npc/npc_m_dontid_ja
+
+	NPC_QUESTION_JA0 npc/npc_m_whatgon_ja
+	NPC_QUESTION_JA1 npc/npc_m_didhear_ja
+	NPC_QUESTION_JA2 npc/npc_m_whoare_ja
+	NPC_QUESTION_JA3 npc/npc_m_thosepol_ja
+
+	NPC_IDLE_JA0 npc/npc_m_howhapp_ja
+	NPC_IDLE_JA1 npc/npc_m_whyme_ja
+	NPC_IDLE_JA2 npc/npc_m_sudden_ja
+	NPC_IDLE_JA3 npc/npc_m_whatgo_ja
+
+	NPC_NOGO_JA0 npc/npc_m_dontgoth_ja
+
+	NPC_MONST_JA0 npc/npc_m_iseeone_ja
+	NPC_MONST_JA1 npc/npc_m_theyhere_ja
+	NPC_MONST_JA2 npc/npc_m_theygotguns_ja
+
+	NPC_HEAR_JA0 npc/npc_m_hearthat_ja
+	NPC_HEAR_JA1 npc/npc_m_someover_ja
+
+
+	NPC_WOUND_JA npc/npc_m_beenshot_ja
+	NPC_WOUND_JA npc/npc_m_ow_ja
+	NPC_WOUND_JA npc/npc_m_arg_ja
+
+	NPC_MORTAL_JA0 npc/npc_m_notgoingm_ja
+	NPC_MORTAL_JA1 npc/npc_m_noo_ja
+	NPC_MORTAL_JA2 npc/npc_m_ahhh1_ja
+
+	NPC_CUREA_JA0 npc/npc_m_youdontlo_ja
+	NPC_CUREA_JA1 npc/npc_m_sureOK_ja
+
+	NPC_HEAL_JA0 npc/npc_m_heretake_ja
+	NPC_HEAL_JA1 npc/npc_m_letme_ja
+
+	NPC_PLFEAR_JA0 npc/npc_m_thoughtc_ja
+	NPC_PLFEAR_JA1 npc/npc_m_getawaym_ja
+	NPC_PLFEAR_JA2 npc/npc_m_helost_ja
+
+	NPC_PAIN_JA0 h/h_m_pain1_ja
+	NPC_PAIN_JA1 h/h_m_pain2_ja
+	NPC_PAIN_JA2 h/h_m_pain3_ja
+
+	NPC_FEAR_JA0 npc/npc_m_help2_ja
+	NPC_FEAR_JA1 npc/npc_m_whatgo2_ja
+
+	NPC_SCREAM_JA0 npc/npc_m_omg_ja
+	NPC_SCREAM_JA1 npc/npc_m_helpme_ja
+	NPC_SCREAM_JA2 npc/npc_m_ahh3_ja
+	NPC_SCREAM_JA3 npc/npc_m_thisnot_ja
+	NPC_SCREAM_JA4 npc/npc_m_whatstop_ja
+	NPC_SCREAM_JA5 npc/npc_m_dontdo_ja
+
+
+	//**NPC female chatter
+
+
+	NPC_OK_JAF0 npc/npc_f_yesdo_ja
+	NPC_OK_JAF1 npc/npc_f_right_ja
+	NPC_OK_JAF2 npc/npc_f_ok_ja
+
+	NPC_WAIT_JAF0 npc/npc_f_waithere_ja
+	NPC_WAIT_JAF1 npc/npc_f_stayhere_ja
+	NPC_WAIT_JAF2 npc/npc_f_movemusc_ja
+
+	NPC_STOP_JAF0 npc/npc_f_notfurth_ja
+
+	NPC_STARE_JAF0 npc/npc_f_lookme_ja
+	NPC_STARE_JAF1 npc/npc_f_yousure_ja
+
+	NPC_HELLO_JAF0 npc/npc_f_hello_ja
+	NPC_HELLO_JAF1 npc/npc_f_officer_ja
+
+	NPC_ANSWER_JAF0 npc/npc_f_iworried_ja
+	NPC_ANSWER_JAF1 npc/npc_f_canttell_ja
+	NPC_ANSWER_JAF2 npc/npc_f_whatdoth_ja
+	NPC_ANSWER_JAF3 npc/npc_f_dontid_ja
+
+	NPC_QUESTION_JAF0 npc/npc_f_whatgon_ja
+	NPC_QUESTION_JAF1 npc/npc_f_didhear_ja
+	NPC_QUESTION_JAF2 npc/npc_f_whoare_ja
+	NPC_QUESTION_JAF3 npc/npc_f_thosepol_ja
+
+	NPC_IDLE_JAF0 npc/npc_f_howhapp_ja
+	NPC_IDLE_JAF1 npc/npc_f_whyme_ja
+	NPC_IDLE_JAF2 npc/npc_f_sudden_ja
+	NPC_IDLE_JAF3 npc/npc_f_whatgo_ja
+
+	NPC_NOGO_JAF0 npc/npc_f_dontgoth_ja
+
+	NPC_MONST_JAF0 npc/npc_f_iseeone_ja
+	NPC_MONST_JAF1 npc/npc_f_theyhere_ja
+	NPC_MONST_JAF2 npc/npc_f_theygotguns_ja
+
+	NPC_HEAR_JAF0 npc/npc_f_hearthat_ja
+	NPC_HEAR_JAF1 npc/npc_f_someover_ja
+
+
+	NPC_WOUND_JAF0 npc/npc_f_beenshot_ja
+	NPC_WOUND_JAF1 npc/npc_f_ow_ja
+	NPC_WOUND_JAF2 npc/npc_f_arg_ja
+
+	NPC_MORTAL_JAF0 npc/npc_f_notgoingm_ja
+	NPC_MORTAL_JAF1 npc/npc_f_noo_ja
+	NPC_MORTAL_JAF2 npc/npc_f_ahhh1_ja
+
+	NPC_CUREA_JAF0 npc/npc_f_youdontlo_ja
+	NPC_CUREA_JAF1 npc/npc_f_sureOK_ja
+
+	NPC_HEAL_JAF0 npc/npc_f_heretake_ja
+	NPC_HEAL_JAF1 npc/npc_f_letme_ja
+
+	NPC_PLFEAR_JAF0 npc/npc_f_thoughtc_ja
+	NPC_PLFEAR_JAF1 npc/npc_f_getawaym_ja
+	NPC_PLFEAR_JAF2 npc/npc_f_helost_ja
+
+	NPC_PAIN_JAF0 h/h_f_pain1_ja
+	NPC_PAIN_JAF1 h/h_f_pain2_ja
+	NPC_PAIN_JAF2 h/h_f_pain3_ja
+
+	NPC_FEAR_JAF0 npc/npc_f_ahh2_ja
+	NPC_FEAR_JAF1 npc/npc_f_whatgo2_ja
+
+	NPC_SCREAM_JAF0 npc/npc_f_omg_ja
+	NPC_SCREAM_JAF1 npc/npc_f_helpme_ja
+	NPC_SCREAM_JAF2 npc/npc_f_ahh3_ja
+	NPC_SCREAM_JAF3 npc/npc_f_thisnot_ja
+	NPC_SCREAM_JAF4 npc/npc_f_whatstop_ja
+	NPC_SCREAM_JAF5 npc/npc_f_dontdo_ja
+
+}
+ 
+%biker 
+{	
+	@NPC3Style
+	$speaker = biker 
+	$listener = player 
+}
+
+%diversion_gal
+{
+	@NPC1Style
+	$speaker = diversion_gal
+}
+
+%alley_run_bike_seq
+{
+	#firetargets="driver_off"
+	#firetargets="awindow0_sp"
+	#firetargets="bike_down"
+	#pause = .5
+	#firetargets="tosh_yell_music"
+	@T1Style
+	#text="#HANKAGAI_OUTOFWAY"
+	#firetargets="sniper2_seq0"
+	#firetargets="outofmyway"
+	#pause = 2.5
+	@biker
+	//#text="Anata ne! What's the big idea,
+	//you kids have no respect!"
+	#sound=oldman_hey,
+	pause = 3
+}
+
+%alley_rollout_seq
+{
+	#firetargets="alley_rollout"
+}
+
+%alley_window0_seq
+{
+	#firetargets="awindow0_seq"
+	#pause = .5
+	#firetargets="alley_window"
+	#pause = 1.2
+	#firetargets="awindow0_guy_ck"
+	#firetargets="awindow0_seq"
+	#pause = .5
+	#firetargets="alley_window2"
+	#firetargets="hidden_door1_sp"
+}
+
+%biker_use_seq1
+{
+	@biker
+	//#text="I hope you kick his ass, the little bastard!"
+	#sound=oldman_kickbas
+	#firetargets="biker_use_ck1"
+	#pause = 3
+}
+
+%biker_use_seq2
+{
+	@biker
+	//#text="I think he bent my rim."
+	#sound=oldman_bendrim
+	#firetargets="biker_use_ck2"
+	#pause = 3
+}
+
+%biker_use_seq3
+{
+	@biker
+	//#text="Why are you still bothering me? Go get that hoodlum!."
+	#sound=oldman_gethood
+	#firetargets="biker_use_ck1"
+	#pause = 4
+}
+
+%into_alley
+{
+	#killtargets="sniper2a"
+	#firetargets="crashdoor_snd"
+	#pause = 1
+	#firetargets="sniper_roofdoor"
+	#pause = .2
+	#firetargets="sniper3_seq1"
+}
+
+%fenced_alley_seq
+{
+	#firetargets="civvy_flee_ck"
+	#pause = .2
+	#firetargets="diversion_gal_walk"
+}
+
+%sniper3_hide1
+{
+	#pause = .5
+
+	#firetargets="sniper3_seq3"
+	#firetargets="alley2_window_sp"
+	#pause = .5
+	#firetargets="alley2_window_seq"
+	#pause = .5
+	#firetargets="alley2_window1"
+	#pause = 1.
+	#firetargets="alley2_window_seq"
+	#pause = .5
+	#firetargets="alley2_window2"
+}
+
+%sniper3_hide2
+{
+	#pause = .5
+	#firetargets="sniper3_seq4"
+	#firetargets="storefront_sp"
+	#pause = .5
+	#firetargets="storefront_out"
+	#pause = 2
+	#firetargets="crateclip"
+}
+
+%garagewindow_seq
+{
+	#firetargets="sniper4_kill"
+	#pause = .5
+	#firetargets="car_train"
+	#firetargets="car_trainb"
+	#pause = .1
+	#firetargets="carhorn"
+	#pause = .1
+	#firetargets="carbrakes"
+	#pause = .75
+	#firetargets="toshi_car_hit"
+	#pause = .15
+	#firetargets="toshi_car_hit2"
+	#pause = .1
+	#firetargets="car_clip"
+	#killtargets="car_trainb"
+	#firetargets="driver_on"
+	#firetargets="car_trainb_ck1"
+	#pause = .2
+	#firetargets="car_trainb_ck2"
+	#pause = 2.1
+	#firetargets="g_alley_spawn1"
+	#firetargets="g_alley_spawn2"
+	#firetargets="garagewindow_sp"
+	#pause = .5
+	#firetargets="gwindow_seq"
+	#firetargets="car_wall"
+	#pause = .5
+	#firetargets="garagedoor1"
+	#firetargets="garagewindow"
+	#pause = 1
+	#killtargets="garage_cars"
+}
+
+%g_window_death
+{
+	#pause = .5
+	#firetargets="g_scream_snd"
+	#pause = 1.04
+	#firetargets="g_impact_snd"
+}
+
+%g_alley_go
+{
+	#firetargets="g_alley_gus1"
+	#firetargets="g_alley_gus2"
+}
+
+%move_player_snd
+{
+	#pause = 8
+	@RadioStyle
+	//#text="Chase down that sniper, chikusho!"
+	#sound=cnc_chasedmn,
+	pause = 67
+	@RadioStyle
+	//#text="Keep after Toshifune, don't let him get away!"
+	#sound=cnc_keepaftert
+	#pause = 67
+	@RadioStyle
+	//#text="Are you waiting for an invitation?!"
+	#sound=cnc_invite,
+	pause = 67
+	@RadioStyle
+	//#text="You're going to lose him!"
+	#sound=cnc_yougolose
+	#pause = 67
+	#repeat = -1
+}
+
+%flyby_seq
+{
+	#firetargets="flyby"
+	#pause = 55
+	#repeat = -1
+}
+
+%npc_failure
+{
+	#firetargets="mission_fail"
+	#pause = 3
+	@FailureStyle
+	#text="#HANKAGAI_NPC_FAIL_MSG"
+}

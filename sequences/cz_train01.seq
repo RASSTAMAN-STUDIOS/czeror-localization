@@ -1,0 +1,784 @@
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//|| CZ_Training01 Dialog Sequences (cz_train01) ||
+//|| Tom "ParadoX" Mustaine			 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+
+// Sentences for +use on actors and so on.
+!sentences
+{
+	// The Receptionist in training 
+	Training_Rec_talk0 cz_training/rec_theyarew
+	Training_Rec_talk1 cz_training/rec_latest
+	Training_Rec_talk2 cz_training/rec_elepast
+	
+	// Worker #1 in training
+	Training_Worker_one0 cz_training/work1_sorrybus
+	Training_Worker_one1 cz_training/work1_pleaseno
+	Training_Worker_one2 cz_training/work1_wetalk
+
+	// Worker #2 in training
+	Training_Worker_two0 cz_training/work2_data
+	Training_Worker_two1 cz_training/work2_needtoget
+	Training_Worker_two2 cz_training/work2_plsdata
+	Training_Worker_two3 cz_training/work2_canihelp
+	
+//	// Worker #3 in training
+//	Training_Worker_three0 cz_training/work3_hello
+//	Training_Worker_three1 cz_training/work3_trainth
+//	Training_Worker_three2 cz_training/work3_getmov
+	
+//	// Worker #4 in training
+//	Training_Worker_four0 cz_training/work4_sorry
+//	Training_Worker_four1 cz_training/work4_yes
+//	Training_Worker_four2 cz_training/work4_doyou
+	
+	// Worker #5 in training
+	Training_Worker_five0 cz_training/work5f_whatup
+	Training_Worker_five1 cz_training/work5f_intense
+	Training_Worker_five2 cz_training/work5f_notgoodt
+	
+// Dialog called in the level	
+	Training_Pleasewait0 		cz_training/rec_plswait
+	Training_IdConf0		cz_training/rec_idconf
+	Training_HelloandWelc0		cz_training/rec_hellocts
+	Training_WelcProceed0		cz_training/rec_procele
+	Training_Mutter_first0		cz_training/workov_walla1
+	Training_Mutter_second0		cz_training/workov_walla2
+	Training_Course_Ahead0		cz_training/workg_justahead
+	Please_Keep_Moving0		cz_training/workg_plskeep
+	Training_Greeting0		cz_training/tr_greetop
+	Training_Pressduck0		cz_training/tr_pressduck
+	Training_Good0			cz_training/tr_good1
+	Training_YouJumpBox0 		cz_training/tr_youjumpbox
+	Training_EnterVent0 		cz_training/tr_toentvent
+	Training_StandFrontVent0	cz_training/tr_standdir
+	Training_DuckJumpCMD0 		cz_training/tr_thenjump
+	Trainnig_NothingHere0		cz_training/workg_nothingint
+	Training_GoodJob0 		cz_training/tr_goodjob1
+	Training_LadderDes0 		cz_training/tr_todesc
+	Training_LookDown0		cz_training/tr_lokdwnc
+	Training_Climbpipe0		cz_training/tr_climbup
+	Training_Jumpinto_Tank0		cz_training/tr_jumpinto
+	Training_ToSwim0		cz_training/tr_toswim
+	Training_WatchAir0 		cz_training/tr_watchair
+	Training_Excellent0 		cz_training/tr_excellent1
+	Training_Pleaseopen0 		cz_training/tr_pleaseopen
+	Training_PushEasy0 		cz_training/tr_pusheasy
+	Training_Push0			cz_training/tr_toprocpushb
+	Training_Pull0 			cz_training/tr_somepull
+	Training_ToPull0 		cz_training/tr_topullbox
+	Training_Holduse0 		cz_training/tr_holduseslow
+	Training_Grip0 			cz_training/tr_whilegrip
+	Training_Wheel0 		cz_training/tr_toopenctrl
+	Training_SomeDoor0 		cz_training/tr_somedoorsr
+	Training_UseWalk0 		cz_training/tr_walkusek
+	Training_CloseUse0 		cz_training/tr_tocloseuse
+	Training_HostageRes0		cz_training/tr_hosreszone
+	Training_LeadHos0		cz_training/tr_leadhostres
+	Training_TheyWill0		cz_training/tr_theywillfoll
+	Training_LeadCiv0		cz_training/tr_leadcivtosec
+	
+// Sentences for Hostages and other actors that had their stuff pulled from sentences.txt
+// NOTE FOR LOCALIZATION.  THIS BLOCK OF TEXT BELOW SHOULD BE
+// REPLACED BY THE LOCAL LANGUAGE BLOCK OF DIALOG FOR WHATEVER TARGET
+// LANGUAGE THE PRODUCT IS AIMING FOR.
+// 
+// THIS BLOCK OF TEXT IS FOR AMERICAN ENGLISH NPC DIALOG
+	
+	NPC_OK_AM0 npc/npc_m_yesdo_am
+	NPC_OK_AM1 npc/npc_m_right_am
+	NPC_OK_AM2 npc/npc_m_ok_am
+	
+	NPC_WAIT_AM0 npc/npc_m_waithere_am
+	NPC_WAIT_AM1 npc/npc_m_stayhere_am
+	NPC_WAIT_AM2 npc/npc_m_movemusc_am
+	
+	NPC_STOP_AM0 npc/npc_m_notfurth_am
+	
+	NPC_STARE_AM0 npc/npc_m_lookme_am
+	NPC_STARE_AM1 npc/npc_m_yousure_am
+	
+	NPC_HELLO_AM0 npc/npc_m_hello_am
+	NPC_HELLO_AM1 npc/npc_m_officer_am
+	
+	NPC_ANSWER_AM0 npc/npc_m_iworried_am
+	NPC_ANSWER_AM1 npc/npc_m_canttell_am
+	NPC_ANSWER_AM2 npc/npc_m_whatdoth_am
+	NPC_ANSWER_AM3 npc/npc_m_dontid_am
+	
+	NPC_QUESTION_AM0 npc/npc_m_whatgon_am
+	NPC_QUESTION_AM1 npc/npc_m_didhear_am
+	NPC_QUESTION_AM2 npc/npc_m_whoare_am
+	NPC_QUESTION_AM3 npc/npc_m_thosepol_am
+	
+	NPC_IDLE_AM0 npc/npc_m_howhapp_am
+	NPC_IDLE_AM1 npc/npc_m_whyme_am
+	NPC_IDLE_AM2 npc/npc_m_sudden_am
+	NPC_IDLE_AM3 npc/npc_m_whatgo_am
+	
+	NPC_NOGO_AM0 npc/npc_m_dontgoth_am
+	
+	NPCONST_AM0 npc/npc_m_iseeone_am
+	NPCONST_AM1 npc/npc_m_theyhere_am
+	NPCONST_AM2 npc/npc_m_theygotguns_am
+	
+	NPC_HEAR_AM0 npc/npc_m_hearthat_am
+	NPC_HEAR_AM1 npc/npc_m_someover_am
+	
+	
+	NPC_WOUND_AM0 npc/npc_m_beenshot_am
+	NPC_WOUND_AM1 npc/npc_m_ow_am
+	NPC_WOUND_AM2 npc/npc_m_arg_am
+	
+	NPCORTAL_AM0 npc/npc_m_notgoingm_am
+	NPCORTAL_AM1 npc/npc_m_noo_am
+	NPCORTAL_AM2 npc/npc_m_ahhh1_am
+	
+	NPC_CUREA_AM0 npc/npc_m_youdontlo_am
+	NPC_CUREA_AM1 npc/npc_m_sureOK_am
+	
+	NPC_HEAL_AM0 npc/npc_m_heretake_am
+	NPC_HEAL_AM1 npc/npc_m_letme_am
+	
+	NPC_PLFEAR_AM0 npc/npc_m_thoughtc_am
+	NPC_PLFEAR_AM1 npc/npc_m_getawaym_am
+	NPC_PLFEAR_AM2 npc/npc_m_helost_am
+	
+	NPC_FEAR_AM0 npc/npc_m_ahh2_am
+	NPC_FEAR_AM1 npc/npc_m_help2_am
+	NPC_FEAR_AM2 npc/npc_m_whatgo2_am
+	
+	NPC_SCREAM_AM0 npc/npc_m_omg_am
+	NPC_SCREAM_AM1 npc/npc_m_helpme_am
+	NPC_SCREAM_AM2 npc/npc_m_ahh3_am
+	NPC_SCREAM_AM3 npc/npc_m_thisnot_am
+	
+	NPC_SCREAM_AM0 npc/npc_m_whatstop_am
+	NPC_SCREAM_AM1 npc/npc_m_dontdo_am
+	
+	NPC_OK_AMF0 npc/npc_f_yesdo_am
+	NPC_OK_AMF1 npc/npc_f_right_am
+	NPC_OK_AMF2 npc/npc_f_ok_am
+	
+	NPC_WAIT_AMF0 npc/npc_f_waithere_am
+	NPC_WAIT_AMF1 npc/npc_f_stayhere_am
+	NPC_WAIT_AMF2 npc/npc_f_movemusc_am
+	
+	NPC_STOP_AMF0 npc/npc_f_notfurth_am
+	
+	NPC_STARE_AMF0 npc/npc_f_lookme_am
+	NPC_STARE_AMF1 npc/npc_f_yousure_am
+	
+	NPC_HELLO_AMF0 npc/npc_f_hello_am
+	NPC_HELLO_AMF1 npc/npc_f_officer_am
+	
+	NPC_ANSWER_AMF0 npc/npc_f_iworried_am
+	NPC_ANSWER_AMF1 npc/npc_f_canttell_am
+	NPC_ANSWER_AMF2 npc/npc_f_whatdoth_am
+	NPC_ANSWER_AMF3 npc/npc_f_dontid_am
+	
+	NPC_QUESTION_AMF0 npc/npc_f_whatgon_am
+	NPC_QUESTION_AMF1 npc/npc_f_didhear_am
+	NPC_QUESTION_AMF2 npc/npc_f_whoare_am
+	NPC_QUESTION_AMF3 npc/npc_f_thosepol_am
+	
+	NPC_IDLE_AMF0 npc/npc_f_howhapp_am
+	NPC_IDLE_AMF1 npc/npc_f_whyme_am
+	NPC_IDLE_AMF2 npc/npc_f_sudden_am
+	NPC_IDLE_AMF3 npc/npc_f_whatgo_am
+	
+	NPC_NOGO_AMF0 npc/npc_f_dontgoth_am
+	
+	NPCONST_AMF0 npc/npc_f_iseeone_am
+	NPCONST_AMF1 npc/npc_f_theyhere_am
+	NPCONST_AMF2 npc/npc_f_theygotguns_am
+	
+	NPC_HEAR_AMF0 npc/npc_f_hearthat_am
+	NPC_HEAR_AMF1 npc/npc_f_someover_am
+	
+	NPC_WOUND_AMF0 npc/npc_f_beenshot_am
+	NPC_WOUND_AMF1 npc/npc_f_ow_am
+	NPC_WOUND_AMF2 npc/npc_f_arg_am
+	
+	NPCORTAL_AMF0 npc/npc_f_notgoingm_am
+	NPCORTAL_AMF1 npc/npc_f_noo_am
+	NPCORTAL_AMF2 npc/npc_f_ahhh1_am
+	
+	NPC_CUREA_AMF0 npc/npc_f_youdontlo_am
+	NPC_CUREA_AMF1 npc/npc_f_sureOK_am
+	
+	NPC_HEAL_AMF0 npc/npc_f_heretake_am
+	NPC_HEAL_AMF1 npc/npc_f_letme_am
+	
+	NPC_PLFEAR_AMF0 npc/npc_f_thoughtc_am
+	NPC_PLFEAR_AMF1 npc/npc_f_getawaym_am
+	NPC_PLFEAR_AMF2 npc/npc_f_helost_am
+	
+	NPCEAR_AMF0 npc/npc_f_ahh2_am
+	NPCEAR_AMF1 npc/npc_f_help2_am
+	NPCEAR_AMF2 npc/npc_f_whatgo2_am
+	
+	NPC_SCREAM_AMF0 npc/npc_f_omg_am
+	NPC_SCREAM_AMF1 npc/npc_f_helpme_am
+	NPC_SCREAM_AMF2 npc/npc_f_ahh3_am
+	NPC_SCREAM_AMF3 npc/npc_f_thisnot_am
+	
+	NPC_SCREAM_AMF0 npc/npc_f_whatstop_am
+	NPC_SCREAM_AMF1 npc/npc_f_dontdo_am
+
+// NOTE FOR LOCALIZATION.  THIS BLOCK OF TEXT BELOW SHOULD BE
+// REPLACED BY THE LOCAL LANGUAGE BLOCK OF DIALOG FOR WHATEVER TARGET
+// LANGUAGE THE PRODUCT IS AIMING FOR.
+// 
+// THIS BLOCK OF TEXT IS FOR AMERICAN ENGLISH HOSTAGE DIALOG	
+	H_HELP_AM0 h/h_m_getmeout_am
+	H_HELP_AM1 h/h_m_okletsgo_am
+	H_HELP_AM2 h/h_m_gethellout_am
+	H_HELP_AM3 h/h_m_ohlets_am
+	
+	//H_WAIT_AM0 npc/npc_m_waithere_am
+	//H_WAIT_AM1 npc/npc_m_stayhere_am
+	//H_WAIT_AM2 npc/npc_m_movemusc_am
+	
+	H_THANK_AM0 h/h_m_thanksave_am
+	H_THANK_AM1 h/h_m_owelife_am
+	H_THANK_AM2 h/h_m_gladover_am
+	H_THANK_AM3 h/h_m_thanks_am
+	
+	H_PAIN_AM0 h/h_m_pain1_am
+	H_PAIN_AM1 h/h_m_pain2_am
+	H_PAIN_AM2 h/h_m_pain3_am
+	H_PAIN_AM3 h/h_m_pain4_am
+	
+	H_DEATH_AM0 h/h_m_death1_am
+	H_DEATH_AM1 h/h_m_death2_am
+	H_DEATH_AM2 h/h_m_death3_am
+	H_DEATH_AM3 h/h_m_death4_am
+	
+	H_PLFEAR_AM0 h/h_m_mygodw_am
+	H_PLFEAR_AM1 h/h_m_ithought_am
+	H_PLFEAR_AM2 h/h_m_pleasenok_am
+	
+	H_FEAR_AM0 h/h_m_dontdie_am
+	H_FEAR_AM1 h/h_m_yousavr_am
+	H_FEAR_AM2 h/h_m_wherewego_am
+	
+	H_SCREAM_AM0 h/h_m_ahh1_am
+	H_SCREAM_AM1 h/h_m_lookout_am
+	H_SCREAM_AM2 h/h_m_they'rehere_am
+	
+	H_SICK_AM0 h/h_m_cantgo_am
+	H_SICK_AM1 h/h_m_toosick_am
+	H_SICK_AM2 h/h_m_goinpuke_am
+	
+	H_BETTER_AM0 h/h_m_feelmuch_am
+	H_BETTER_AM1 h/h_m_didtr_am
+	H_BETTER_AM2 h/h_m_thankshot_am
+	
+//	H_HELP_AMF0 h/h_f_mygoodp_am
+//	H_HELP_AMF1 h/h_f_neverbeen_am
+//	H_HELP_AMF2 h/h_f_scaredp_am
+//	
+//	H_THANK_AMF0 h/h_f_thankf_am
+//	H_THANK_AMF1 h/h_f_veryb_am
+//	H_THANK_AMF2 h/h_f_courage_am
+//	
+//	H_PAIN_AMF0 h/h_f_pain1_am
+//	H_PAIN_AMF1 h/h_f_pain2_am
+//	H_PAIN_AMF2 h/h_f_pain3_am
+//	H_PAIN_AMF3 h/h_f_pain4_am
+//	
+//	H_DEATH_AMF0 h/h_f_death1_am
+//	H_DEATH_AMF1 h/h_f_death2_am
+//	H_DEATH_AMF2 h/h_f_death3_am
+//	H_DEATH_AMF3 h/h_f_death4_am
+//	
+//	H_PLFEAR_AMF0 h/h_f_mygod_am
+//	H_PLFEAR_AMF1 h/h_f_myside_am
+//	H_PLFEAR_AMF2 h/h_f_plsnokill_am
+//	
+//	HEAR_AMF0 h/h_f_ohhelp_am
+//	HEAR_AMF1 h/h_f_ohmy_am
+//	HEAR_AMF2 h/h_f_help_am
+//	
+//	H_SCREAM_AMF0 h/h_f_ahh1_am
+//	H_SCREAM_AMF1 h/h_f_lookout_am
+//	H_SCREAM_AMF2 h/h_f_theyhere_am
+//	
+//	H_SICK_AMF0 h/h_f_dontfeel_am
+//	H_SICK_AMF1 h/h_f_toosick_am
+//	H_SICK_AMF2 h/h_f_puke_am
+//	
+//	H_BETTER_AMF0 h/h_f_feelbett_am
+//	H_BETTER_AMF1 h/h_f_trick_am
+//	H_BETTER_AMF2 h/h_f_shotgo_am
+}
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	BEGIN: Speaker, Style & Definitions	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+%Receptionist
+{
+	@NPC1Style
+	$speaker	= worker1
+	$listener	= player
+}
+
+%Worker1
+{
+	@NPC2Style
+	$speaker	= worker_walk1
+	$listener	= player
+}
+
+%Worker2
+{
+	@NPC3Style
+	$speaker	= worker2
+	$listener	= player
+}
+
+%Worker3
+{
+	@NPC1Style
+	$speaker	= worker3
+	$listener	= player
+}
+
+%Observer1		// Hallway to ducking area
+{
+	@NPC1Style
+	$speaker 	= area2_observer2
+	$listener	= player
+}
+
+%Trainer1		// Ducking area
+{
+	@NPC1Style
+	$speaker	= area3_observer1
+	$listener	= player	
+}
+
+//Added 2nd trainer to the ducking obstacle course
+%Trainer1b
+{
+	@NPC1Style
+	$speaker	= area3_observer2
+	$listener	= player
+}
+
+%Trainer2		// Ladder area
+{
+	@NPC1Style
+	$speaker	= area4_observer2
+	$listener	= player
+}
+
+%Trainer3		// Push / Pull area
+{
+	@NPC1Style
+	$speaker	= area5_observer1
+	$listener	= player
+}
+
+%Trainer4		// Use Door area
+{
+	@NPC1Style
+	$speaker	= area6_observer1
+	$listener	= player
+}
+
+%Trainer5		// Hostage area
+{
+	@NPC1Style
+	$speaker	= area7_observer2
+	$listener	= player
+}
+
+%Training_Text
+{
+	$position = -1 0.1
+	$fadein = 0.005, holdtime = 3.5, fadeout = 1.0
+	$color = 0 128 255, color2 = 0 64 192, effect = 2
+	$channel = 3
+}
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	END: Speaker Definitions		 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	BEGIN: Use Characters Sequences 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+
+%Use_Receptionist
+{
+	@Receptionist
+	//#text = ""		// +use lines of dialog should not be localized
+	#sound = Training_Rec_talk
+}
+
+%Use_Worker1
+{
+	@Worker1
+	//#text = ""		// +use lines of dialog should not be localized
+	#sound = Training_Worker_two
+}
+
+%Use_Worker2
+{
+	@Worker2
+	//#text = ""		// +use lines of dialog should not be localized
+	#sound = Training_Worker_one
+}
+
+%Use_Worker3
+{
+	@Worker3
+	//#text = ""		// +use lines of dialog should not be localized
+	#sound = Training_Worker_five
+}
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	END: Use Characters Sequences 	 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	BEGIN: Level relevant Sequences 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+
+%Opening_Sequence
+{
+	#firetargets = "start_music"
+	#firetargets = "hud"
+	#firetargets = "freeze_me"
+	@TitleStyle
+	#pause = 1
+	#firetargets = "start_dark"	
+	#text = "#TRAINING_TITLE" //#text = "Counter Terrorist Training"
+	#pause = 5
+	@SubtitleStyle
+	#text = "#TRAINING_SUBTITLE" //#text = "08:30 HOURS
+//Counter Terrorist Training Facility
+//Undisclosed location"
+
+	#pause = 6.5
+	@RadioStyle
+	//#text = "Please wait while I verify your identity."
+	#sound = Training_Pleasewait
+	#pause = 5 // SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+
+	@RadioStyle
+	//#text = "Identity confirmed.  Please proceed"
+	#sound = Training_IdConf
+	#firetargets = "freeze_me"
+
+	@Training_Text
+	#text = "#TRAINING_PLAYER_CONTROLS" //#text = "MOVE FORWARD BY PRESSING FORWARD KEY
+//MOVE BACKWARD BY PRESSING BACKWARD KEY
+//MOVE LEFT BY PRESSING MOVELEFT
+//MOVE RIGHT BY PRESSING MOVERIGHT"
+	#pause = 2
+	
+	#firetargets = "worker_sequence1"
+	#firetargets = "loop"
+	#firetargets = "entry_doors"	
+	#firetargets = "area1_sounds"
+}
+
+%Opening_Greeting
+{
+	@Receptionist
+	//#text = "Hello and welcome to the counter terrorist specail training facility!"
+	#sound = Training_HelloandWelc
+	#pause = 3.9	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Receptionist
+	//#text = "Please proceed to the elevator, they are waiting for you in the training areas."
+	#sound = Training_WelcProceed
+	#firetargets = "script_new_obj01" //fires thread "new_obj01_elev" below
+	#firetargets = "receptionist_point_sequence"
+	#pause = 3.9	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#firetargets = "rec_keyvalue_change"
+}	
+
+%new_obj01_elev
+{
+	@ObjectiveStyle
+	#text = "#OBJ1_TRAIN_NEW" //#text = "NEW OBJECTIVE: Proceed to elevator for training"
+	#firetargets = "obj01_elev" //adds objective to objectives list
+}
+
+%Oversee_Conversation
+{
+//	FIXME
+//	#sound = Training_Mutter_first, speaker = observer1, listener = observer2
+//	#pause = 3
+//	#sound = Training_Mutter_second, speaker = observer2, listener = observer1
+}
+
+%Move_Along_Sequence
+{
+	@Observer1
+	//#text = "The training course is just ahead"
+	#sound = Training_Course_Ahead
+	#pause = 10
+	#firetargets = "move_faster"
+}
+
+%Please_Keep_Moving
+{
+	@Observer1
+	//#text = "Please keep moving"
+	#sound = Please_Keep_Moving
+}	
+
+%Ducking_Sequence
+{
+	@Trainer1
+	//#text = "Greetings, operative. The first moves you will practice are related to basic movement"
+	#sound = Training_Greeting
+	#pause = 5.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer1
+	//#text = "Press your duck key to navigate under these obstacles"
+	#sound = Training_Pressduck
+	@Training_Text
+	#text = "#TRAINING_DUCK" //#text = "PRESS FORWARD KEY TO RUN FORWARD
+//PRESS DUCK KEY TO DUCK"
+	#pause = 2
+	#firetargets = "duck_stop"
+}
+
+%Ducking_Sequence_Done
+{
+	@Trainer1
+	//#text = "Good"
+	#sound = Training_Good
+	#pause = 1	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer1
+	//#text = "You will now need to jump up on these boxes to proceed"
+	#sound = Training_YouJumpBox
+	@Training_Text
+	#text = "#TRAINING_FORWARD_JUMP" //#text = "PRESS FORWARD KEY TO RUN FORWARD
+//PRESS JUMP KEY TO JUMP"
+}
+
+%Enter_Vent
+{
+	@Trainer1
+	//#text = "To enter this vent, you will need to perform a duck jump"
+	#sound = Training_EnterVent
+	#pause = 3.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer1	
+	//#text = "Stand directly in front of the vent, and continue to press forward"
+	#sound = Training_StandFrontVent
+	@Training_Text
+	#text = "#TRAINING_DUCK_JUMP" //"PRESS FORWARD + JUMP, THEN WHILE IN MID AIR PRESS DUCK"
+	#pause = 4.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer1
+	#sound = Training_DuckJumpCMD
+	//#text = "Then jump and while you are in the air press your duck key."
+	#pause = 2
+	#firetargets = "vent_stop"
+}
+
+%Screwing_Around
+{
+	@Trainer1b	
+	//#text = "There is nothing here of any interest, please continue with the test"
+	#sound = Trainnig_NothingHere
+}
+
+%Vent_Good
+{
+	@Trainer1
+	//#text = "Good job!"
+	#sound = Training_GoodJob
+}
+
+%Climb_Ladder
+{
+	@Trainer2
+	//#text = "To descend on this ladder, simply walk directly into the ladder."
+	#sound = Training_LadderDes
+	@Training_Text
+	#text = "#TRAINING_LADDER_DOWN" //#text = "PRESS BACKWARD KEY TO MOVE DOWN LADDERS
+//OR LOOK DOWN AND PRESS FORWARD KEY"
+	#pause = 4.6	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer2
+	//#text = "Look down, and continue moving forward"
+	#sound = Training_LookDown
+	#pause = 2.5	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#firetargets = "ladder_door_stop"
+}
+
+%Climb_Pipes
+{
+	@Trainer2
+	//#text = "Climb up these pipes by walking directly in to them while continuing to press forward"
+	#sound = Training_Climbpipe
+	@Training_Text
+	#text = "#TRAINING_LADDER_UP" //#text = "PRESS FORWARD KEY TO MOVE UP LADDERS
+//OR LOOK UP AND PRESS FORWARD KEY"
+}
+
+%Start_Swimming
+{
+	#firetargets = "hud_on"
+	@Trainer2
+	//#text = "Jump into this tank of water and swim through the pipe below"
+	#sound = Training_Jumpinto_Tank
+	#pause = 3.5 	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#firetargets = "water_stop"
+
+	@Trainer2 	
+	//#text = "To swim, simply look in the direction you want to swim and press forward"
+	#sound = Training_ToSwim
+	@Training_Text
+	#text = "#TRAINING_SWIM" //#text = "PRESS YOUR FORWARD KEY
+//AIM WITH THE MOUSE AS YOU SWIM"
+}
+
+%Swimming_Neatstuff
+{
+	@Trainer2
+	//#text = "Watch your air supply closely while swimming. 
+	//if you need to surface for air, an oxygen icon will light up on your display"
+	#sound = Training_WatchAir
+	#firetargets = "observers_looking_through_glass"
+	//#text = "observers targeted"
+	@Training_Text
+	#text = "#TRAINING_OXYGEN" //#text = "FIND AIR IF YOU BEGIN TO LOSE HEALTH
+//WAIT IN THE AIR UNTIL HEALTH RETURNS TO FORMER LEVEL"
+}
+
+%Done_Swimming
+{
+	#firetargets = "hud"
+	@Trainer3
+	//#text = "Excellent!"
+	#sound = Training_Excellent 
+	#pause = 1.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer3	
+	//#text = "Please open this door by walking up to the button, 
+	//looking at it, and pressing your use key"
+	#sound = Training_Pleaseopen 
+	@Training_Text
+	#text = "#TRAINING_BUTTON" //#text = "PRESS YOUR USE KEY TO PUSH A BUTTON"
+}
+
+%Push_Box
+{
+	@Trainer3
+	//#text = "To proceed, you'll need to push that box through the corridor"
+	#sound = Training_Push 
+	@Training_Text
+	#text = "#TRAINING_PUSH_BOXES" //#text = "PRESS FORWARD KEY TO MOVE AGAINST BOX
+//KEEP PRESSING FOWARD TO PUSH BOX"
+	#pause = 4.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer3	
+	//#text = "Pushing is easy, move forward against the box to push it out of your way"
+	#sound = Training_PushEasy 
+	#firetargets = "push_stop"
+}
+
+%Pull_Box
+{
+//	@Trainer3	
+//	//#text = "Sometimes you will need to pull objects out of your way"
+//	#sound = Training_Pull 
+//	#pause = 3.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer3
+	//#text = "To pull this box, move up to it and press your use key"
+	#sound = Training_ToPull 
+	@Training_Text
+	#text = "#TRAINING_PULL_BOXES" //#text = "PRESS USE+BACKWARD KEYS TOGETHER
+//TO PULL BOX BACKWARD"
+	#pause = 4.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer3	
+	//#text = "Hold the use key down to keep a grip on the object, and move slowly backward.  
+	//The object will come along with you"
+	#sound = Training_Holduse 
+
+	#pause = 7.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer3	
+	//#text = "While gripping an object, you can also use strafe keys to move the object from side to side"
+	#sound = Training_Grip 
+	#firetargets = "pull_stop"
+}
+
+%Turn_Crank
+{
+	@Trainer3
+	//#text = "To open this door, walk up to the control wheel, then press and hold the use key"
+	#sound = Training_Wheel
+	
+	@Training_Text
+	#text = "#TRAINING_HOLD_USEKEY" //#text = "ACTIVATE WHEELS AND DIALS
+//BY HOLDING DOWN THE USE KEY
+//HOLD USE KEY UNTIL DOOR IS FULLY OPEN"
+}
+
+%Use_The_Door
+{
+	@Trainer4
+	//#text = "Some doors will require you to press use to open them, 
+	//especially in areas where stealth is important"
+	#sound = Training_SomeDoor 
+	
+	@Training_Text
+	#text = "#TRAINING_USE_DOOR" //#text = "PRESS YOUR USE KEY TO OPEN ROTATING DOORS"	
+	
+	#pause = 5.5	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer4
+	//#text = "Walk up to this door, and press your use key to open the door"
+	#sound = Training_UseWalk 	
+	#pause = 3.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	@Trainer4	
+	//#text = "To close the door, simply walk up to the door and press the use key again"
+	#sound = Training_CloseUse 
+	
+	#pause = 2	
+	#firetargets = "move_door99"
+}
+
+%Rescue_Hostages
+{
+	@Trainer5
+	//#text = "Hostage rescue zones can be identified by areas where the hostage rescue icon is visible"
+	#sound = Training_HostageRes 
+	#pause = 5.5	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	
+	@Training_Text
+	#text = "#TRAINING_HOSTAGE_FOLLOWS" //#text = "APPROACH A HOSTAGE
+//PRESS YOUR USE KEY TO MAKE THEM FOLLOW YOU
+//LEAD HOSTAGES TO HOSTAGE RESCUE ZONE"	
+	
+	@Trainer5
+	//#text = "To lead the hostages to the rescue zone, 
+//you must approach a hostage and press the use key"
+	#sound = Training_LeadHos 
+	#pause = 5.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs	
+	@Trainer5	
+	//#text = "They will follow you until they reach a rescue zone, 
+//or until you face them and press the use key again"
+	#sound = Training_TheyWill 
+}
+
+%Lead_NPC
+{
+	@Trainer5
+	#sound = Training_LeadCiv
+	//#text = "Lead this civilian to the security panel near the door.
+	//He will bypass the security and allow you to proceed"
+	#firetargets = "hostage_door"
+	
+	@Training_Text
+	#text = "#TRAINING_REQUEST_HELP" //#text = "APPROACH THIS CIVILIAN
+//PRESS YOUR USE KEY TO GET HIS HELP
+//WALK TORWARD DOOR AND CIVILIAN
+//WILL ACTIVATE BUTTONS"
+}
+
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	END: Level relevant Sequences 	 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]

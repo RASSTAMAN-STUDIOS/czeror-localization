@@ -1,0 +1,248 @@
+//==================================================================
+//	Sequence File for CS:CZ - Motorcade Assault (cz_motor2)
+//		by Chris 'kanaeda' Voss  chrisv@ritual.com
+//==================================================================
+
+
+
+
+
+
+
+//==================================================================
+//	Sound file 'sentence' definitions
+//==================================================================
+
+!sentences
+{
+	
+	GSG9_CNClostCon0 mcade/cnc_lostcont
+
+	GSG9_GTThanks0	mcade/gsg9gt_thanks
+
+	GSG9_area2Delay0 mcade/gsg9tl_gettov
+
+	GSG9_ext1Delay0 mcade/cnc_getoutta
+	GSG9_ext2Delay0 mcade/cnc_getamon
+
+	Commander0_seq0	h/h_m_death1_ge
+	Commander1_seq0	mcade/gsg9tl_imhit
+	Commander2_seq0	mcade/gsg9tl_go
+
+	Commander1_use0	mcade/gsg9tl_beal
+	Commander2_use0	mcade/gsg9tl_gettov
+
+}
+
+
+
+
+
+
+
+//==================================================================
+//	speaker	style definitions
+//==================================================================
+
+%apone		
+{
+	@CT1Style
+	$speaker=apone
+}
+
+
+
+
+
+
+
+
+
+//==================================================================
+//	courtyard 1(area1), first wave
+//==================================================================
+
+
+%area1_wave1
+{
+	#firetargets="apone"
+	#pause = .2
+	#firetargets="area1_sequence5"
+	#pause = .3
+	#firetargets="area1_door1"
+	#pause = .2
+	#firetargets="area1_sequence1"
+}
+
+
+
+
+
+
+//==================================================================
+//	courtyard 1(area1), second wave
+//==================================================================
+
+
+%area1_wave2
+{
+	#firetargets="area1_sequence3"
+
+	#firetargets="area1_shutters_left"
+	#firetargets="area1_shutters_right"
+	
+	#pause = 1.5
+	#firetargets="area1_sequence4"	
+}
+
+
+
+
+
+
+//==================================================================
+//	courtyard 1(area1), open the gates
+//==================================================================
+
+
+%area1_gates_open
+{
+	
+	#firetargets="switch_light_grn"
+	#firetargets="switch_light_red"
+	#firetargets="switch_sprite_green"
+	#firetargets="switch_sprite_red"
+	#pause = 1
+	
+	#firetargets="area2_gate1"
+
+
+
+
+
+	#firetargets="area1_gate_clip_relay"
+	
+	#pause = 1.5
+
+	@ObjectiveStyle		#text="#OBJ4_MOTOR_NEW"
+	#firetargets="objective4"
+
+	@RadioStyle	//#text="Attention assault team, we have lost contact with
+			//most of the ground team. The remaining contacts are 
+			//pinned down and need you assistance.",
+			#sound=GSG9_CNClostCon,
+			pause = 12
+
+	@RadioStyle	#sound=GSG9_area2Delay
+
+}
+
+
+
+
+
+
+//==================================================================
+//	courtyard 2(area2) rescue sequence
+//==================================================================
+
+
+%area2_wounded_rescue
+{
+	#firetargets="area2_hero_sequence"
+	#firetargets="area2_wounded_sequence"
+	#pause = 5.5
+	
+	#firetargets="ct_hero_grenade"
+
+	#pause = 6.5
+	
+	@RadioStyle	#sound=GSG9_GTThanks
+	
+	#firetargets="objective4"
+
+
+}
+	
+	
+%area2_turret_attack
+
+{
+	#firetargets="area2_turret_splode1"
+	#pause = .5
+	#firetargets="area2_turret_splode2"
+	#firetargets="area2_turret_splode"
+	#pause = .5
+
+	#firetargets="area2_grunt1_sequence"
+	#pause = 1
+	
+	#firetargets="area2_window2"
+	#pause = 2
+	
+	#firetargets="area2_door_kick"
+	#firetargets="area2_window4"
+}
+
+
+%area2_combat_start
+
+{
+	#firetargets="area2_gunner1_spawner"
+	#firetargets="area2_gunner2_spawner"
+
+	#firetargets="area2_ct1_spawner"
+	#firetargets="area2_ct2_spawner"
+}
+		
+	
+
+
+
+%dont_shoot_me
+
+{
+	#firetargets="early_failure"
+	#pause = 5
+
+	@FailureStyle	#text="#motor_failure4"	
+
+}
+
+%commander_wounded
+{
+	@apone		#sound=Commander0_seq,
+			pause = 3,		
+			listener=player
+
+	@apone		#sound=Commander1_seq,
+			pause = 2.5,		
+			listener=player
+
+	@apone		#sound=Commander2_seq,
+			pause = 3,		
+			listener=player
+
+	#firetargets="ready_to_use1"
+}
+
+%Commander_use1
+{
+	@apone		#sound=Commander1_use,		
+			listener=player
+	
+	#pause = 2
+
+	#firetargets="ready_to_use2"
+
+}
+
+%Commander_use2
+{
+	@apone		#sound=Commander2_use,		
+			listener=player
+
+		#pause = 2
+
+	#firetargets="ready_to_use1"
+}

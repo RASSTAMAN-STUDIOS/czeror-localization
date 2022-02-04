@@ -1,0 +1,458 @@
+!sentences
+{
+Nego1_0	alamo/nego_kebab
+CNC1_0	alamo/cnc_messy
+Nego2_0	alamo/nego_bomb
+CNC2_0	alamo/cnc_whatyeah
+CNC3_0	alamo/cnc_holed
+CNC4_0	alamo/cnc_schedm
+CNC5_0	alamo/cnc_sweetass
+Team1_0	alamo/team1_weopen
+T1_0		alamo/t_swine
+T2_0		alamo/t_snore
+Team2_0	alamo/team1_wdrmeet
+Team3_0	alamo/team1_takingf
+Team4_0	alamo/team1_imhitimhit
+Team5_0	alamo/team2_surround
+Team6_0	alamo/team1_pain
+Team7_0	alamo/team2_imhityougo
+Team8_0	alamo/team1_death
+Team9_0	alamo/team2_death
+HosF1_0	alamo/hosf_helpus3
+HosF2_0	alamo/hosf_thankgod3
+CNC6_0	alamo/cnc_yourteamdown
+CNC7_0	alamo/cnc_airlift
+CNC8_0	alamo/cnc_radioairt
+CNC9_0	alamo/cnc_roghosp
+CNC10_0	alamo/cnc_holdplong
+Pilot1_0	alamo/pilot_tkfire
+Pilot2_0	alamo/pilot_dustover
+Pilot3_0	alamo/pilot_teamposd
+CNC11_0	alamo/cnc_rogbhome
+}
+
+
+
+
+
+%titletext
+{
+	#firetargets = "hud_off"
+
+	#pause = 0.1
+
+	#firetargets = "freeze_player"
+
+	#pause = 1.0
+
+	#firetargets = "intro_fade_start"
+
+	#firetargets = "levelstart_autosave"
+
+	@TitleStyle
+	#text = "#ALAMO_TITLE",
+	pause = 5.0
+
+	@SubtitleStyle
+	#text = "#ALAMO_SUBTITLE",
+	pause = 6.5
+
+	#firetargets = "chopper_changetarget"
+
+	#pause = 6.0
+
+//	#firetargets = "ct1"
+//	#firetargets = "ct2"
+
+	@RadioStyle
+	#text = "",
+//	#text = "This is the negotiator, the hostages are being
+//held in a neighborhood behind the American
+//Embassy.  The exact location is not known,
+//but it is believed to be near the former
+//King Kabob restaurant building.",
+	sound = Nego1_,
+	pause = 10.0
+
+	#pause = 2.0
+
+	#firetargets = "ct1_init_script"
+	#pause = 1.5
+	#firetargets = "ct2_init_script"
+
+	#firetargets = "freeze_player"
+	#firetargets = "equip"
+	#firetargets = "hud_on"
+	#pause = .1
+	#firetargets = "equip2"
+	#pause = .5
+
+	#firetargets="objective1"
+	@ObjectiveStyle
+	#text="#OBJ1_ALAMO_NEW"
+
+	@RadioStyle
+	#text = "",
+//	#text = "The targets are holed-up somewhere
+//near the King Kabob restaurant.  Find
+//these bastards and flush them out, get
+//inside and locate the hostages. Once you
+//do, secure your position and radio for
+//further orders.",
+	sound = CNC3_
+
+//	@RadioStyle
+//	#text = "This is going to be a messy extraction gentlemen.
+//You volunteered for this, I hope you know
+//what you're doing!  Forget diplomacy or
+//hurting the feelings of any scum-sucking
+//politicians back home. If anyone even spits
+//in your direction, shoot 'em dead.",
+//	sound = CNC1_,
+//	pause = 12.0
+
+//	@RadioStyle
+//	#text = "This group is taking credit for the bombing at the King Kabob yesterday...",
+//	sound = Nego2_,
+//	pause = 6.0
+
+//	@RadioStyle
+//	#text = "What?!  Yeah, we know...",
+//	sound = CNC2_,
+//	pause = 3.0
+}
+
+
+
+
+
+
+
+%sniper1a_sequence
+{
+	#firetargets = "sniper1a_window"
+	#firetargets = "kitchen_ambusher_script"
+
+	@T1Style
+	$speaker = kitchen_ambusher
+	#text = "#ALAMO_EATTHIS",
+//	#text = "Sharmuta swine!  Eat this!",
+	sound = T1_,
+	pause = 3.0
+}
+
+
+
+
+
+
+%sniper1b_sequence
+{
+//	#firetargets = "ct1_script"
+//	#firetargets = "ct2_script"
+
+//	#pause = 2.0
+
+//	#firetargets = "sniper1c"
+	#firetargets = "sniper1c_script"
+
+//	#pause = 7.0
+
+	#firetargets = "sniper1b_kickopen"
+	#pause = 0.5
+	#firetargets = "sniper1b_shutters"
+	#pause = 1
+	#firetargets = "sniper1b"
+
+	#firetargets = "ct1"
+	#firetargets = "ct2"
+}
+
+
+
+
+%sniper1b_deathsequence
+{
+	#firetargets = "sniper1b_death_script"
+	#pause = 1.5
+	#firetargets = "sniper1b_deathcrates"
+}
+
+
+
+
+%cts_exit_sequence
+{
+	#firetargets = "kitchen_ambusher_spawn"
+	#firetargets = "kitchen_guard_spawn"
+
+	#firetargets = "ct1"
+	#firetargets = "ct2"
+
+	#firetargets = "ct1_exit_script"
+	#pause = 0.5
+	#firetargets = "ct2_exit_script"
+
+	#pause = 5.0
+
+	@CT1Style
+	$speaker = ct1
+	#text = "",
+//	#text = "Go around and unblock this gate.  We'll try to get these doors open.",
+	sound = Team1_,
+	pause = 3.0
+
+	#firetargets="objective2"
+	@ObjectiveStyle
+	#text="#OBJ2_ALAMO_NEW"
+}
+
+
+
+
+
+
+%CT1_unblock_gate_sequence
+{
+	@CT1Style
+	$speaker = ct1
+	#text = "",
+//	#text = "Go around and unblock this gate.  We'll try to get these doors open.",
+	sound = Team1_,
+	pause = 3.0
+}
+
+
+
+%CT2_unblock_gate_sequence
+{
+	@CT1Style
+	$speaker = ct2
+	#text = "",
+//	#text = "Go around and unblock this gate.  We'll try to get these doors open.",
+	sound = Team1_,
+	pause = 3.0
+}
+
+
+
+
+%objective2_sequence
+{
+	#firetargets="objective2"
+}
+
+
+
+
+
+
+
+
+%grenade_tosser1_sequence
+{
+	#pause = 1.5
+
+//	#firetargets = "grenade_tosser1_script"
+
+	@RadioStyle
+	#text = "",
+//	#text = "We got through the doors, we'll meet you ahead.",
+	sound = Team2_,
+	pause = 4.0
+}
+
+
+
+%hallway1_sequence1
+{
+	#firetargets = "hallway1_attacker2_spawn"
+	#firetargets = "hallway1_attacker3_spawn"
+	#firetargets = "hallway1_attacker4_spawn"
+	#pause = 0.5
+
+	#firetargets = "hallway1_attacker1_script"
+	#firetargets = "kill_ct1"
+	#firetargets = "kill_ct2"
+	#firetargets = "kill_grenade_tosser1"
+
+//	#firetargets = "dummy_T1_spawn"
+//	#firetargets = "dummy_CT1_spawn"
+
+	#pause = 0.5
+	#firetargets = "hallway1_attacker4_script"
+
+//	#firetargets = "dummy_T2_spawn"
+
+//	#pause = 2.0
+	#firetargets = "hallway1_attacker3_script"
+
+	#pause = 0.5
+	#firetargets = "hallway1_attacker2_script"
+
+//	#pause = 1.0
+	#firetargets = "hallway1_attacker5_script"
+
+	@RadioStyle
+	#text = "",
+//	#text = "Taking fire!  Need assistance!",
+	sound = Team3_
+//	pause = 4.0
+
+	#firetargets = "CT_battle_sounds"
+
+	#pause = 3.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "I'm hit, I'm hit!",
+	sound = Team4_
+//	pause = 4.0
+
+	#pause = 4.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "We're surrounded, can't get out...",
+	sound = Team5_
+//	pause = 4.0
+
+	#pause = 6.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "<pain from further shots>",
+	sound = Team6_
+//	pause = 4.0
+
+	#pause = 4.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Ahh, I've been hit too!  You'll have to go it alone!",
+	sound = Team7_
+//	pause = 4.0
+
+	#pause = 2.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Your team is down, proceed to the target zone at all costs!",
+	sound = CNC6_,
+	pause = 4.0
+}
+
+
+
+
+
+
+
+
+%tower1_sequence
+{
+//	#firetargets = "dummy_CT2_spawn"
+//	#firetargets = "dummy_T3_spawn"
+
+	#firetargets = "tower1_window"
+	#pause = 0.5
+}
+
+
+%tower2_sequence
+{
+	#firetargets = "courtyard2_attacker3_spawn"
+	#firetargets = "tower2_spawn"
+	#pause = 0.5
+
+	#firetargets = "tower2_script"
+	#pause = 0.5
+
+	#firetargets = "tower2_door"
+	#pause = 0.5
+
+	#firetargets = "courtyard2_attacker3_script"
+
+//	#firetargets = "dummy_T2_spawn"
+//	#firetargets = "dummy_CT2_spawn"
+}
+
+
+%courtyard1_sequence
+{
+	#firetargets = "courtyard1_attacker6_script"
+	#firetargets = "courtyard1_attacker2_script"
+	#firetargets = "courtyard1_attacker3_script"
+
+	#pause = 2.5
+
+	#firetargets = "courtyard1_attacker1_window"
+
+	#firetargets = "courtyard1_attacker5_script"
+	#pause = 2.5
+
+	#firetargets = "courtyard1_attacker4_script"
+
+//	#firetargets = "dummy_T1_spawn"
+//	#firetargets = "dummy_CT1_spawn"
+
+	@RadioStyle
+	#text = "",
+//	#text = "<death>",
+	sound = Team8_,
+	pause = 4.0
+
+	#pause = 5.5
+
+	@RadioStyle
+	#text = "",
+//	#text = "<death>",
+	sound = Team9_,
+	pause = 4.0
+}
+
+
+%courtyard2_sequence
+{
+	#firetargets = "courtyard2_attacker4_spawn"
+	#pause = 0.5
+
+	#firetargets = "courtyard2_attacker1_window"
+}
+
+
+
+%dumpster_sequence
+{
+	#firetargets = "dumpster_attacker1_spawn"
+	#firetargets = "dumpster_attacker2_spawn"
+}
+
+
+
+//%falling_walls_sequence
+//{
+//	#firetargets = "falling_wall1"
+//	#pause = 1.0
+
+//	#firetargets = "falling_wall1_damage"
+//}
+
+
+%car_sequence
+{
+	#firetargets = "car1_spawn"
+	#pause = 1.0
+	#firetargets = "car1_script"
+	#pause = 1.0
+
+	#firetargets = "car3_spawn"
+	#pause = 1.0
+	#firetargets = "car3_script"
+	#pause = 1.0
+
+	#firetargets = "car2_spawn"
+	#pause = 1.0
+	#firetargets = "car2_script"
+	#pause = 1.0
+}

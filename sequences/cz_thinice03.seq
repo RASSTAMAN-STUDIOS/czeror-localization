@@ -1,0 +1,86 @@
+// Ice Breaker dialog sequence files
+
+!sentences
+{
+	//===========================
+	// CNC over radio
+	//===========================
+	CNC_01_heading0 thinice/cnc_hiaway
+	CNC_02_heading0 thinice/cnc_exworkcredit 
+	
+	Grenadeguy	brecon/rg9_intruder
+
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%SAS_Commander
+{
+	@RadioStyle
+}
+
+%T_talking02
+{
+	@T2Style
+}
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+
+%sequence01
+{
+	
+	#firetargets = "OBJ2"
+	#pause = 1
+	$channel = 1
+	$fadein = 1.5, holdtime = 4, fadeout = 0.5
+	@SAS_Commander	#sound=CNC_01_heading
+	// #text="The boat is no longer heading for shore.  
+	// Now don't let those hi-jackers get away!"
+	
+	#pause = 6
+
+	// new mission objective
+	@ObjectiveStyle
+	#text = "#OBJ3_THIN_NEW"
+	#firetargets = "OBJ3"
+	
+}
+
+%sequence02
+{
+	#firetargets = "OBJ3"
+	#pause = 1
+	$channel = 2
+	$fadein = 1.5, holdtime = 4, fadeout = 0.5
+	@SAS_Commander	#sound=CNC_02_heading
+	// #text="Excellent work comrade, you are a credit to the mother land."
+}
+
+%wave_guy1
+{
+	#pause = 1
+	$channel = 1
+	$fadein = 1.5, holdtime = 4, fadeout = 0.5
+	@T_talking02	#sound=Grenadeguy
+	// #speaker=Final_battleguys
+}
+
+%wave_guy3
+{
+	#pause = 1
+	$channel = 1
+	$fadein = 1.5, holdtime = 4, fadeout = 0.5
+	@T_talking02	#sound=Grenadeguy
+	// #speaker=Final_battleguys2
+}
+
+%Mission_success
+{
+	@titlestyle
+	#text =	"#GENERIC_SUCCESS"
+}

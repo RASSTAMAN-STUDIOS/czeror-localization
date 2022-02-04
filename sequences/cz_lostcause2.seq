@@ -1,0 +1,61 @@
+$position = .8 .8
+$fadein = 1.5, holdtime = 2, fadeout = 0.5
+$color = 240 100 0, color2 = 0 100 240
+
+!sentences
+{
+	dialogEndLevel lostcause/gsg9l_messrecvd
+	dialogEndLevel2 lostcause/cnc_exboats
+}
+
+%NotClear
+{
+	
+//	@CT2Style	 #text = "You need to clear out that area before
+//	we can evac!"
+	
+}
+
+%DockClear
+{
+	
+	#sound = dialogEndLevel
+	#firetargets = "end_music"
+	#firetargets = "final_gate_doors1" //KILTRON
+	#firetargets = "new_objective05_complete" // KILTRON
+	
+	//#pause = 5
+	#pause = 7
+	#firetargets = "soundDock"
+	#firetargets = "spawnEndRun"
+	#firetargets = "animBoatEnd"
+	#firetargets = "animDriverBoat"
+	#pause = .5
+	#firetargets = "renBoatEnd"
+	#firetargets = "renDriverBoat"
+	
+	#sound = dialogEndLevel2
+	
+	#firetargets = "EndRun"
+	
+	#pause = 6
+	
+	#firetargets = "nextlevel"
+
+	#pause = 3
+	@TitleStyle
+	#text="#GENERIC_SUCCESS"
+}
+
+
+
+//=============================================
+// Mission Objectives
+//=============================================
+
+%new_objective05
+{
+	@ObjectiveStyle	#text = "#OBJ5_LCAUSE_NEW", //#text = "NEW OBJECTIVE: Radio for boat extraction once area is secure"
+				firetargets="new_objective05_complete"
+}
+

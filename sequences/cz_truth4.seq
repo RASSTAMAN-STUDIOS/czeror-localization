@@ -1,0 +1,321 @@
+!sentences
+{
+	cnc_vxlook0 truth/cnc_vxlook
+	cnc_gotall0 truth/cnc_gotall
+	clan6_atdoor0 truth/clan6_atdoor
+	clan6_comebar0 truth/clan6_comebar
+	cnc_makes0 truth/cnc_makes
+	cnc_shouldcont0 truth/cnc_shouldcont
+	clan7_dielikerest0 truth/clan7_dielikerest
+	clancharge0 t/t_melee1_ja
+}
+
+%garage_guard
+{
+	@T1Style
+	$speaker	= garage_guard
+	$listener	= player
+}
+
+%truck_warn
+{
+	@T2Style
+	$speaker	= truck_warn
+}
+
+%gus2under
+{
+	@T1Style
+	$speaker = gus2under
+	$listener = player
+}
+
+%mrclean
+{
+	@NPC1Style
+	$speaker = mrclean
+}
+
+%kiltron
+{
+	@NPC2Style
+	$speaker = kiltron
+}
+
+%kanaeda
+{
+	@NPC2Style
+	$speaker = kanaeda
+}
+
+%castle
+{
+	@NPC1Style
+	$speaker = castle
+}
+
+%psyko
+{
+	@NPC1Style
+	$speaker = psyko
+}
+
+%weasl
+{
+	@NPC2Style
+	$speaker = weasl
+}
+
+%paradox
+{
+	@NPC2Style
+	$speaker = paradox
+}
+
+%levelord
+{
+	@NPC1Style
+	$speaker = levelord
+}
+
+%truth4_start
+{
+	#firetargets="truth4_save"
+	#firetargets="pa_steps_rel"
+	#firetargets="pa_moving_rel"
+	#pause = 1
+	#firetargets="objective6"
+	@ObjectiveStyle
+	#text="#OBJ6_TRUTH_NEW"
+}
+
+%firefight
+{
+	#firetargets="pa_check"
+	#pause = 3
+	#firetargets="firefight_t"
+	#pause = 1
+	#firetargets="firefight_ct"
+}
+
+%door2underseq
+{
+	#firetargets="d2u_spawn"
+	#pause = 1.
+	#firetargets="door2under"
+	#pause = .5
+	@gus2under
+	#sound=clancharge
+	#firetargets="gus2under_go"
+}
+
+%obj6_complete
+{
+	#firetargets="objective6"
+}
+
+%get_truck
+{
+	@truck_warn
+	#text="#TRUTH_THEYCOME"
+	#sound=clan6_comebar,
+	pause = 8
+	#firetargets="pa_tquest"
+}
+
+%final_door_voice
+{
+	@garage_guard
+	#text="#TRUTH_ATDOOR"
+	#sound=clan6_atdoor,
+	pause = 3
+}
+
+
+%vx_approach
+{
+	#firetargets="truth4_save"
+	#firetargets="vx_music"
+	@RadioStyle
+	//#text="You should be approaching an area with VX containers."
+	#sound=cnc_shouldcont,
+	pause = 16
+	#firetargets="vx_music"
+
+}
+
+%vxrelease2
+{
+	#firetargets="stealth_x_off"
+	#firetargets="vxrelease_seq"
+	#firetargets="vxrelease_snd"
+	@T2Style
+	#text="#TRUTH_RELEASE"
+}
+
+%vx_released
+{
+	#firetargets="failure"
+	#firetargets="vxreleased_fx"
+	#firetargets="vxreleased_snd"
+	@T2Style
+	#text="#TRUTH_PREVAIL"
+}
+
+%vx_msg_more
+{
+	@RadioStyle
+	//#text="HAZMAT: Location noted.
+	//Keep looking, there should be more."
+	#sound=cnc_vxlook
+}
+
+%vx_msg_all
+{
+	@RadioStyle
+	//#text="HAZMAT: Location noted. Good job, looks like we've got it all."
+	#sound=cnc_gotall,
+	pause = 3
+	#firetargets="objective5"
+	#firetargets="mission_done_seq"
+}
+
+%find_vx
+{
+	@RadioStyle
+	//#text="Make sure all the VX has been identified in this area.
+	//Use your radio to alert the Hazmat teams."
+	#sound=cnc_makes
+}
+
+%mission_done_seq
+{
+	#pause = 1
+	#firetargets="end_mission"
+	#pause = 3
+	@TitleStyle
+	#text="#GENERIC_SUCCESS"
+}
+
+%vx_loc_1
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_2
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_3
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_4
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_5
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_6
+{
+	#firetargets="vx_loc_rel"
+}
+
+%vx_loc_7
+{
+	#firetargets="vx_loc_rel"
+}
+
+%failure
+{
+	#firetargets="missionfail"
+	#pause = 3
+	@FailureStyle
+	#text="#TRUTH_GAS_FAIL"
+}
+
+%mrclean_use
+{
+	@mrclean
+	#text="Mr.CleaN:
+	'Talk is easy, action is difficult.
+	Yet action is easy, true understanding is difficult'"
+}
+
+%kanaeda_use
+{
+	@kanaeda
+	#text="Kanaeda:
+	'Shut up, Russell!'"
+}
+
+%kiltron_use
+{
+	@kiltron
+	#text="The Kiltron:
+	'What do you mean we're done?
+	I'm still missing art assets!'"
+}
+
+%castle_use
+{
+	@castle
+	#text="Castle:
+	'@#$!! There's no chicken in this
+	chicken-fried steak!'"
+}
+
+%psyko_use
+{
+	@psyko
+	#text="Psyko:
+	'Shut up, Russell!'"
+}
+
+%weasl_use
+{
+	@weasl
+	#text="weasl:
+	'hmmm?'"
+}
+
+%levelord_use
+{
+	@levelord
+	#text="The Levelord:
+	'You're not supposed to be here'"
+}
+
+%paradox_use
+{
+	@paradox
+	#text="Paradox:
+	'Ship It!'"
+}
+
+%dead_ld_seq
+{
+	#text="Oh, you shouldn't have done that!"
+	#pause = 1
+	#firetargets="dead_ld1"
+	#pause = .7
+	#firetargets="dead_ld2"
+	#pause = .7
+	#firetargets="dead_ld3"
+	#pause = .7
+	#firetargets="dead_ld4"
+	#pause = .7
+	#firetargets="dead_ld5"
+	#pause = .7
+	#firetargets="dead_ld6"
+	#pause = .7
+	#firetargets="dead_ld7"
+	#pause = .7
+	#firetargets="dead_ld8"
+}

@@ -1,0 +1,30 @@
+//============================================
+// Pipedream1 Dialog Sequences (cz_pipedream1)
+// Mike "BALD" Porter
+//============================================
+
+!sentences
+{
+  
+	Terrorist_C01_talk0 pipedream/pipet3_getload
+	
+}
+	
+//============================================
+//	Speaker, Style & Definitions
+//============================================
+
+%Terrorist_C
+{
+	@T3Style
+	$speaker = Terrorist_C
+}
+			
+%truckloadingSequence_start
+{
+	@Terrorist_C		#text = "",//"Get those weapons loaded! We need to move! Yel-la, yeal-la!",	//LOCALIZE_ME						
+						sound = Terrorist_C01_talk,
+						pause = 3									  						
+}						
+
+

@@ -1,0 +1,328 @@
+//==================================================================
+//	Sequence File for CS:CZ - Motorcade Assault (cz_motor3)
+//		by Chris 'kanaeda' Voss  chrisv@ritual.com
+//==================================================================
+
+
+
+
+
+//==================================================================
+//	Sound file 'sentence' definitions
+//==================================================================
+
+
+!Sentences
+{
+	GSG9_extCover0 	mcade/gsg9p_cover 
+			
+	GSG9_extSarge0	mcade/gsg9p_serg
+
+	Vinny_1panic0 mcade/gia_dontlet
+	Vinny_2panic0 mcade/gia_stopthem
+	// Vinny_3panic0 mcade/gia_helpme
+
+	GSG9_ext1CNC0 	mcade/cnc_confel
+
+	GSG9_ext1Delay0 mcade/cnc_getoutta
+	GSG9_ext2Delay0 mcade/cnc_boatlv
+	GSG9_ext3Delay0 mcade/cnc_getamon
+
+	GSG9_bt1Delay0	mcade/gsg9tl_letinv
+}
+
+
+
+
+
+
+
+
+//==================================================================
+//	speaker	style definitions
+//==================================================================
+
+
+%vinny
+{
+	@RadioStyle
+	$color = 255 0 0
+}
+
+
+
+
+//==================================================================
+//	bridge cover message
+//==================================================================
+
+
+%cover_message
+{
+	//@RadioStyle	#text="We're coming to provide cover.",
+	//		sound=GSG9_extCover
+}
+				
+			
+
+
+
+//==================================================================
+//	street combat sequence
+//==================================================================
+
+
+%street_combat_sequence
+{
+	#firetargets="VIP_escape"
+	#pause = .5
+	#firetargets="VIP_escort_escape"
+	#pause = 1.5
+
+	#firetargets="escape_sniper1_window"
+	#pause = 1
+	#firetargets="escape_sniper2_window"
+	#pause = 3
+	
+	//@RadioStyle	//#text="We have the sergeant and are moving to the extraction point",
+	//		sound=GSG9_extSarge,
+	//		color=128 128 255
+}	
+	
+	
+
+
+
+
+
+//==================================================================
+//	Vinny combat messages
+//==================================================================
+
+
+%vinny_scared_one
+{	
+
+
+	@vinny		#text="#motor_vinny1",	//dont let them get in here!
+			sound=Vinny_1panic
+}
+
+
+%vinny_scared_two
+{
+	#firetargets="vinny_scared2_anim"	
+	
+	@vinny		#text="#motor_vinny2",	//stop them!
+			sound=Vinny_2panic
+}
+
+
+%vinny_scared_three
+{	
+	#firetargets="vinny_scared1_anim"	
+
+	@vinny		#text="#motor_vinny2",	//stop them!
+			sound=Vinny_3panic
+
+	#firetargets="vinny_scared_loop"
+
+}
+
+
+
+%vinny_scared_loop
+{
+	#pause = 15
+	#firetargets="vinny_scared_two"
+	#pause = 18
+	#firetargets="vinny_scared_one"
+
+	#repeat=-1
+}
+
+
+
+
+
+//==================================================================
+//	VIP death sequence
+//==================================================================
+
+%vip_death_sequence
+	
+{
+	#killtargets="vinny_scared_loop"
+	#firetargets="boss_boom_shake"
+	#pause = 2
+
+	#firetargets="boss_area_gates"
+	#firetargets="team_exit_controller"
+	#pause = .2
+
+	#firetargets="area5_gate_attack"
+
+	#firetargets="objective3"
+	
+	@ObjectiveStyle		#text="#OBJ6_MOTOR_NEW"
+	
+	#firetargets="objective5"
+	
+	@RadioStyle	//#text="CNC:	
+			//We have comfirmation that the target has been eliminated.
+			//All contacts, move immediately to the extraction point.",
+			#sound=GSG9_ext1CNC,
+			pause = 2,
+			holdtime=10
+
+	#firetargets="vip_sniper_stand"
+	#pause = 8
+
+	@RadioStyle	//#text="CNC:
+			//The boat is outbound in one minute!",
+			#sound=GSG9_ext2Delay,
+			pause = 20
+	
+	@RadioStyle	//#text="CNC:
+			//Get a move on!",
+			#sound=GSG9_ext3Delay,
+			pause = 15
+	
+	@RadioStyle	//#text="CNC:
+			//You'd better beat feet.",
+			#sound=GSG9_ext1Delay,
+			pause = 15
+
+	#firetargets="vip_exit_failed"
+}
+
+%Objective_txt
+{
+
+	@ObjectiveStyle		#text="#OBJ5_MOTOR_NEW"
+
+}
+
+//==================================================================
+//	friendly evac sequence
+//==================================================================
+
+%ct_walk_on_by
+{
+	#firetargets="area5_hicks_sequence"
+	#pause = 1.5
+	
+	#firetargets="area5_hudson_sequence"
+	#pause = 2
+	
+	#firetargets="area5_apone_sequence"
+	#pause = 15
+	
+	#killtargets="area5_hicks"
+	#killtargets="area5_husdon"
+	#killtargets="area5_apone"
+	
+}
+
+
+
+
+
+
+
+//==================================================================
+//	boat combat sequence
+//==================================================================
+
+
+%boat_window_sequence
+{
+	#firetargets="boss_area_gates"
+
+	#firetargets="exit_window1"
+	#pause = 3
+				
+	@RadioStyle	//#text="Let's go!
+			//Are you waiting for an invitation?
+			//Schnell, schnell!!",
+			#sound=GSG9_bt1Delay
+}
+
+
+
+
+
+
+//==================================================================
+//	looping stoplight sequence
+//==================================================================
+
+%looping_stoplight
+{
+
+	#pause = 25  			//green light hold time
+	
+	#firetargets="light_green"	//switch green to red
+	#pause = .1
+	#firetargets="light_red"
+	
+	#pause = 15			//red light hold time
+
+	#firetargets="light_red"	//switch red back to green
+	#pause = .1				
+	#firetargets="light_green"
+
+	#repeat=-1
+
+}
+
+
+
+
+
+
+
+
+//==================================================================
+//	Mission Failure text
+//==================================================================
+
+%motor_lose
+{
+
+	#firetargets="failure_fade"
+	#pause = 5
+	
+	@FailureStyle	#text="#motor_failure3"
+	
+}
+
+
+
+
+%dont_shoot_me
+
+{
+	#firetargets="early_failure"
+	#pause = 5
+
+	@FailureStyle	#text="#motor_failure4"	
+
+}
+
+
+
+//==================================================================
+//	Mission Successful
+//==================================================================
+
+%motor_win
+	
+{
+	#firetargets="objective5"
+	#pause = .5
+	#firetargets="motor_win"	
+	#pause = 5
+	
+	@TitleStyle	#text="#GENERIC_SUCCESS"
+}

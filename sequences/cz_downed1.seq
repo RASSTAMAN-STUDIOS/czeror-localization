@@ -1,0 +1,106 @@
+//============================================
+// Downed Pilot Dialog Sequences (cz_downed1)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//============================================
+//	Sentences
+//============================================
+
+!sentences
+{
+
+squadleader1_talk0 downed/gsg9l_situation
+squadleader2_talk0 downed/pilot_vispos
+squadleader3_talk0 downed/pilot2_rogthat
+squadleader4_talk0 downed/pilot_grimno
+squadleader5_talk0 downed/gsg9l_lethenct
+
+}
+
+//============================================
+//	Speaker Style & Definitions
+//============================================
+
+%squad_leader		
+{
+
+	@CT1Style
+	$speaker=squad_leader
+}
+
+%copilot	
+{
+
+	@CT1Style
+	$speaker=copilot
+}
+
+%pilot	
+{
+
+	@CT1Style
+	$speaker=pilot
+}
+
+//============================================
+//	Sequence ID's
+//============================================
+
+%Opening_Sequence			
+{
+	#firetargets = "hud_off"
+	#pause = 1
+	
+	#firetargets = "start_fade"	
+
+	@TitleStyle
+	#text = "#DOWNED_TITLE", // LOCALIZE_ME
+	pause = 5,
+	holdtime = 3
+
+	@SubtitleStyle
+	#text = "#DOWNED1_LOCATION" // LOCALIZE_ME
+	#pause = 6.5
+
+}
+
+%squad_briefing
+{
+
+	@squad_leader	//#text="Gentlemen, we have a critical situation deep in the
+				//jungles outside of Puerto Iguazu, Argentina.  One of our
+				//helicopters was shot down by guerillas during routine training.
+				//As Application Unit 3, we were assigned to locate the wreckage
+				//and look for survivors.",
+				#text="",
+				sound=squadleader1_talk,
+				pause = 14.4
+
+	@copilot		//#text="Alpha1, we have a visual on the downed aircraft, moving
+				//in.",
+				#text="",
+				sound=squadleader2_talk,
+				pause = 5.1
+
+	@pilot		//#text="Roger that, Alpha2.",
+				#text="",
+				sound=squadleader3_talk,
+				pause = 2.1
+
+	@copilot		//#text="Alpha1, It looks pretty grim, no signs of movement from
+				//up here.",
+				#text="",
+				sound=squadleader4_talk,
+				pause = 4
+
+	@squad_leader	//#text="This is where you get off men.  Get down there and
+				//look for survivors.  Be prepared to use lethal force for
+				//any opposition you encounter.",
+				#text="",
+				sound=squadleader5_talk,
+				pause = 8.1
+
+}
+
+

@@ -1,0 +1,147 @@
+
+%tunnel_t1_sequence
+{
+	#firetargets = "tunnel_t1_script"
+}
+
+
+
+
+
+%truck1_sequence
+{
+	#firetargets = "truck_t1_script"
+	#pause = 0.5
+	#firetargets = "truck_t2_script"
+}
+
+
+
+%truck2_sequence
+{
+	#firetargets = "truck_t5_script"
+	#pause = 0.5
+	#firetargets = "truck_t3_script"
+	#pause = 0.5
+	#firetargets = "truck_t4_script"
+}
+
+
+
+
+
+
+
+
+%lot1alert1_sequence
+{
+	#firetargets = "lot1_t1_script"
+	#pause = 0.5
+	#firetargets = "lot1_t2_script"
+	#pause = 1.0
+	#firetargets = "lot1_t4_script"
+
+}
+
+
+
+
+
+%lot1alert2_sequence
+{
+	#firetargets = "lot1_t6_spawn"
+	#pause = 0.5
+
+	#firetargets = "lot1_t6_door"
+
+	#pause = 1.0
+
+	#firetargets = "lot1_t6_script"
+}
+
+
+
+
+%lot1alert3_sequence
+{
+	#firetargets = "lot1_t5_spawn"
+	#firetargets = "lot1_t10_spawn"
+	#firetargets = "lot1_t11_spawn"
+	#firetargets = "lot1_t12_spawn"
+	#pause = 0.5
+
+	#firetargets = "lot1_t5_script"
+	#firetargets = "lot1_t10_script"
+	#firetargets = "lot1_t11_script"
+	#firetargets = "lot1_t12_script"
+}
+
+
+
+
+
+
+
+
+%alleyalert1_sequence
+{
+	#firetargets = "alley_t1_script"
+	#firetargets = "alley_t2_script"
+}
+
+
+
+
+
+
+%garagedoor_sequence
+{
+	#firetargets = "garagedoor_open_script"
+	#pause = 1.5
+	#firetargets = "garagedoor_blocker"
+
+	#pause = 3.0
+
+	#firetargets = "garagedoor_openidle_script"
+}
+
+
+
+
+
+%garagealert1_sequence
+{
+	#firetargets = "garage_t1_script"
+	#firetargets = "alley_t3_script"
+}
+
+
+
+
+
+%lot2alert1_sequence
+{
+	#firetargets = "lot2_t1_spawn"
+	#firetargets = "lot2_t2_spawn"
+	#firetargets = "lot2_t3_spawn"
+	#firetargets = "lot2_t7_spawn"
+	#firetargets = "lot2_t8_spawn"
+	#pause = 0.5
+
+	#firetargets = "lot2_t1_script"
+	#firetargets = "lot2_t2_script"
+	#firetargets = "lot2_t3_script"
+}
+
+
+
+
+%lot2alert2_sequence
+{
+	#firetargets = "lot2_t4_spawn"
+	#firetargets = "lot2_t5_spawn"
+	#firetargets = "lot2_t6_spawn"
+	#pause = 0.5
+
+	#firetargets = "lot2_t4_script"
+}

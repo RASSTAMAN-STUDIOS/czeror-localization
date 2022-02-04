@@ -1,0 +1,484 @@
+!sentences
+{
+	vip_superjob0 hankagai/vip_superjob
+	vip_orders0 hankagai/vip_orders
+	scom_secalley0 hankagai/scom_secalley
+	scom_getaway0 hankagai/scom_getaway
+	seal2_hereyago0 hankagai/seal2_hereyago
+	seal1_secalley0 hankagai/seal1_secalley
+	npc1_yennote0 hankagai/npc1_yennote
+	npc1_backoff0 hankagai/npc1_backoff
+	npc1_waitturn0 hankagai/npc1_waitturn
+	npc2_anysay0 hankagai/npc2_anysay
+	npc2_notsup0 hankagai/npc2_notsup
+	cnc_yoshdown0 hankagai/cnc_yoshdown
+	scom_skywalk0 hankagai/scom_skywalk
+	scom_freshr0 hankagai/scom_freshr
+	scom_alley0 hankagai/scom_alley
+	scom_tandown0 hankagai/scom_tandown
+	scom_ganglead0 hankagai/scom_ganglead
+	scom_sniper0 hankagai/scom_sniper
+	scom_ysafetake0 hankagai/scom_ysafetake
+	scom_yougeta0 hankagai/scom_yougeta
+	scom_hosalley0 hankagai/scom_hosalley
+	snip_youcant0 hankagai/snip_youcant
+	snip_outwayo0 hankagai/snip_outwayo
+	snip_stophim0 hankagai/snip_stophim
+	snip_dontlet0 hankagai/snip_dontlet
+	cnc_chasedmn0 hankagai/cnc_chasedmn
+
+	//**NPC chatter
+
+	NPC_OK_JA0 npc/npc_m_yesdo_ja
+	NPC_OK_JA1 npc/npc_m_right_ja
+	NPC_OK_JA2 npc/npc_m_ok_ja
+
+	NPC_WAIT_JA0 npc/npc_m_waithere_ja
+	NPC_WAIT_JA1 npc/npc_m_stayhere_ja
+	NPC_WAIT_JA2 npc/npc_m_movemusc_ja
+
+	NPC_STOP_JA0 npc/npc_m_notfurth_ja
+
+	NPC_STARE_JA0 npc/npc_m_lookme_ja
+	NPC_STARE_JA1 npc/npc_m_yousure_ja
+
+	NPC_HELLO_JA0 npc/npc_m_hello_ja
+	NPC_HELLO_JA1 npc/npc_m_officer_ja
+
+	NPC_ANSWER_JA0 npc/npc_m_iworried_ja
+	NPC_ANSWER_JA1 npc/npc_m_canttell_ja
+	NPC_ANSWER_JA2 npc/npc_m_whatdoth_ja
+	NPC_ANSWER_JA3 npc/npc_m_dontid_ja
+
+	NPC_QUESTION_JA0 npc/npc_m_whatgon_ja
+	NPC_QUESTION_JA1 npc/npc_m_didhear_ja
+	NPC_QUESTION_JA2 npc/npc_m_whoare_ja
+	NPC_QUESTION_JA3 npc/npc_m_thosepol_ja
+
+	NPC_IDLE_JA0 npc/npc_m_howhapp_ja
+	NPC_IDLE_JA1 npc/npc_m_whyme_ja
+	NPC_IDLE_JA2 npc/npc_m_sudden_ja
+	NPC_IDLE_JA3 npc/npc_m_whatgo_ja
+
+	NPC_NOGO_JA0 npc/npc_m_dontgoth_ja
+
+	NPC_MONST_JA0 npc/npc_m_iseeone_ja
+	NPC_MONST_JA1 npc/npc_m_theyhere_ja
+	NPC_MONST_JA2 npc/npc_m_theygotguns_ja
+
+	NPC_HEAR_JA0 npc/npc_m_hearthat_ja
+	NPC_HEAR_JA1 npc/npc_m_someover_ja
+
+
+	NPC_WOUND_JA npc/npc_m_beenshot_ja
+	NPC_WOUND_JA npc/npc_m_ow_ja
+	NPC_WOUND_JA npc/npc_m_arg_ja
+
+	NPC_MORTAL_JA0 npc/npc_m_notgoingm_ja
+	NPC_MORTAL_JA1 npc/npc_m_noo_ja
+	NPC_MORTAL_JA2 npc/npc_m_ahhh1_ja
+
+	NPC_CUREA_JA0 npc/npc_m_youdontlo_ja
+	NPC_CUREA_JA1 npc/npc_m_sureOK_ja
+
+	NPC_HEAL_JA0 npc/npc_m_heretake_ja
+	NPC_HEAL_JA1 npc/npc_m_letme_ja
+
+	NPC_PLFEAR_JA0 npc/npc_m_thoughtc_ja
+	NPC_PLFEAR_JA1 npc/npc_m_getawaym_ja
+	NPC_PLFEAR_JA2 npc/npc_m_helost_ja
+
+	NPC_PAIN_JA0 h/h_m_pain1_ja
+	NPC_PAIN_JA1 h/h_m_pain2_ja
+	NPC_PAIN_JA2 h/h_m_pain3_ja
+
+	NPC_FEAR_JA0 npc/npc_m_help2_ja
+	NPC_FEAR_JA1 npc/npc_m_whatgo2_ja
+
+	NPC_SCREAM_JA0 npc/npc_m_omg_ja
+	NPC_SCREAM_JA1 npc/npc_m_helpme_ja
+	NPC_SCREAM_JA2 npc/npc_m_ahh3_ja
+	NPC_SCREAM_JA3 npc/npc_m_thisnot_ja
+	NPC_SCREAM_JA4 npc/npc_m_whatstop_ja
+	NPC_SCREAM_JA5 npc/npc_m_dontdo_ja
+
+
+	//**NPC female chatter
+
+
+	NPC_OK_JAF0 npc/npc_f_yesdo_ja
+	NPC_OK_JAF1 npc/npc_f_right_ja
+	NPC_OK_JAF2 npc/npc_f_ok_ja
+
+	NPC_WAIT_JAF0 npc/npc_f_waithere_ja
+	NPC_WAIT_JAF1 npc/npc_f_stayhere_ja
+	NPC_WAIT_JAF2 npc/npc_f_movemusc_ja
+
+	NPC_STOP_JAF0 npc/npc_f_notfurth_ja
+
+	NPC_STARE_JAF0 npc/npc_f_lookme_ja
+	NPC_STARE_JAF1 npc/npc_f_yousure_ja
+
+	NPC_HELLO_JAF0 npc/npc_f_hello_ja
+	NPC_HELLO_JAF1 npc/npc_f_officer_ja
+
+	NPC_ANSWER_JAF0 npc/npc_f_iworried_ja
+	NPC_ANSWER_JAF1 npc/npc_f_canttell_ja
+	NPC_ANSWER_JAF2 npc/npc_f_whatdoth_ja
+	NPC_ANSWER_JAF3 npc/npc_f_dontid_ja
+
+	NPC_QUESTION_JAF0 npc/npc_f_whatgon_ja
+	NPC_QUESTION_JAF1 npc/npc_f_didhear_ja
+	NPC_QUESTION_JAF2 npc/npc_f_whoare_ja
+	NPC_QUESTION_JAF3 npc/npc_f_thosepol_ja
+
+	NPC_IDLE_JAF0 npc/npc_f_howhapp_ja
+	NPC_IDLE_JAF1 npc/npc_f_whyme_ja
+	NPC_IDLE_JAF2 npc/npc_f_sudden_ja
+	NPC_IDLE_JAF3 npc/npc_f_whatgo_ja
+
+	NPC_NOGO_JAF0 npc/npc_f_dontgoth_ja
+
+	NPC_MONST_JAF0 npc/npc_f_iseeone_ja
+	NPC_MONST_JAF1 npc/npc_f_theyhere_ja
+	NPC_MONST_JAF2 npc/npc_f_theygotguns_ja
+
+	NPC_HEAR_JAF0 npc/npc_f_hearthat_ja
+	NPC_HEAR_JAF1 npc/npc_f_someover_ja
+
+
+	NPC_WOUND_JAF0 npc/npc_f_beenshot_ja
+	NPC_WOUND_JAF1 npc/npc_f_ow_ja
+	NPC_WOUND_JAF2 npc/npc_f_arg_ja
+
+	NPC_MORTAL_JAF0 npc/npc_f_notgoingm_ja
+	NPC_MORTAL_JAF1 npc/npc_f_noo_ja
+	NPC_MORTAL_JAF2 npc/npc_f_ahhh1_ja
+
+	NPC_CUREA_JAF0 npc/npc_f_youdontlo_ja
+	NPC_CUREA_JAF1 npc/npc_f_sureOK_ja
+
+	NPC_HEAL_JAF0 npc/npc_f_heretake_ja
+	NPC_HEAL_JAF1 npc/npc_f_letme_ja
+
+	NPC_PLFEAR_JAF0 npc/npc_f_thoughtc_ja
+	NPC_PLFEAR_JAF1 npc/npc_f_getawaym_ja
+	NPC_PLFEAR_JAF2 npc/npc_f_helost_ja
+
+	NPC_PAIN_JAF0 h/h_f_pain1_ja
+	NPC_PAIN_JAF1 h/h_f_pain2_ja
+	NPC_PAIN_JAF2 h/h_f_pain3_ja
+
+	NPC_FEAR_JAF0 npc/npc_f_ahh2_ja
+	NPC_FEAR_JAF1 npc/npc_f_whatgo2_ja
+
+	NPC_SCREAM_JAF0 npc/npc_f_omg_ja
+	NPC_SCREAM_JAF1 npc/npc_f_helpme_ja
+	NPC_SCREAM_JAF2 npc/npc_f_ahh3_ja
+	NPC_SCREAM_JAF3 npc/npc_f_thisnot_ja
+	NPC_SCREAM_JAF4 npc/npc_f_whatstop_ja
+	NPC_SCREAM_JAF5 npc/npc_f_dontdo_ja
+
+}
+
+%escort1
+{
+	@CT1Style
+	$speaker	= escort1
+}
+
+%tanaka
+{
+	@CT2Style
+	$speaker	= tanaka
+	$listener	= player
+}
+
+%escort2player
+{
+	@CT3Style
+	$speaker	= escort1
+	$listener	= player
+}
+
+%phone_npc
+{
+	$speaker = phone_npc
+	$listener = player
+}
+
+%vip
+{
+	@NPC2Style
+	$speaker = vip
+	$listener = player
+}
+
+%npc2
+{
+	@NPC3Style
+	$speaker = npc2
+	$listener = player
+}
+
+%walker1
+{
+	@NPC2Style
+	$speaker = walker1
+	$listener = player
+}
+
+
+%into_alley
+{
+	#killtargets="sniper2a"
+	#firetargets="crashdoor"
+}
+
+%fenced_alley_seq
+{
+	#firetargets="crashdoor"
+	#pause = 4
+	#firetargets="sniper3_seq1"
+}
+
+%sniper3_hide1
+{
+	#pause = 1
+	#firetargets="awindow1_sp"
+	#pause = 1
+	#firetargets="sniper3_seq3"
+}
+
+%sniper3_hide2
+{
+	#pause = .5
+	#firetargets="storefront_sp"
+	#pause = .5
+	#firetargets="storefront_out"
+	#pause = .7
+	#firetargets="sniper3_seq4"
+}
+
+
+%outofsight
+{
+	@RadioStyle
+	//#text="We've got hostiles coming from the alley! Get over here!"
+	#sound=scom_hosalley
+	#firetargets="alley_ch_sp"
+	#firetargets="alley_ch_sp1"
+	#firetargets="alley_ch_sp2"
+	#pause = 4
+}
+
+%come_down
+{
+	#firetargets="walker_path1"
+	#pause = .5
+	#firetargets="vip_path5"
+	@RadioStyle
+	//#text="We are heading into the building across the plaza from the skywalk."
+	#sound=scom_skywalk,
+	pause = 3
+	#firetargets="esc_path4"
+}
+
+%tanaka_seq
+{
+	#firetargets="tanaka_act"
+	#firetargets="tanaka_use_ck"
+	@tanaka
+	//#text="Here you go. Don't use it all in one place, heheh."
+	#sound=seal2_hereyago,
+	pause = 1
+	#firetargets="moreammo"
+	#pause = 2
+}
+
+%tanaka_seq2
+{
+	@tanaka
+	//#text="I think the captain wants you to secure the alley over there."
+	#sound=seal1_secalley,
+	pause = 4
+}
+
+%new_area
+{
+	#firetargets="objective3"
+	@escort2player
+	//#text="Tanaka has some fresh rounds for you if you're low."
+	#sound=scom_freshr,
+	pause = 3.5
+}
+
+%scout_alley
+{
+	@escort2player
+	//#text="Scout out that alley over there."
+	#sound=scom_alley,
+	pause = 3
+	@ObjectiveStyle
+	#text="#OBJ4_HANK_NEW"
+	#firetargets="objective4"
+}
+
+%sniper_spawn_seq
+{
+	#firetargets="objective4"
+	#firetargets="rollgate"
+	#firetargets="sniper_spawn"
+	#pause = .5
+	#firetargets="tanaka_killable"
+	#firetargets="sniper_in_seq"
+	#firetargets="sniper_pow"
+	#pause = .75
+	@escort1
+	//#text="Sniper!"
+	#sound=scom_sniper
+	#firetargets="tanaka_death"
+	#killtargets="tanaka_seq"
+	#killtargets="tanaka_seq2"
+	#killtargets="moreammo"
+	#pause = .5
+	#firetargets="tanaka_down"
+	@ObjectiveStyle
+	#text="#OBJ5_HANK_NEW"
+	#firetargets="objective5"
+}
+
+%toshi_inpos
+{
+	#firetargets="see_toshi_global"
+	#firetargets="sniper_ck1_rel"
+}
+
+%tanaka_down
+{
+	#pause = .5
+	#firetargets="tanaka_music"
+	#pause = .5
+	@escort2player
+	#sound=scom_tandown,
+	pause = 4.5
+}
+
+%sniper_run1
+{
+	#killtargets="sniper_ck1_rel"
+	#firetargets="ldr_use_ck3"
+	#firetargets="sniper_ck3"
+	#pause = .05
+	#killtargets="outofsight_trig"
+	#firetargets="sniper_run_seq"
+	#pause = 1
+	#firetargets="objective5"
+	@escort2player
+	//#text="That was the gang leader Toshifune!"
+	#sound=scom_ganglead,
+
+	pause = 2.1		// LOCALIZE_WAVFILE_LENGTH_ADJUST
+	@escort2player
+	//#text="Mr Yoshida is safe, get after that sniper!
+	//Chase him down and take him out."
+	#sound=scom_ysafetake
+	#pause = 5
+	@ObjectiveStyle
+	#text="#OBJ6_HANK_NEW"
+	#firetargets="objective6"
+	#pause = 10
+	#firetargets="impatient"
+}
+
+%impatient
+{
+	#firetargets="impatient_cnt"
+	#pause = 7
+	#repeat = 2
+}
+
+%impatient_msg
+{
+	@escort2player
+	//#text="Chase down that Sniper damnit!"
+	#sound=cnc_chasedmn,
+	pause = 4.5
+	#firetargets="impatient"
+}
+
+%ldr_use_seq1
+{
+	#firetargets="ldr_use_ck1"
+	@escort2player
+	//#text="Have you secured the alley yet?"
+	#sound=scom_secalley,
+	pause = 3.5
+
+}
+
+%ldr_use_seq2
+{
+	#firetargets="ldr_use_ck2"
+	@escort2player
+	//#text="Scout out that alley over there."
+	#sound=scom_alley,
+	pause = 3.5
+}
+
+%ldr_use_seq3
+{
+	@escort2player
+	//#text="Why are you still here? Toshifune is getting away!"
+	#sound=scom_getaway,
+	pause = 3.5
+}
+
+%walker_use_seq1
+{
+	@walker1
+	//#text="I don't have anything to say to you."
+	#sound=npc2_anysay,
+	pause = 3.5
+}
+
+%walker_use_seq2
+{
+	@walker1
+	#sound=NPC_SCREAM_JA,
+	pause = 3.5
+}
+
+%npc_failure
+{
+	#killtargets="trans2-3"
+	#killtargets="sniper_run1"
+	#killtargets="failure"
+	#firetargets="mission_fail"
+	#pause = 3
+	@FailureStyle
+	#text="#HANKAGAI_NPC_FAIL_MSG"
+}
+
+%failure
+{
+	#killtargets="npc_failure"
+	#killtargets="trans2-3"
+	#killtargets="sniper_run1"
+	@RadioStyle
+	//#text="Mr Yoshida is down, repeat Yoshida is down!"
+	#sound=cnc_yoshdown
+	#pause = 3.1
+	#firetargets="mission_fail"
+	#pause = 3
+	@FailureStyle
+	#text="#HANKAGAI_ESC_FAIL_MSG"
+}
+
+%teamkill_failure
+{
+	#firetargets="mission_fail"
+	#pause = 3
+	@FailureStyle
+	#text="#HANKAGAI_TEAM_FAIL"
+}

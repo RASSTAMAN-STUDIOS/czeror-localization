@@ -1,0 +1,492 @@
+// $position = .8 .8
+// $fadein = 1.5, holdtime = 2, fadeout = 0.5
+// $color = 240 100 0, color2 = 0 100 240
+
+
+!sentences
+{
+//character dialog	
+	dialogDeltaTower0 recoil/dsnip_tower
+	dialogDeltaRescue0 recoil/dsnip_tab //3sec
+	dialogCnCRescue0 recoil/cnc_arriv
+	dialogClearEvac0 recoil/cnc_fireev
+	dialogGoodW0 recoil/cnc_goodw
+	dialogCnCLost0 recoil/cnc_lost
+	dialogCnCEnd0 recoil/cnc_goodwex
+	dialogDoorOpen0 recoil/dsnip_dooropen
+	dialogDeltaSnipe0 ct/ct_gotsixsir_am
+	dialogDeltaCaptured0 ct/ct_pain1_am
+	dialogCTStayOne0 ct/ct_rightstay_am
+	dialogCTStayTwo0 ct/ct_takeupp_am
+	
+	
+	//ct chatter which I think works fine even commented below
+	//CT_WAIT0 ct/ct_rightstay_am.wav
+	//CT_WAIT1 ct/ct_takeupp_am.wav
+	
+	H_HELP_AM0 h/h_m_getmeout_am
+	H_HELP_AM1 h/h_m_okletsgo_am
+	H_HELP_AM2 h/h_m_gethellout_am
+	H_HELP_AM3 h/h_m_ohlets_am
+
+	H_THANK_AM0 h/h_m_thanksave_am
+	H_THANK_AM1 h/h_m_owelife_am
+	H_THANK_AM2 h/h_m_gladover_am
+	H_THANK_AM3 h/h_m_thanks_am
+	
+	H_PAIN_AM0 h/h_m_pain1_am
+	H_PAIN_AM1 h/h_m_pain2_am
+	H_PAIN_AM2 h/h_m_pain3_am
+	H_PAIN_AM3 h/h_m_pain4_am
+
+	H_DEATH_AM0 h/h_m_death1_am
+	H_DEATH_AM1 h/h_m_death2_am
+	H_DEATH_AM2 h/h_m_death3_am
+	H_DEATH_AM3 h/h_m_death4_am
+
+	H_PLFEAR_AM0 h/h_m_mygodw_am
+	H_PLFEAR_AM1 h/h_m_ithought_am
+	H_PLFEAR_AM2 h/h_m_pleasenok_am
+
+	H_FEAR_AM0 h/h_m_dontdie_am
+	H_FEAR_AM1 h/h_m_yousavr_am
+	H_FEAR_AM2 h/h_m_wherewego_am
+
+	H_SCREAM_AM0 h/h_m_ahh1_am
+	H_SCREAM_AM1 h/h_m_lookout_am
+	H_SCREAM_AM2 h/h_m_they'rehere_am
+
+	H_SICK_AM0 h/h_m_cantgo_am
+	H_SICK_AM1 h/h_m_toosick_am
+	H_SICK_AM2 h/h_m_goinpuke_am
+
+	H_BETTER_AM0 h/h_m_feelmuch_am
+	H_BETTER_AM1 h/h_m_didtr_am
+	H_BETTER_AM2 h/h_m_thankshot_am
+
+	//**hostage female chatter
+
+	H_HELP_AMF0 h/h_f_mygoodp_am
+	H_HELP_AMF1 h/h_f_neverbeen_am
+	H_HELP_AMF2 h/h_f_scaredp_am
+
+	H_THANK_AMF0 h/h_f_thankf_am
+	H_THANK_AMF1 h/h_f_veryb_am
+	H_THANK_AMF2 h/h_f_courage_am
+
+	H_PAIN_AMF0 h/h_f_pain1_am
+	H_PAIN_AMF1 h/h_f_pain2_am
+	H_PAIN_AMF2 h/h_f_pain3_am
+	H_PAIN_AMF3 h/h_f_pain4_am
+
+	H_DEATH_AMF0 h/h_f_death1_am
+	H_DEATH_AMF1 h/h_f_death2_am
+	H_DEATH_AMF2 h/h_f_death3_am
+	H_DEATH_AMF3 h/h_f_death4_am
+
+	H_PLFEAR_AMF0 h/h_f_mygod_am
+	H_PLFEAR_AMF1 h/h_f_myside_am
+	H_PLFEAR_AMF2 h/h_f_plsnokill_am
+
+	HEAR_AMF0 h/h_f_ohhelp_am
+	HEAR_AMF1 h/h_f_ohmy_am
+	HEAR_AMF2 h/h_f_help_am
+
+	H_SCREAM_AMF0 h/h_f_ahh1_am
+	H_SCREAM_AMF1 h/h_f_lookout_am
+	H_SCREAM_AMF2 h/h_f_theyhere_am
+
+	H_SICK_AMF0 h/h_f_dontfeel_am
+	H_SICK_AMF1 h/h_f_toosick_am
+	H_SICK_AMF2 h/h_f_puke_am
+
+	H_BETTER_AMF0 h/h_f_feelbett_am
+	H_BETTER_AMF1 h/h_f_trick_am
+	H_BETTER_AMF2 h/h_f_shotgo_am
+
+
+	//**NPC chatter
+
+	NPC_OK_AM0 npc/npc_m_yesdo_am
+	NPC_OK_AM1 npc/npc_m_right_am
+	NPC_OK_AM2 npc/npc_m_ok_am
+
+	NPC_WAIT_AM0 npc/npc_m_waithere_am
+	NPC_WAIT_AM1 npc/npc_m_stayhere_am
+	NPC_WAIT_AM2 npc/npc_m_movemusc_am
+
+	NPC_STOP_AM0 npc/npc_m_notfurth_am
+
+	NPC_STARE_AM0 h/npc_m_lookme_am
+	NPC_STARE_AM1 h/npc_m_yousure_am
+
+	NPC_HELLO_AM0 h/npc_m_hello_am
+	NPC_HELLO_AM1 h/npc_m_officer_am
+
+	NPC_ANSWER_AM0 h/npc_m_iworried_am
+	NPC_ANSWER_AM1 h/npc_m_canttell_am
+	NPC_ANSWER_AM2 h/npc_m_whatdoth_am
+	NPC_ANSWER_AM3 h/npc_m_dontid_am
+
+	NPC_QUESTION_AM0 h/npc_m_whatgon_am
+	NPC_QUESTION_AM1 h/npc_m_didhear_am
+	NPC_QUESTION_AM2 h/npc_m_whoare_am
+	NPC_QUESTION_AM3 h/npc_m_thosepol_am
+
+	NPC_IDLE_AM0 h/npc_m_howhapp_am
+	NPC_IDLE_AM1 h/npc_m_whyme_am
+	NPC_IDLE_AM2 h/npc_m_sudden_am
+	NPC_IDLE_AM3 h/npc_m_whatgo_am
+
+	NPC_NOGO_AM0 h/npc_m_dontgoth_am
+
+	NPCONST_AM0 h/npc_m_iseeone_am
+	NPCONST_AM1 h/npc_m_theyhere_am
+	NPCONST_AM2 h/npc_m_theygotguns_am
+
+	NPC_HEAR_AM0 h/npc_m_hearthat_am
+	NPC_HEAR_AM1 h/npc_m_someover_am
+
+	NPC_WOUND_AM h/npc_m_beenshot_am
+	NPC_WOUND_AM h/npc_m_ow_am
+	NPC_WOUND_AM h/npc_m_arg_am
+
+	NPCORTAL_AM0 h/npc_m_notgoingm_am
+	NPCORTAL_AM1 h/npc_m_noo_am
+	NPCORTAL_AM2 h/npc_m_ahhh1_am
+
+	NPC_CUREA_AM0 h/npc_m_youdontlo_am
+	NPC_CUREA_AM1 h/npc_m_sureOK_am
+
+	NPC_HEAL_AM0 h/npc_m_heretake_am
+	NPC_HEAL_AM1 h/npc_m_letme_am
+
+	NPC_PLFEAR_AM0 h/npc_m_thoughtc_am
+	NPC_PLFEAR_AM1 h/npc_m_getawaym_am
+	NPC_PLFEAR_AM2 h/npc_m_helost_am
+
+	NPC_FEAR_AM0 h/npc_m_ahh2_am
+	NPC_FEAR_AM1 h/npc_m_help2_am
+	NPC_FEAR_AM2 h/npc_m_whatgo2_am
+
+	NPC_SCREAM_AM0 h/npc_m_omg_am
+	NPC_SCREAM_AM1 h/npc_m_helpme_am
+	NPC_SCREAM_AM2 h/npc_m_ahh3_am
+	NPC_SCREAM_AM3 h/npc_m_thisnot_am
+
+	NPC_SCREAM_AM0 h/npc_m_whatstop_am
+	NPC_SCREAM_AM1 h/npc_m_dontdo_am
+
+
+	//**NPC female chatter
+
+	NPC_OK_AMF0 h/npc_f_yesdo_am
+	NPC_OK_AMF1 h/npc_f_right_am
+	NPC_OK_AMF2 h/npc_f_ok_am
+
+	NPC_WAIT_AMF0 h/npc_f_waithere_am
+	NPC_WAIT_AMF1 h/npc_f_stayhere_am
+	NPC_WAIT_AMF2 h/npc_f_movemusc_am
+
+	NPC_STOP_AMF0 h/npc_f_notfurth_am
+
+	NPC_STARE_AMF0 h/npc_f_lookme_am
+	NPC_STARE_AMF1 h/npc_f_yousure_am
+
+	NPC_HELLO_AMF0 h/npc_f_hello_am
+	NPC_HELLO_AMF1 h/npc_f_officer_am
+
+	NPC_ANSWER_AMF0 h/npc_f_iworried_am
+	NPC_ANSWER_AMF1 h/npc_f_canttell_am
+	NPC_ANSWER_AMF2 h/npc_f_whatdoth_am
+	NPC_ANSWER_AMF3 h/npc_f_dontid_am
+
+	NPC_QUESTION_AMF0 h/npc_f_whatgon_am
+	NPC_QUESTION_AMF1 h/npc_f_didhear_am
+	NPC_QUESTION_AMF2 h/npc_f_whoare_am
+	NPC_QUESTION_AMF3 h/npc_f_thosepol_am
+
+	NPC_IDLE_AMF0 h/npc_f_howhapp_am
+	NPC_IDLE_AMF1 h/npc_f_whyme_am
+	NPC_IDLE_AMF2 h/npc_f_sudden_am
+	NPC_IDLE_AMF3 h/npc_f_whatgo_am
+
+	NPC_NOGO_AMF0 h/npc_f_dontgoth_am
+
+	NPCONST_AMF0 h/npc_f_iseeone_am
+	NPCONST_AMF1 h/npc_f_theyhere_am
+	NPCONST_AMF2 h/npc_f_theygotguns_am
+
+	NPC_HEAR_AMF0 h/npc_f_hearthat_am
+	NPC_HEAR_AMF1 h/npc_f_someover_am
+
+	NPC_WOUND_AMF0 h/npc_f_beenshot_am
+	NPC_WOUND_AMF1 h/npc_f_ow_am
+	NPC_WOUND_AMF2 h/npc_f_arg_am
+
+	NPCORTAL_AMF0 h/npc_f_notgoingm_am
+	NPCORTAL_AMF1 h/npc_f_noo_am
+	NPCORTAL_AMF2 h/npc_f_ahhh1_am
+
+	NPC_CUREA_AMF0 h/npc_f_youdontlo_am
+	NPC_CUREA_AMF1 h/npc_f_sureOK_am
+
+	NPC_HEAL_AMF0 h/npc_f_heretake_am
+	NPC_HEAL_AMF1 h/npc_f_letme_am
+
+	NPC_PLFEAR_AMF0 h/npc_f_thoughtc_am
+	NPC_PLFEAR_AMF1 h/npc_f_getawaym_am
+	NPC_PLFEAR_AMF2 h/npc_f_helost_am
+
+
+	NPCEAR_AMF0 h/npc_f_ahh2_am
+	NPCEAR_AMF1 h/npc_f_help2_am
+	NPCEAR_AMF2 h/npc_f_whatgo2_am
+
+	NPC_SCREAM_AMF0 h/npc_f_omg_am
+	NPC_SCREAM_AMF1 h/npc_f_helpme_am
+	NPC_SCREAM_AMF2 h/npc_f_ahh3_am
+	NPC_SCREAM_AMF3 h/npc_f_thisnot_am
+
+	NPC_SCREAM_AMF0 h/npc_f_whatstop_am
+	NPC_SCREAM_AMF1 h/npc_f_dontdo_am
+}
+	
+%TowerDeltaSniper
+{
+	@CT1Style
+	$speaker	= delta
+	$listener	= player
+}
+
+%Brushbaron_CT01
+{
+	@CT1Style
+	$speaker	= spawn1EvaqPoint
+	$listener	= player
+}
+
+%Brushbaron_CT02
+{
+	@CT2Style
+	$speaker	= spawnHeliCT
+	$listener	= player
+}
+
+%Brushbaron_CT03
+{
+	@CT1Style
+	$speaker	= dragDelta
+	$listener	= player
+}
+
+
+//Firing: (seqDragDelta)
+//Found: trigger_sequence, firing (seqDragDelta)
+//Found: trigger_relay, firing (seqDragDelta)
+//KillTarget: delta
+//killing monster_ct_swat_sniperrifle
+//Found: scripted_sequence, firing (seqDragDelta)
+//Found: scripted_sequence, firing (seqDragDelta)
+//Found: scripted_sequence, firing (seqDragDelta)
+//script "seqDragDelta" using monster "dragt1"
+//script "seqDragDelta" using monster "dragdelta"
+//script "seqDragDelta" using monster "dragt2"
+
+%new_obj02
+{	
+	@ObjectiveStyle
+	#text = "#OBJ2_RECOIL_NEW" //#text = "NEW OBJECTIVE: Meet up with the rest of the team at the extraction point"
+	#firetargets = "recoil_obj02" //adds objective to objectives list
+}
+
+%new_obj03
+{
+	@ObjectiveStyle
+	#text = "#OBJ3_RECOIL_NEW" //#text = "NEW OBJECTIVE: Neutralize hostiles occupying Landing Zone"
+	#firetargets = "recoil_obj03" //adds objective to objectives list
+}
+
+%new_obj04
+{
+	@ObjectiveStyle
+	#text = "#OBJ4_RECOIL_NEW" //#text = "NEW OBJECTIVE: Rescue Delta operator back at his last known location"
+	#firetargets = "recoil_obj04" //adds objective to objectives list
+}
+
+%new_obj05
+{
+	@ObjectiveStyle
+	#text = "#OBJ5_RECOIL_NEW" //#text = "NEW OBJECTIVE: Get to evac Landing Zone"
+	#firetargets = "recoil_obj05" //adds objective to objectives list
+}
+
+%seqTowerEvents		
+{	
+
+	@CT1Style	
+	#sound = dialogDeltaTower,
+		speaker = delta		
+	#pause = .4
+	#firetargets = "script_new_obj02" //new objective
+	#firetargets = "doorTower"	
+	#pause = 1	
+	#firetargets = "seqTower0"
+	#firetargets = "seqDoorO"	
+	//	text = "You go on ahead, I'm going to check out this tower."	
+	#pause = 5
+	#firetargets = "Play_ladder_climb"
+	#pause = 3.5
+	#firetargets = "Close_hatch"		
+	#firetargets = "brushbaron_delta_sniper" //spawns a delta sniper in the tower	
+	#firetargets = "script_brushbaron_snipes" //triggers brushbaron_snipes thread below
+}
+
+%brushbaron_snipes
+{
+	#firetargets = "suicidal_baddie" //spawn the T around the corner	
+	#firetargets = "has_death_wish01" //make the T run towards tower	
+}
+
+//%kill_suicidal_baddie
+//{	
+	//#firetargets = "snd_kill_suicidal_baddie"
+	//#firetargets = "kill_suicidal_baddie_guy"
+	//#firetargets = "script_got_back"
+//}
+
+//%hes_got_yo_back_bro
+//{
+	//#pause = 2.0
+	//#sound = dialogDeltaSnipe,
+		//speaker = delta	//ct_gotsixsir_am.wav
+//}
+
+%wontmove01
+{
+	@Brushbaron_CT01
+	#sound = dialogCTStayOne,		
+		pause = 1.0
+}
+
+%wontmove02
+{
+	@Brushbaron_CT02
+	#sound = dialogCTStayTwo,		
+		pause = 1.0
+}
+
+%delta_captured
+{		
+	#firetargets = "ct_pain"
+	//@Brushbaron_CT03
+	//#sound = dialogDeltaCaptured,
+		//pause = 1.0		
+}
+
+%seqOpenDoor
+{
+	@CT1Style
+	#sound = dialogDoorOpen,
+		speaker = deltaHostage,
+		pause = 1.0		
+}
+
+%seqEndEvents
+{	
+	#firetargets = "recoil_obj05" //objective completed
+	#firetargets = "musicEnd"	
+	#sound = dialogCnCEnd
+	#pause = 3
+	#firetargets = "nextlevel"
+	#pause = 3
+	@TitleStyle
+	#text="#GENERIC_SUCCESS"	
+}
+
+%dead_delta
+{
+	#firetargets = "fail"
+	#pause = 5
+	@FailureStyle
+	#text = "#RECOIL_FAIL"
+}
+
+%RescueDelta
+{
+	#firetargets = "recoil_obj03" //objective 3 completed
+	
+	@CT1Style	
+	// #text = "Good Work Redtail. Extraction team inbound"
+	
+	#sound = dialogGoodW
+		
+	
+	#firetargets = "blood1"
+	#firetargets = "Bad_guy_spawners"
+	#firetargets = "seqHideDelta"
+	
+	#pause = 5
+	
+	
+	#sound = dialogCnCLost		
+	
+	@CT1Style
+	//#text = "Redtail, we've lost contact with your delta force sniper. Return to
+	//his last known position and assess the situation."
+	
+	#pause = 6
+	
+	//@CT1Style
+	//#text = "Repeat. Contact with Delta sniper has been lost
+	//we have a possible rescue situation"
+	//@ObjectiveStyle #text = "#recoil_Objective04"
+	#firetargets = "script_new_obj04" //new objective		
+}
+
+%use_hostage
+{
+	@ObjectiveStyle
+	#text = "#RECOIL_USE_HOSTAGE" //#text = "Press USE to make the Delta Sniper follow you."
+}
+
+%ClearEvac
+{
+	@RadioStyle,
+		sound = dialogClearEvac
+//		text = "Redtail 5, be advised, evac team dusted off due to heavy 
+//		fire at the evac zone.
+//		Until that area is cleared of hostiles no evac will be possible."
+	//@ObjectiveStyle #text = "#recoil_Objective03"	
+	#firetargets = "script_new_obj03" //new objective
+	#killtargets = "brushbaron_delta_sniper"
+}
+
+%Rescue
+{
+	#firetargets = "recoil_obj04" //objective completed	
+	#firetargets = "changeDAnim"
+	#firetargets = "musicRDelta"
+	#firetargets = "clipHeli"
+	#firetargets = "spawnHeliCT"
+	
+	#pause = 1.5
+	
+	@CT2Style
+		#sound = dialogDeltaRescue, 
+		speaker = deltaHostage
+//		text = "Thanks. Next time we're out on the town, the tabs on me." //3sec
+	#pause = 3.0
+	
+	#firetargets = "brushbaron_rescue"
+	#firetargets = "usable"
+	#firetargets = "seqDoorO"	
+	#pause = 4.0	
+//	@RadioStyle,
+//		text = "Redtail, evac has arrived. Repeat, the Extraction team has arrived. 
+//		Hustle your butts back there, hostiles are moving in fast.",	
+
+		#sound = dialogCnCRescue
+		//@ObjectiveStyle #text = "#recoil_Objective05"
+		#firetargets = "script_new_obj05" //new objective
+}

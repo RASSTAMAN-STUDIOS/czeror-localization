@@ -1,0 +1,185 @@
+!sentences
+{
+	// ==============================================================
+	// High Rise
+	// ==============================================================
+ 
+	3rd_floor0			HighRise/cnc_headthird
+
+	security_disabled0 	HighRise/cnc_goodlockout
+
+	mounted_machine0 		HighRise/cnc_groundpinned
+
+	guns_disabled0 		HighRise/cnc_gunposdis
+	
+	Roger_control0 		HighRise/sass_affirm
+	Moving_in0 			HighRise/sass_movingin
+	Taking_fire0 		HighRise/sass_takingfire
+	Engaging_targets0 	HighRise/sass_enegag
+	Hostages_down0 		HighRise/sass_hosdown
+	Delta_down0 		HighRise/sass_deltadown
+	Tango_down0 		HighRise/sass_tangdown
+	Snipers0 			HighRise/sass_snipers
+	In_position0 		HighRise/sass_inpos
+	Firing0 			HighRise/sass_firing
+	Im_hit0 			HighRise/sass_bloodhit
+	need_backup0 		HighRise/sass_cncneedback
+
+	Be_advised0 		HighRise/cnc_ourboys
+
+	//Lightning and thunder ambience
+
+	HR_thunder0			ambience/HR_thunder1
+	HR_thunder1			ambience/HR_thunder3
+	HR_thunder2			ambience/HR_thunder4
+	HR_thunder3			ambience/HR_Thunstrike
+	HR_thunder4			ambience/HR_rollthun
+
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%CNC_voice
+{
+	@RadioStyle
+}
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%CNC_voice_01
+{
+	@CNC_voice	#sound = 3rd_floor,	channel = 1
+		//text = "Head to the 3rd floor of the building, locate and disable the 
+		//		security systems so our ground forces can get in.  They know 
+		//		you are in the building, so expect heavy resistance."
+
+	@ObjectiveStyle #text = "#OBJ3_HRISE_NEW"
+
+}
+
+%CNC_voice_02
+{
+	#pause = 3
+	@CNC_voice	#sound = security_disabled,	pause = 3.0,	channel = 1
+		//text = "Good!  The security lockouts have been disabled."
+
+	@CNC_voice	#sound = mounted_machine,	channel = 1
+		//text = "Our ground teams are pinned down by mounted machine guns.
+		//		Get to the lobby overlook and disable those mounted guns."
+	@ObjectiveStyle #text = "#OBJ4_HRISE_NEW"	
+
+	#pause = 7
+	#firetargets = "sec_room_open1"
+}
+
+%CNC_voice_04
+{
+	#pause = 2.0
+
+	@CNC_voice	#sound = guns_disabled,	pause = 4.0,	channel = 1
+		//text = "Mounted guns are disabled.  Ground teams move in!"
+
+	@CNC_voice	#sound = Roger_control,	pause = 1.0,	channel = 1
+		//text = "Roger control!"
+
+	@CNC_voice	#sound = Moving_in,	pause = 3.0,	channel = 2
+		//text = "Moving in!"
+	
+	@CNC_voice	#sound = Engaging_targets,	pause = 3.0,	channel = 4
+		//text = "Engaging targets!"
+
+	// @CNC_voice	#sound = Taking_fire,	pause = 2.0,	channel = 3
+		//text = "Taking fire!"
+	
+	@ObjectiveStyle #text = "#OBJ5_HRISE_NEW"
+
+	@CNC_voice	#sound = Be_advised,	pause = 6.0,		channel = 1
+		//text = "Be advised, our spotters have located the nuke on the roof.  
+		//		Get back to the elevators and proceed to the roof!
+		//		Our ground teams are still engaged, you're the only one 
+		//		who can get to the roof in time! You need to get to the roof now!"
+	
+	#firetargets = "OB_HR03_NEW"
+	@ObjectiveStyle #text = "#OBJ8_HRISE_NEW"
+
+	//@CNC_voice	#sound = Hostages_down,	pause = 3.0,	channel = 5
+		//text = "Hostages down!"
+
+	//@CNC_voice	#sound = Firing,	pause = 3.0,	channel = 2
+		//text = "Firing!"
+
+	//@CNC_voice	#sound = Delta_down,	pause = 3.0,	channel = 6
+		//text = "Delta down!"
+
+	//@CNC_voice	#sound = Snipers,	pause = 3.0,	channel = 8
+		//text = "Snipers!"
+	
+	//@CNC_voice	#sound = Tango_down,	pause = 3.0,	channel = 7
+		//text = "Tango down!"
+
+	//@CNC_voice	#sound = In_position,	pause = 3.0,	channel = 1
+		//text = "In position!"
+
+	//@CNC_voice	#sound = Im_hit,	pause = 3.0,	channel = 3
+		//text = "I'm hit!"
+
+	//@CNC_voice	#sound = need_backup,	pause = 3.0,	channel = 4
+		//text = "CNC need backup!"
+
+}
+
+%lightning_thun_amb1
+{
+	#pause = 10
+
+	#firetargets = "setoff_bolt_10"	
+	#firetargets = "bolt_flash"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#pause = 16
+
+	#firetargets = "setoff_bolt_11"	
+	#pause = 1.4
+	#sound = HR_thunder
+
+	
+	#firetargets = "lightning_thun_amb2"
+	
+}
+
+%lightning_thun_amb2
+{
+	#pause = 24
+
+	#firetargets = "setoff_bolt_12"
+	#firetargets = "bolt_flash"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#firetargets = "lightning_thun_amb1"
+
+	#pause = 12
+
+	#firetargets = "setoff_bolt_14"
+	#pause = 1.4
+	#sound = HR_thunder
+
+	#firetargets = "lightning_thun_amb1"	
+}
+
+// =====================================================================
+// Mission Fails
+// =====================================================================
+
+%Mission_failed01
+{
+	#pause = 1.2
+	@FailureStyle
+	#text =	"#RiseHard_Felltodeath"
+
+}

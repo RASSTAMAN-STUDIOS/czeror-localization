@@ -1,0 +1,606 @@
+//==================================================================
+//	Sequence File for CS:CZ - Motorcade Assault (cz_motor1)
+//		by Chris 'kanaeda' Voss  chrisv@ritual.com
+//
+//	'A One that is not cold, is scarcely a One at all.' 
+//						- StrongBad
+//
+//==================================================================
+
+
+
+
+
+//==================================================================
+//	Sound file 'sentence' definitions
+//==================================================================
+
+
+!sentences
+{
+	GSG9_l1Balcony0 mcade/gsg9tl_getdwn
+	GSG9_l2Balcony0 mcade/gsg9tl_dmnear
+	GSG9_l3Balcony0 mcade/gsg9tl_letmv
+
+	GSG9_bal1Delay0 mcade/gsg9tl_bridgeo
+	GSG9_bal2Delay0 mcade/gsg9tl_comepos
+	
+	silo_4_Firstseq0 secretwar/spzsy_yessir
+
+	GSG9_l1Bridge0 mcade/gsg9tl_drill
+	GSG9_l2Bridge0 mcade/gsg9tl_preplaw
+	GSG9_l3Bridge0 mcade/gsg9tl_onsig
+	GSG9_l4Bridge0 mcade/gsg9tl_alstay
+	GSG9_l5Bridge0 mcade/gsg9tl_nowhit
+
+	GSG9_br1Early0 mcade/gsg9tl_whatdo
+	GSG9_br2Early0 mcade/gsg9tl_dontfire
+
+
+	GSG9_br1Late0 mcade/gsg9tl_hitlead
+	GSG9_br2Late0 mcade/gsg9tl_fireclos
+	GSG9_br3Late0 mcade/gsg9tl_redfor
+	
+	GSG9_br1Babble0 mcade/gsg9tl_attk
+	GSG9_br2Babble0 mcade/gsg9g_herecm
+	GSG9_br3Babble0 mcade/gsg9p_anoth
+	GSG9_br4Babble0 mcade/gsg9tl_headdwn
+	GSG9_br5Babble0 mcade/gsg9g_whereass
+	GSG9_br6Babble0 mcade/gsg9p_toomany
+	GSG9_br7Babble0	mcade/gsg9tl_pinned
+
+	GSG9_brUsuck0 mcade/gsg9tl_damesc
+
+	GSG9_brVIPbreak0 mcade/shitvip
+
+	GSG9_brTunnel0 mcade/gsg9p_firetunn
+
+	GSG9_brExitCNC0 mcade/cnc_beadas
+	GSG9_br1Exit0 mcade/gsg9tl_youheard
+	GSG9_br2Exit0 mcade/gsg9g_yessir
+	GSG9_br3Exit0 mcade/gsg9p_roger	
+	GSG9_br4Exit0 mcade/gsg9tl_tkpoint
+
+}
+
+
+//==================================================================
+//	speaker	style definitions
+//==================================================================
+
+
+%apone_intro		
+{
+	@CT1Style
+	$speaker=apone_intro
+}
+
+%apone		
+{
+	@CT1Style
+	$speaker=apone
+}
+
+%hicks
+{
+	@CT2Style
+	$speaker=hicks
+	$listener=apone
+}
+
+%hudson
+{
+	@CT3Style
+	$speaker=hudson
+	$listener=apone
+}
+
+
+
+
+
+//==================================================================
+//	opening sequence
+//==================================================================
+
+%bridge_setup
+{
+	#firetargets="hud_off"
+	#pause = .1
+	#firetargets="intro_freeze"
+	#pause = 1
+	
+	#firetargets="motor_intro_muzak"
+	#firetargets="motor_save"
+	#pause = 1
+
+	#firetargets="motor_fade"
+	@TitleStyle	#text="#MOTORCADE_TITLE",	
+			pause = 5
+	
+	@SubtitleStyle	#text="#Motorcade_Subtitle",	
+			pause = 12	
+			
+//	#firetargets="hud_on"
+//	#firetargets="motor_equip1"
+//	#pause = .1
+//	#firetargets="motor_equip2"
+//	#pause = 1		
+	
+	@apone_intro	//#text="Take cover, here they come!",
+			#sound=GSG9_l1Balcony,
+			pause = .5
+	
+	#firetargets="ct_intro_duck"
+	#firetargets="driveby_sound"
+
+	#pause = 3
+
+	#firetargets="area0_truck1_sequence"	// move truck 1
+	#firetargets="area0_truck2_sequence"	// move truck 2
+	#firetargets="area0_jeep1_sequence"	// move jeep 1
+	#firetargets="area0_jeep2_sequence"	// move jeep 2
+	#firetargets="driveby_sound"
+	#pause = .5
+	#firetargets="area0_motorcade_show" 	// show the convoy
+	
+	#pause = 4
+	
+	@apone_intro	//#text="Verdammt!  They're early.",
+			#sound=GSG9_l2Balcony,
+			pause = 4
+
+	#firetargets="ct_intro_stand"
+	#pause = 1.5
+	
+	@apone_intro	//#text="Lets move!  You take the point,
+			//to the bridge double time! Schnell!",
+			#sound=GSG9_l3Balcony,
+			pause = 2.5
+	
+		
+
+	#firetargets="CT_all_move"		// release the hounds!
+
+	#firetargets="motor_fade-out"		//start fading out the screen
+	
+	#firetargets="hicks_intro_go"		//run off and do something!
+	#firetargets="hudson_intro_go"
+	#firetargets="apone_intro_go"
+
+	#pause = 3
+	
+	#firetargets="intro_freeze"		//let me go!
+	#pause = .1
+
+	#firetargets="motor_intro_tele"		//now send me to the bridge, please
+		
+}
+
+
+
+
+%ct_intro_duck
+
+{
+	#firetargets="hicks_intro_duck"
+	#firetargets="apone_intro_duck"
+	#firetargets="hudson_intro_duck"
+	#pause = .1
+
+	#firetargets="hicks_crouch_idle"
+	#firetargets="hudson_crouch_idle"
+	#firetargets="apone_crouch_idle"
+}
+
+
+
+
+%ct_intro_stand
+
+{
+	#firetargets="hicks_intro_stand"
+	#firetargets="apone_intro_stand"
+	#firetargets="hudson_intro_stand"
+	#pause = .1
+
+	#firetargets="hicks_stand_idle"
+	#firetargets="hudson_stand_idle"
+	#firetargets="apone_stand_idle"
+}
+
+
+
+
+
+		
+
+
+
+//==================================================================
+//	motorcade attack sequence, part the first
+//==================================================================
+
+
+%i_like_french_toast
+
+{
+
+	#firetargets="bridge_apone_spawner"
+	#firetargets="bridge_hicks_spawner"
+	#firetargets="bridge_hudson_spawner"
+
+	#firetargets="bridge_fade"
+
+	#pause = 5
+
+	#firetargets="bridge_autosave"
+		
+	#firetargets="apone_bridge_sequence1"
+
+	@apone		//#text="All right people, you know the drill.
+			//Everybody get in position.",
+			#sound=GSG9_l1Bridge,
+			pause = 1
+
+	#firetargets="hud_on"
+	#firetargets="motor_equip1"
+	#pause = .1
+	#firetargets="motor_equip2"
+
+	#firetargets="hicks_bridge_sequence1"
+	#firetargets="hudson_bridge_sequence1"
+	#pause = 5
+	
+	@ObjectiveStyle	#text="#OBJ1_MOTOR_NEW"		//trigger first objective
+	#firetargets="objective1"
+
+	@apone		//#text="Prepare your LAW rockets, wait for my go.
+			//You hit the lead car, Karl will hit the rear.",
+			#sound=GSG9_l2Bridge,
+			pause = 2
+	
+	#firetargets="ct_intro_duck"
+	#pause = 3
+
+	#firetargets="motorcade_sequence"
+
+	#pause = 3
+
+	@apone		//#text="On my signal...",
+			#sound=GSG9_l3Bridge,
+			pause = 2
+	
+	@apone		//#text="Almost there, Stay sharp people.",
+			#sound=GSG9_l4Bridge,
+			pause = 5
+
+	#firetargets="Bridge_jeep1_ready"
+	#firetargets="jeep1_ready"
+	#killtargets="listener_dummies"
+		
+
+	@apone		//#text="NOW! Hit them now!!",
+			#sound=GSG9_l5Bridge,
+			pause = 1.5
+
+	@apone		//#text="Hit the lead vehicle now!",
+			#sound=GSG9_br1Late,
+			pause = 2.5,
+			listener=player
+
+	@apone		//#text="Fire on the closest vheicle now!",
+			#sound=GSG9_br2Late,
+			pause = 2.5,
+			listener=player
+
+	@apone		//#text="The light won't stay red forever!",
+			#sound=GSG9_br3Late,
+			pause = 2.5,
+			listener=player
+
+	
+	#firetargets="motorcade_exit"
+	#killtargets="motorcade_truck1_wall"
+	#killtargets="motorcade_truck2_wall"
+	#firetargets="motorcade_truck1_idle"
+	#firetargets="motorcade_truck2_idle"
+	#firetargets="jeep1_disabled"
+	#pause = 2
+	#firetargets="bridge_uSuck"
+	
+	@apone		//#text="They're escaping, schwachkopf!",
+			#sound=GSG9_brUsuck
+
+	
+}
+
+
+
+
+
+
+//==================================================================
+//	motorcade attack, second phase
+//==================================================================
+
+
+%with_syrup_and_krispy_bacon
+
+{
+	#firetargets="objective1"		//first objective completed
+	#killtargets="bridge_setup_manager"
+	#firetargets="ct_intro_stand"
+	#pause = .5
+	#firetargets="jeep2_ready"
+	#firetargets="hicks_jeep2_attack"
+	#firetargets="okyoucandienow"
+	
+	#pause = 1
+	
+	@ObjectiveStyle		#text="#OBJ2_MOTOR_NEW"
+
+	#firetargets="objective2"	
+
+	#firetargets="bridge_grunt2_spawner"
+	#firetargets="bridge_sniper1_sequence"
+	
+	@apone		//#text="Attack!",
+			#sound=GSG9_br1Babble,
+			pause = 2
+	
+	
+	#firetargets="bridge_grunt4_spawner"
+
+	@RadioStyle		//#text="Here they come!",
+			#sound=GSG9_br2Babble,
+			pause = 1
+	
+	#firetargets="bridge_grunt1_spawner"
+	#pause = 2
+	
+	#firetargets="bridge_grunt3_spawner"
+	
+	@RadioStyle	//#text="There's another one!",
+			#sound=GSG9_br3Babble,
+			pause = 5
+	
+	@RadioStyle	//#text="Keep them pinned down!",
+			#sound=GSG9_br7Babble
+}
+
+
+
+
+
+
+//==================================================================
+//	part attack of third motorcade the
+//==================================================================
+
+
+%i_live_in_a_bucket
+
+{
+	#pause = .5
+	#firetargets="bridge_gate_crates1"
+	#pause = .3
+	@hudson		//#text="Sir!  We are taking fire from the tunnel!
+			//Aufpassen!",
+			#sound=GSG9_brTunnel,
+			pause = 1.5
+
+	#firetargets="bridge_gate_splode1"
+	#firetargets="bridge_gate_grunt1_spawner"
+	#pause = .1
+	#firetargets="bridge_gate_grunt1_sequence"
+	#pause = .4
+
+	#firetargets="bridge_gate_crates3"
+
+	#firetargets="bridge_gate_grunt2_spawner"
+	#pause = .1
+	#firetargets="bridge_gate_grunt2_sequence"
+	#pause = .4
+
+	#firetargets="bridge_gate_crates2"
+	#firetargets="bridge_gate_splode2"
+	#firetargets="bridge_gate_left"
+	#firetargets="bridge_gate_right"
+	#pause = .5
+
+	#firetargets="apone_exit_sequence2"
+	
+	@apone		//#text="Keep your head down.",
+			#sound=GSG9_br4Babble
+
+	
+}	
+
+
+
+
+
+
+
+
+//==================================================================
+//	last phase of motorcade attack
+//==================================================================
+
+
+%pancakes_are_good_too
+
+{
+	#firetargets="objective2"
+	
+	@ObjectiveStyle		#text="#OBJ3_MOTOR_NEW"
+	#firetargets="objective3_WEEEE"
+
+	@RadioStyle	//#text="CNC:
+			//Be advised assault team, the ground team has been
+			//cut off and will not be able to eliminate the target.
+			//Assault team, it's up to you to locate target
+			//and complete the mission!",
+			#sound=GSG9_brExitCNC,
+			pause = 8.5
+			
+	@apone		//#text="OK assault team, you heard the man, 
+			//we're splitting up! You're with me. 
+			//Marco, stay up here and keep these
+			//bastards pinned down!",
+			#sound=GSG9_br1Exit,
+			pause = 7,		
+			listener=player
+
+	#firetargets="Hudson_sweep"
+	@hudson	#sound=GSG9_br2Exit  
+			// text="Yes Sir."
+	
+	@RadioStyle	//#text="Roger.",
+			#sound=GSG9_br3Exit,
+			pause = 1
+
+	@apone		//#text="You take the point.",
+			#sound=GSG9_br4Exit,
+			pause = 1,
+			listener=player
+	
+	#firetargets="hudson_gate_sequence4"
+}
+
+
+
+
+
+
+
+//==================================================================
+//	turn on jeep target, turn on jeep 'shell'
+//==================================================================
+
+
+%bridge_jeep1_ready
+
+{
+	#firetargets="bridge_jeep1_master"
+	#firetargets="bridge_jeep2_shell"
+	#firetargets="hicks_jeep2_attack"
+}
+
+
+
+
+
+
+
+
+//==================================================================
+//	explosions and f/x for the dead jeep models
+//==================================================================
+
+
+
+%jeep1_fx_thread
+{
+	#pause = 5
+	#firetargets="jeep1_flame1"
+
+	#pause = 12
+	
+	#firetargets="jeep1_flame2"
+}
+	
+
+
+%jeep2_fx_thread
+{
+	#pause = 4
+	#firetargets="jeep2_flame2"
+
+	#pause = 8
+	
+	#firetargets="jeep2_flame1"
+}
+
+
+
+
+
+
+
+//==================================================================
+//	spawn and evacuate the VIP target
+//==================================================================
+
+
+%did_i_mention_the_krispy_bacon
+
+{
+	#firetargets="VIP_spawners"
+	#pause = 1
+	
+	#firetargets="gate_explosion_timer"
+
+	@apone		//#text="Scheisse!  Our VIP is making a break for it!",
+			#sound=GSG9_brVIPbreak,
+			pause = 2
+
+	#firetargets="apone_exit_move"
+	#pause = .1
+	#firetargets="apone_exit_sequence1"
+	#pause = 1.5
+	
+	@hudson		//#text="Sir! Where's the ground assault team?!",
+			#sound=GSG9_br5Babble			
+
+}
+
+
+
+
+
+
+
+//==================================================================
+//	Mission Failure text
+//==================================================================
+
+
+%yer_such_a_n00b
+
+{
+	#firetargets="failure_fade"
+	#pause = 5
+	@FailureStyle	#text="#motor_failure2"
+	
+}
+
+
+
+
+
+%shoot_early
+
+{
+	#firetargets="early_failure"
+	#killtargets="bridge_setup_manager"
+	#pause = 5
+
+	@FailureStyle	#text="#motor_failure1"	
+
+}
+
+
+
+
+
+%dont_shoot_me
+
+{
+	#firetargets="early_failure"
+	#pause = 5
+
+	@FailureStyle	#text="#motor_failure4"	
+
+}

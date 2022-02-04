@@ -1,0 +1,386 @@
+$position = .8 .8
+$fadein = 1.5, holdtime = 2, fadeout = 0.5
+$color = 240 100 0, color2 = 0 100 240
+
+!sentences
+{
+	Moses11_0 turncrank/moses_productspeak
+	Moses12_0 turncrank/moses_eaththis
+	Moses13_0 turncrank/moses_upicantkill
+	WareG1_0 turncrank/wareg1_inside
+	WareG2_0 turncrank/wareg2_takedown
+	WareG3_0 turncrank/wareg3_stopthem
+	Moses14_0 turncrank/moses_death
+	Moses15_0 junglecamp/t_snort
+	CNC9_0 turncrank/cnc_bothsecure
+	CNC10_0 turncrank/cnc_medevac
+}
+
+
+
+
+%firstcorner_sequence
+{
+	#firetargets="objective3"
+
+	#firetargets = "firstcorner_dude_script"
+
+	#firetargets = "secondcorner_dude_script"
+
+	@T1Style
+	$speaker = secondcorner_dude
+	#text = "",
+//	#text = "They're inside!",
+	sound = WareG1_,
+	pause = 3.0
+
+	#firetargets="objective4"
+	@ObjectiveStyle
+	#text="#OBJ4_CRANK_NEW"
+}
+
+
+
+
+
+%fall_guy_sequence
+{
+	#firetargets = "fall_guy_script"
+	#pause = 1.3
+	#firetargets = "fall_guy_crates"
+}
+
+
+
+
+
+%assault1_sequence
+{
+	@T2Style
+	$speaker = fall_guy
+	#text = "",
+//	#text = "Take them down!",
+	sound = WareG2_,
+	pause = 3.0
+
+	#firetargets = "attacker1b_spawn"
+
+	#firetargets = "sniper1a_script"
+
+	#pause = 0.3
+	#firetargets = "sniper1a_window"
+
+//	#firetargets = "sniper1b_script"
+
+//	#firetargets = "attacker1b_script"
+
+//	#pause = 0.3
+//	#firetargets = "sniper1b_window"
+
+	#firetargets = "assault1_dudes"
+}
+
+
+
+
+%sniper1b_deathsequence
+{
+	#firetargets = "fall_guy_script"
+//	#pause = 0.3
+	#firetargets = "fall_guy_crates"
+}
+
+
+
+
+%roofsniper1_sequence
+{
+	#firetargets = "balconygoon1"
+
+	#firetargets = "roofsniper2_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "roofsniper2_script"
+	#firetargets = "roof_window1"
+}
+
+
+
+
+
+
+%assault2_sequence
+{
+	#firetargets = "attacker2a_spawn"
+	#firetargets = "attacker2b_spawn"
+	#firetargets = "attacker2c_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "attacker2a_script"
+
+	#firetargets = "assault2_dudes"
+
+	@T1Style
+	$speaker = attacker2a
+	#text = "",
+//	#text = "Stop them!",
+	sound = WareG3_,
+	pause = 3.0
+}
+
+
+
+
+
+
+%assault3_sequence
+{
+//	#firetargets = "roofsniper2_spawn"
+
+//	#pause = 0.5
+
+//	#firetargets = "roof_window3"
+//	#firetargets = "roofsniper2_script"
+}
+
+
+
+
+
+
+%assault4_sequence
+{
+	#firetargets = "attacker4a_spawn"
+	#firetargets = "attacker4b_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "attacker4b_doorsound"
+
+	#firetargets = "attacker4a_script"
+	#firetargets = "attacker4b_script"
+
+	#firetargets = "roofsniper1_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "roof_window4"
+	#firetargets = "roofsniper1_script"
+
+	#firetargets = "assault4_dudes"
+}
+
+
+
+
+
+
+%assault5_sequence
+{
+	#firetargets = "assault5_dudes"
+
+	#firetargets = "assault5_dudes_doorsound"
+
+	#firetargets = "sniper5a_spawn"
+
+	#pause = 0.5
+	#firetargets = "sniper5a_window"
+
+	#pause = 3.5
+
+	#firetargets = "attacker4b_doorsound"
+
+	#firetargets = "attacker5a_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "attacker5a_script"
+}
+
+
+
+
+
+
+
+%Moses1_sequence
+{
+	#firetargets = "Mosesguard1_spawn"
+	#firetargets = "Mosesguard2_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "Mosesguard1_script"
+	#firetargets = "Mosesguard2_script"
+}
+
+
+
+
+
+%Moses2_sequence
+{
+//	#firetargets = "roofsniper2_spawn"
+	#firetargets = "roofsniper3_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "roof_window6"
+//	#firetargets = "roofsniper2_script"
+
+//	#pause = 0.5
+
+//	#firetargets = "roof_window5"
+	#firetargets = "roofsniper3_script"
+
+	#firetargets = "Mosesguard3_window"
+	#firetargets = "Mosesguard3_script"
+
+}
+
+
+
+
+
+
+
+
+%Moses3_sequence
+{
+	@T1Style
+	$speaker = Moses2
+	#text = "#TURNCRANK_MOSES11",
+	sound = Moses11_,
+	pause = 3.0
+
+	#firetargets = "Moses2_window"
+
+	#firetargets = "finalgoon1_spawn"
+	#firetargets = "finalgoon2_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "finalgoon1_script"
+	#firetargets = "finalgoon2_script"
+
+	#pause = 5.0
+
+	#firetargets = "Moses2_cantmove"
+
+	#pause = 1.0
+
+	#firetargets = "Moses2_script"
+}
+
+
+
+
+%Moses4_sequence
+{
+	#firetargets = "finalgoon3_spawn"
+	#firetargets = "finalgoon4_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "finalgoon3_script"
+	#pause = 1.0
+	#firetargets = "finalgoon4_script"
+}
+
+
+
+
+
+
+
+
+%Mosesaides_sequence
+{
+	@T1Style
+	$speaker = Moses2
+	#text = "",
+	sound = Moses15_
+
+	#firetargets = "Mosesaide1_spawn"
+	#firetargets = "Mosesaide2_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "Mosesaide1_script"
+
+	#pause = 3.5
+
+	#firetargets = "Mosesaide2_script"
+
+	#firetargets = "BossMusic"
+
+	@T1Style
+	$speaker = Moses2
+	#text = "#TURNCRANK_MOSES13",
+	sound = Moses13_,
+	pause = 3.0
+
+	#pause = 1.5
+
+//	#firetargets = "repel_T1_window"
+//	#pause = 0.5
+//	#firetargets = "repel_T1"
+
+	#pause = 0.5
+
+//	#firetargets = "repel_T2_window"
+//	#pause = 0.5
+//	#firetargets = "repel_T2"
+
+	@T1Style
+	$speaker = Moses2
+	#text = "#TURNCRANK_MOSES12",
+	sound = Moses12_,
+	pause = 3.0
+}
+
+
+
+
+
+
+
+%end_mission_sequence
+{
+	@T1Style
+	$speaker = Moses2
+	#text = "",
+	sound = Moses14_
+
+	#pause = 0.5
+
+	#firetargets = "Moses_death_explosion1"
+
+	#pause = 0.5
+
+	#firetargets = "Moses_death_explosion2"
+
+	#pause = 1.0
+
+	#firetargets = "Moses_death_explosion3"
+
+	#pause = 0.5
+
+	@RadioStyle
+	#text = "",
+//	#text = "Both secure...",
+	sound = CNC9_
+
+	@TitleStyle
+	#text = "#GENERIC_SUCCESS"
+
+	#firetargets = "end_mission"
+
+}
+
+
+
+
+

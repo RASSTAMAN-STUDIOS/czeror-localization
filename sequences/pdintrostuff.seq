@@ -1,0 +1,21 @@
+
+
+%apcSequence
+{
+	#firetargets="APCQuake"	
+	#pause=5
+	#firetargets="DoorCrash"
+	#pause=3
+	#firetargets="apc-door0"
+	#pause=.3
+	#firetargets="Guy1Go"  
+	#pause=.5               
+	#firetargets="Guy2Go"  
+	#pause=.5               
+	#firetargets="Guy3Go"
+	#firetargets="idlechange1"
+	#firetargets="idlechange2"
+	#firetargets="idlechange3"
+	
+}
+

@@ -1,0 +1,272 @@
+!sentences
+{
+	CNCvoice1_0 sandstorm/cnc_gettingclbio
+	CNCvoice2_0 sandstorm/cnc_plantrcb
+	CNCvoice3_0 sandstorm/cnc_scudlau
+	CNCvoice4_0 sandstorm/cnc_trying
+	CNCvoice5_0 sandstorm/cnc_beadv
+	CNCvoice6_0 sandstorm/cnc_elimscud
+	CNCvoice7_0 sandstorm/cnc_timetomovel
+	SASleader1_0 sandstorm/sass_comeong
+	SASleader2_0 sandstorm/sass_letsroll
+	SASleader3_0 sandstorm/sass_movout
+}
+
+
+
+
+
+%lot1alert1_sequence
+{
+	#firetargets = "lot1_t1_spawn"
+	#firetargets = "lot1_t2_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "lot1_t1_script"
+	#firetargets = "lot1_t2_script"
+}
+
+
+
+
+
+%lot1alert2_sequence
+{
+	#firetargets = "lot1_t3_spawn"
+	#firetargets = "lot1_t4_spawn"
+	#firetargets = "lot1_t6_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "lot1_t3_script"
+	#firetargets = "lot1_t4_script"
+	#firetargets = "lot1_t6_script"
+}
+
+
+
+
+
+
+%tankarea1alert_sequence
+{
+	#firetargets = "tankarea1goon1_spawn"
+	#firetargets = "tankarea1goon2_spawn"
+	#firetargets = "tankarea1goon3_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "tankarea1goon1_script"
+	#firetargets = "tankarea1goon2_script"
+	#firetargets = "tankarea1goon3_script"
+}
+
+
+
+
+
+
+
+
+
+
+%tankarea1alert2_sequence
+{
+	#firetargets = "tankarea1goon4_spawn"
+	#pause = 0.5
+	#firetargets = "tankarea1goon4_script"
+}
+
+
+
+
+%lot2alert1_sequence
+{
+	#firetargets = "lot2_t1_spawn"
+	#firetargets = "lot2_t2_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "lot2_t1_script"
+	#firetargets = "lot2_t2_script"
+
+	#pause = 1.0
+
+	#firetargets = "lot2_t1_door"
+}
+
+
+
+
+
+%lot2alert2_sequence
+{
+	#firetargets = "lot2_t3_spawn"
+	#firetargets = "lot2_t4_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "lot2_t4_script"
+
+	@RadioStyle
+	#text = "",
+//	#text = "You should be getting close to the bio-chem storage tanks.",
+	sound = CNCvoice1_,
+	pause = 5.0
+
+//	#firetargets = "patrol_chopper1_spawn"
+}
+
+
+
+
+
+
+%lot2alert3_sequence
+{
+	#firetargets="objective2"
+
+	#firetargets = "lot2_t5_spawn"
+	#firetargets = "lot2_t6_spawn"
+	#firetargets = "lot2_t7_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "lot2_t5_script"
+	#firetargets = "lot2_t6_script"
+	#firetargets = "lot2_t7_script"
+
+	#pause = 6.5
+
+	#firetargets = "SpottedMusic"
+
+	@RadioStyle
+	#text = "",
+//	#text = "Plant RC bombs on each of those bio-chem tanks and take cover.",
+	sound = CNCvoice2_,
+	pause = 5.0
+
+	#firetargets="objective3"
+	@ObjectiveStyle
+	#text="#OBJ3_STORM_NEW"
+}
+
+
+
+
+
+%objective3_sequence
+{
+	#firetargets="objective3"
+
+	#pause = 6.5
+
+	#firetargets="objective4"
+	@ObjectiveStyle
+	#text="#OBJ4_STORM_NEW"
+}
+
+
+
+
+
+
+
+
+%lot3alert1_sequence
+{
+	#firetargets = "lot3_t1_spawn"
+	#firetargets = "lot3_t3_spawn"
+	#firetargets = "lot3_t7_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "lot3_t1_script"
+	#firetargets = "lot3_t3_script"
+}
+
+
+
+
+
+%lot3alert2_sequence
+{
+	#firetargets = "lot3_t4_spawn"
+	#firetargets = "lot3_t5_spawn"
+	#firetargets = "lot3_t6_spawn"
+	#firetargets = "lot3_t8_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "lot3_t4_script"
+	#pause = 2.5
+	#firetargets = "lot3_t5_script"
+	#pause = 6.5
+	#firetargets = "lot3_t6_script"
+}
+
+
+
+
+%lot3alert3_sequence
+{
+	#firetargets = "lot3_t2_spawn"
+	#firetargets = "lot3_t9_spawn"
+	#firetargets = "lot3_t10_spawn"
+	#firetargets = "lot3_t11_spawn"
+	#firetargets = "lot3_t12_spawn"
+
+	#pause = 0.5
+
+	#firetargets = "lot3_t2_script"
+	#firetargets = "lot3_t10_script"
+	#pause = 2.5
+	#firetargets = "lot3_t11_script"
+	#pause = 6.5
+	#firetargets = "lot3_t12_script"
+
+	#firetargets = "SpottedMusic"
+
+	@RadioStyle
+	#text = "",
+//	#text = "They are trying to move the scud launcher out.",
+	sound = CNCvoice4_,
+	pause = 5.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "That scud launcher is most likely armed...",
+	sound = CNCvoice6_,
+	pause = 5.0
+}
+
+
+
+
+%end_mission_sequence
+{
+	#pause = 0.5
+
+	#firetargets="objective4"
+
+	@TitleStyle
+	#text = "#GENERIC_SUCCESS"
+
+	@RadioStyle
+	#text = "",
+//	#text = "Good job lad...",
+	sound = CNCvoice7_,
+	pause = 5.0
+
+	#firetargets = "end_mission"
+}
+
+
+
+
+
+
+
+
+

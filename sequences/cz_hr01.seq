@@ -1,0 +1,93 @@
+!sentences
+{
+	// ==============================================================
+	// High Rise Mission Breifing
+	// ==============================================================
+ 
+	Briefing_1_talk0 HighRise/sasc_pagetorn
+	// wav_time_12.860
+	Briefing_2_talk0 HighRise/sasc_theyfort
+	// wav_time_4.404
+	Briefing_3_talk0 HighRise/sasc_badnews
+	// wav_time_8.192
+	Briefing_4_talk0 HighRise/sasc_m5notknow
+	// wav_time_6.297
+	Briefing_5_talk0 HighRise/sasc_youzip
+	// wav_time_8.465
+	Briefing_6_talk0 HighRise/sasc_blather
+	// wav_time_4.821
+	Briefing_7_talk0 HighRise/sasc_godspeed
+	// wav_time_8.522
+
+
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%SAS_Commander
+{
+	@CT1Style
+	$speaker	= SAS_commander
+	$listener	= Player
+}
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%Commander_talk10
+{
+
+	#firetargets="Start_music"
+
+	#pause = .2
+	#firetargets = "hud_off"		// Turns the hud off 
+	#firetargets = "freeze_player"	// Calls the IRS
+	#pause = 1
+	
+	#firetargets = "env_fade"		// Env_fade that fades from, with a 15 sec holdtime, and a duration of 4	
+
+	@TitleStyle
+	#text = "#HIGHRISE_TITLE"
+	#pause = 5			// This pause ensures that the title is on screen long enough for dramatic effect, and for any level sounds to start making an impact
+
+	@SubtitleStyle
+	#text = "#RiseHard_SUBTITLE"
+
+	#pause = 8			// This pause ensurse that the subtitle is on long enough for the player to read it and for it to fade out before the fade-in begins. (This pause is adjustable)
+
+
+	@SAS_Commander	#sound = Briefing_1_talk,	pause = 12.860,	channel = 1 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+		//text = "Today we have a page torn directly out of the worst-case 
+		//		scenario handbook, here's the good news, a LARGE group of 
+		//		terrorists have taken over a hi-rise in downtown."
+
+	@SAS_Commander	#sound = Briefing_2_talk,	pause = 4.404,	channel = 2 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+		//text = "They have fortified the main entrance and positioned heavy
+		//		 weaponry on multiple floors."
+
+	@SAS_Commander	#sound = Briefing_3_talk,	pause = 8.192,	channel = 3 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+		//text = "Now the bad news, they have a tactical nuclear device and 
+		//		are planning on setting it off in the next two hours."
+
+	@SAS_Commander	#sound = Briefing_4_talk,	pause = 6.297,	channel = 4 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+		//text = "We don't know the location of the nuke yet, so we will 
+		//		have spotters on lookout during the operation."
+
+	// @SAS_Commander	#sound = Briefing_5_talk,	pause = 8.465,	channel = 5 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+		//text = "Since the ground entrances are completely compromised, you 
+		//		will be airlifted to an adjacent rooftop, from there you 
+		//		will zip-line into the hi-rise."
+
+	@SAS_Commander	#sound = Briefing_6_talk,	pause = 4.821,	channel = 1 // LOCALIZE_WAVFILE_LENGTH_ADJUST
+		//text = "You'll receive further instructions once inside the building."
+
+	@SAS_Commander	#sound = Briefing_7_talk,	pause = 4.0
+		//text = "Good luck."
+
+	#firetargets="end_map",	pause = 2
+	#firetargets="end_map2"
+
+}

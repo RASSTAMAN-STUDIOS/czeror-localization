@@ -1,0 +1,9 @@
+
+
+%explodeSequence
+{
+	#text="BOOM"
+	#firetargets="killbuilding"				
+	#pause=5
+	#text="Building destroyed"			
+}

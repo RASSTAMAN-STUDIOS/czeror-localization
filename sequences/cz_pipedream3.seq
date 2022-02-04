@@ -1,0 +1,484 @@
+//============================================
+// Pipedream2 Dialog Sequences (cz_pipedream2)
+// Mike "BALD" Porter
+//============================================
+
+!sentences
+{
+
+Spetsnaz_Soldier01_talk0 pipedream/spzs_careciv
+
+Spetsnaz_Pilot01_talk0 pipedream/spzp_copyair
+Spetsnaz_Pilot02_talk0 pipedream/spzp_hostrans
+Spetsnaz_Pilot03_talk0 pipedream/spzp_targelim
+
+Hostage_A01_talk0 pipedream/pipeh1_helpusover
+Hostage_A02_talk0 pipedream/pipeh1_arg
+
+Hostage_B01_talk0 pipedream/pipeh1_thankgod
+
+Hostage_C01_talk0 pipedream/pipeh2_thankgod
+
+CNC_Voice01_talk0 pipedream/cnc_rebinterc
+CNC_Voice02_talk0 pipedream/cnc_getmovb
+CNC_Voice03_talk0 pipedream/cnc_whatwaiting
+CNC_Voice04_talk0 pipedream/cnc_goodj3
+CNC_Voice05_talk0 pipedream/cnc_comradethere
+
+Terrorist_C01_talk0 pipedream/pipet3_getload
+
+Terrorist_D01_talk0 pipedream/pipet4_keepoff
+Terrorist_D02_talk0 pipedream/pipet4_bomb30
+
+//============================================
+//NPC Chatter
+//============================================    
+
+NPC_OK_RUM h/npc_m_yesdo_ru
+NPC_OK_RUM h/npc_m_right_ru
+NPC_OK_RUM h/npc_m_ok_ru
+NPC_WAIT_RUM h/npc_m_waithere_ru
+NPC_WAIT_RUM h/npc_m_stayhere_ru
+NPC_WAIT_RUM h/npc_m_movemusc_ru
+NPC_STOP_RUM h/npc_m_notfurth_ru
+NPC_STARE_RUM h/npc_m_lookme_ru
+NPC_STARE_RUM h/npc_m_yousure_ru
+NPC_HELLO_RUM h/npc_m_hello_ru
+NPC_HELLO_RUM h/npc_m_officer_ru
+NPC_ANSWER_RUM h/npc_m_iworried_ru
+NPC_ANSWER_RUM h/npc_m_canttell_ru
+NPC_ANSWER_RUM h/npc_m_whatdoth_ru
+NPC_ANSWER_RUM h/npc_m_dontid_ru
+NPC_QUESTION_RUM h/npc_m_whatgon_ru
+NPC_QUESTION_RUM h/npc_m_didhear_ru
+NPC_QUESTION_RUM h/npc_m_whoare_ru
+NPC_QUESTION_RUM h/npc_m_thosepol_ru
+NPC_IDLE_RUM h/npc_m_howhapp_ru
+NPC_IDLE_RUM h/npc_m_whyme_ru
+NPC_IDLE_RUM h/npc_m_sudden_ru
+NPC_IDLE_RUM h/npc_m_whatgo_ru
+NPC_NOGO_RUM h/npc_m_dontgoth_ru
+NPCONST_RUM h/npc_m_iseeone_ru
+NPCONST_RUM h/npc_m_theyhere_ru
+NPCONST_RUM h/npc_m_theygotguns_ru
+NPC_HEAR_RUM h/npc_m_hearthat_ru
+NPC_HEAR_RUM h/npc_m_someover_ru
+NPC_WOUND_RUM h/npc_m_beenshot_ru
+NPC_WOUND_RUM h/npc_m_ow_ru
+NPC_WOUND_RUM h/npc_m_arg_ru
+NPCORTAL_RUM h/npc_m_notgoingm_ru
+NPCORTAL_RUM h/npc_m_noo_ru
+NPCORTAL_RUM h/npc_m_ahhh1_ru
+NPC_CUREA_RUM h/npc_m_youdontlo_ru
+NPC_CUREA_RUM h/npc_m_sureOK_ru
+NPC_HEAL_RUM h/npc_m_heretake_ru
+NPC_HEAL_RUM h/npc_m_letme_ru
+NPC_PLFEAR_RUM h/npc_m_thoughtc_ru
+NPC_PLFEAR_RUM h/npc_m_getawaym_ru
+NPC_PLFEAR_RUM h/npc_m_helost_ru
+NPC_FEAR_RUM h/npc_m_ahh2_ru
+NPC_FEAR_RUM h/npc_m_help2_ru
+NPC_FEAR_RUM h/npc_m_whatgo2_ru
+NPC_SCREAM_RUM h/npc_m_omg_ru
+NPC_SCREAM_RUM h/npc_m_helpme_ru
+NPC_SCREAM_RUM h/npc_m_ahh3_ru
+NPC_SCREAM_RUM h/npc_m_thisnot_ru
+NPC_SCREAM_RUM h/npc_m_whatstop_ru
+NPC_SCREAM_RUM h/npc_m_dontdo_ru
+
+//============================================
+//Hostage Chatter
+//============================================    
+
+H_HELP_RU h/h_m_getmeout_ru
+H_HELP_RU h/h_m_okletsgo_ru
+H_HELP_RU h/h_m_gethellout_ru
+H_HELP_RU h/h_m_ohlets_ru
+	
+H_THANK_RU h/h_m_thanksave_ru
+H_THANK_RU h/h_m_owelife_ru
+H_THANK_RU h/h_m_gladover_ru
+H_THANK_RU h/h_m_thanks_ru
+	
+H_PAIN_RU h/h_m_pain1_ru
+H_PAIN_RU h/h_m_pain2_ru
+H_PAIN_RU h/h_m_pain3_ru
+H_PAIN_RU h/h_m_pain4_ru
+	
+H_DEATH_RU h/h_m_death1_ru
+H_DEATH_RU h/h_m_death2_ru
+H_DEATH_RU h/h_m_death3_ru
+H_DEATH_RU h/h_m_death4_ru
+
+H_PLFEAR_RU h/h_m_mygodw_ru
+H_PLFEAR_RU h/h_m_ithought_ru
+H_PLFEAR_RU h/h_m_pleasenok_ru
+	
+H_FEAR_RU h/h_m_dontdie_ru
+H_FEAR_RU h/h_m_yousavr_ru
+H_FEAR_RU h/h_m_wherewego_ru
+
+H_SCREAM_RU h/h_m_ahh1_ru
+H_SCREAM_RU h/h_m_lookout_ru
+H_SCREAM_RU h/h_m_they'rehere_ru
+	
+H_SICK_RU h/h_m_cantgo_ru
+H_SICK_RU h/h_m_toosick_ru
+H_SICK_RU h/h_m_goinpuke_ru
+
+H_BETTER_RU h/h_m_feelmuch_ru
+H_BETTER_RU h/h_m_didtr_ru
+H_BETTER_RU h/h_m_thankshot_ru
+
+}
+
+
+//============================================
+//	Speaker, Style & Definitions
+//============================================
+
+%Spetsnaz_Soldier
+{
+	@RadioStyle
+}
+
+%Spetsnaz_Pilot
+{
+	@RadioStyle
+}
+
+%Hostage_A
+{
+	@NPC1Style
+	$speaker = hostagewindowguy
+	$listener = player 
+}
+
+%Hostage_B
+{
+	@NPC2Style
+	$speaker = hostagedude1
+	$listener = player 
+	
+}
+
+%Hostage_C
+{
+	@NPC3Style
+	$speaker = hostagedude2 
+	$listener = player 
+	
+}           
+
+%CNC_Voice			
+{
+	@RadioStyle
+}	
+
+%Terrorist_A
+{
+	@T1Style
+}	
+
+%Terrorist_B
+{
+	@T2Style
+}	
+
+%Terrorist_C
+{
+	@T3Style
+}	
+    
+%Terrorist_D
+{
+	@T1Style
+}	
+
+//============================================
+//	End Definitions
+//============================================
+ 
+//============================================
+//	Begin Regular Sequence  Info
+//============================================
+      
+      
+ 
+%heliodialog_Sequence
+{
+	@Spetsnaz_Pilot		#text = "", //"Copy, air support inbound.",						
+						sound = Spetsnaz_Pilot01_talk,
+						pause = 3
+}						
+
+
+%heliohostagedialogSequence
+{                         
+	#firetargets="weldingguyspawn"
+	#firetargets="helosound0"
+	#pause = 2
+	#firetargets="c_dn_on"              
+	#pause = 2
+	#firetargets="helosound"
+	#firetargets="guycomestoweld"
+	#pause = 1.5  	
+   	@Spetsnaz_Pilot		#text = "", //"Hostage transport is in place.  
+									//Get those civilians to the rescue zone",
+						sound = Spetsnaz_Pilot02_talk,
+						pause = 2	
+						
+	#firetargets="morects"
+		@ObjectiveStyle          
+	#text = "#OBJ3_PDREAM_NEW"		
+	#firetargets = "OBJ3"
+	
+	#pause = 2
+   	#firetargets="gettheseguys"
+}
+
+%hostageCTSequence
+{
+	//make everyone invulnerable?
+		
+	//music and other end shit
+	#firetargets = "success_music"
+	
+	#pause = 2.0
+	
+	@Spetsnaz_Soldier	//#text = "" //"I'll take care of these civilians.",						
+	#sound = Spetsnaz_Soldier01_talk,
+	pause = 3.0
+	
+	@CNC_Voice			#text = "", //"Good job!  The facility is clear.  Clean-up teams are moving in.",
+					sound = CNC_Voice04_talk
+					
+	#firetargets = "OBJ4" //check off rescuing hostages
+	
+	#pause = 3.0
+		
+	#firetargets = "hud_off"
+	#firetargets = "nextmission" //fade and level load
+	#pause = 2.0	
+	
+	//used as a success msg instead
+	@TitleStyle
+	#text = "#GENERIC_SUCCESS"	
+}						
+
+
+%hostagewaveSequence
+{
+   	#firetargets="hostagewindow" 
+	@Hostage_A       	#text = "", //"Help us!  Pozhalujsta! We're over here!",						
+						sound = Hostage_A01_talk,
+						pause = 2			
+   	//#pause = .5                       
+   	#firetargets="gunshot"
+   	#firetargets="hostagewindowguykiller"   	
+	@Hostage_A       	#text = "", //"Arrrghhh!",						
+						sound = Hostage_A02_talk,
+						pause = 2			
+   	#pause = .5
+   	//#firetargets="hostagewindow"
+   	#firetargets = "m01"
+   	#pause = .5
+   	#firetargets = "spot01"
+   	#pause = 1.0
+   	#firetargets="hostagewindow02"
+   	#pause = .5
+   	#firetargets = "m02"
+   	#pause = .5
+   	#firetargets = "spot02"
+   	#pause = 1.0
+   	#firetargets="hostagewindow03"
+   	#pause = .5
+   	#firetargets = "m03"
+   	#pause = .5
+   	#firetargets = "spot03"
+}
+
+
+						
+%moredialogSequence	
+{
+	@Hostage_B       	#text = "", //"Spasibo! Bol'shoe spasibo! Thank god you're here!",						
+						sound = Hostage_B01_talk,
+						pause = 4			
+	
+	@Hostage_C       	#text = "", //"Spasibo! Bol'shoe spasibo! Thank god you're here!",						
+						sound = Hostage_C01_talk,
+						pause = 4	
+}						
+
+%hurryupSequence
+{						
+	@CNC_Voice			#text = "", //"Get moving! Bystro, bystro!",						
+						sound = CNC_Voice02_talk,
+						pause = 6									  
+}						
+						
+
+						
+%toggeldooropenSequence
+{
+	#firetargets="openkey"
+	#pause = .1
+	#firetargets="openkeyidle"
+	#firetargets="gdoormovesound"	
+	#killtargets="doorblocker1"	
+	#firetargets="c_dn_off"	
+	#firetargets="c_dn_off0"
+}
+
+%doorpuzzleSequence
+{ 
+	#firetargets="powerforcameranew"
+	#firetargets="elctricgenlightsnew"
+	#firetargets="electrichumnew"
+	#firetargets="console1a"
+	#firetargets="panelmoniters"
+	//#firetargets="lookstupid"
+	#firetargets = "wander01"
+}   
+
+%dooropennowSequence
+{
+	#firetargets="killthatshit"
+	#pause = 2
+	#firetargets="gdoormovesoundnew"
+	#killtargets="doorblockernew"	
+}                       
+
+
+//thread not used as of 06.27.03
+%cleanuplooseendSequence
+{
+	#killtargets="bomby"
+	#killtargets="radiozone"   
+	#pause = 1
+	#firetargets="locked_gshack"
+}
+
+%terrorists_activate_bomb
+{
+	#firetargets = "alert_bombsetupdude"
+	@Terrorist_D		#text = "", //Bomb is armed!  30 seconds!"
+				sound = Terrorist_D02_talk,
+				pause = 3  
+	#pause = 1
+		@ObjectiveStyle          
+	#text = "#OBJ5_PDREAM_NEW"		
+	#firetargets = "OBJ5"
+	#firetargets = "bomb_plantedmusic"
+}                                    
+
+
+%player_won
+{	
+	#firetargets = "bomb_disarmed_sound"	
+	@CNC_Voice			#text = "", //"Good job!  The facility is clear.  Clean-up teams are moving in.",
+					sound = CNC_Voice04_talk,
+					pause = 4.0      
+	#pause = 1					
+	#firetargets = "OBJ4"
+	#pause = 1
+	#firetargets = "OBJ5"					
+	//#firetargets = "nextmissionfade" //just the fade
+	#firetargets = "nextmission" //fade and level load
+	#firetargets = "hud_off"
+	#firetargets = "success_music"
+	#pause = 2.0
+	
+	//used as a success msg instead
+	@FailureStyle
+	#text = "#GENERIC_SUCCESS"
+}
+
+%player_failed
+{
+	#firetargets = "kill_player"
+	#killtargets = "defuse_zone"
+   	#killtargets = "beep1"
+   	#firetargets = "c4_explosion_snd"
+   	#firetargets = "pipedebris"
+   	#firetargets = "pipexplosion"   	
+   	#firetargets = "bigbangbombbaby"
+   	#firetargets = "explo_manager"
+	#killtargets = "bomb"   	
+   	#firetargets = "pipe_busts_open" //makes pipe goto death animation
+   	#killtargets = "bomb_on"
+   	#killtargets = "bomb_off"
+   	#pause = 3.0
+   	@CNC_Voice	#text = "", //"Comrade, are you there!?  Comrade!!!",
+			sound = CNC_Voice05_talk,
+			pause = 2.0	
+	#firetargets = "bomb_fadeout"
+	#firetargets = "hud_off"
+	#firetargets = "failure_music"	
+	#pause = 2.0
+	
+	@FailureStyle
+	#text = "#PIPEDREAM_FAILURE"
+
+	#pause = 3.0
+	#firetargets = "autoload"
+}
+
+%hostageskilledSequence
+{
+	#firetargets = "bomb_fadeout"
+	#firetargets = "hud_off"
+	#firetargets = "failure_music"	
+	#pause = 2.0
+	
+	@FailureStyle
+	#text = "#PIPEDREAM_FAILURE"
+
+	#pause = 3.0
+	#firetargets = "load"
+}
+
+%gatepuzzleSequence
+{
+	#firetargets="powerforcamera"
+	#firetargets="elctricgenlightsnew1" 
+	#firetargets="console1a0"
+	#firetargets="electrichum"
+	#pause = 1
+	#firetargets="lockeddoorelectricroom"
+	#firetargets="Button_lightOFF"
+	#firetargets="Button_lightON"
+}
+
+%helogoawaySequence
+{  
+	#firetargets="levelthing"
+	#firetargets="helosound1"
+	#pause = .5
+	#firetargets="helosound"
+	#killtargets="help"
+	#killtargets="chopper_dn0"
+	#killtargets="hostagedude1"
+	#killtargets="theseguys"
+	#firetargets="topgate"
+	#firetargets="topgate0"   
+	#killtargets="rescueicon"
+}  
+                   
+%bomb_made_gone     
+{              
+#firetargets="beep1"
+#firetargets="bomb_disarmed_sound"
+#firetargets="bomb_failure_remove"
+#firetargets="bomb_off"
+#firetargets="bomb_on"
+#firetargets="bombexplode1"
+}
+
+
+
+
+//============================================
+//	End Regular Sequence Info
+//============================================

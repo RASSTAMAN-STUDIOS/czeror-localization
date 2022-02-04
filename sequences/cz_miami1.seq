@@ -1,0 +1,279 @@
+//============================================
+// Miami Heat Dialog Sequences (cz_miami1)
+// Thearrel "Kiltron" McKinney
+//============================================
+
+//============================================
+// Sentences
+//============================================
+
+!sentences
+{
+
+miami_intro1_talk0 miami/seall_wegotbank
+miami_intro2_talk0 miami/seall_wecut
+miami_intro3_talk0 miami/robb1_backpigs
+miami_intro4_talk0 miami/poff1_officerdown
+miami_intro5_talk0 miami/psnip_cleanshot
+miami_intro6_talk0 miami/cnc_negrisk
+miami_intro7_talk0 miami/robb1_seewhat
+miami_intro8_talk0 miami/robb1_ourdemands
+miami_intro9_talk0 miami/seall_getdrain
+squad_car_approach1_talk0 miami/poff1_stayback
+officer1_use_talk0 miami/poff2_wewonder poff2_betterlate
+officer2_use_talk0 miami/poff1_needjoin poff1_stalling
+squad_leader_use_talk0 miami/seals_getmov
+sewers_dialog1_talk0 miami/seals_weneeddown
+where_are_you_dialog1_talk0 miami/seals_whereent
+welding_hole1_talk0 miami/seals2_almostdone
+welding_hole2_talk0 miami/seals_thereitis
+welding_hole3_talk0 miami/seall_assessit
+
+}
+
+//============================================
+// Speaker Style & Definitions
+//============================================
+
+%Opening_Sequence			
+{
+	#firetargets = "hud_off" 
+	#pause = 1
+	
+	#firetargets = "start_fade"	
+
+	@TitleStyle
+	#text = "#MIAMI_TITLE", // LOCALIZE_ME
+	pause = 5,
+	holdtime = 3
+
+	@SubtitleStyle
+	#text = "#MIAMI_LOCAL" // LOCALIZE_ME
+	#pause = 6.5
+
+}
+
+%squad_leader		
+{
+	@CT1Style
+	$speaker=squad_leader
+}
+
+%terrorist_killer2		
+{
+	@T1Style
+	$speaker=terrorist_killer2
+}
+
+%officer1		
+{
+	@CT1Style
+	$speaker=officer1
+}
+
+%officer2		
+{
+	@CT1Style
+	$speaker=officer2
+}
+
+%squad_sniper		
+{
+	@CT1Style
+	$speaker=squad_sniper
+}
+
+%ct_welder		
+{
+	@CT1Style
+	$speaker=ct_welder
+}
+
+%ct_pipe_dropdown		
+{
+	@CT1Style
+	$speaker=ct_pipe_dropdown
+}
+
+//============================================
+// Sequence ID's
+//============================================
+
+%squad_briefing
+{
+
+	@squad_leader		//#text="We've got bank robbers covering all the entrances, and
+					//an unknown number of hostages inside.  Forced entry topside
+					//is ill advised, so we are going in through the city drainage
+					//system.",
+					#text="",
+					sound=miami_intro1_talk,
+					pause = 9.6
+
+	@squad_leader		//#text="We will cut through the sub floor in the network
+					//equipme...wha?",
+					#text="", 
+					sound=miami_intro2_talk,
+					pause = 2.3
+
+	@officer1			//#text="Officer down!",
+					#text="",
+					sound=miami_intro4_talk,
+					pause = 1.4
+
+	@terrorist_killer2	//#text="I said stay back pigs!", // LOCALIZE_ME
+					#text="",
+					firetargets="terrorist_speak1",
+					sound=miami_intro3_talk,
+					pause = 2.2
+
+	@squad_sniper		//#text="I've got a clean shot, awaiting confirmation.
+					//Let me take this bastard out.",
+					#text="",
+					//firetargets="cam1",
+					sound=miami_intro5_talk,
+					pause = 4.5
+
+	@officer1			//#text="Negative, stand down - we can't risk the packages.",
+					#text="",
+					sound=miami_intro6_talk,
+					pause = 3.2
+
+	@terrorist_killer2	//#text="See what happens when you don't listen?", // LOCALIZE_ME
+					#text="",
+					firetargets="terrorist_speak2",
+					sound=miami_intro7_talk,
+					pause = 2.2
+
+	@terrorist_killer2	//#text="If our demands are not met within 2 hours, another
+					//hostage dies!", // LOCALIZE_ME
+					#text="",
+					firetargets="terrorist_speak3",
+					sound=miami_intro8_talk,
+					pause = 4.2
+
+	@squad_leader		//#text="Get to the drainage entrance, lets get this over with.",
+					#text="",
+					firetargets="new_objective01_sequence", // NEW
+					sound=miami_intro9_talk,
+					pause = 2.8
+			
+}
+
+%squad_car_approach
+{
+
+	@officer2			//#text="Stay Back! They'll shoot anybody that gets any closer
+					//than this barricade!",
+					#text="",
+					sound=squad_car_approach1_talk,
+					pause = 3.5
+
+}
+
+%officer1_use
+{
+
+	@officer1			//#text="We were wondering if you guys would bother showing up.
+					//Better late than never, eh?",
+					#text="",
+					sound=officer1_use_talk,
+					pause = 2.5
+}
+
+%officer2_use
+{
+
+	@officer2			//#text="You need to join your teammates in the drainage system.
+					//Stalling will get more hostages killed, get moving!",
+					#text="",
+					sound=officer2_use_talk,
+					pause = 3.3
+}
+
+%squad_leader_use
+{
+
+	@squad_leader		//#text="You heard the man, get moving!",
+					#text="",
+					sound=squad_leader_use_talk,
+					pause = 3.3
+}
+
+%need_you_in_sewers_dialog
+{
+
+	@RadioStyle			//#text="We need you down in the drainage tunnels, get moving.",
+					#text="",
+					sound=sewers_dialog1_talk,
+					pause = 2.9
+
+}
+
+%where_are_you_dialog
+{
+
+	@RadioStyle			//#text="Where are you, we are nearing the entry point.",
+					#text="",
+					sound=where_are_you_dialog1_talk,
+					pause = 2.2
+
+}
+
+%welding_hole
+{
+
+	@ct_welder			//#text="Almost done...",
+					#text="",
+					sound=welding_hole1_talk,
+					pause = 8.5
+
+	@ct_welder			//#text="There it is....ok, lets go.",
+					#text="",
+					sound=welding_hole2_talk,
+					firetargets="new_objective02_complete", // NEW
+					pause = 2.5
+
+	@ct_pipe_dropdown		//#text="Assess the situation inside. When you radio for
+					//support, the assault element will move in. Good luck.",
+					#text="",
+					sound=welding_hole3_talk,
+					pause = 5.8
+
+}
+
+//============================================
+// Mission Failure
+//============================================
+
+%mission_failure_message1
+{
+	@FailureStyle	#text="#MIAMI_FAILURE1",
+				holdtime = 4
+
+}
+
+%mission_failure_message2
+{
+	@FailureStyle	#text="#MIAMI_FAILURE2",
+				holdtime = 4
+
+}
+
+
+
+//=============================================
+// Mission Objectives
+//=============================================
+
+%new_objective01
+{
+	@ObjectiveStyle	#text = "#OBJ1_MIAMI_NEW", //#text = "NEW OBJECTIVE: Proceed to the drainage entrance"
+				firetargets="new_objective01_complete"
+}
+
+%new_objective02
+{
+	@ObjectiveStyle	#text = "#OBJ2_MIAMI_NEW", //#text = "NEW OBJECTIVE: Gain entry into the bank through drainage tunnels"
+				firetargets="new_objective02_complete"
+}

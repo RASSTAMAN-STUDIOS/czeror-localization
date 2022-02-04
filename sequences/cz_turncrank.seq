@@ -1,0 +1,278 @@
+$position = .8 .8
+$fadein = 1.5, holdtime = 2, fadeout = 0.5
+$color = 240 100 0, color2 = 0 100 240
+
+
+!sentences
+{
+	CNC1_0 turncrank/cnc_checkonetwo
+	CNC2_0 turncrank/cnc_entersepul
+	CNC3_0 turncrank/cnc_stopscrew
+	CNC4_0 turncrank/cnc_getintothat
+	CNC5_0 turncrank/cnc_thatsit
+	StairG1_0 turncrank/stairg_outtaface
+	StairG2_0 turncrank/stairg_lookinout
+	DoorG1_0 turncrank/doorg_entre
+	IntG1_0 turncrank/intg1_moseswait
+	IntG2_0 turncrank/intg2_dontkeep
+	IntG3_0 turncrank/intg2_halfhour
+	IntG4_0 turncrank/intg3_brief
+	Moses1_0 turncrank/moses_seemoney
+	Moses2_0 turncrank/moses_quickly
+	Moses3_0 turncrank/moses_ilovewait
+	Moses4_0 turncrank/moses_looksgood
+	Moses5_0 turncrank/moses_comeme
+	MosG1_0 turncrank/mosg1_betteropen
+	MosG2_0 turncrank/mosg2_moveit
+	CNC6_0 turncrank/cnc_firehole2
+	Moses6_0 turncrank/moses_killpigs
+	Moses7_0 turncrank/moses_run
+	Moses8_0 turncrank/moses_bust
+	Moses9_0 turncrank/moses_gettowarehouse
+	Moses10_0 turncrank/moses_takebas
+	CNC7_0 turncrank/cnc_multtarg
+	SEAL1_0 turncrank/seals_bedclear
+	SEAL2_0 turncrank/seals_targdown2
+	SEAL3_0 turncrank/seals_frontresclr
+	SEAL4_0 turncrank/seals_sectclr
+	SEAL5_0 turncrank/seals_takfire
+	SEAL6_0 turncrank/seals_moving2
+	SEAL7_0 turncrank/seals_clear2
+	CNC8_0 turncrank/cnc_housesec
+	Moses11_0 turncrank/moses_productspeak
+	Moses12_0 turncrank/moses_eaththis
+	Moses13_0 turncrank/moses_upicantkill
+	WareG1_0 turncrank/wareg1_inside
+	WareG2_0 turncrank/wareg2_takedown
+	WareG3_0 turncrank/wareg3_stopthem
+	Moses13_0 turncrank/moses_death
+	CNC9_0 turncrank/cnc_bothsecure
+	CNC10_0 turncrank/cnc_medevac
+}
+
+
+
+
+
+%titletext
+{
+	#firetargets = "under_cover"
+	#firetargets = "hud_off"
+
+	#pause = 0.1
+
+	#firetargets = "freeze_player"
+
+	#firetargets = "intro_fade_start"
+
+	#firetargets = "levelstart_autosave"
+
+	#pause = 1.0
+
+	#firetargets = "girl_script1"
+
+	@TitleStyle
+	#text = "#TURNCRANK_TITLE"
+
+	#pause = 5.0
+
+	@SubtitleStyle
+	#text = "#TURNCRANK_SUBTITLE"
+
+	#pause = 10.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Check, check, one-two, one-two...",
+	sound = CNC1_
+
+	#pause = 4.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "Enter Sepulveda's house and make the transaction.
+//Your briefcase is wired to send a signal to the
+//assault team when opened.  Do so ONLY when you are
+//sure we have Moses Sepulveda in the building.",
+	sound = CNC2_
+
+	#pause = 9.5
+
+	#firetargets = "freeze_player"
+
+	#firetargets = "hud_on"
+	#firetargets = "equip"
+
+	#firetargets="objective1"
+	@ObjectiveStyle
+	#text="#OBJ1_CRANK_NEW"
+}
+
+
+
+%playerwarning1_sequence
+{
+	@RadioStyle
+	#text = "",
+//	#text = "Stop screwing around, you'll blow the sting!",
+	sound = CNC3_,
+	pause = 5
+}
+
+
+
+
+%playerwarning2_sequence
+{
+	@RadioStyle
+	#text = "",
+//	#text = "Get into that house!  Move it!",
+	sound = CNC4_,
+	pause = 5
+}
+
+
+
+
+
+%housegoon_dummy_sequence
+{
+	#pause = 0.5
+}
+
+
+
+
+%housegoon1_sequence
+{
+	@T1Style
+	$speaker = housegoon1
+	#text = "",
+//	#text = "Moses is waiting for you in the back.",
+	sound = IntG1_,
+	pause = 3.0
+
+	#firetargets = "housegoon1_usetarget"
+}
+
+
+%housegoon2_sequence
+{
+	@T1Style
+	$speaker = housegoon2
+	#text = "",
+//	#text = "You don't want to keep him waiting friend.",
+	sound = IntG2_,
+	pause = 3.0
+
+	#firetargets = "housegoon2_usetarget"
+}
+
+%housegoon3_sequence
+{
+	@T1Style
+	$speaker = housegoon3
+	#text = "",
+//	#text = "Weren't you supposed to be here half an hour ago?",
+	sound = IntG3_,
+	pause = 3.0
+
+	#firetargets = "housegoon3_usetarget"
+}
+
+%housegoon4_sequence
+{
+	@T2Style
+	$speaker = housegoon4
+	#text = "",
+//	#text = "What's in the briefcase?",
+	sound = IntG4_,
+	pause = 3.0
+
+	#firetargets = "housegoon4_usetarget"
+}
+
+
+
+
+
+%porchgoon1_sequence
+{
+	@T2Style
+	$speaker = porchgoon1
+	#text = "",
+//	#text = "What's in the briefcase?",
+	sound = IntG4_,
+	pause = 3.0
+
+	#firetargets = "porchgoon1_usetarget"
+}
+
+
+
+
+
+
+%playerfailure_sequence
+{
+	@RadioStyle
+	#text = "",
+//	#text = "That’s it.  Abort mission, repeat, abort mission.",
+	sound = CNC5_,
+	pause = 5
+
+	#firetargets = "failurefade"
+	#pause = 1.0
+	#firetargets = "failure_reload"
+}
+
+
+
+
+
+%frontdoor_sequence
+{
+	#pause = 1.0
+
+	#firetargets = "radio_volume"
+
+	#pause = 1.0
+
+	#firetargets = "housegoon1_script1"
+
+	#pause = 1.0
+
+	#firetargets = "frontdoor"
+
+	#firetargets = "housegoon1_script1"
+
+	#firetargets="objective1"
+
+	#pause = 1.0
+
+	#firetargets="objective2"
+	@ObjectiveStyle
+	#text="#OBJ2_CRANK_NEW"
+
+	@T1Style
+	$speaker = housegoon1
+	#text = "",
+//	#text = "Entre,  Entre, homes!  You're late!",
+	sound = DoorG1_,
+	pause = 3.0
+
+	#firetargets = "housegoon5_snore"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

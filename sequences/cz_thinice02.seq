@@ -1,0 +1,34 @@
+// Ice Breaker dialog sequence files
+
+!sentences
+{
+	
+	Grenadeguy	brecon/rg9_intruder
+
+}
+
+//---------------------------------------------------------------------------
+// NPC, CT, and T speakers.
+//---------------------------------------------------------------------------
+
+%T_talking02
+{
+	@T2Style
+	$speaker	= grenadeguy
+}
+
+//---------------------------------------------------------------------------
+// NPC Dialog
+//---------------------------------------------------------------------------
+
+%wave_guy1
+{
+	$channel = 1
+	$fadein = 1.5, holdtime = 4, fadeout = 0.5
+	@T_talking02	#sound=Grenadeguy
+}
+
+%Squigy_cat
+{
+	// #text="My CaTS Are FuZZY!!!!!"
+}

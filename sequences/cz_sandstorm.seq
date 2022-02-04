@@ -1,0 +1,76 @@
+!sentences
+{
+	SASleader1_0 sandstorm/sasl_biochemfac
+}
+
+
+%titletext
+{
+	#firetargets = "hud_off"
+
+//	#firetargets = "intro_freeze"
+
+	#pause = 1.0
+
+	#firetargets = "intro_fade_start"
+
+	@TitleStyle
+	#text = "#SANDSTORM_TITLE"
+
+	#pause = 5.0
+
+	@SubtitleStyle
+	#text = "#SANDSTORM_SUBTITLE"
+
+	#pause = 3.0
+
+	#firetargets = "intro_shake1"
+
+	#pause = 3.0
+
+	#firetargets = "intro_shake3"
+	#pause = 2.0
+
+	#firetargets = "intro_shake4"
+	#pause = 4.0
+
+	@RadioStyle
+	#text = "",
+//	#text = "We are going in to take out the bio-chem facility in Tall Huqa.
+//This is a free-fire zone in MBN with no friendly presence.
+//Consider all personnel hostile.  Once you're detected, expect heavy resistance.",
+	sound = SASleader1_,
+	pause = 9.0
+
+	#firetargets = "intro_shake5"
+
+	#pause = 2.0
+
+	#firetargets = "intro_shake2"
+
+	#firetargets = "intro_fade_end"
+
+	#pause = 4.0
+
+	#firetargets = "trainstop_sound"
+
+	#pause = 6.0
+
+//	#firetargets = "intro_freeze"
+
+	#firetargets = "changelevel_fade"
+	#pause = 1.5
+	#firetargets = "changelevel_trigger"
+}
+
+
+
+
+
+
+
+
+
+
+
+
