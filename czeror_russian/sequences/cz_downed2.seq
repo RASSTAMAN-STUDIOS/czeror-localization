@@ -94,7 +94,7 @@ minediffuse_3_dialog0 downed/gsg9gl_setsite
 
 %mission_failure_message1
 {
-	@FailureStyle	#text="#DOWNED2_FAILURE1",
+	@FailureStyle	#text="#DOWNED_FAILURE1",
 				holdtime = 4
 
 }
