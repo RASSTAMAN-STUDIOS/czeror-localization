@@ -218,9 +218,9 @@
 	{
 		"ControlName"		"Button"
 		"fieldName"			"Cancel"
-		"xpos"				"384"
+		"xpos"				"372"
 		"ypos"				"410"
-		"wide"				"110"
+		"wide"				"128"
 		"tall"				"22"
 		"autoResize"		"0"
 		"pinCorner"			"2"
