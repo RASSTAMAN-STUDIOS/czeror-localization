@@ -1,43 +1,43 @@
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//|| CZ_Training01 Dialog Sequences (cz_train01) ||
-//|| Tom "ParadoX" Mustaine			 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//|| Последовательности диалогов CZ_Training01 (cz_train01)	 ||
+//|| Том "ParadoX" Мастейн									 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
-// Sentences for +use on actors and so on.
+// Фразы, которые воспроизводятся при использовании команды +use на актёрах и т.д.
 !sentences
 {
-	// The Receptionist in training 
+	// Секретарь приёмной комиссии на обучении 
 	Training_Rec_talk0 cz_training/rec_theyarew
 	Training_Rec_talk1 cz_training/rec_latest
 	Training_Rec_talk2 cz_training/rec_elepast
 	
-	// Worker #1 in training
+	// Работник #1 на обучении
 	Training_Worker_one0 cz_training/work1_sorrybus
 	Training_Worker_one1 cz_training/work1_pleaseno
 	Training_Worker_one2 cz_training/work1_wetalk
 
-	// Worker #2 in training
+	// Работник #2 на обучении
 	Training_Worker_two0 cz_training/work2_data
 	Training_Worker_two1 cz_training/work2_needtoget
 	Training_Worker_two2 cz_training/work2_plsdata
 	Training_Worker_two3 cz_training/work2_canihelp
 	
-//	// Worker #3 in training
+//	// Работник #3 на обучении
 //	Training_Worker_three0 cz_training/work3_hello
 //	Training_Worker_three1 cz_training/work3_trainth
 //	Training_Worker_three2 cz_training/work3_getmov
 	
-//	// Worker #4 in training
+//	// Работник #4 на обучении
 //	Training_Worker_four0 cz_training/work4_sorry
 //	Training_Worker_four1 cz_training/work4_yes
 //	Training_Worker_four2 cz_training/work4_doyou
 	
-	// Worker #5 in training
+	// Работник #5 на обучении
 	Training_Worker_five0 cz_training/work5f_whatup
 	Training_Worker_five1 cz_training/work5f_intense
 	Training_Worker_five2 cz_training/work5f_notgoodt
 	
-// Dialog called in the level	
+// Диалоги, вызываемые на уровне	
 	Training_Pleasewait0 		cz_training/rec_plswait
 	Training_IdConf0		cz_training/rec_idconf
 	Training_HelloandWelc0		cz_training/rec_hellocts
@@ -78,12 +78,12 @@
 	Training_TheyWill0		cz_training/tr_theywillfoll
 	Training_LeadCiv0		cz_training/tr_leadcivtosec
 	
-// Sentences for Hostages and other actors that had their stuff pulled from sentences.txt
-// NOTE FOR LOCALIZATION.  THIS BLOCK OF TEXT BELOW SHOULD BE
-// REPLACED BY THE LOCAL LANGUAGE BLOCK OF DIALOG FOR WHATEVER TARGET
-// LANGUAGE THE PRODUCT IS AIMING FOR.
+// Фразы заложников и других актёров, которые были взяты из файла sentences.txt
+// ПРИМЕЧАНИЕ ДЛЯ ЛОКАЛИЗАТОРОВ. ЭТОТ БЛОК ТЕКСТА ВНИЗУ ДОЛЖЕН БЫТЬ
+// ЗАМЕНЁН БЛОКОМ ДИАЛОГОВ НА МЕСТНОМ ЯЗЫКЕ ДЛЯ ЛЮБОГО ЦЕЛЕВОГО
+// ЯЗЫКА, НА КОТОРЫЙ ОРИЕНТИРОВАН ПРОДУКТ.
 // 
-// THIS BLOCK OF TEXT IS FOR AMERICAN ENGLISH NPC DIALOG
+// ЭТОТ БЛОК ТЕКСТА ПРЕДНАЗНАЧЕН ДЛЯ ДИАЛОГОВ NPC НА АМЕРИКАНСКОМ АНГЛИЙСКОМ ЯЗЫКЕ
 	
 	NPC_OK_AM0 npc/npc_m_yesdo_am
 	NPC_OK_AM1 npc/npc_m_right_am
@@ -226,11 +226,11 @@
 	NPC_SCREAM_AMF0 npc/npc_f_whatstop_am
 	NPC_SCREAM_AMF1 npc/npc_f_dontdo_am
 
-// NOTE FOR LOCALIZATION.  THIS BLOCK OF TEXT BELOW SHOULD BE
-// REPLACED BY THE LOCAL LANGUAGE BLOCK OF DIALOG FOR WHATEVER TARGET
-// LANGUAGE THE PRODUCT IS AIMING FOR.
+// ПРИМЕЧАНИЕ ДЛЯ ЛОКАЛИЗАТОРОВ. ЭТОТ БЛОК ТЕКСТА ВНИЗУ ДОЛЖЕН БЫТЬ
+// ЗАМЕНЁН БЛОКОМ ДИАЛОГОВ НА МЕСТНОМ ЯЗЫКЕ ДЛЯ ЛЮБОГО ЦЕЛЕВОГО
+// ЯЗЫКА, НА КОТОРЫЙ ОРИЕНТИРОВАН ПРОДУКТ.
 // 
-// THIS BLOCK OF TEXT IS FOR AMERICAN ENGLISH HOSTAGE DIALOG	
+// ЭТОТ БЛОК ТЕКСТА ПРЕДНАЗНАЧЕН ДЛЯ ДИАЛОГОВ ЗАЛОЖНИКОВ НА АМЕРИКАНСКОМ АНГЛИЙСКОМ ЯЗЫКЕ	
 	H_HELP_AM0 h/h_m_getmeout_am
 	H_HELP_AM1 h/h_m_okletsgo_am
 	H_HELP_AM2 h/h_m_gethellout_am
@@ -315,7 +315,7 @@
 }
 
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	BEGIN: Speaker, Style & Definitions	 ||
+//||	НАЧАЛО: Диктор, стиль и определения		 ||
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 %Receptionist
 {
@@ -345,21 +345,21 @@
 	$listener	= player
 }
 
-%Observer1		// Hallway to ducking area
+%Observer1		// Коридор, ведущий в зону приседания
 {
 	@NPC1Style
 	$speaker 	= area2_observer2
 	$listener	= player
 }
 
-%Trainer1		// Ducking area
+%Trainer1		// Зона приседания
 {
 	@NPC1Style
 	$speaker	= area3_observer1
 	$listener	= player	
 }
 
-//Added 2nd trainer to the ducking obstacle course
+//Добавлен 2-й инструктор на курс по преодолению препятствий с приседанием
 %Trainer1b
 {
 	@NPC1Style
@@ -367,28 +367,28 @@
 	$listener	= player
 }
 
-%Trainer2		// Ladder area
+%Trainer2		// Зона лестницы
 {
 	@NPC1Style
 	$speaker	= area4_observer2
 	$listener	= player
 }
 
-%Trainer3		// Push / Pull area
+%Trainer3		// Зона толкания / вытаскивания
 {
 	@NPC1Style
 	$speaker	= area5_observer1
 	$listener	= player
 }
 
-%Trainer4		// Use Door area
+%Trainer4		// Зона использования двери
 {
 	@NPC1Style
 	$speaker	= area6_observer1
 	$listener	= player
 }
 
-%Trainer5		// Hostage area
+%Trainer5		// Зона заложника
 {
 	@NPC1Style
 	$speaker	= area7_observer2
@@ -404,44 +404,44 @@
 }
 
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	END: Speaker Definitions		 ||
+//||	КОНЕЦ: Определения диктора				 ||
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	BEGIN: Use Characters Sequences 	 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	НАЧАЛО: Последовательности использования персонажей 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
 %Use_Receptionist
 {
 	@Receptionist
-	//#text = ""		// +use lines of dialog should not be localized
+	//#text = ""		// Диалоги использования персонажей (+use) не должны быть локализованы
 	#sound = Training_Rec_talk
 }
 
 %Use_Worker1
 {
 	@Worker1
-	//#text = ""		// +use lines of dialog should not be localized
+	//#text = ""		// Диалоги использования персонажей (+use) не должны быть локализованы
 	#sound = Training_Worker_two
 }
 
 %Use_Worker2
 {
 	@Worker2
-	//#text = ""		// +use lines of dialog should not be localized
+	//#text = ""		// Диалоги использования персонажей (+use) не должны быть локализованы
 	#sound = Training_Worker_one
 }
 
 %Use_Worker3
 {
 	@Worker3
-	//#text = ""		// +use lines of dialog should not be localized
+	//#text = ""		// Диалоги использования персонажей (+use) не должны быть локализованы
 	#sound = Training_Worker_five
 }
 
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	END: Use Characters Sequences 	 	 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	КОНЕЦ: Последовательности использования персонажей 	 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 //||	BEGIN: Level relevant Sequences 	 ||
