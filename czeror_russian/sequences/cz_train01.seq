@@ -443,9 +443,9 @@
 //||	КОНЕЦ: Последовательности использования персонажей 	 	 ||
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	BEGIN: Level relevant Sequences 	 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	НАЧАЛО: Последовательности, соответствующие уровню 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
 %Opening_Sequence
 {
@@ -465,11 +465,13 @@
 	#pause = 6.5
 	@RadioStyle
 	//#text = "Please wait while I verify your identity."
+	#text = "Пожалуйста, подождите, пока я проверю вашу личность."
 	#sound = Training_Pleasewait
-	#pause = 5 // SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5 // ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 
 	@RadioStyle
 	//#text = "Identity confirmed.  Please proceed"
+	#text = "Личность подтверждена. Пожалуйста, проходите."
 	#sound = Training_IdConf
 	#firetargets = "freeze_me"
 
@@ -489,15 +491,17 @@
 %Opening_Greeting
 {
 	@Receptionist
-	//#text = "Hello and welcome to the counter terrorist specail training facility!"
+	//#text = "Hello and welcome to the counter terrorist special training facility!"
+	#text = "Здравствуйте и добро пожаловать в специальный учебный центр контр-террористов!"
 	#sound = Training_HelloandWelc
-	#pause = 3.9	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.9	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Receptionist
 	//#text = "Please proceed to the elevator, they are waiting for you in the training areas."
+	#text = "Пожалуйста, пройдите к лифту, Вас ждут в учебных помещениях."
 	#sound = Training_WelcProceed
-	#firetargets = "script_new_obj01" //fires thread "new_obj01_elev" below
+	#firetargets = "script_new_obj01" //запускает поток "new_obj01_elev" ниже
 	#firetargets = "receptionist_point_sequence"
-	#pause = 3.9	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.9	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	#firetargets = "rec_keyvalue_change"
 }	
 
@@ -505,7 +509,7 @@
 {
 	@ObjectiveStyle
 	#text = "#OBJ1_TRAIN_NEW" //#text = "NEW OBJECTIVE: Proceed to elevator for training"
-	#firetargets = "obj01_elev" //adds objective to objectives list
+	#firetargets = "obj01_elev" //добавляет задание в список заданий
 }
 
 %Oversee_Conversation
@@ -520,6 +524,7 @@
 {
 	@Observer1
 	//#text = "The training course is just ahead"
+	#text = "Учебный курс впереди."
 	#sound = Training_Course_Ahead
 	#pause = 10
 	#firetargets = "move_faster"
@@ -529,6 +534,7 @@
 {
 	@Observer1
 	//#text = "Please keep moving"
+	#text = "Пожалуйста, продолжайте движение."
 	#sound = Please_Keep_Moving
 }	
 
@@ -536,10 +542,12 @@
 {
 	@Trainer1
 	//#text = "Greetings, operative. The first moves you will practice are related to basic movement"
+	#text = "Приветствую Вас, оперативник. Первые приёмы, которые Вы будете практиковать, связаны с базовыми движениями."
 	#sound = Training_Greeting
-	#pause = 5.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer1
 	//#text = "Press your duck key to navigate under these obstacles"
+	#text = "Нажмите клавишу приседания, чтобы пройти под этими препятствиями."
 	#sound = Training_Pressduck
 	@Training_Text
 	#text = "#TRAINING_DUCK" //#text = "PRESS FORWARD KEY TO RUN FORWARD
@@ -552,10 +560,12 @@
 {
 	@Trainer1
 	//#text = "Good"
+	#text = "Прекрасно."
 	#sound = Training_Good
-	#pause = 1	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 1	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer1
 	//#text = "You will now need to jump up on these boxes to proceed"
+	#text = "Вам теперь нужно запрыгнуть на эти ящики, чтобы пройти дальше."
 	#sound = Training_YouJumpBox
 	@Training_Text
 	#text = "#TRAINING_FORWARD_JUMP" //#text = "PRESS FORWARD KEY TO RUN FORWARD
@@ -566,17 +576,20 @@
 {
 	@Trainer1
 	//#text = "To enter this vent, you will need to perform a duck jump"
+	#text = "Чтобы попасть в вентиляцию, необходимо выполнить прыжок с приседанием."
 	#sound = Training_EnterVent
-	#pause = 3.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.8	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer1	
 	//#text = "Stand directly in front of the vent, and continue to press forward"
+	#text = "Встаньте прямо перед вентиляцией и продолжайте нажимать вперёд."
 	#sound = Training_StandFrontVent
 	@Training_Text
 	#text = "#TRAINING_DUCK_JUMP" //"PRESS FORWARD + JUMP, THEN WHILE IN MID AIR PRESS DUCK"
-	#pause = 4.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.2	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer1
 	#sound = Training_DuckJumpCMD
 	//#text = "Then jump and while you are in the air press your duck key."
+	#text = "Затем подпрыгните и, находясь в воздухе, нажмите клавишу приседания."
 	#pause = 2
 	#firetargets = "vent_stop"
 }
@@ -585,6 +598,7 @@
 {
 	@Trainer1b	
 	//#text = "There is nothing here of any interest, please continue with the test"
+	#text = "Здесь нет ничего интересного, пожалуйста, продолжайте тест."
 	#sound = Trainnig_NothingHere
 }
 
@@ -592,6 +606,7 @@
 {
 	@Trainer1
 	//#text = "Good job!"
+	#text = "Хорошая работа!"
 	#sound = Training_GoodJob
 }
 
@@ -599,15 +614,17 @@
 {
 	@Trainer2
 	//#text = "To descend on this ladder, simply walk directly into the ladder."
+	#text = "Чтобы спуститься по этой лестнице, достаточно идти прямо на неё."
 	#sound = Training_LadderDes
 	@Training_Text
 	#text = "#TRAINING_LADDER_DOWN" //#text = "PRESS BACKWARD KEY TO MOVE DOWN LADDERS
 //OR LOOK DOWN AND PRESS FORWARD KEY"
-	#pause = 4.6	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.6	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer2
 	//#text = "Look down, and continue moving forward"
+	#text = "Посмотрите вниз и продолжайте двигаться вперёд."
 	#sound = Training_LookDown
-	#pause = 2.5	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 2.5	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	#firetargets = "ladder_door_stop"
 }
 
@@ -615,6 +632,7 @@
 {
 	@Trainer2
 	//#text = "Climb up these pipes by walking directly in to them while continuing to press forward"
+	#text = "Поднимитесь по этим трубам, подойдя прямо к ним и продолжая нажимать вперёд."
 	#sound = Training_Climbpipe
 	@Training_Text
 	#text = "#TRAINING_LADDER_UP" //#text = "PRESS FORWARD KEY TO MOVE UP LADDERS
@@ -626,12 +644,14 @@
 	#firetargets = "hud_on"
 	@Trainer2
 	//#text = "Jump into this tank of water and swim through the pipe below"
+	#text = "Запрыгните в этот резервуар с водой и проплывите по трубе внизу."
 	#sound = Training_Jumpinto_Tank
-	#pause = 3.5 	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.5 	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	#firetargets = "water_stop"
 
 	@Trainer2 	
 	//#text = "To swim, simply look in the direction you want to swim and press forward"
+	#text = "Чтобы плыть, просто смотрите в том направлении, куда Вы хотите плыть, и нажимайте вперёд."
 	#sound = Training_ToSwim
 	@Training_Text
 	#text = "#TRAINING_SWIM" //#text = "PRESS YOUR FORWARD KEY
@@ -643,9 +663,12 @@
 	@Trainer2
 	//#text = "Watch your air supply closely while swimming. 
 	//if you need to surface for air, an oxygen icon will light up on your display"
+	#text = "Во время плавания внимательно следите за запасом воздуха. 
+	Если вам необходимо подняться на поверхность, чтобы набрать воздуха, на экране загорится значок кислорода."
 	#sound = Training_WatchAir
 	#firetargets = "observers_looking_through_glass"
 	//#text = "observers targeted"
+	//#text = "на наблюдателей поставлена цель"		// <-- $_Vladislav: Возможно это какой-то отладочный текст, наблюдатели не должны произносить такую фразу. Это перевод строки выше.
 	@Training_Text
 	#text = "#TRAINING_OXYGEN" //#text = "FIND AIR IF YOU BEGIN TO LOSE HEALTH
 //WAIT IN THE AIR UNTIL HEALTH RETURNS TO FORMER LEVEL"
@@ -656,11 +679,14 @@
 	#firetargets = "hud"
 	@Trainer3
 	//#text = "Excellent!"
+	#text = "Превосходно!"
 	#sound = Training_Excellent 
-	#pause = 1.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 1.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer3	
 	//#text = "Please open this door by walking up to the button, 
 	//looking at it, and pressing your use key"
+	#text = "Пожалуйста, откройте эту дверь, подойдя к кнопке, 
+	смотря на неё и нажав клавишу использования."
 	#sound = Training_Pleaseopen 
 	@Training_Text
 	#text = "#TRAINING_BUTTON" //#text = "PRESS YOUR USE KEY TO PUSH A BUTTON"
@@ -670,13 +696,15 @@
 {
 	@Trainer3
 	//#text = "To proceed, you'll need to push that box through the corridor"
+	#text = "Чтобы пройти, необходимо протащить ящик по коридору."
 	#sound = Training_Push 
 	@Training_Text
 	#text = "#TRAINING_PUSH_BOXES" //#text = "PRESS FORWARD KEY TO MOVE AGAINST BOX
 //KEEP PRESSING FOWARD TO PUSH BOX"
-	#pause = 4.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer3	
 	//#text = "Pushing is easy, move forward against the box to push it out of your way"
+	#text = "Толкать очень просто: двигайтесь вперёд напротив ящика, чтобы сдвинуть его с места."
 	#sound = Training_PushEasy 
 	#firetargets = "push_stop"
 }
@@ -685,23 +713,28 @@
 {
 //	@Trainer3	
 //	//#text = "Sometimes you will need to pull objects out of your way"
+//	#text = "Иногда необходимо тащить за собой предметы, перекрывающие дорогу."
 //	#sound = Training_Pull 
-//	#pause = 3.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+//	#pause = 3.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer3
 	//#text = "To pull this box, move up to it and press your use key"
+	#text = "Чтобы вытащить этот ящик, подойдите к нему и нажмите клавишу использования."
 	#sound = Training_ToPull 
 	@Training_Text
 	#text = "#TRAINING_PULL_BOXES" //#text = "PRESS USE+BACKWARD KEYS TOGETHER
 //TO PULL BOX BACKWARD"
-	#pause = 4.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer3	
 	//#text = "Hold the use key down to keep a grip on the object, and move slowly backward.  
 	//The object will come along with you"
+	#text = "Удерживайте клавишу использования, чтобы держать объект и медленно двигайтесь назад.  
+	Объект будет следовать за вами."
 	#sound = Training_Holduse 
 
-	#pause = 7.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 7.2	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer3	
 	//#text = "While gripping an object, you can also use strafe keys to move the object from side to side"
+	#text = "При удерживании объекта можно также использовать клавиши стрейфа для перемещения объекта из стороны в сторону."
 	#sound = Training_Grip 
 	#firetargets = "pull_stop"
 }
@@ -710,6 +743,7 @@
 {
 	@Trainer3
 	//#text = "To open this door, walk up to the control wheel, then press and hold the use key"
+	#text = "Чтобы открыть эту дверь, подойдите к колесу управления, затем нажмите и удерживайте клавишу использования."
 	#sound = Training_Wheel
 	
 	@Training_Text
@@ -723,18 +757,22 @@
 	@Trainer4
 	//#text = "Some doors will require you to press use to open them, 
 	//especially in areas where stealth is important"
+	#text = "Некоторые двери требуют нажатия клавиши использования для их открытия, 
+	особенно в местах, где важна скрытность."
 	#sound = Training_SomeDoor 
 	
 	@Training_Text
 	#text = "#TRAINING_USE_DOOR" //#text = "PRESS YOUR USE KEY TO OPEN ROTATING DOORS"	
 	
-	#pause = 5.5	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.5	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer4
 	//#text = "Walk up to this door, and press your use key to open the door"
+	#text = "Подойдите к этой двери и нажмите клавишу использования, чтобы открыть дверь."
 	#sound = Training_UseWalk 	
-	#pause = 3.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.8	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Trainer4	
 	//#text = "To close the door, simply walk up to the door and press the use key again"
+	#text = "Чтобы закрыть дверь, просто подойдите к ней и снова нажмите клавишу использования."
 	#sound = Training_CloseUse 
 	
 	#pause = 2	
@@ -745,8 +783,9 @@
 {
 	@Trainer5
 	//#text = "Hostage rescue zones can be identified by areas where the hostage rescue icon is visible"
+	#text = "Зоны спасения заложников можно определить по участкам, где виден значок спасения заложников."
 	#sound = Training_HostageRes 
-	#pause = 5.5	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.5	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Training_Text
 	#text = "#TRAINING_HOSTAGE_FOLLOWS" //#text = "APPROACH A HOSTAGE
@@ -755,12 +794,16 @@
 	
 	@Trainer5
 	//#text = "To lead the hostages to the rescue zone, 
-//you must approach a hostage and press the use key"
+	//you must approach a hostage and press the use key"
+	#text = "Чтобы отвести заложников к зоне спасения, 
+	Вы должны подойти к заложнику и нажать клавишу использования."
 	#sound = Training_LeadHos 
-	#pause = 5.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs	
+	#pause = 5.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.	
 	@Trainer5	
 	//#text = "They will follow you until they reach a rescue zone, 
-//or until you face them and press the use key again"
+	//or until you face them and press the use key again"
+	#text = "Они будут следовать за Вами до тех пор, пока не достигнут зоны спасения, 
+	или до тех пор, пока вы не встретитесь с ними и не нажмёте клавишу использования ещё раз."
 	#sound = Training_TheyWill 
 }
 
@@ -770,6 +813,8 @@
 	#sound = Training_LeadCiv
 	//#text = "Lead this civilian to the security panel near the door.
 	//He will bypass the security and allow you to proceed"
+	#text = "Приведите гражданина к панели безопасности возле двери.
+	Он обойдёт систему безопасности и позволит Вам пройти дальше."
 	#firetargets = "hostage_door"
 	
 	@Training_Text
@@ -779,6 +824,6 @@
 //WILL ACTIVATE BUTTONS"
 }
 
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	END: Level relevant Sequences 	 	 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	КОНЕЦ: Последовательности, соответствующие уровню 	 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
