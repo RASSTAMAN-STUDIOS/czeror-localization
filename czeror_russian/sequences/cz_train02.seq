@@ -1,24 +1,24 @@
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//|| CZ_Training02 Dialog Sequences (cz_train02) ||
-//|| Tom "ParadoX" Mustaine			 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//|| Последовательности диалогов CZ_Training02 (cz_train02)	 ||
+//|| Том "ParadoX" Мастейн									 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
-//modified by Reid "BrushBaron" Kimball on 05/16/03
+//изменено Ридом "BrushBaron" Кимбаллом 16 мая 2003
 
-// Sentences for +use on actors and so on.
+// Фразы, которые воспроизводятся при использовании команды +use на актёрах и т.д.
 !sentences
 {
-	// CT Trainer
+	// Инструктор
 	Training_CT1_talk0 cz_training/trgun_dontyouhave
 	Training_CT1_talk1 cz_training/trgun_allday
 	Training_CT1_talk2 cz_training/trgun_what
 
-	// The CT Ammo dude
+	// Чувак с патронами
 	Training_CT2_talk0 cz_training/trammo_huh
 	Training_CT2_talk1 cz_training/trammo_keep
 	Training_CT2_talk2 cz_training/trammo_wherefire
 
-// Dialog called in the level
+// Диалоги, вызываемые на уровне
 	Training_Gun_Welcome0	cz_training/trgun_welcomelive
 	Training_Hereyouwill0	cz_training/trgun_hereyouwill
 	Training_PickupWeaps0	cz_training/trgun_pickweapons
@@ -76,13 +76,13 @@
 	Training_YouWereSpot0	cz_training/tr_youspottry
 	Training_ExWork0	cz_training/tr_exwork2
 	
-	//added for the terrorist chatter in the fiber cam room	
+	//добавлено для болтовни террористов в комнате для оптоволоконной камеры	
 	Terrorist01_Convo0	ambience/training_conv1
 	Terrorist02_Convo0	ambience/training_conv2	
 }
 
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	BEGIN: Speaker, Style & Definitions	 ||
+//||	НАЧАЛО: Диктор, стиль и определения		 ||
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 %Training_Text
 {
@@ -127,14 +127,14 @@
 	$listener	= player
 }
 
-%Hotchick01	//playboy bunny
+%Hotchick01	//плейбойский кролик
 {
 	@T1Style
 	$speaker=guard_fibcam1
 	$listener=guard_fibcam2
 }
 
-%Hotchick02	//playboy bunny
+%Hotchick02	//плейбойский кролик
 {
 	@T2style
 	$speaker=guard_fibcam2
@@ -142,12 +142,12 @@
 }
 
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	END: Speaker Definitions		 ||
+//||	КОНЕЦ: Определения диктора				 ||
 //[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	BEGIN: Use Characters Sequences 	 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	НАЧАЛО: Последовательности использования персонажей 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
 %Use_CT1
 {
@@ -161,13 +161,13 @@
 	#sound = Training_CT2_talk
 }
 
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	END: Use Characters Sequences 	 	 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	КОНЕЦ: Последовательности использования персонажей 	 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
-//||	BEGIN: Level relevant Sequences 	 ||
-//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
+//||	НАЧАЛО: Последовательности, соответствующие уровню 	 ||
+//[]=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=[]
 
 %Start_Gunrange
 {
@@ -177,17 +177,21 @@
 
 	@CT1
 	//#text = "Welcome to the live fire range!"
+	#text = "Добро пожаловать на стрельбище!"
 	#sound = Training_Gun_Welcome		//cz_training/trgun_welcomelive
-	#pause = 2.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 2.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Here you will receive training in firing weapons, reloading, 
 	//mode switching, accuracy, and finally, explosives!"
+	#text = "Здесь Вы пройдёте обучение по стрельбе из оружия, перезарядке,
+	переключению режимов, точности и, наконец, использованию гранат!"
 	#sound = Training_Hereyouwill		//cz_training/trgun_hereyouwill
-	#pause = 7.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 7.2	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Pick up your weapons and proceed to the firing station!"
+	#text = "Возьмите оружие и отправляйтесь на огневую станцию!"
 	#sound = Training_PickupWeaps		//cz_training/trgun_pickweapons
 	@Training_Text
 	#text = "#TRAINING_PICKUP_WEAPONS" //#text = "MOVE UP TO WEAPONS TO PICK THEM UP"
@@ -215,39 +219,49 @@
 
 	@CT1
 	//#text = "If you run out of ammo, step to the ammo window for additional magazines."
+	#text = "Если у Вас закончились патроны, подойдите к окну с патронами, чтобы получить дополнительные магазины."
 	#sound = Training_IfAmmoOut	//cz_training/trgun_ifrunout
-	#pause = 4.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Also, try to reload during pauses, rather than running out of 
 	//ammunition at a critical time."
+	#text = "Также старайтесь перезаряжаться во время пауз, чтобы в критический
+	момент не кончились боеприпасы."
 	#sound = Training_ReloadPause	//cz_training/trgun_reloadpause
-	#pause = 5.3	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.3	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Ok, squeeze off a few rounds to get a feel for your weapon"
+	#text = "Хорошо, отстреляйте несколько патронов, чтобы прочувствовать свое оружие."
 	#sound = Training_Squeeze	//cz_training/trgun_squeeze
-	#pause = 4.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Notice that when you fire, your crosshair expands with each shot.  
 	//The size of the crosshair represents the accuracy of your weapon"
+	#text = "Заметьте, что когда Вы стреляете, прицел расширяется с каждым выстрелом.
+	Размер прицела отражает точность оружия."
 	#sound = Training_NoticeHair	//cz_training/trgun_noticehair
-	#pause = 7.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 7.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "The wider the crosshair, the less accurate your shots will be"
+	#text = "Чем шире прицел, тем менее точными будут Ваши выстрелы."
 	#sound = Training_TheWider	//cz_training/trgun_thewider
-	#pause = 4.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "To be effective in the field, use short, controlled bursts 
 	//to ensure accurate targeting"
+	#text = "Для эффективной работы в полевых условиях следует использовать короткие,
+	контролируемые очереди для обеспечения точного прицеливания."
 	#sound = Training_UseShort	//cz_training/trgun_useshort
-	#pause = 5.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Engage 3 targets to continue"
+	#text = "Поразите 3 цели чтобы продолжить."
 	#sound = Training_EngThree
 	#pause 		= 2.0
 	#firetargets	= "dude1"
@@ -258,11 +272,13 @@
 	#pause = 2.0
 	@CT1
 	//#text = "To switch firing modes on your weapon, press the secondary fire key"
+	#text = "Чтобы переключать режимы стрельбы оружия, нажимайте клавишу вторичного огня."
 	#sound = Training_SwitchFire	//cz_training/trgun_switchfire
-	#pause = 5.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Engage all the targets to continue"
+	#text = "Поразите все цели для продолжения."
 	#sound = Training_EngageAll	//cz_training/trgun_engageall	
 	#pause		= 3.0
 	#firetargets 	= "dude4"	
@@ -278,13 +294,15 @@
 	
 	@CT1
 	//#text = "Good job!  Time to change weapons"
+	#text = "Отличная работа! Пора менять оружие."
 	#sound = Training_GoodJobT
-	#pause = 2.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 2.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 
 	@CT1
 	//#text = "Pick up your next weapons and proceed to the firing station!"
+	#text = "Возьмите следующее оружие и отправляйтесь на огневую станцию!"
 	#sound = Training_PickUpNexts
-	#pause = 2.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 2.8	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	#firetargets = "round2_env_global"
 	#firetargets = "round2_showweapon"
 }
@@ -304,13 +322,15 @@
 	
 	@CT1
 	//#text = "All sniper rifles can zoom in on a target using the secondary fire key"
+	#text = "Все снайперские винтовки могут приближать цель с помощью клавиши вторичного огня."
 	#sound = Training_SniperRifle		
-	#pause = 5.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Training_Text
 	#text = "#TRAINING_ZOOM" //#text = "PRESS ATTACK2 TO ZOOM"
 	
 	@CT1
 	//#text = "Engage all the targets to continue"
+	#text = "Поразите все цели для продолжения."
 	#sound = Training_EngageAll
 	
 	#pause = 2
@@ -328,11 +348,13 @@
 	
 	@CT1
 	//#text = "Good"
+	#text = "Хорошо."
 	#sound = Training_GoodSucka
-	#pause = 0.6	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 0.6	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Pick up this high explosive grenade"
+	#text = "Подберите эту взрывную гранату."
 	#sound = Training_PickupGren	
 	#firetargets = "round3_env_global"
 	#firetargets = "round3_showweapon"
@@ -344,7 +366,7 @@
 	#firetargets = "round3_ammo_env_global"
 	#firetargets = "round3_hideweapon"
 	#firetargets = "round3_showammo"
-	#firetargets = "before_grenade" //autosaves before player has a chance to kill self
+	#firetargets = "before_grenade" //автосохраняется до того, как игрок успеет убить себя
 	#pause = 0.2
 	#firetargets = "round3_weaponequip"
 	#pause = 1.8
@@ -352,6 +374,7 @@
 
 	@CT1
 	//#text = "Toss the grenade at the target to continue"
+	#text = "Бросьте гранату в цель, чтобы продолжить."
 	#sound = Training_TossGren
 	#pause = 2
 	#firetargets = "dude12"
@@ -368,11 +391,13 @@
 	
 	@CT1
 	//#text =	"Boom!  Good job!"
+	#text =	"Бум! Хорошая работа!"
 	#sound = Training_BoomGood 
-	#pause = 1.7	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 1.7	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Finally, pick up the flashbang and smoke grenade"
+	#text = "И наконец, возьмите светошумовую и дымовую гранату."
 	#sound = Training_SmokeFlash
 	#pause = 1
 	
@@ -401,26 +426,34 @@
 	@CT1
 	//#text = "Flashbangs temporarily blind enemies, but if you look at 
 	//it when it explodes, you will be blinded as well"
+	#text = "Светошумовые гранаты временно ослепляют врагов, но если Вы
+	посмотрите на них в момент взрыва, то Вы тоже будете ослеплены."
 	#sound = Training_Blind
-	#pause = 6.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 6.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Turning away from flashbangs when they are about to 
 	//explode will limit the blinding effect"
+	#text = "Отворачивайтесь от светошумовых гранат, когда они вот-вот взорвутся.
+	Это ограничит ослепляющий эффект."
 	#sound = Training_TurnAway
-	#pause = 4.25	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.25	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Smoke grenades also temporarily affect your enemies ability 
 	//to accurately attack- very useful in crowded firefight situations"
+	#text = "Дымовые гранаты также временно влияют на точность атаки противника.
+	Это очень полезно в условиях многолюдной перестрелки."
 	#sound = Training_SmokeGren
-	#pause = 9.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 9.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@CT1
 	//#text = "Your offensive weapons training is complete.  
 	//Please advance to the next area"
+	#text = "Обучение владению наступательным оружием завершено.
+	Пожалуйста, перейдите в следующую зону."
 	#sound = Training_YourOffW
-	#pause = 5.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 
 	#firetargets = "change_dork1"
 	#firetargets = "change_dork2"
@@ -441,7 +474,8 @@
 {
 	#firetargets="failed_cts"
 	@RadioStyle
-	//#text = "Shooting a counter terrorist teammate often has fatal repercussions!"	
+	//#text = "Shooting a counter terrorist teammate often has fatal repercussions!"
+	#text = "Стрельба по вашим напарникам часто приводит к фатальным последствиям!"	
 	#sound = Training_tr_shootct
 	@FailureStyle
 	#text = "#TRAINING_SHOOTCTS_FAILURE" //#text = "STATUS: MISSION FAILED
@@ -458,7 +492,7 @@
 	@Training_Text 
 	#text = "#TRAINING_PICK_KEVLAR" //#text = "MOVE UP TO THE KEVLAR TO PICK IT UP"
 
-	#pause = 6.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 6.2	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 
 	@Haz_Trainer
 	//#text = "If you pass through fire or steam, you will see a heat damage icon light up"
@@ -467,7 +501,7 @@
 	#text = "#TRAINING_DAMAGE_TYPES" //#text = "CERTAIN TYPES OF DAMAGE WILL REGISTER
 //ON YOUR HEADS-UP DISPLAY."
 
-	#pause = 5.5	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.5	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Haz_Trainer
 	//#text = "Directional indicators at the center of your display show you 
@@ -478,7 +512,7 @@
 	#text = "#TRAINING_DIRECTIONAL_DAMAGE" //#text = "DIRECTION OF DAMAGE IS INDICATED BY RED
 //FLASHES IN THE CENTER OF YOUR SCREEN"
 
-	#pause = 5.5 // SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.5 // ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	#firetargets = "multi_hazard_setup"
 }
@@ -493,19 +527,19 @@
 	#text = "#TRAINING_MEDKIT" //#text = "USE MED-KITS BY LOOKING AT FIRST-AID ITEMS
 //AND PRESSING THE USE KEY"
 	
-	#pause = 7.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 7.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer1
 	//#text = "While most med kits only contain enough first aid supplies for a 
 	//single recovery, some kits can be used more than once"
 	#sound = Training_MostMeds
-	#pause = 6.65	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 6.65	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer1
 	//#text = "To use a med kit again, look at the remaining first aid items 
 	//and press use again"
 	#sound = Training_UseMed
-	#pause = 5.3	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.3	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer1
 	//#text = "Once all the first aid items are gone, a med kit cannot be re-used"
@@ -524,25 +558,25 @@
 	@Trainer2
 	//#text = "Welcome to the Counter Terrorist special equipment training"
 	#sound = Training_WelcomeSpec
-	#pause = 2.95	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 2.95	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "The first piece of equipment you will use is the blowtorch"
 	#sound = Training_Blowtorch
-	#pause = 3.45	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.45	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "The blowtorch can only be used in blowtorch zones. 
 	//A blowtorch zone can be identified by areas where a blowtorch icon is visible"
 	#sound = Training_BlowZone
-	#pause = 8.15	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 8.15	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "Walk up to the table and pick up the blowtorch"
 	#sound = Training_PickBlow
 	@Training_Text 
 	//#text = "MOVE UP TO EQUIPMENT TO PICK IT UP"
-	#pause = 2.85	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 2.85	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 
 	#firetargets = "blow_stop"
 	
@@ -552,7 +586,7 @@
 	@Training_Text
 	#text = "#TRAINING_BLOWTORCH"//#text = "LOOK AT THE LOCK ON THE DOOR
 //PRESS AND HOLD ATTACK1 UNTIL THE LOCK IS DESTROYED"
-	#pause = 3.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.2	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "With the blowtorch selected, press your fire key until the lock is destroyed"
@@ -564,17 +598,17 @@
 	@Trainer2
 	//#text = "Good job!"
 	#sound = Training_Good_Job
-	#pause = 1.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 1.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "The next piece of equipment is the radio controlled bomb"
 	#sound = Training_RCBomb
-	#pause = 3.25	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.25	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "Like the blowtorch, radio controlled bombs can only be used in radio bomb zones"
 	#sound = Training_RCZone
-	#pause = 4.75	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.75	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "Pick up the radio bombs and plant a bomb on the equipment"
@@ -583,7 +617,7 @@
 	#text = "#TRAINING_RCBOMB" //#text = "WALK TO THE BOMB ZONE, PRESS ATTACK1 TO
 //PLANT A RC BOMB"
 
-	#pause = 3.6	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.6	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	#firetargets = "rc_stop"
 	
@@ -603,7 +637,7 @@
 	@Trainer2
 	//#text = "Move on to the next area"
 	#sound = Training_MoveNextArea
-	#pause = 1	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 1	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	#firetargets = "bomb_door"
 }
@@ -614,18 +648,18 @@
 	@Trainer2
 	//#text = "Pick up the digital camera to continue"
 	#sound = Training_PickupDigicam
-	#pause = 2.25	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 2.25	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "This SAT enabled digital camera is used to relay tactical 
 	//data to command and control from the field"
 	#sound = Training_SatCam
-	#pause = 5.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 5.8	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "Take a digital picture of the sensitive equipment on this table to continue"
 	#sound = Training_TakePic
-	#pause = 3.95	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.95	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	@Training_Text	
 	#text = "#TRAINING_CAMERA" //#text = "WALK TO THE CAMERA ZONE
 //LOOK AT THE BLUEPRINTS AND PRESS ATTACK1
@@ -639,7 +673,7 @@
 	@RadioStyle
 	//#text = "Picture received!  Move on to the next area"
 	#sound = Training_CNCPicture
-	#pause = 2.5	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs	
+	#pause = 2.5	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.	
 	
 	#firetargets = "camera_door"	
 }
@@ -652,7 +686,7 @@
 	//#text = "The fiber optic camera can be used to analyze tactical
 	//situations without revealing yourself to potential threats"
 	#sound = Training_FibOptic
-	#pause = 8.0	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 8.0	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@RadioStyle
 	//#text = "Pick up the fiber optic camera and use it in the fiber
@@ -662,7 +696,7 @@
 	#text = "#TRAINING_FIBEROPTIC_CAM" //#text = "WALK TO THE FIBER OPTIC CAMERA ZONE
 //AND PRESS ATTACK1 TO ACTIVATE THE
 //FIBER OPTIC CAMERA"
-	#pause = 6.4	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 6.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 }
 
 %spying_on_hotchicks
@@ -698,12 +732,12 @@
 	@RadioStyle
 	//#text = "Use your fiber optic camera to sneak past the guard in the next area"
 	#sound = Training_UseFib
-	#pause = 4.2	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 4.2	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 		
 	@RadioStyle
 	//#text = "If you are spotted, don't worry - you will be able to try again"
 	#sound = Training_IfSpotted
-	#pause = 3.75	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.75	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	#firetargets = "fiber_door1"
 	#firetargets = "stealth_music"
@@ -718,13 +752,13 @@
 	#text = "#TRAINING_STEALTH" //#text = "ENEMIES CANNOT SEE YOU WHILE YOU ARE IN A
 //STEALTH ZONE.  ATTACKING AN ENEMY FROM A STEALTH ZONES WILL
 //BLOW YOUR COVER"
-	#pause = 3.8	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 3.8	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@RadioStyle
 	//#text = "Any time you are in a stealth zone, enemies cannot 
 	//see you and will not attack or alert others"
 	#sound = Training_Anytimesteal
-	#pause = 6.15	// SOUND FILE ABOVE, LENGTH OF THIS PAUSE MUST BE ADJUSTED ON LOCALIZATION + 0.2 / 0.5 secs
+	#pause = 6.15	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 }
 
 %Player_Spotted
