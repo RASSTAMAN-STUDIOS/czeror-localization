@@ -509,6 +509,7 @@
 	@Haz_Trainer
 	//#text = "Directional indicators at the center of your display show you 
 	//where damage is coming from"
+	#text = "Индикаторы направления в центре экрана показывают откуда идёт урон."
 	#sound = Training_Directional	
 	
 	@Training_Text 
@@ -525,6 +526,8 @@
 	@Trainer1
 	//#text = "Mounted med kits will restore your health. Walk up to this med 
 	//kit and press your use key to administer first aid"
+	#text = "Вмонтированные аптечки восстановят ваше здоровье. Подойдите к этой
+	аптечке и нажмите клавишу использования, чтобы получить первую помощь."
 	#sound = Training_MountedMed
 	@Training_Text 
 	#text = "#TRAINING_MEDKIT" //#text = "USE MED-KITS BY LOOKING AT FIRST-AID ITEMS
@@ -535,6 +538,9 @@
 	@Trainer1
 	//#text = "While most med kits only contain enough first aid supplies for a 
 	//single recovery, some kits can be used more than once"
+	#text = "В то время как большинство аптечек содержат средства первой помощи,
+	достаточные только для однократного восстановления здоровья, некоторые из них
+	можно использовать более одного раза."
 	#sound = Training_MostMeds
 	#pause = 6.65	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
