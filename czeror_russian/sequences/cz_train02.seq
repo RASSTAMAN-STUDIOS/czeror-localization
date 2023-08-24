@@ -590,6 +590,7 @@
 	
 	@Trainer2
 	//#text = "Walk up to the table and pick up the blowtorch"
+	#text = "Подойдите к столу и возьмите паяльник."
 	#sound = Training_PickBlow
 	@Training_Text 
 	//#text = "MOVE UP TO EQUIPMENT TO PICK IT UP"
@@ -598,7 +599,8 @@
 	#firetargets = "blow_stop"
 	
 	@Trainer2
-	//#text = "Select the blowtorch and look at the lock on the door" 
+	//#text = "Select the blowtorch and look at the lock on the door"
+	#text = "Выберите паяльник и посмотрите на замок на двери." 
 	#sound = Training_SelBlow
 	@Training_Text
 	#text = "#TRAINING_BLOWTORCH"//#text = "LOOK AT THE LOCK ON THE DOOR
@@ -607,6 +609,7 @@
 	
 	@Trainer2
 	//#text = "With the blowtorch selected, press your fire key until the lock is destroyed"
+	#text = "Выбрав паяльник, удерживайте клавишу огня до тех пор, пока замок не будет уничтожен."
 	#sound = Training_BlowFire
 }
 
@@ -614,16 +617,19 @@
 {
 	@Trainer2
 	//#text = "Good job!"
+	#text = "Хорошая работа!"
 	#sound = Training_Good_Job
 	#pause = 1.4	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "The next piece of equipment is the radio controlled bomb"
+	#text = "Следующим элементом оборудования является радиоуправляемая бомба."
 	#sound = Training_RCBomb
 	#pause = 3.25	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "Like the blowtorch, radio controlled bombs can only be used in radio bomb zones"
+	#text = "Как и паяльная лампа, радиоуправляемые бомбы могут применяться только в зонах радиоуправляемых бомб."
 	#sound = Training_RCZone
 	#pause = 4.75	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
