@@ -547,11 +547,15 @@
 	@Trainer1
 	//#text = "To use a med kit again, look at the remaining first aid items 
 	//and press use again"
+	#text = "Чтобы снова использовать аптечку, просмотрите на оставшиеся средства
+	первой помощи и нажмите кнопку использования ещё раз."
 	#sound = Training_UseMed
 	#pause = 5.3	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer1
 	//#text = "Once all the first aid items are gone, a med kit cannot be re-used"
+	#text = "После того как все средства первой помощи закончатся, аптечка не может
+	быть использована повторно."
 	#sound = Training_OnceUsed
 	#pause = 2
 	
@@ -566,17 +570,21 @@
 {
 	@Trainer2
 	//#text = "Welcome to the Counter Terrorist special equipment training"
+	#text = "Приветствуем Вас на обучении по использованию спецоборудования Контр-Террористов."
 	#sound = Training_WelcomeSpec
 	#pause = 2.95	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "The first piece of equipment you will use is the blowtorch"
+	#text = "Первым оборудованием, которое Вы будете использовать, является паяльная лампа."
 	#sound = Training_Blowtorch
 	#pause = 3.45	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
 	@Trainer2
 	//#text = "The blowtorch can only be used in blowtorch zones. 
 	//A blowtorch zone can be identified by areas where a blowtorch icon is visible"
+	#text = "Паяльник можно использовать только в зоне паяльника.
+	Зону паяльника можно определить по участкам, где виден значок паяльника."
 	#sound = Training_BlowZone
 	#pause = 8.15	// ЗВУКОВОЙ ФАЙЛ ВЫШЕ, ДЛИТЕЛЬНОСТЬ ЭТОЙ ПАУЗЫ ДОЛЖНА БЫТЬ СКОРРЕКТИРОВАНА В ЗАВИСИМОСТИ ОТ ЛОКАЛИЗАЦИИ + 0.2 / 0.5 сек.
 	
