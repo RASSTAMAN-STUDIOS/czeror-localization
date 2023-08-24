@@ -488,6 +488,8 @@
 	@Haz_Trainer
 	//#text = "Kevlar armor is essential to your survival in the field.  
 	//Pick up your armor and proceed to the hazards area"
+	#text = "Кевларовая броня необходима для выживания в полевых условиях.
+	Возьмите бронежилет и пройдите в зону опасностей."
 	#sound = Training_Kevlar
 	@Training_Text 
 	#text = "#TRAINING_PICK_KEVLAR" //#text = "MOVE UP TO THE KEVLAR TO PICK IT UP"
@@ -496,6 +498,7 @@
 
 	@Haz_Trainer
 	//#text = "If you pass through fire or steam, you will see a heat damage icon light up"
+	#text = "При прохождении через огонь или пар загорается значок теплового урона."
 	#sound = Training_Firesteam
 	@Training_Text 
 	#text = "#TRAINING_DAMAGE_TYPES" //#text = "CERTAIN TYPES OF DAMAGE WILL REGISTER
